@@ -2,34 +2,29 @@ import React, { useState } from 'react';
 
 const faqData = [
   {
-    question: 'Is Depo-Provera linked to brain tumors?',
+    question: 'How do I know if I qualify?',
     answer:
-      'Yes. Studies and lawsuits have reported higher rates of hormone-sensitive tumors like meningiomas in women who used Depo-Provera long-term.',
+      'Complete the form. A legal team will assess your situation based on your exposure and health condition.',
   },
   {
-    question: 'What is pseudotumor cerebri?',
+    question: 'Do I have to pay anything now?',
     answer:
-      'PTC is a neurological disorder that causes increased pressure inside the skull. It can lead to vision loss, migraines, and permanent complications.',
+      'No. You only pay if your case results in compensation.',
   },
   {
-    question: 'Is there a recall?',
+    question: 'Will someone contact me?',
     answer:
-      'Depo-Provera is not recalled, but it carries a black box warning for significant bone density loss.',
+      'Yes. If you qualify, a legal representative will follow up with a confidential consultation.',
   },
   {
-    question: 'Do I need medical records now?',
+    question: 'Can I file on behalf of a loved one?',
     answer:
-      'No. Your legal team can help request records after your initial eligibility review.',
-  },
-  {
-    question: 'Will this cost me anything?',
-    answer:
-      'There is no cost to submit your case. You only pay if you receive a settlement or award.',
+      'Yes. Family members can often file for wrongful death or disability claims.',
   },
 ];
 
 
-const HomeEight = () => {
+const ServiceFour = () => {
   const [activeIndex, setActiveIndex] = useState(null); // No dropdown open by default
 
   const toggle = (idx) => {
@@ -78,4 +73,4 @@ const HomeEight = () => {
   );
 };
 
-export default HomeEight;
+export default ServiceFour;

@@ -23,7 +23,7 @@ const features = [
   },
 ];
 
-const HomeTwo  = () => {
+const ServiceTwo  = () => {
   return (
   <section className="bg-[#0A1F8F] text-white py-12 px-4 sm:px-8 md:px-16 " style={{ fontFamily: 'Quicksand, sans-serif' }}>
   <div className="max-w-[1440px] mx-auto flex flex-col lg:flex-row items-center justify-between gap-8">
@@ -38,7 +38,7 @@ const HomeTwo  = () => {
     {/* Cards */}
     {/* <div className="w-full grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 gap-6 flex-1"> */}
 
-    <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 flex-1">
+    <div className="w-full grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 flex-1">
       {features.map((item, idx) => (
         <div
           key={idx}
@@ -64,4 +64,4 @@ const HomeTwo  = () => {
   );
 };
 
-export default HomeTwo;
+export default ServiceTwo;

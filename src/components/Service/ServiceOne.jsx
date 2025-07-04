@@ -2,7 +2,7 @@ import React from 'react'
 import herobg from '../../assets/Depobg.png'
 import MobileHeroBg from '../../assets/DepoMobileBg.png'
 
-const HomeOne = () => {
+const ServiceOne = () => {
   return (
     <>
       {/* Desktop/Laptop/Tablet Hero Section */}
@@ -65,4 +65,4 @@ const HomeOne = () => {
   )
 }
 
-export default HomeOne
+export default ServiceOne

@@ -1,6 +1,6 @@
 import React from 'react'
 import img1 from '../../assets/Frame 48.png'
-const HomeSeven = () => {
+const ServiceFive = () => {
   return (
     <>
       {/* Desktop Tile Section */}
@@ -125,4 +125,4 @@ const HomeSeven = () => {
   )
 }
 
-export default HomeSeven
+export default ServiceFive
