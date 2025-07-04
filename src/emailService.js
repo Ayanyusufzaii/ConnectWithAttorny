@@ -1,11 +1,10 @@
 // // emailService.js
 // import emailjs from '@emailjs/browser';
 
-// const SERVICE_ID = 'service_azb26ks';
-// const ADMIN_TEMPLATE_ID = 'template_35jmukc';
-// const USER_TEMPLATE_ID = 'template_oaj717f';
-// const PUBLIC_KEY = 'DyDZ85E9uwzwSyUoD';
-
+// const SERVICE_ID = process.env.SERVICE_ID;
+// const ADMIN_TEMPLATE_ID = process.env.ADMIN_TEMPLATE_ID;
+// const USER_TEMPLATE_ID = process.env.USER_TEMPLATE_ID;
+// const PUBLIC_KEY = process.env.PUBLIC_KEY;
 // emailjs.init(PUBLIC_KEY);
 
 // export const sendAdminEmail = (formData) => {
@@ -108,10 +107,10 @@
 // emailService.js
 import emailjs from '@emailjs/browser';
 
-const SERVICE_ID = 'service_azb26ks';
-const ADMIN_TEMPLATE_ID = 'template_i4yx3al';
-const USER_TEMPLATE_ID = 'template_v3x552b';
-const PUBLIC_KEY = 'DyDZ85E9uwzwSyUoD';
+const SERVICE_ID = process.env.SERVICE_ID;
+const ADMIN_TEMPLATE_ID = process.env.ADMIN_TEMPLATE_ID;
+const USER_TEMPLATE_ID = process.env.USER_TEMPLATE_ID;
+const PUBLIC_KEY = process.env.PUBLIC_KEY;
 
 emailjs.init(PUBLIC_KEY);
 
