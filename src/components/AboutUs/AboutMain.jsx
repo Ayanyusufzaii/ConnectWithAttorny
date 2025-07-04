@@ -10,7 +10,7 @@ import HomeFour from './HomeFour.jsx';
 import HomeFive from './HomeFive.jsx';
 import HomeSix from './HomeSix.jsx';
 
-const TURNSTILE_SITE_KEY = process.env.TURNSTILE_SITE_KEY;
+const TURNSTILE_SITE_KEY = process.env.REACT_APP_TURNSTILE_SITE_KEY;
 
 const AboutMain = () => {
   const [verified, setVerified] = useState(false);

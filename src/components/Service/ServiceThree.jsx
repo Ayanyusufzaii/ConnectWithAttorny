@@ -207,7 +207,7 @@ const lawsuits = [
   },
 ];
 
-const HomeFour = () => {
+const ServiceThree = () => {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -227,14 +227,14 @@ const HomeFour = () => {
       {/* Header */}
       <div className="flex justify-between items-center mb-8 flex-wrap gap-4">
         <h2 className="text-2xl md:text-3xl font-semibold text-[#0A1F8F]">
-          What Do We <span className="text-[#EDC14A]">Help</span> You With{' '}
-          <span className="text-[#EDC14A]">?</span>
+          What Do We <span className="text-[#EDC14A]">Help You </span>  With{' '}
+          ?
         </h2>
       </div>
 
       {/* Cards */}
       {isMobile ? (
-         <div className="grid grid-cols-1 gap-6">
+         <div className="grid grid-cols-2 gap-6">
           {/* </div> <div className="flex gap-6 overflow-x-auto scrollbar-hide pb-2">  */}
            
           {lawsuits.map((item, idx) => (
@@ -252,9 +252,13 @@ const HomeFour = () => {
                   className="w-full h-full object-cover rounded-[10%]"
                 />
                 <div className="absolute bottom-0 left-0 w-full text-left px-4 py-3">
-                  <h3 className="text-[16px] sm:text-[18px] font-bold text-white truncate px-2">
+                  {/* <h3 className="text-[16px] sm:text-[18px] font-bold text-white truncate px-2">
                     {item.title}
-                  </h3>
+                  </h3> */}
+              <h3 className="text-[16px] sm:text-[13px] font-bold text-white leading-tight px-2 break-words whitespace-normal">
+              {item.title}
+            </h3>
+
                 </div>
               </div>
 
@@ -288,9 +292,9 @@ const HomeFour = () => {
                   className="w-full h-full object-cover rounded-[10%]"
                 />
                  <div className="absolute bottom-0 left-0 w-full text-left px-4 py-3">
-                  <h3 className="text-[16px] sm:text-[18px] font-bold text-white truncate px-2">
-                    {item.title}
-                  </h3>
+                      <h3 className="text-[16px] font-bold text-white leading-tight px-2 break-words whitespace-normal">
+              {item.title}
+            </h3>
                 </div>
               </div>
 
@@ -314,4 +318,4 @@ const HomeFour = () => {
   );
 };
 
-export default HomeFour;
+export default ServiceThree;

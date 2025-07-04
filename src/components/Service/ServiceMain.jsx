@@ -1,13 +1,10 @@
 import React, { useEffect } from 'react';
 import Navbar from '../Navbar/Navbar';
-import HomeOne from './HomeOne';  
-import HomeTwo from './HomeTwo';
-// import HomeThree from './HomeThree';    
-import HomeFour from './HomeFour';
-// import HomeFive from './HomeFive';
-// import HomeSix from './HomeSix';
-import HomeEight from './HomeEight';
-import HomeSeven from './HomeSeven';
+import ServiceOne from './ServiceOne';
+import ServiceTwo from './ServiceTwo';
+import ServiceThree from './ServiceThree';
+import ServiceFour from './ServiceFour';
+import ServiceFive from './ServiceFive';
 import Footer from '../Footer/Footer';
 
 const ServiceMain = () => {
@@ -18,20 +15,14 @@ const ServiceMain = () => {
   return (
     <div>
       <Navbar />
-      <HomeOne />
-      <HomeTwo />
-      {/* <HomeThree /> */}
-      <HomeFour />
-      {/* <HomeFive /> */}
-      {/* <HomeSix /> */}
-      <HomeEight />
-      <HomeSeven />
+      <ServiceOne />
+      <ServiceTwo />
+      <ServiceThree />
+      <ServiceFour />
+      <ServiceFive />
       <Footer />
     </div>
   );
 };
 
 export default ServiceMain;
-
-
-// src\components\Home\HomeTwo.jsx
