@@ -1,0 +1,66 @@
+import React from 'react';
+import bag1 from '../../assets/Bag1.png';
+import bag2 from '../../assets/Bag2.png';
+import bag3 from '../../assets/Bag3.png';
+
+const features = [
+  {
+    icon: bag1,
+    title: 'Specialized Legal Support',
+    description: 'Get your best Attorneys who focus on drug injury lawsuits.',
+  },
+  {
+    icon: bag2,
+    title: 'No Upfront Costs',
+    description:
+      "You don’t pay unless your case results in compensation. Case reviews are always free.",
+  },
+  {
+    icon: bag3,
+    title: 'Confidential Case Reviews',
+    description:
+      'Your information is protected and never shared without your permission.',
+  },
+];
+
+const HomeFour = () => {
+  return (
+  <section className="bg-[#0A1F8F] text-white py-12 px-4 sm:px-8 md:px-16 " style={{ fontFamily: 'Quicksand, sans-serif' }}>
+  <div className="max-w-[1440px] mx-auto flex flex-col lg:flex-row items-center justify-between gap-8">
+    {/* Left Title */}
+    <div className="w-full lg:w-[300px] flex justify-center lg:justify-start">
+      <h2 className="text-center text-[32px] sm:text-[40px] font-quicksand font-semibold text-white leading-[48px] sm:leading-[60px] capitalize">
+        Why You <span className="text-[#FFC928] font-quicksand">Can</span> <br />
+        <span className="text-[#FFC928] font-quicksand">Always</span> Trust Us
+      </h2>
+    </div>
+
+    {/* Cards */}
+    {/* <div className="w-full grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 gap-6 flex-1"> */}
+
+    <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 flex-1">
+      {features.map((item, idx) => (
+        <div
+          key={idx}
+          className="rounded-[10px] border border-[#EDC14A] p-6 bg-white/5 text-center transition hover:shadow-md"
+        >
+          <div className="flex justify-center mb-4">
+            <img
+              src={item.icon}
+              alt={item.title}
+              className="w-12 h-12 object-contain"
+            />
+          </div>
+          <h3 className="text-lg font-quicksand font-semibold mb-2">{item.title}</h3>
+          <p className="text-sm font-quicksand text-gray-200 leading-relaxed">
+            {item.description}
+          </p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+  );
+};
+
+export default HomeFour;
