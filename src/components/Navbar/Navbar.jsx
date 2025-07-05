@@ -1,16 +1,34 @@
 import React, { useState } from "react";
 import logo from "../../assets/Logo.png"; // Adjust the path as necessary
-import { Facebook, Instagram, Linkedin } from 'lucide-react';
+import { Facebook, Instagram, Linkedin, ChevronDown } from 'lucide-react';
 import { BsTwitterX } from "react-icons/bs"; // Importing Twitter icon from react-icons
 
 const NAV_LINKS = [
   { name: "Home", href: "/" },
-  { name: "About Us", href: "#about" },
-  { name: "Services", href: "/ServiceMain" },
-  { name: "Contact Us", href: "#contact" },
+  { name: "About Us", href: "/AboutUs" },
+  { name: "Services", hasDropdown: true },
+  { name: "Contact Us", href: "/ContactUs" },
+];
+
+
+
+const LAWSUIT_TYPES = [
+  { name: "Depo-Provera Lawsuit", href: "/Depomain" },
+  { name: "Paraquat Lawsuit", href: "/ParaquatMain" },
+  { name: "Roundup Lawsuit", href: "/RoundupMain" },
+  { name: "Toxic Baby Food Lawsuit", href: "/Babyfood" },
+  { name: "Oxbryta Lawsuit", href: "/OxbrytaMain" },
+  { name: "Talcum Powder Lawsuit", href: "/TalcumMain" },
+  { name: "Bard PowerPort Lawsuit", href: "/BardPowerPortMain" },
+  { name: "Ultra-Processed Foods Lawsuit", href: "/UltraProcessedMain" },
+  { name: "AFFF Firefighting Foam Lawsuit", href: "/AFFFMain" },
+  { name: "PFAS Contamination Lawsuit", href: "/PFASMain" },
+  { name: "Transvaginal Mesh Lawsuit", href: "/TransvaginalMain" },
 ];
 
 function DesktopNavbar() {
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+
   return (
     <nav className="w-full bg-white shadow flex items-center justify-between px-6 py-3">
       {/* Logo */}
@@ -21,13 +39,45 @@ function DesktopNavbar() {
       <div className="flex-1 flex justify-center">
         <ul className="flex space-x-8">
           {NAV_LINKS.map((link) => (
-            <li key={link.name}>
-              <a
-                href={link.href}
-                className="text-[#0A1F8F] font-semibold hover:underline transition"
-              >
-                {link.name}
-              </a>
+            <li key={link.name} className="relative">
+              {link.hasDropdown ? (
+                <div 
+                  className="relative"
+                  onMouseEnter={() => setDropdownOpen(true)}
+                  onMouseLeave={() => setDropdownOpen(false)}
+                >
+                  <button
+                    className="text-[#0A1F8F] font-semibold hover:underline transition flex items-center gap-1 cursor-pointer"
+                    onClick={() => setDropdownOpen(!dropdownOpen)}
+                  >
+                    {link.name}
+                    <ChevronDown className="w-4 h-4" />
+                  </button>
+                  {/* Dropdown Menu */}
+                  {dropdownOpen && (
+                    <div className="absolute top-full left-0 mt-2 w-72 bg-white shadow-lg rounded-lg border border-gray-200 z-50">
+                      <div className="py-2">
+                        {LAWSUIT_TYPES.map((lawsuit) => (
+                          <a
+                            key={lawsuit.name}
+                            href={lawsuit.href}
+                            className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#0A1F8F] transition-colors border-b border-gray-100 last:border-b-0"
+                          >
+                            {lawsuit.name}
+                          </a>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                </div>
+              ) : (
+                <a
+                  href={link.href}
+                  className="text-[#0A1F8F] font-semibold hover:underline transition"
+                >
+                  {link.name}
+                </a>
+              )}
             </li>
           ))}
         </ul>
@@ -45,19 +95,20 @@ function DesktopNavbar() {
 
 function MobileNavbar() {
   const [open, setOpen] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
   const NAV_LINKS = [
     { name: "Home", href: "/  " },
-    { name: "About Us", href: "#about" },
-    { name: "Services", href: "/ServiceMain" },
-    { name: "Contact Us", href: "#contact" },
-    { name: "FAQs", href: "#faqs" },
+    { name: "About Us", href: "/AboutUs" },
+    { name: "Services", hasDropdown: true },
+    { name: "Contact Us", href: "/ContactUs" },
+  
   ];
   // Define socialLinks here, matching the footer
   const socialLinks = [
     { icon: Facebook, href: '#', label: 'Facebook' },
     { icon: BsTwitterX , href: '#', label: 'Twitter' },
     { icon: Instagram, href: '#', label: 'Instagram' },
-    { icon: Linkedin, href: '#', label: 'LinkedIn' },
+    
   ];
   const [active, setActive] = useState("Home");
   return (
@@ -77,54 +128,88 @@ function MobileNavbar() {
         <span className="block w-6 h-0.5 bg-blue-600 rounded"></span>
       </button>
       {/* Fullscreen Dropdown */}
-      <div
-        className={`fixed inset-0 bg-yellow-400 z-50 flex flex-col transition-all duration-500 ease-in-out ${open ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0 pointer-events-none'}`}
-        style={{ transitionProperty: 'transform, opacity' }}
-      >
+     <div
+  className={`fixed inset-0 bg-white z-50 flex flex-col font-quicksand transition-all duration-500 ease-in-out ${open ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0 pointer-events-none'}`}
+  style={{ transitionProperty: 'transform, opacity' }}
+>
+
         {/* Top Bar */}
-        <div className="flex items-center justify-between px-4 py-4 bg-[#EDC14A]">
+        <div className="flex items-center justify-between px-4 py-4 bg-white">
           <button
-            className="text-white text-3xl font-bold focus:outline-none"
+            className="text-[#0A1F8F] text-3xl font-bold focus:outline-none"
             onClick={() => setOpen(false)}
             aria-label="Close menu"
           >
             &times;
           </button>
-          <span className="text-white text-lg font-bold mx-auto">BE WITH LAW </span>
+          <span className="text-[#0A1F8F] text-lg font-bold mx-auto">BE WITH LAW</span>
           <span className="w-8"></span> {/* Spacer for symmetry */}
         </div>
-        {/* Blue Section */}
-        <div className="flex-1 bg-[#0A1F8F] w-full flex flex-col justify-start">
-          <ul className="flex flex-col w-full mt-6">
-            {NAV_LINKS.map((link, idx) => (
-              <li key={link.name} className="w-full">
-                <a
-                  href={link.href}
-                  className={`block w-full px-8 py-4 text-lg font-semibold text-left border-b border-blue-700 transition-colors duration-200 ${active === link.name ? 'text-yellow-400' : 'text-white'} hover:text-yellow-400`}
-                  onClick={() => { setActive(link.name); setOpen(false); }}
-                >
-                  {link.name}
-                </a>
-              </li>
-            ))}
-          </ul>
-          
-          <div className="flex gap-4 py-6 px-8">
-            {socialLinks.map((social) => {
-              const IconComponent = social.icon;
-              return (
-                <a
-                  key={social.label}
-                  href={social.href}
-                  className="w-12 h-12 flex items-center justify-center rounded-full border-2 border-yellow-400 bg-[#001F4D] hover:bg-opacity-80 transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-4 focus:ring-white focus:ring-opacity-30"
+        
+        {/* Scrollable Content */}
+        <div className="flex-1 bg-[#E7E9F4] overflow-y-auto">
+          <div className="flex flex-col min-h-full">
+            {/* Navigation Links */}
+            <div className="flex-1">
+              <ul className="flex flex-col w-full">
+                {NAV_LINKS.map((link, idx) => (
+                  <li key={link.name} className="w-full">
+                    {link.hasDropdown ? (
+                      <div className="w-full">
+                        <button
+                          className={`block w-full px-8 py-4 text-lg font-semibold text-left transition-colors duration-200 ${active === link.name ? 'text-[#0A1F8F] bg-gray-300' : 'text-gray-600'} hover:text-[#0A1F8F]  flex items-center justify-between`}
+                          onClick={() => setServicesOpen(!servicesOpen)}
+                        >
+                          {link.name}
+                          <ChevronDown className={`w-5 h-5 transition-transform duration-200 ${servicesOpen ? 'rotate-180' : ''}`} />
+                        </button>
+                        {servicesOpen && (
+                          <div className="bg-gray-100">
+                            {LAWSUIT_TYPES.map((lawsuit) => (
+                              <a
+                                key={lawsuit.name}
+                                href={lawsuit.href}
+                                className="block px-12 py-3 text-sm text-gray-700 hover:text-[#0A1F8F] hover:bg-gray-200 transition-colors duration-200"
+                                onClick={() => setOpen(false)}
+                              >
+                                {lawsuit.name}
+                              </a>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+                    ) : (
+                      <a
+                        href={link.href}
+                        className={`block w-full px-8 py-4 text-lg font-semibold text-left transition-colors duration-200 ${active === link.name ? 'text-[#0A1F8F] ' : 'text-gray-600'} hover:text-[#0A1F8F] `}
+                        onClick={() => { setActive(link.name); setOpen(false); }}
+                      >
+                        {link.name}
+                      </a>
+                    )}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            
+            {/* Follow Us Section */}
+            <div className="mt-8 px-8 pb-8 bg-[#0A1F8F]">
+              <h3 className="text-gray-700 font-semibold text-lg mb-4 text-white mt-8">Follow Us</h3>
+                 <div className="flex justify-left gap-8 mt-5 ">
+              {socialLinks.map(({ icon: Icon, href, label }) => (
+               <a
+  key={label}
+  href={href}
+  aria-label={label}
+  className="w-12 h-12 flex items-center justify-center rounded-lg border-2 border-white bg-[#00085B] hover:bg-opacity-80 transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-4 focus:ring-white focus:ring-opacity-30"
+>
+  <Icon className="w-5 h-5 text-white" />
+</a>
 
-                  aria-label={social.label}
-                >
-                  <IconComponent className="w-6 h-6 text-white" />
+              ))}
+            </div>
 
-                </a>
-              );
-            })}
+            </div>
           </div>
         </div>
       </div>

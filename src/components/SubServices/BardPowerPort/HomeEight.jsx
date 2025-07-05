@@ -2,29 +2,29 @@ import React, { useState } from 'react';
 
 const faqData = [
   {
-    question: 'Is Depo-Provera linked to brain tumors?',
+    question: 'What is wrong with the Bard PowerPort?',
     answer:
-      'Yes. Studies and lawsuits have reported higher rates of hormone-sensitive tumors like meningiomas in women who used Depo-Provera long-term.',
+      'The catheter has been reported to crack or fracture inside the body, which may lead to infection or serious complications.',
   },
   {
-    question: 'What is pseudotumor cerebri?',
+    question: 'How do I know if I had a Bard PowerPort?',
     answer:
-      'PTC is a neurological disorder that causes increased pressure inside the skull. It can lead to vision loss, migraines, and permanent complications.',
+      'Your medical records can confirm the manufacturer and model of your implanted port. Your legal team can help access these if needed.',
   },
   {
     question: 'Is there a recall?',
     answer:
-      'Depo-Provera is not recalled, but it carries a black box warning for significant bone density loss.',
+      'As of now, the Bard PowerPort has not been formally recalled, but litigation is ongoing due to device failure reports.',
   },
   {
-    question: 'Do I need medical records now?',
+    question: 'What if the device was removed already?',
     answer:
-      'No. Your legal team can help request records after your initial eligibility review.',
+      'You may still qualify if you suffered complications while the device was implanted.',
   },
   {
-    question: 'Will this cost me anything?',
+    question: 'How long do I have to file?',
     answer:
-      'There is no cost to submit your case. You only pay if you receive a settlement or award.',
+      'Legal deadlines apply and vary by state. Submit your case review as soon as possible to preserve your rights.',
   },
 ];
 

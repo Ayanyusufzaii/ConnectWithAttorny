@@ -25,7 +25,7 @@ const HomeMain = () => {
 
   // Handle success and persist verification
   const handleVerificationSuccess = (token) => {
-    console.log('Turnstile token:', token);
+    // console.log('Turnstile token:', token);
     localStorage.setItem('isHumanVerified', 'true');
     setVerified(true);
   };

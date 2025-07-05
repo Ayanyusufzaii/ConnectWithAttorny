@@ -2,31 +2,32 @@ import React, { useState } from 'react';
 
 const faqData = [
   {
-    question: 'Is Depo-Provera linked to brain tumors?',
+    question: 'Is glyphosate officially classified as cancer-causing?',
     answer:
-      'Yes. Studies and lawsuits have reported higher rates of hormone-sensitive tumors like meningiomas in women who used Depo-Provera long-term.',
+      'The World Health Organization’s International Agency for Research on Cancer classified glyphosate as “probably carcinogenic to humans” in 2015.',
   },
   {
-    question: 'What is pseudotumor cerebri?',
+    question: 'Has Roundup been recalled?',
     answer:
-      'PTC is a neurological disorder that causes increased pressure inside the skull. It can lead to vision loss, migraines, and permanent complications.',
+      'No. Roundup remains on the market, but legal action is ongoing.',
   },
   {
-    question: 'Is there a recall?',
+    question: 'Do I need receipts or proof of purchase?',
     answer:
-      'Depo-Provera is not recalled, but it carries a black box warning for significant bone density loss.',
+      'Not necessarily. Work history, treatment records, and usage history can help establish a claim.',
   },
   {
-    question: 'Do I need medical records now?',
+    question: 'How soon should I file?',
     answer:
-      'No. Your legal team can help request records after your initial eligibility review.',
+      'Each state has its own time limit to file. It’s best to act quickly.',
   },
   {
-    question: 'Will this cost me anything?',
+    question: 'Will I have to go to court?',
     answer:
-      'There is no cost to submit your case. You only pay if you receive a settlement or award.',
+      'Most cases are resolved through settlement. Your legal team will guide the process.',
   },
 ];
+
 
 
 const HomeEight = () => {

@@ -2,31 +2,32 @@ import React, { useState } from 'react';
 
 const faqData = [
   {
-    question: 'Is Depo-Provera linked to brain tumors?',
+    question: 'Which baby food brands are involved?',
     answer:
-      'Yes. Studies and lawsuits have reported higher rates of hormone-sensitive tumors like meningiomas in women who used Depo-Provera long-term.',
+      'Investigations have listed brands like Gerber, Beech-Nut, Earth’s Best, HappyBABY, and more.',
   },
   {
-    question: 'What is pseudotumor cerebri?',
+    question: 'Is there a scientific link to autism?',
     answer:
-      'PTC is a neurological disorder that causes increased pressure inside the skull. It can lead to vision loss, migraines, and permanent complications.',
+      'Heavy metals such as arsenic and lead are known to harm brain development. Studies and legal reviews suggest a link between early exposure and autism diagnoses.',
   },
   {
-    question: 'Is there a recall?',
+    question: 'Do I need to prove which brand my child consumed?',
     answer:
-      'Depo-Provera is not recalled, but it carries a black box warning for significant bone density loss.',
+      'Proof of purchase helps but is not always required. Intake teams will help assess this.',
   },
   {
-    question: 'Do I need medical records now?',
+    question: 'What age range qualifies?',
     answer:
-      'No. Your legal team can help request records after your initial eligibility review.',
+      'Typically, children diagnosed before age 12, with early exposure to packaged baby foods, may qualify.',
   },
   {
-    question: 'Will this cost me anything?',
+    question: 'Is this a class action?',
     answer:
-      'There is no cost to submit your case. You only pay if you receive a settlement or award.',
+      'Most cases are filed as individual mass tort claims. You may be eligible for compensation specific to your child’s harm.',
   },
 ];
+
 
 
 const HomeEight = () => {

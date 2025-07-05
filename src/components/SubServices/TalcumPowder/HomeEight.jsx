@@ -2,29 +2,29 @@ import React, { useState } from 'react';
 
 const faqData = [
   {
-    question: 'Is Depo-Provera linked to brain tumors?',
+    question: 'Is talcum powder still on the market?',
     answer:
-      'Yes. Studies and lawsuits have reported higher rates of hormone-sensitive tumors like meningiomas in women who used Depo-Provera long-term.',
+      'Johnson & Johnson discontinued talc-based Baby Powder in North America, but it remains available in other regions. Cornstarch alternatives are now more common.',
   },
   {
-    question: 'What is pseudotumor cerebri?',
+    question: 'How long must I have used talcum powder to qualify?',
     answer:
-      'PTC is a neurological disorder that causes increased pressure inside the skull. It can lead to vision loss, migraines, and permanent complications.',
+      'Most cases involve regular use over several years, especially during reproductive age.',
   },
   {
-    question: 'Is there a recall?',
+    question: 'Do I need proof of purchase?',
     answer:
-      'Depo-Provera is not recalled, but it carries a black box warning for significant bone density loss.',
+      'Not always. Personal testimony, diagnosis timing, and usage history may support your case.',
   },
   {
-    question: 'Do I need medical records now?',
+    question: 'Is this a class action?',
     answer:
-      'No. Your legal team can help request records after your initial eligibility review.',
+      'No. These are individual mass tort cases, meaning compensation is based on your specific harm.',
   },
   {
-    question: 'Will this cost me anything?',
+    question: 'What if a family member passed away from ovarian cancer?',
     answer:
-      'There is no cost to submit your case. You only pay if you receive a settlement or award.',
+      'You may still be able to file on behalf of a deceased loved one under wrongful death rules.',
   },
 ];
 

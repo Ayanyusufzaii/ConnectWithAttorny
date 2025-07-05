@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import { sendAdminEmail, sendUserEmail } from '../../emailService.js';
+import { SubServiceSendAdminEmail, SubServiceSendUserEmail } from '../../emailService.js';
 import toast, { Toaster } from 'react-hot-toast';
 
 const CustomCaptcha = ({ onCaptchaChange, resetTrigger }) => {
@@ -538,8 +538,8 @@ const DesktopForm = () => {
       xxTrustedFormCertToken: tokenUrl,
     };
 
-         await sendAdminEmail(formDataWithTrustedForm);
-    await sendUserEmail(formDataWithTrustedForm);
+         await SubServiceSendAdminEmail(formDataWithTrustedForm);
+    await SubServiceSendUserEmail(formDataWithTrustedForm);
       toast.success('Your request has been submitted successfully.')
       // Reset form
       setFormData({
@@ -983,8 +983,8 @@ try {
       xxTrustedFormCertToken: tokenUrl,
     };
 
-    await sendAdminEmail(formDataWithTrustedForm);
-    await sendUserEmail(formDataWithTrustedForm);
+    await SubServiceSendAdminEmail(formDataWithTrustedForm);
+    await SubServiceSendUserEmail(formDataWithTrustedForm);
 
       toast.success('Your request has been submitted successfully.')
       // Reset form

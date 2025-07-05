@@ -2,31 +2,32 @@ import React, { useState } from 'react';
 
 const faqData = [
   {
-    question: 'Is Depo-Provera linked to brain tumors?',
+    question: 'Is there scientific proof that Paraquat causes Parkinson’s?',
     answer:
-      'Yes. Studies and lawsuits have reported higher rates of hormone-sensitive tumors like meningiomas in women who used Depo-Provera long-term.',
+      'Multiple studies, including research cited by the NIH, have shown a strong link between Paraquat exposure and increased Parkinson’s risk.',
   },
   {
-    question: 'What is pseudotumor cerebri?',
+    question: 'Is Paraquat banned?',
     answer:
-      'PTC is a neurological disorder that causes increased pressure inside the skull. It can lead to vision loss, migraines, and permanent complications.',
+      'Paraquat is banned in over 30 countries, but remains in use in the United States under EPA regulation.',
   },
   {
-    question: 'Is there a recall?',
+    question: 'How do I prove I was exposed?',
     answer:
-      'Depo-Provera is not recalled, but it carries a black box warning for significant bone density loss.',
+      'Your work history, location, or industry can help demonstrate exposure. A legal team can help document this during review.',
   },
   {
-    question: 'Do I need medical records now?',
+    question: 'How long do I have to file?',
     answer:
-      'No. Your legal team can help request records after your initial eligibility review.',
+      'Each state has its own statute of limitations. It’s best to submit your case review as soon as possible.',
   },
   {
-    question: 'Will this cost me anything?',
+    question: 'Will this cost me anything upfront?',
     answer:
-      'There is no cost to submit your case. You only pay if you receive a settlement or award.',
+      'No. You will not pay anything unless your case results in a financial recovery.',
   },
 ];
+
 
 
 const HomeEight = () => {

@@ -2,29 +2,29 @@ import React, { useState } from 'react';
 
 const faqData = [
   {
-    question: 'Is Depo-Provera linked to brain tumors?',
+    question: 'What are PFAS chemicals?',
     answer:
-      'Yes. Studies and lawsuits have reported higher rates of hormone-sensitive tumors like meningiomas in women who used Depo-Provera long-term.',
+      ' PFAS are man-made chemicals used in water-resistant and non-stick products, firefighting foam, and industrial applications. They are toxic and persist in the environment and bloodstream.'
   },
   {
-    question: 'What is pseudotumor cerebri?',
+    question: 'How do I know if I was exposed?',
     answer:
-      'PTC is a neurological disorder that causes increased pressure inside the skull. It can lead to vision loss, migraines, and permanent complications.',
+      ' If you lived near a known PFAS contamination site or used PFAS-laced water, you may qualify. Your legal team can help investigate your exposure.'
   },
   {
-    question: 'Is there a recall?',
+    question: 'Which companies are being sued?',
     answer:
-      'Depo-Provera is not recalled, but it carries a black box warning for significant bone density loss.',
+  'Major defendants include 3M, DuPont, Chemours, and others involved in PFAS production and distribution.'
   },
   {
-    question: 'Do I need medical records now?',
+    question: 'Is this a class action or individual lawsuit?',
     answer:
-      'No. Your legal team can help request records after your initial eligibility review.',
+      ' These are typically mass tort claims filed individually. Compensation is based on your specific health and exposure history.',
   },
   {
-    question: 'Will this cost me anything?',
+    question: 'What if a loved one passed away from a PFAS-related illness?',
     answer:
-      'There is no cost to submit your case. You only pay if you receive a settlement or award.',
+      'You may be able to file a wrongful death claim on their behalf.',
   },
 ];
 

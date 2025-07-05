@@ -136,76 +136,89 @@
 
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import img1 from '../../assets/home3_1.png';
+// Import each image with a unique name
+import depoImg from "../../assets/subservice/depo-provera-lawsuit.png";
+import paraquatImg from "../../assets/subservice/paraquat-lawsuit.png";
+import roundupImg from "../../assets/subservice/roundup-lawsuit.png";
+import babyFoodImg from "../../assets/subservice/toxic-baby-food-lawsuit.png";
+import oxbrytaImg from "../../assets/subservice/oxbryta-lawsuit.png";
+import talcumImg from "../../assets/subservice/talcum-powder-lawsuit.png";
+import bardImg from "../../assets/subservice/bard-powerport-lawsuit.png";
+import ultraProcessedImg from "../../assets/subservice/ultra-processed-foods-lawsuit.png";
+import afffImg from "../../assets/subservice/afff-firefighting-foam-lawsuit.png";
+import pfasImg from "../../assets/subservice/pfas-contamination-lawsuit.png";
+import meshImg from "../../assets/subservice/transvaginal-mesh-lawsuit.png";
 
+// Map images correctly in the lawsuits array
 const lawsuits = [
   {
     title: 'Depo-Provera Lawsuit',
     description: 'Linked to brain tumors and bone loss in long-term users',
-    image: img1,
+    image: depoImg,
     link: '/DepoMain',
   },
   {
     title: 'Paraquat Lawsuit',
     description: 'Parkinsons disease caused by toxic herbicide exposure',
-    image: img1,
+    image: paraquatImg,
     link: '/ParaquatMain',
   },
   {
     title: 'Roundup-Lawsuit',
     description: 'Cancer linked to glyphosate-based weed killer',
-    image: img1,
+    image: roundupImg,
     link: '/roundupMain',
   },
   {
     title: 'Toxic Baby Food Lawsuit',
     description: 'Heavy metal exposure tied to developmental delays',
-    image: img1,
+    image: babyFoodImg,
     link: '/Babyfood',
   },
   {
     title: 'Oxbryta Lawsuit',
     description: 'Linked to brain tumors and bone loss in long-term users',
-    image: img1,
+    image: oxbrytaImg,
     link: '/OxbrytaMain',
   },
   {
     title: 'Talcum Powder Lawsuit',
     description: 'Parkinson’s disease caused by toxic herbicide exposure',
-    image: img1,
+    image: talcumImg,
     link: '/TalcumMain',
   },
   {
     title: 'Bard PowerPort Lawsuit',
     description: 'Cancer linked to glyphosate-based weed killer',
-    image: img1,
+    image: bardImg,
     link: '/BardPowerPortMain',
   },
   {
     title: 'Ultra-Processed Foods Lawsuit',
     description: 'Heavy metal exposure tied to developmental delays',
-    image: img1,
+    image: ultraProcessedImg,
     link: '/UltraProcessedMain',
   },
   {
     title: 'AFFF Firefighting Foam Lawsuit',
     description: 'Linked to brain tumors and bone loss in long-term users',
-    image: img1,
+    image: afffImg,
     link: '/AFFFMain',
   },
   {
     title: 'PFAS Contamination Lawsuit',
     description: 'Parkinson’s disease caused by toxic herbicide exposure',
-    image: img1,
+    image: pfasImg,
     link: '/PFASMain',
   },
   {
     title: 'Transvaginal Mesh Lawsuit',
     description: 'Cancer linked to glyphosate-based weed killer',
-    image: img1,
+    image: meshImg,
     link: '/TransvaginalMain',
   },
 ];
+
 
 const ServiceThree = () => {
   const [isMobile, setIsMobile] = useState(false);

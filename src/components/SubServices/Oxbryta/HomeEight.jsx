@@ -2,31 +2,32 @@ import React, { useState } from 'react';
 
 const faqData = [
   {
-    question: 'Is Depo-Provera linked to brain tumors?',
+    question: 'What is Oxbryta used for?',
     answer:
-      'Yes. Studies and lawsuits have reported higher rates of hormone-sensitive tumors like meningiomas in women who used Depo-Provera long-term.',
+      'Oxbryta is prescribed to treat sickle cell disease by improving hemoglobin levels and reducing red blood cell destruction.',
   },
   {
-    question: 'What is pseudotumor cerebri?',
+    question: 'What risks have been reported?',
     answer:
-      'PTC is a neurological disorder that causes increased pressure inside the skull. It can lead to vision loss, migraines, and permanent complications.',
+      'Liver toxicity, stroke, and multi-organ complications have been reported in patients taking Oxbryta — especially in younger individuals.',
   },
   {
-    question: 'Is there a recall?',
+    question: 'Is there an FDA recall or warning?',
     answer:
-      'Depo-Provera is not recalled, but it carries a black box warning for significant bone density loss.',
+      'As of now, Oxbryta remains approved, but adverse event reports have triggered legal action and monitoring.',
   },
   {
-    question: 'Do I need medical records now?',
+    question: 'What documentation do I need?',
     answer:
-      'No. Your legal team can help request records after your initial eligibility review.',
+      'Medical records showing your diagnosis, prescription history, and adverse effects are helpful but not required to start a case review.',
   },
   {
-    question: 'Will this cost me anything?',
+    question: 'Do I need to take legal action now?',
     answer:
-      'There is no cost to submit your case. You only pay if you receive a settlement or award.',
+      'Yes. There are time limits based on your state. Submit your case for review as soon as possible.',
   },
 ];
+
 
 
 const HomeEight = () => {

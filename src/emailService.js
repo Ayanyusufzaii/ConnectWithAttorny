@@ -1,141 +1,33 @@
-// // emailService.js
-// import emailjs from '@emailjs/browser';
-
-<<<<<<< HEAD
-// const SERVICE_ID = process.env.SERVICE_ID;
-// const ADMIN_TEMPLATE_ID = process.env.ADMIN_TEMPLATE_ID;
-// const USER_TEMPLATE_ID = process.env.USER_TEMPLATE_ID;
-// const PUBLIC_KEY = process.env.PUBLIC_KEY;
-=======
-// const SERVICE_ID = process.env.SERVICE_ID ;
-// const ADMIN_TEMPLATE_ID = process.env.ADMIN_TEMPLATE_ID;
-// const USER_TEMPLATE_ID = process.env.USER_TEMPLATE_ID;
-// const PUBLIC_KEY = process.env.PUBLIC_KEY;
-
->>>>>>> branch_a
-// emailjs.init(PUBLIC_KEY);
-
-// export const sendAdminEmail = (formData) => {
-//   const templateParams = {
-//     name: formData.name,
-//     email: formData.email,
-//     phone: formData.phone,
-//     category: formData.category,
-//     message: `New legal service request from ${formData.name}`,
-
-//   };
-
-//   return emailjs.send(SERVICE_ID, ADMIN_TEMPLATE_ID, templateParams);
-// };
-
-// export const sendUserEmail = (formData) => {
-//   const templateParams = {
-//     name: formData.name,
-//     email: formData.email,
-//     phone: formData.phone,
-//     category: formData.category,
-//     date: new Date().toLocaleDateString(),
-//   };
-
-//   return emailjs.send(SERVICE_ID, USER_TEMPLATE_ID, templateParams);
-// };
-
-
-
-
-// // emailService.js
-// import emailjs from '@emailjs/browser';
-
-// const SERVICE_ID = 'service_azb26ks';
-// const ADMIN_TEMPLATE_ID = 'template_i4yx3al';
-// const USER_TEMPLATE_ID = 'template_v3x552b';
-// const PUBLIC_KEY = 'DyDZ85E9uwzwSyUoD';
-
-// emailjs.init(PUBLIC_KEY);
-
-// export const sendAdminEmail = (formData) => {
-//   const templateParams = {
-//     name: formData.name,
-//     email: formData.email,
-//     phone: formData.phone,
-//     category: formData.category,
-//     streetAddress: formData.streetAddress,
-//     city: formData.city,
-//     state: formData.state,
-//     zipCode: formData.zipCode,
-//     fullAddress: `${formData.streetAddress}, ${formData.city}, ${formData.state} ${formData.zipCode}`,
-//     message: `New legal service request from ${formData.name}`,
-//     submissionDate: new Date().toLocaleString(),
-//   };
-
-//   return emailjs.send(SERVICE_ID, ADMIN_TEMPLATE_ID, templateParams);
-// };
-
-// export const sendUserEmail = (formData) => {
-//   const templateParams = {
-//     name: formData.name,
-//     email: formData.email,
-//     phone: formData.phone,
-//     category: formData.category,
-//     streetAddress: formData.streetAddress,
-//     city: formData.city,
-//     state: formData.state,
-//     zipCode: formData.zipCode,
-//     fullAddress: `${formData.streetAddress}, ${formData.city}, ${formData.state} ${formData.zipCode}`,
-//     date: new Date().toLocaleDateString(),
-//     submissionDate: new Date().toLocaleString(),
-//   };
-
-//   return emailjs.send(SERVICE_ID, USER_TEMPLATE_ID, templateParams);
-// };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // emailService.js
+ 
 import emailjs from '@emailjs/browser';
-
-const SERVICE_ID = process.env.REACT_APP_SERVICE_ID ;
-const ADMIN_TEMPLATE_ID = process.env.REACT_APP_ADMIN_TEMPLATE_ID;
-const USER_TEMPLATE_ID =  process.env.REACT_APP_USER_TEMPLATE_ID;
-const PUBLIC_KEY = process.env.REACT_APP_PUBLIC_KEY;
-
+ 
+const SERVICE_ID = 'service_azb26ks';
+const ADMIN_TEMPLATE_ID = 'template_i4yx3al';
+const USER_TEMPLATE_ID = 'template_v3x552b';
+ 
+// SubService template IDs
+const SUBSERVICE_ADMIN_TEMPLATE_ID = 'template_0yxv4ra';
+const SUBSERVICE_USER_TEMPLATE_ID = 'template_145waea';  
+ 
+const PUBLIC_KEY = 'DyDZ85E9uwzwSyUoD';
+ 
 emailjs.init(PUBLIC_KEY);
-
+ 
 // Function to get the initial landing URL
 let initialLandingUrl = null;
-
+ 
 const getSourceUrl = () => {
   if (typeof window === "undefined") return "Unknown";
-  
+ 
   // If we haven't stored the initial URL yet, store it
   if (!initialLandingUrl) {
     initialLandingUrl = window.location.href;
   }
-  
+ 
   return initialLandingUrl;
 };
-
+ 
 // Function to get IP address
 const getIPAddress = async () => {
   try {
@@ -147,11 +39,11 @@ const getIPAddress = async () => {
     return "IP address not available";
   }
 };
-
+ 
+// Original functions (keeping your existing ones)
 export const sendAdminEmail = async (formData) => {
-  console.log(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_ADMIN_TEMPLATE_ID, process.env.REACT_APP_USER_TEMPLATE_ID);
-  
-    const ipAddress = await getIPAddress();
+  const ipAddress = await getIPAddress();
+ 
   const templateParams = {
     name: formData.name,
     email: formData.email,
@@ -164,21 +56,21 @@ export const sendAdminEmail = async (formData) => {
     fullAddress: `${formData.streetAddress}, ${formData.city}, ${formData.state} ${formData.zipCode}`,
     message: `New legal service request from ${formData.name}`,
     submissionDate: new Date().toLocaleString(),
-      ip_address: ipAddress,
-      page_source: getSourceUrl(),
-
+    ip_address: ipAddress,
+    page_source: getSourceUrl(),
+   
     // TrustedForm data
     trustedFormCertUrl: formData.xxTrustedFormCertUrl || 'Not available',
     trustedFormPingUrl: formData.xxTrustedFormPingUrl || 'Not available',
     trustedFormToken: formData.xxTrustedFormCertToken || 'Not available',
   };
-
+ 
   return emailjs.send(SERVICE_ID, ADMIN_TEMPLATE_ID, templateParams);
 };
-
+ 
 export const sendUserEmail = async (formData) => {
-    const ipAddress = await getIPAddress();
-
+  const ipAddress = await getIPAddress();
+ 
   const templateParams = {
     name: formData.name,
     email: formData.email,
@@ -190,15 +82,83 @@ export const sendUserEmail = async (formData) => {
     zipCode: formData.zipCode,
     fullAddress: `${formData.streetAddress}, ${formData.city}, ${formData.state} ${formData.zipCode}`,
     date: new Date().toLocaleDateString(),
-      ip_address: ipAddress,
+    ip_address: ipAddress,
     submissionDate: new Date().toLocaleString(),
-      page_source: getSourceUrl(),
-
-    // TrustedForm data (optional for user emails, but included for completeness)
+    page_source: getSourceUrl(),
+   
+    // TrustedForm data
     trustedFormCertUrl: formData.xxTrustedFormCertUrl || 'Not available',
     trustedFormPingUrl: formData.xxTrustedFormPingUrl || 'Not available',
     trustedFormToken: formData.xxTrustedFormCertToken || 'Not available',
   };
-
+ 
   return emailjs.send(SERVICE_ID, USER_TEMPLATE_ID, templateParams);
 };
+ 
+// NEW SubService functions
+export const SubServiceSendAdminEmail = async (formData) => {
+  const ipAddress = await getIPAddress();
+ 
+  const templateParams = {
+    // Handle both desktop and mobile form field names
+    first_name: formData.first_name || formData.fist_name || '',
+    last_name: formData.last_name || '',
+    full_name: `${formData.first_name || formData.fist_name || ''} ${formData.last_name || ''}`.trim(),
+    email: formData.email,
+    phone: formData.phone,
+    streetAddress: formData.streetAddress,
+    city: formData.city,
+    state: formData.state,
+    zipCode: formData.zipCode,
+    fullAddress: `${formData.streetAddress || ''}, ${formData.city || ''}, ${formData.state || ''} ${formData.zipCode || ''}`.replace(/^,\s*/, '').trim(),
+    message: `New SubService case review request from ${formData.first_name || formData.fist_name || ''} ${formData.last_name || ''}`,
+    submissionDate: new Date().toLocaleString(),
+    ip_address: ipAddress,
+    page_source: getSourceUrl(),
+   
+    // TrustedForm data
+    trustedFormCertUrl: formData.xxTrustedFormCertUrl || 'Not available',
+    trustedFormPingUrl: formData.xxTrustedFormPingUrl || 'Not available',
+    trustedFormToken: formData.xxTrustedFormCertToken || 'Not available',
+   
+    // Additional fields for better tracking
+    form_type: 'SubService Case Review',
+    captcha_verified: 'Yes',
+    terms_accepted: formData.termsAccepted ? 'Yes' : 'No',
+  };
+ 
+  return emailjs.send(SERVICE_ID, SUBSERVICE_ADMIN_TEMPLATE_ID, templateParams);
+};
+ 
+export const SubServiceSendUserEmail = async (formData) => {
+  const ipAddress = await getIPAddress();
+ 
+  const templateParams = {
+    // Handle both desktop and mobile form field names
+    first_name: formData.first_name || formData.fist_name || '',
+    last_name: formData.last_name || '',
+    full_name: `${formData.first_name || formData.fist_name || ''} ${formData.last_name || ''}`.trim(),
+    email: formData.email,
+    phone: formData.phone,
+    streetAddress: formData.streetAddress,
+    city: formData.city,
+    state: formData.state,
+    zipCode: formData.zipCode,
+    fullAddress: `${formData.streetAddress || ''}, ${formData.city || ''}, ${formData.state || ''} ${formData.zipCode || ''}`.replace(/^,\s*/, '').trim(),
+    date: new Date().toLocaleDateString(),
+    submissionDate: new Date().toLocaleString(),
+    ip_address: ipAddress,
+    page_source: getSourceUrl(),
+   
+    // TrustedForm data
+    trustedFormCertUrl: formData.xxTrustedFormCertUrl || 'Not available',
+    trustedFormPingUrl: formData.xxTrustedFormPingUrl || 'Not available',
+    trustedFormToken: formData.xxTrustedFormCertToken || 'Not available',
+   
+    // Additional fields for personalization
+    form_type: 'SubService Case Review',
+  };
+ 
+  return emailjs.send(SERVICE_ID, SUBSERVICE_USER_TEMPLATE_ID, templateParams);
+};
+ 

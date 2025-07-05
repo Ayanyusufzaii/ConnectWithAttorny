@@ -2,29 +2,29 @@ import React, { useState } from 'react';
 
 const faqData = [
   {
-    question: 'Is Depo-Provera linked to brain tumors?',
+    question: 'What is transvaginal mesh used for?',
     answer:
-      'Yes. Studies and lawsuits have reported higher rates of hormone-sensitive tumors like meningiomas in women who used Depo-Provera long-term.',
+    ' It is implanted to support weakened pelvic muscles in cases of pelvic organ prolapse or urinary incontinence.'
   },
   {
-    question: 'What is pseudotumor cerebri?',
+    question: 'Why are lawsuits being filed?',
     answer:
-      'PTC is a neurological disorder that causes increased pressure inside the skull. It can lead to vision loss, migraines, and permanent complications.',
+    ' Many women were not properly warned of serious complications, and thousands required mesh revision or removal surgery.'
   },
   {
-    question: 'Is there a recall?',
+    question: 'Which companies are involved?',
     answer:
-      'Depo-Provera is not recalled, but it carries a black box warning for significant bone density loss.',
+    'Manufacturers include Johnson & Johnson (Ethicon), Boston Scientific, C.R. Bard, and others.'
   },
   {
-    question: 'Do I need medical records now?',
+    question: 'Do I need medical records to file?',
     answer:
-      'No. Your legal team can help request records after your initial eligibility review.',
+      'They are helpful, but not required initially. Your legal team can help retrieve them.',
   },
   {
-    question: 'Will this cost me anything?',
+    question: 'What if I already had my mesh removed?',
     answer:
-      'There is no cost to submit your case. You only pay if you receive a settlement or award.',
+      'You may still qualify for compensation based on your original complications and treatment.',
   },
 ];
 

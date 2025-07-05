@@ -1,35 +1,37 @@
 import React, { useRef, useEffect, useState } from 'react';
-import img1 from '../../assets/home3_1.png';
 import { Link } from 'react-router-dom';
-
+// Import correct images
+import depoImg from '../../assets/subservice/depo-provera-lawsuit.png';
+import paraquatImg from '../../assets/subservice/paraquat-lawsuit.png';
+import roundupImg from '../../assets/subservice/roundup-lawsuit.png';
+import babyFoodImg from '../../assets/subservice/toxic-baby-food-lawsuit.png';
 
 const lawsuits = [
   {
     title: 'Depo-Provera Lawsuit',
     description: 'Linked to brain tumors and bone loss in long-term users',
-    image: img1,
+    image: depoImg,
     link: '/DepoMain',
   },
   {
     title: 'Paraquat Lawsuit',
     description: 'Parkinsons disease caused by toxic herbicide exposure',
-    image: img1,
+    image: paraquatImg,
     link: '/ParaquatMain',
   },
   {
     title: 'Roundup-Lawsuit',
     description: 'Cancer linked to glyphosate-based weed killer',
-    image: img1,
-    link: '/RoundupMain', 
+    image: roundupImg,
+    link: '/RoundupMain',
   },
   {
     title: 'Toxic Baby Food Lawsuit',
     description: 'Heavy metal exposure tied to developmental delays',
-    image: img1,
-    link: '/BabyfoodMain', 
+    image: babyFoodImg,
+    link: '/BabyfoodMain',
   },
 ];
-
 
 const HomeThree = () => {
 
