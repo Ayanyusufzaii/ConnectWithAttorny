@@ -41,35 +41,32 @@ function DesktopNavbar() {
           {NAV_LINKS.map((link) => (
             <li key={link.name} className="relative">
               {link.hasDropdown ? (
-                <div 
-                  className="relative"
-                  onMouseEnter={() => setDropdownOpen(true)}
-                  onMouseLeave={() => setDropdownOpen(false)}
-                >
-                  <button
-                    className="text-[#0A1F8F] font-semibold hover:underline transition flex items-center gap-1 cursor-pointer"
-                    onClick={() => setDropdownOpen(!dropdownOpen)}
-                  >
-                    {link.name}
-                    <ChevronDown className="w-4 h-4" />
-                  </button>
-                  {/* Dropdown Menu */}
-                  {dropdownOpen && (
-                    <div className="absolute top-full left-0 mt-2 w-72 bg-white shadow-lg rounded-lg border border-gray-200 z-50">
-                      <div className="py-2">
-                        {LAWSUIT_TYPES.map((lawsuit) => (
-                          <a
-                            key={lawsuit.name}
-                            href={lawsuit.href}
-                            className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#0A1F8F] transition-colors border-b border-gray-100 last:border-b-0"
-                          >
-                            {lawsuit.name}
-                          </a>
-                        ))}
-                      </div>
-                    </div>
-                  )}
-                </div>
+                <div className="relative">
+  <button
+    className="text-[#0A1F8F] font-semibold hover:underline transition flex items-center gap-1 cursor-pointer"
+    onClick={() => setDropdownOpen(prev => !prev)}
+  >
+    {link.name}
+    <ChevronDown className={`w-4 h-4 transition-transform ${dropdownOpen ? 'rotate-180' : ''}`} />
+  </button>
+
+  {dropdownOpen && (
+    <div className="absolute top-full left-0 mt-2 w-72 bg-white shadow-lg rounded-lg border border-gray-200 z-50">
+      <div className="py-2">
+        {LAWSUIT_TYPES.map((lawsuit) => (
+          <a
+            key={lawsuit.name}
+            href={lawsuit.href}
+            className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#0A1F8F] transition-colors border-b border-gray-100 last:border-b-0"
+          >
+            {lawsuit.name}
+          </a>
+        ))}
+      </div>
+    </div>
+  )}
+</div>
+
               ) : (
                 <a
                   href={link.href}
