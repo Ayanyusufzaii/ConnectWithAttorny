@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { sendAdminEmail, sendUserEmail } from '../../emailService.js';
 import toast, { Toaster } from 'react-hot-toast';
@@ -112,7 +111,7 @@ const CustomCaptcha = ({ onCaptchaChange, resetTrigger }) => {
   const handleAudioToggle = (e) => {
     setAudioEnabled(e.target.checked);
   };
- 
+   
   return (
     <div className="mt-4">
       <div className="flex flex-col sm:flex-row sm:items-center gap-4">
@@ -624,10 +623,17 @@ const DesktopForm = () => {
             style={{ fontFamily: 'Quicksand, sans-serif' }}
           >
             <option value="">Lawsuit Type</option>
-            <option value="Drug Injury">Drug Injury</option>
-            <option value="Medical Device">Medical Device</option>
-            <option value="Toxic Exposure">Toxic Exposure</option>
-            <option value="other">Other</option>
+            <option value="Depo-Provera Lawsuit ">Depo-Provera Lawsuit  </option>
+            <option value="Paraquat Lawsuit ">Paraquat Lawsuit </option>
+            <option value="Roundup Lawsuit ">Roundup Lawsuit </option>
+            <option value="Toxic Baby Food Lawsuit ">Toxic Baby Food Lawsuit   </option>
+            <option value="Oxbryta Lawsuit ">Oxbryta Lawsuit </option>
+            <option value="Talcum Powder Lawsuit ">  Talcum Powder Lawsuit  </option>
+             <option value="Bard PowerPort Lawsuit ">Bard PowerPort Lawsuit  </option>
+            <option value="Ultra-Processed Foods Lawsuit ">Ultra-Processed Foods Lawsuit   </option>
+            <option value="AFFF Firefighting Foam Lawsuit ">AFFF Firefighting Foam Lawsuit </option>
+            <option value="PFAS Contamination Lawsuit ">PFAS Contamination Lawsuit </option>
+            <option value="Transvaginal Mesh Lawsuit ">Transvaginal Mesh Lawsuit  </option>
           </select>
           <span className="pointer-events-none absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400 text-xl">▼</span>
         </div>
@@ -785,6 +791,7 @@ const MobileForm = () => {
   const [certId, setCertId] = useState("");
   const [tokenUrl, settokenUrl] = useState("");
 
+
   useEffect(() => {
   // Simple observer to capture TrustedForm data when it's populated
   const observer = new MutationObserver((mutations) => {
@@ -810,6 +817,7 @@ const MobileForm = () => {
       }
     });
   });
+
 
   // Start observing after a short delay to ensure TrustedForm script has loaded
   const timeoutId = setTimeout(() => {
@@ -1074,10 +1082,17 @@ try {
             style={{ fontFamily: 'Quicksand, sans-serif' }}
           >
             <option value="">Lawsuit Type</option>
-            <option value="Drug Injury">Drug Injury</option>
-            <option value="Medical Device">Medical Device</option>
-            <option value="Toxic Exposure">Toxic Exposure</option>
-            <option value="other">Other</option>
+            <option value="Depo-Provera Lawsuit ">Depo-Provera Lawsuit  </option>
+            <option value="Paraquat Lawsuit ">Paraquat Lawsuit </option>
+            <option value="Roundup Lawsuit ">Roundup Lawsuit </option>
+            <option value="Toxic Baby Food Lawsuit ">Toxic Baby Food Lawsuit   </option>
+            <option value="Oxbryta Lawsuit ">Oxbryta Lawsuit </option>
+            <option value="Talcum Powder Lawsuit ">Talcum Powder Lawsuit  </option>
+             <option value="Bard PowerPort Lawsuit ">Bard PowerPort Lawsuit  </option>
+            <option value="Ultra-Processed Foods Lawsuit ">Ultra-Processed Foods Lawsuit   </option>
+            <option value="AFFF Firefighting Foam Lawsuit ">AFFF Firefighting Foam Lawsuit </option>
+            <option value="PFAS Contamination Lawsuit ">PFAS Contamination Lawsuit </option>
+            <option value="Transvaginal Mesh Lawsuit ">Transvaginal Mesh Lawsuit  </option>
           </select>
           <span className="pointer-events-none absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400 text-xl">▼</span>
         </div>
@@ -1237,67 +1252,3 @@ const HomeTwo = () => {
 };
  
 export default HomeTwo;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
