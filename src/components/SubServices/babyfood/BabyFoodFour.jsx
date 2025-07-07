@@ -103,7 +103,7 @@ const ParaquatLawsuitOverview = () => {
           </span>
          
           <span className="text-[#EDC14A] text-[24px] sm:text-[28px] font-semibold leading-[1.2] capitalize">
-            Paraquat Lawsuit
+            Toxic Baby Food Lawsuit 
           </span>
         </h2>
  

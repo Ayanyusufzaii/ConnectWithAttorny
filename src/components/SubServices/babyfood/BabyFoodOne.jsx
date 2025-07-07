@@ -1,6 +1,7 @@
 import React from 'react'
-import herobg from '../../../assets/ParaHero.png'
-import MobileHeroBg from '../../../assets/Paramobilebg.png'
+import herobg from '../../../assets/subservice/BabyFoodHerobg.png'
+import MobileHeroBg from '../../../assets/subservice/BabyFoodMobilebg.png'
+
 
 const HomeOne = () => {
   return (
@@ -23,15 +24,13 @@ const HomeOne = () => {
             className="text-2xl md:text-3xl lg:text-5xl font-bold text-white mb-4 drop-shadow-lg"
             style={{ fontFamily: 'Quicksand, sans-serif' }}
           >
-          Exposed to Paraquat and Later Diagnosed with Parkinson’s?
+         Was Your Child Diagnosed with Autism After Consuming Baby Food? 
           </h1>
           <h2
             className="text-sm sm:text-base md:text-xs lg:text-xl text-white mb-6 font-medium drop-shadow leading-relaxed"
             style={{ fontFamily: 'Quicksand, sans-serif' }}
           >
-           Farmers, agricultural workers, and nearby residents exposed to Paraquat may face a 
-higher risk of Parkinson’s disease. If you or a loved one were affected, you may be 
-eligible for settlement.
+           Lawsuits claim certain baby foods contained dangerous levels of heavy metals, leading to autism and developmental delays. You may be eligible for settlement. Start with a free legal case review. 
           </h2>
         </div>
       </section>
@@ -50,13 +49,13 @@ eligible for settlement.
       className="text-3xl font-bold text-white mb-4 drop-shadow-lg"
       style={{ fontFamily: 'Quicksand, sans-serif' }}
     >
-      Trusted Legal Support for Your Future
+      Was Your Child Diagnosed with Autism After Consuming Baby Food? 
     </h1>
     <h2
       className="text-sm text-white mb-4 font-normal drop-shadow"
       style={{ fontFamily: 'Quicksand, sans-serif' }}
     >
-      If you’ve been harmed by a dangerous drug, medical device, or toxic exposure, you're not alone. We help you understand your rights and connect you with experienced legal teams who put your recovery first.
+     Lawsuits claim certain baby foods contained dangerous levels of heavy metals, leading to autism and developmental delays. You may be eligible for  settlement. Start with a free legal case review. 
     </h2>
   </div>
   {/* Overlay */}
