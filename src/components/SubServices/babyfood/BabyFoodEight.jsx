@@ -30,7 +30,7 @@ const faqData = [
 
 
 
-const HomeEight = () => {
+const BabyFoodEight = () => {
   const [activeIndex, setActiveIndex] = useState(null); // No dropdown open by default
 
   const toggle = (idx) => {
@@ -79,4 +79,4 @@ const HomeEight = () => {
   );
 };
 
-export default HomeEight;
+export default BabyFoodEight;

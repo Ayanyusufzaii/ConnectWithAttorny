@@ -1,14 +1,14 @@
 import React, { useEffect } from 'react';
-import HomeOne from './HomeOne.jsx';
+import OxbrytaOne from './OxbrytaOne.jsx';
 import SubServiceForm from '../SubServiceForm.jsx';
 import Navbar from '../../Navbar/Navbar.jsx';
 import Footer from '../../Footer/Footer.jsx';
-import HomeThree from './HomeThree.jsx';
-import HomeFour from './HomeFour.jsx';
-import HomeFive from './HomeFive.jsx';
-import HomeSix from './HomeSix.jsx';
-import HomeSeven from './HomeSeven.jsx';
-import HomeEight from './HomeEight.jsx'; // Assuming you have a HomeEight component
+import OxbrytaThree from './OxbrytaThree.jsx';
+import OxbrytaFour from './OxbrytaFour.jsx';
+import OxbrytaFive from './OxbrytaFive.jsx';
+import OxbrytaSix from './OxbrytaSix.jsx';
+import OxbrytaSeven from './OxbrytaSeven.jsx';
+import OxbrytaEight from './OxbrytaEight.jsx'; // Assuming you have a OxbrytaEight component
 
 const OxbrytaMain = () => {
   useEffect(() => {
@@ -18,14 +18,14 @@ const OxbrytaMain = () => {
   return (
     <div>
       <Navbar />
-      <HomeOne />
+      <OxbrytaOne />
       <SubServiceForm />
-      <HomeThree />
-      <HomeFour />
-      <HomeFive />
-      <HomeSix />
-      <HomeEight />
-      <HomeSeven />
+      <OxbrytaThree />
+      <OxbrytaFour />
+      <OxbrytaFive />
+      <OxbrytaSix />
+      <OxbrytaEight />
+      <OxbrytaSeven />
       <Footer />
     </div>
   );

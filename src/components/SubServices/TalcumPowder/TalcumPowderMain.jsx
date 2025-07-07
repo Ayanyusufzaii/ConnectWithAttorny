@@ -1,14 +1,14 @@
 import React, { useEffect } from 'react';
-import HomeOne from './HomeOne.jsx';
+import TalcumPowderOne from './TalcumPowderOne.jsx';
 import SubServiceForm from '../SubServiceForm.jsx';
 import Navbar from '../../Navbar/Navbar.jsx';
 import Footer from '../../Footer/Footer.jsx';
-import HomeThree from './HomeThree.jsx';
-import HomeFour from './HomeFour.jsx';
-import HomeFive from './HomeFive.jsx';
-import HomeSix from './HomeSix.jsx';
-import HomeSeven from './HomeSeven.jsx';
-import HomeEight from './HomeEight.jsx'; // Assuming you have a HomeEight component
+import TalcumPowderThree from './TalcumPowderThree.jsx';
+import TalcumPowderFour from './TalcumPowderFour.jsx';
+import TalcumPowderFive from './TalcumPowderFive.jsx';
+import TalcumPowderSix from './TalcumPowderSix.jsx';
+import TalcumPowderSeven from './TalcumPowderSeven.jsx';
+import TalcumPowderEight from './TalcumPowderEight.jsx'; // Assuming you have a TalcumPowderEight component
 
 const TalcumMain = () => {
   useEffect(() => {
@@ -18,14 +18,14 @@ const TalcumMain = () => {
   return (
     <div>
       <Navbar />
-      <HomeOne />
+      <TalcumPowderOne />
       <SubServiceForm />
-      <HomeThree />
-      <HomeFour />
-      <HomeFive />
-      <HomeSix />
-      <HomeEight />
-      <HomeSeven />
+      <TalcumPowderThree />
+      <TalcumPowderFour />
+      <TalcumPowderFive />
+      <TalcumPowderSix />
+      <TalcumPowderEight />
+      <TalcumPowderSeven />
       <Footer />
     </div>
   );

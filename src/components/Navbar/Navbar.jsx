@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import logo from "../../assets/Logo.png"; // Adjust the path as necessary
-import { Facebook, Instagram, Linkedin, ChevronDown } from 'lucide-react';
+import { Facebook, Instagram, Linkedin, ChevronDown, Check } from 'lucide-react';
 import { BsTwitterX } from "react-icons/bs"; // Importing Twitter icon from react-icons
 
 const NAV_LINKS = [
@@ -9,8 +9,6 @@ const NAV_LINKS = [
   { name: "Services", hasDropdown: true },
   { name: "Contact Us", href: "/ContactUs" },
 ];
-
-
 
 const LAWSUIT_TYPES = [
   { name: "Depo-Provera Lawsuit", href: "/Depomain" },
@@ -42,31 +40,35 @@ function DesktopNavbar() {
             <li key={link.name} className="relative">
               {link.hasDropdown ? (
                 <div className="relative">
-  <button
-    className="text-[#0A1F8F] font-semibold hover:underline transition flex items-center gap-1 cursor-pointer"
-    onClick={() => setDropdownOpen(prev => !prev)}
-  >
-    {link.name}
-    <ChevronDown className={`w-4 h-4 transition-transform ${dropdownOpen ? 'rotate-180' : ''}`} />
-  </button>
+                  <button
+                    className="text-[#0A1F8F] font-semibold hover:underline transition flex items-center gap-1 cursor-pointer"
+                    onClick={() => setDropdownOpen(prev => !prev)}
+                  >
+                    {link.name}
+                    <ChevronDown className={`w-4 h-4 transition-transform ${dropdownOpen ? 'rotate-180' : ''}`} />
+                  </button>
 
-  {dropdownOpen && (
-    <div className="absolute top-full left-0 mt-2 w-72 bg-white shadow-lg rounded-lg border border-gray-200 z-50">
-      <div className="py-2">
-        {LAWSUIT_TYPES.map((lawsuit) => (
-          <a
-            key={lawsuit.name}
-            href={lawsuit.href}
-            className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#0A1F8F] transition-colors border-b border-gray-100 last:border-b-0"
-          >
-            {lawsuit.name}
-          </a>
-        ))}
-      </div>
-    </div>
-  )}
-</div>
-
+                  {dropdownOpen && (
+                    <div className="absolute top-full left-0 mt-2 w-72 bg-white shadow-lg rounded-lg border border-gray-200 z-50">
+                      <div className="py-2">
+                        {LAWSUIT_TYPES.map((lawsuit) => (
+                          <a
+                            key={lawsuit.name}
+                            href={lawsuit.href}
+                            className="group block px-4 py-3 text-sm text-gray-700 hover:text-[#0A1F8F] transition-colors relative flex items-center justify-between"
+                          >
+                            <span>{lawsuit.name}</span>
+                            <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                              <div className="w-5 h-5 bg-[#0A1F8F] rounded-full flex items-center justify-center">
+                                <Check className="w-3 h-3 text-white" />
+                              </div>
+                            </div>
+                          </a>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                </div>
               ) : (
                 <a
                   href={link.href}
@@ -82,8 +84,8 @@ function DesktopNavbar() {
       {/* Call Now Tile */}
       <div className="flex items-center">
         <div className="bg-[#0A1F8F] rounded-lg px-4 py-2 text-white text-center shadow">
-          <div className="font-bold text-sm">Call Now</div>
-          <div className="text-xs">+1 888 202 1350</div>
+          <div className=" text-l">CALL NOW</div>
+          <div className="text-l">888 201-1350</div>
         </div>
       </div>
     </nav>
