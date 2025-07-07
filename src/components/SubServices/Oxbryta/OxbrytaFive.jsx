@@ -6,7 +6,7 @@ const eligibilityCards = [
     number: "01",
     text: (
       <>
-        Worked in <span className="text-[#EDC14A]">farming, landscaping, or chemical application</span>
+       You or a family member took Oxbryta<span className="text-[#EDC14A]">  for sickle cell disease </span>
       </>
     ),
     bg: "bg-[#FDF9ED]",
@@ -15,7 +15,7 @@ const eligibilityCards = [
     number: "02",
     text: (
       <>
-        Were exposed to Paraquat through<span className="text-[#EDC14A]"> mixing, spraying, or contact</span>
+        Experienced<span className="text-[#EDC14A]">  liver injury</span>, <span className="text-[#EDC14A]"> stroke</span>Or <span className="text-[#EDC14A]"> Other serious health complications</span> After Use
                
       </>
     ),
@@ -25,7 +25,7 @@ const eligibilityCards = [
     number: "03",
     text: (
       <>
-      Lived near farms or areas treated with Paraquat
+      Received<span className="text-[#EDC14A]"> Emergency </span> Or <span className="text-[#EDC14A]"> Long Term Medical Care</span>
        
       </>
     ),
@@ -35,23 +35,14 @@ const eligibilityCards = [
     number: "04",
     text: (
       <>
-        Were later diagnosed with <span className="text-[#EDC14A]"> Parkinson’s disease</span>
+        symptoms occurred<span className="text-[#EDC14A]">Wwhile on  </span>Or <span className="text-[#EDC14A]"> shortly after stopping Oxbryta</span>
        
       </>
      
     ),
     bg: "bg-[#FDF9ED]",
   },
-  {
-    number: "05",
-    text: (
-      <>
-        Are within your <span className="text-[#EDC14A]"> state’s filing deadline</span>
-      </>
-     
-    ),
-    bg: "bg-[#F3F4F9]",
-  },
+ 
 ];
  
 const mobileEligibilityCards = eligibilityCards.map((card, index) => {
@@ -69,58 +60,45 @@ export default function EligibilityCriteria() {
       className="w-full bg-white py-12 font-[Quicksand] bg-cover"
       style={{ backgroundImage: `url(${bgImg})` }}
     >
-      {/* Laptop & Large Screen Layout (≥1024px) - 3x2 Grid */}
-      <div className="hidden lg:block max-w-[1280px] mx-auto px-6 lg:px-8">
-        <div className="grid grid-cols-3 gap-6 xl:gap-7">
-          {/* First Row */}
-          {/* Text Block (First Cell) - Sized like a card but without background */}
-          <div className="flex flex-col justify-center px-6 xl:px-8 py-6 xl:py-8 h-[140px] xl:h-[160px]">
-            <h2 className="text-[#0A1F8F] text-[28px] xl:text-[32px] font-semibold capitalize leading-tight mb-2">
-              Who May Be Eligible
-            </h2>
-            <p className="text-[#757575] text-[13px] xl:text-[14px] font-medium leading-[20px] xl:leading-[22px]">
-  Unsure?{' '}
-  <a
-    href="#form-section"
-    className="text-[#EDC14A] hover:text-[#d4a841] transition-colors duration-200 underline"
-  >
-    Submit the form
-  </a>
-  {' '}above to check eligibility at no cost.
-</p>
-          </div>
+      {/* Laptop & Large Screen Layout (≥1024px) - New Layout */}
+<div className="hidden lg:block max-w-[1280px] mx-auto px-6 lg:px-8">
+  <div className="flex h-[320px] xl:h-[360px] gap-6 xl:gap-8">
+   
+    {/* Left Half - Heading (43.61% width) */}
+    <div className="flex flex-col justify-center w-[43.61%]">
+      <h2 className="text-[#0A1F8F] text-[28px] xl:text-[36px] font-semibold capitalize leading-tight mb-2">
+        Who May Be <span className="text-[#EDC14A]"> Eligible</span>
+      </h2>
+      <p className="text-[#757575] text-[15px] xl:text-[18px] leading-[22px] xl:leading-[25px] font-medium">
+        Unsure?{' '}
+        <a
+          href="#form-section"
+          className="text-[#EDC14A] hover:text-[#d4a841] transition-colors duration-200 underline"
+        >
+          Submit the form
+        </a>
+        {' '}above to check <br></br>eligibility at no cost.
+      </p>
+    </div>
  
-          {/* First Two Cards (Second and Third Cells) */}
-          {eligibilityCards.slice(0, 2).map((card) => (
-            <article
-              key={card.number}
-              className={`flex flex-col justify-center items-start gap-2 p-6 xl:p-8 h-[140px] xl:h-[160px] rounded-[10px] ${card.bg} shadow-sm border border-white overflow-hidden`}
-            >
-              <span className="text-[#0A1F8F] font-[Quicksand] font-normal leading-none text-[28px] xl:text-[32px]">
-                {card.number}
-              </span>
-              <p className="text-[#0A1F8F] text-[14px] xl:text-[15px] font-medium leading-[20px] xl:leading-[22px] tracking-[-0.32px] capitalize text-left">
-                {card.text}
-              </p>
-            </article>
-          ))}
- 
-          {/* Second Row - Remaining Three Cards */}
-          {eligibilityCards.slice(2, 5).map((card) => (
-            <article
-              key={card.number}
-              className={`flex flex-col justify-center items-start gap-2 p-6 xl:p-8 h-[140px] xl:h-[160px] rounded-[10px] ${card.bg} shadow-sm border border-white overflow-hidden`}
-            >
-              <span className="text-[#0A1F8F] font-[Quicksand] font-normal leading-none text-[28px] xl:text-[32px]">
-                {card.number}
-              </span>
-              <p className="text-[#0A1F8F] text-[14px] xl:text-[15px] font-medium leading-[20px] xl:leading-[22px] tracking-[-0.32px] capitalize text-left">
-                {card.text}
-              </p>
-            </article>
-          ))}
-        </div>
-      </div>
+    {/* Right Half - 2x2 Grid of Cards (56.39% width) */}
+    <div className="w-[56.39%] grid grid-cols-2 gap-6 xl:gap-7">
+      {eligibilityCards.slice(0, 4).map((card) => (
+        <article
+          key={card.number}
+          className={`flex flex-col justify-center items-start gap-2 p-6 xl:p-8 h-[140px] xl:h-[160px] rounded-[10px] ${card.bg} shadow-sm border border-white overflow-hidden`}
+        >
+          <span className="text-[#0A1F8F] font-[Quicksand] font-normal leading-none text-[28px] xl:text-[32px]">
+            {card.number}
+          </span>
+          <p className="text-[#0A1F8F] text-[14px] xl:text-[15px] font-medium leading-[20px] xl:leading-[22px] tracking-[-0.32px] capitalize text-left">
+            {card.text}
+          </p>
+        </article>
+      ))}
+    </div>
+  </div>
+</div>
  
       {/*  Tablet Layout (md only) */}
       <div className="hidden md:flex lg:hidden max-w-[1200px] mx-auto flex-col items-center gap-6 px-4 py-2 md:gap-6 xl:gap-8">
@@ -195,4 +173,5 @@ export default function EligibilityCriteria() {
     </section>
   );
 }
+ 
  

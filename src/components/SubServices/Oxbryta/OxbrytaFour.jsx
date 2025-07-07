@@ -2,13 +2,13 @@ import React from 'react';
 import bgImg from '../../../assets/Rectangle05.png';
 import dpImg from '../../../assets/2bg 1.png';
 
-   
+  
 const cards = [
   {
     number: "01",
     text: (
       <>
-       Autism spectrum disorder (ASD) 
+        Liver damage<span className="text-[#757575]"> and </span> elevated liver enzymes
       </>
     ),
     bg: "bg-[#FFFFFF]",
@@ -17,7 +17,7 @@ const cards = [
     number: "02",
     text: (
       <>
-        Attention disorders 
+        Stroke<span className="text-[#757575]"> and</span> cerebrovascular<span className="text-[#757575]"> complications</span>
       </>
     ),
     bg: "bg-[#FFFFFF]",
@@ -26,7 +26,7 @@ const cards = [
     number: "03",
     text: (
       <>
-        Cognitive and behavioral delays 
+       Multi-organ failure<span className="text-[#757575]"> and serious adverse events  </span>
       </>
     ),
     bg: "bg-[#FFFFFF]",
@@ -59,22 +59,20 @@ const ParaquatLawsuitOverview = () => {
               Overview of the{' '}
             </span>
             <span className="text-[#EDC14A] text-[35px] font-semibold leading-normal capitalize overflow-hidden text-ellipsis">
-              Toxic Baby Food Lawsuit 
+              Oxbryta Lawsuit 
             </span>
           </h2>
  
           {/* Description Text */}
           <p className="text-[#757575] text-[18px] font-medium leading-normal mb-8 max-w-[1200px]">
-           A congressional investigation revealed that several major baby food brands sold products containing high levels of toxic heavy metals - including arsenic, lead, cadmium, and mercury.<br></br><br></br>
+           Oxbryta (voxelotor) is a prescription drug approved to treat sickle cell disease by increasing hemoglobin levels. <br></br><br></br>
 
-Brands named in lawsuits and investigations include: Gerber, Beech-Nut, Earth's Best, HappyBABY, Plum Organics, and others. <br></br><br></br>
-
-Legal claims allege these manufacturers failed to warn parents and allowed dangerous products to reach children during critical stages of brain development. 
+Lawsuits allege that the manufacturer, Global Blood Therapeutics (GBT), failed to adequately warn doctors and patients about the full scope of potential risks - especially in pediatric and long-term use cases. 
           </p>
  
           {/* Secondary Heading */}
           <h3 className="text-[#0A1F8F] text-[35px] font-semibold leading-normal capitalize mb-8">
-            These metals are known to interfere with brain development and have been linked to: 
+            new safety reports have linked Oxbryta to: 
           </h3>
  
           {/* Cards Container */}
@@ -108,22 +106,20 @@ Legal claims allege these manufacturers failed to warn parents and allowed dange
           </span>
          
           <span className="text-[#EDC14A] text-[24px] sm:text-[28px] font-semibold leading-[1.2] capitalize">
-            Toxic Baby Food Lawsuit 
+            Oxbryta Lawsuit 
           </span>
         </h2>
  
         {/* Mobile Description */}
         <p className="text-[#757575] text-[16px] font-medium leading-normal text-left">
-           A congressional investigation revealed that several major baby food brands sold products containing high levels of toxic heavy metals - including arsenic, lead, cadmium, and mercury.<br></br><br></br>
+           Oxbryta (voxelotor) is a prescription drug approved to treat sickle cell disease by increasing hemoglobin levels. <br></br><br></br>
 
-Brands named in lawsuits and investigations include: Gerber, Beech-Nut, Earth's Best, HappyBABY, Plum Organics, and others. <br></br><br></br>
-
-Legal claims allege these manufacturers failed to warn parents and allowed dangerous products to reach children during critical stages of brain development. 
+Lawsuits allege that the manufacturer, Global Blood Therapeutics (GBT), failed to adequately warn doctors and patients about the full scope of potential risks - especially in pediatric and long-term use cases. 
         </p>
  
         {/* Mobile Secondary Heading */}
         <h3 className="text-[#0A1F8F] text-[24px] sm:text-[28px] font-semibold leading-[1.2] capitalize text-left">
-          These metals are known to interfere with brain development and have been linked to: 
+         new safety reports have linked Oxbryta to: 
         </h3>
  
         {/* Mobile Cards */}

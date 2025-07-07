@@ -35,11 +35,11 @@ export default function Compensation() {
                 </span>
               </h2>
               <ul className="list-disc pl-5 text-[14px] md:text-[16px] lg:text-[22px] font-medium space-y-2 leading-relaxed text-white">
-                <li>Medical Bills And Diagnostic Testing</li>
-                <li>Brain Tumor Treatment Or Surgery</li>
-                <li>Lost Wages Or Inability To Work</li>
-                <li>Ongoing Care For Long-Term Symptoms</li>
-                <li>Pain, Emotional Stress, And Reduced Quality Of Life</li>
+                <li>Medical treatment and hospitalization </li>
+                <li>Lost income due to illness or disability </li>
+                <li>Pain, suffering, and long-term health impact </li>
+                <li>Permanent liver or neurological damage </li>
+                <li>Wrongful death benefits for affected families </li>
               </ul>
             </div>
           </div>
@@ -62,11 +62,11 @@ export default function Compensation() {
               What <span className="text-[#EDC14A]">Compensation</span> May Cover
             </h2>
             <ul className="list-disc pl-5 text-[14px] min-[350px]:text-[16px] min-[400px]:text-[17px] sm:text-[16px] font-medium leading-[28px] min-[400px]:leading-[30px] sm:leading-[32px] capitalize space-y-2">
-              <li>Medical Bills And Diagnostic Testing</li>
-              <li>Brain Tumor Treatment Or Surgery</li>
-              <li>Lost Wages Or Inability To Work</li>
-              <li>Ongoing Care For Long-Term Symptoms</li>
-              <li>Pain, Emotional Stress, And Reduced Quality Of Life</li>
+              <li>Medical treatment and hospitalization </li>
+                <li>Lost income due to illness or disability </li>
+                <li>Pain, suffering, and long-term health impact </li>
+                <li>Permanent liver or neurological damage </li>
+                <li>Wrongful death benefits for affected families </li>
             </ul>
           </div>
         </div>
