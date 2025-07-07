@@ -16,13 +16,13 @@ const ContactOne = () => {
       {isMobile ? (
         // ---------------------- MOBILE VERSION ----------------------
         <div className="pt-8">
-          <h2 className="text-[40px] font-semibold leading-snug text-center">
+          <h2 className="text-[28px] font-semibold leading-snug text-left">
             The Right Legal Help <br />
             <span className="text-white">
               Is Just <span className="text-yellow-400">One Message</span> Away
             </span>
           </h2>
-          <p className="mt-4 text-sm text-gray-200 text-center">
+          <p className="mt-4 text-[15px] text-gray-200 text-left">
             We connect you with law firms that understand complex injury claims and treat your case with urgency and care.
           </p>
           <div className="mt-6">
@@ -45,7 +45,7 @@ const ContactOne = () => {
                   Is Just <span className="text-yellow-400">One Message</span> Away
                 </span>
               </h2>
-              <p className="mt-4 md:text-[11px] lg:text-[13px] text-[18px] text-gray-200 max-w-md">
+              <p className="mt-4 md:text-[11px] lg:text-[14px] xl:text-[18px] text-gray-200 max-w-md">
                 We connect you with law firms that understand complex injury claims and treat your case with urgency,
                 compassion, and attention to detail.
               </p>

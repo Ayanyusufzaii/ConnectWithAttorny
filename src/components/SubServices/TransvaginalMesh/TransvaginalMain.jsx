@@ -1,14 +1,14 @@
 import React, { useEffect } from 'react';
-import HomeOne from './HomeOne.jsx';
+import TransvaginalOne from './TransvaginalOne.jsx';
 import SubServiceForm from '../SubServiceForm.jsx';
 import Navbar from '../../Navbar/Navbar.jsx';
 import Footer from '../../Footer/Footer.jsx';
-import HomeThree from './HomeThree.jsx';
-import HomeFour from './HomeFour.jsx';
-import HomeFive from './HomeFive.jsx';
-import HomeSix from './HomeSix.jsx';
-import HomeSeven from './HomeSeven.jsx';
-import HomeEight from './HomeEight.jsx'; // Assuming you have a HomeEight component
+import TransvaginalThree from './TransvaginalThree.jsx';
+import TransvaginalFour from './TransvaginalFour.jsx';
+import TransvaginalFive from './TransvaginalFive.jsx';
+import TransvaginalSix from './TransvaginalSix.jsx';
+import TransvaginalSeven from './TransvaginalSeven.jsx'; 
+import TransvaginalEight from './TransvaginalEight.jsx';
 
 const TransvaginalMain = () => {
   useEffect(() => {
@@ -18,19 +18,18 @@ const TransvaginalMain = () => {
   return (
     <div>
       <Navbar />
-      <HomeOne />
+      <TransvaginalOne />
       <SubServiceForm />
-      <HomeThree />
-      <HomeFour />
-      <HomeFive />
-      <HomeSix />
-      <HomeEight />
-      <HomeSeven />
+      <TransvaginalThree />
+      <TransvaginalFour />
+      <TransvaginalFive />
+      <TransvaginalSix />
+      <TransvaginalSeven />
+      <TransvaginalEight />
       <Footer />
     </div>
   );
 };
 
 export default TransvaginalMain;
-
 
