@@ -2,7 +2,7 @@ import React from 'react'
 import herobg from '../../../assets/RoundupBg.png'
 import MobileHeroBg from '../../../assets/RoundupMobilebg.png'
 
-const HomeOne = () => {
+const RoundUpOne = () => {
   return (
     <>
       {/* Desktop/Laptop/Tablet Hero Section */}
@@ -49,14 +49,13 @@ with Non-Hodgkin’s Lymphoma?
       className="text-3xl font-bold text-white mb-4 drop-shadow-lg"
       style={{ fontFamily: 'Quicksand, sans-serif' }}
     >
-      Trusted Legal Support for Your Future
+      Used Roundup and Later Diagnosed with Non-Hodgkin’s Lymphoma?
     </h1>
     <h2
       className="text-sm text-white mb-4 font-normal drop-shadow"
       style={{ fontFamily: 'Quicksand, sans-serif' }}
     >
-      If you’ve been harmed by a dangerous drug, medical device, or toxic exposure, you're not alone. We help you understand your rights and connect you with experienced legal teams who put your recovery first.
-    </h2>
+Lawsuits allege long-term exposure to Roundup’s glyphosate causes cancer. If you or a loved one developed non-Hodgkin’s lymphoma, you may qualify for a settlement.    </h2>
   </div>
   {/* Overlay */}
   <div className="absolute inset-0  z-10" />
@@ -66,4 +65,4 @@ with Non-Hodgkin’s Lymphoma?
   )
 }
 
-export default HomeOne
+export default RoundUpOne

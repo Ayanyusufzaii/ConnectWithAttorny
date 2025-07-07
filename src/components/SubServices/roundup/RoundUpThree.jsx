@@ -9,12 +9,12 @@ const trustCards = [
   {
     icon: c1,
     title: 'Specialized Legal Support',
-    description: 'Get experienced attorneys in drug injury, hormone related lawsuits like Depo-Provera.'
+    description: ' We connect you with attorneys who specialize in agricultural and consumer product lawsuits.  '
   },
   {
     icon: c2,
     title: 'No Upfront Costs',
-    description: 'There are no consultation fees. You only pay if your case results in compensation.'
+    description: 'You only pay if your case leads to a settlement or legal recovery. '
   },
   {
     icon: c3,
@@ -23,7 +23,7 @@ const trustCards = [
   }
 ];
 
-const WhyTrustUs = () => (
+const RoundUpThree = () => (
   <section
     className="bg-cover bg-center bg-no-repeat font-[Quicksand] w-full py-16"
     style={{ backgroundImage: `url(${bgImg})` }}
@@ -132,4 +132,4 @@ const WhyTrustUs = () => (
   </section>
 );
 
-export default WhyTrustUs;
+export default RoundUpThree;

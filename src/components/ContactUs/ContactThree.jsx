@@ -19,8 +19,8 @@ const ContactThree = () => {
               { icon: Mail, label: "Reach Us", value: "reachus@bewithlaw.com" },
             ].map(({ icon: Icon, label, value }, idx) => (
               <div key={idx} className="flex items-center gap-3">
-                <div className="bg-[#0A1F8F] rounded-[13px] flex justify-center items-center text-white w-[clamp(4rem,5vw,5rem)] h-[clamp(4rem,5vw,5rem)]">
-                  <Icon className="w-[clamp(3rem,4vw,4rem)] h-[clamp(3rem,4vw,4rem)]" />
+                <div className="bg-[#0A1F8F] rounded-[13px] flex justify-center items-center text-white w-[clamp(4rem,4vw,5rem)] h-[clamp(4rem,4vw,5rem)]">
+                  <Icon className="w-[clamp(3rem,3vw,4rem)] h-[clamp(3rem,3vw,4rem)]" />
                 </div>
                 <div className="min-w-0">
                   <p className="text-[23px] lg:text-[23px] xl:text-[27px] font-semibold text-[#EDC14A] whitespace-nowrap text-ellipsis overflow-hidden">

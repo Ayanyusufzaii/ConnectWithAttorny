@@ -35,11 +35,11 @@ export default function TransvaginalSix() {
                 </span>
               </h2>
               <ul className="list-disc pl-5 text-[14px] md:text-[16px] lg:text-[22px] font-medium space-y-2 leading-relaxed text-white">
-                <li>Medical Bills And Diagnostic Testing</li>
-                <li>Brain Tumor Treatment Or Surgery</li>
-                <li>Lost Wages Or Inability To Work</li>
-                <li>Ongoing Care For Long-Term Symptoms</li>
-                <li>Pain, Emotional Stress, And Reduced Quality Of Life</li>
+                <li>Lost income and inability to work </li>
+                <li>Pain, emotional trauma, and suffering</li>
+                <li> Medical expenses for corrective surgeries </li>
+                <li>Impact on relationships and quality of life</li>
+                <li>Long-term disability and ongoing care</li>
               </ul>
             </div>
           </div>

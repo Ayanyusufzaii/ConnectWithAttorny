@@ -9,17 +9,17 @@ const trustCards = [
   {
     icon: c1,
     title: 'Specialized Legal Support',
-    description: 'Get experienced attorneys in drug injury, hormone related lawsuits like Depo-Provera.'
+    description: 'We connect you with attorneys who focus on medical device failures impacting women.'
   },
   {
     icon: c2,
     title: 'No Upfront Costs',
-    description: 'There are no consultation fees. You only pay if your case results in compensation.'
+    description: 'We connect you with attorneys who focus on medical device failures impacting women.'
   },
   {
     icon: c3,
     title: 'Private and Confidential',
-    description: 'Your information is 100 percent secured and never shared without your consent.'
+    description: 'Your information is 100% secure and never shared without your consent. '
   }
 ];
 

@@ -7,7 +7,7 @@ const cards = [
     number: "01",
     text: (
       <>
-        Farmers, field workers,<span className="text-[#757575]"> and </span>pesticide applicators
+        Agricultural workers
       </>
     ),
     bg: "bg-[#FFFFFF]",
@@ -16,7 +16,7 @@ const cards = [
     number: "02",
     text: (
       <>
-        Communities<span className="text-[#757575]"> near treated fields</span>
+        Groundskeepers and landscapers
       </>
     ),
     bg: "bg-[#FFFFFF]",
@@ -25,14 +25,14 @@ const cards = [
     number: "03",
     text: (
       <>
-        <span className="text-[#757575]">Individuals exposed through </span>direct spraying <span className="text-[#757575]"> or </span> environmental drift  
+       Homeowners who used Roundup regularly
       </>
     ),
     bg: "bg-[#FFFFFF]",
   },
 ];
  
-const ParaquatLawsuitOverview = () => {
+const RoundUpFour = () => {
   const [is1024, setIs1024] = React.useState(false);
  
   React.useEffect(() => {
@@ -58,16 +58,14 @@ const ParaquatLawsuitOverview = () => {
               Overview of the{' '}
             </span>
             <span className="text-[#EDC14A] text-[35px] font-semibold leading-normal capitalize overflow-hidden text-ellipsis">
-              Paraquat Lawsuit
+              Roundup Lawsuit
             </span>
           </h2>
  
           {/* Description Text */}
           <p className="text-[#757575] text-[18px] font-medium leading-normal mb-8 max-w-[1200px]">
-            Paraquat is a highly toxic herbicide used across U.S. farmlands for weed and grass control. Scientific studies and court filings have linked Paraquat exposure to an increased risk of Parkinson's disease, a chronic and progressive neurological condition.
-            <br /><br />
-            Lawsuits claim that manufacturers, including Syngenta and Chevron, failed to properly warn users of these serious health risks - despite knowing the potential dangers for decades.
-          </p>
+Roundup is one of the most widely used weed killers in the world. Its active ingredient, glyphosate, has been the subject of growing concern due to links to non-Hodgkin’s lymphoma, a serious blood cancer.            <br /><br />
+Thousands of lawsuits claim that Monsanto (now owned by Bayer) failed to warn users about the cancer risks associated with glyphosate. Multiple jury verdicts have awarded plaintiffs millions in damages.           </p>
  
           {/* Secondary Heading */}
           <h3 className="text-[#0A1F8F] text-[35px] font-semibold leading-normal capitalize mb-8">
@@ -102,16 +100,15 @@ const ParaquatLawsuitOverview = () => {
           </span>
          
           <span className="text-[#EDC14A] text-[24px] sm:text-[28px] font-semibold leading-[1.2] capitalize">
-            Paraquat Lawsuit
+            Roundup Lawsuit
           </span>
         </h2>
  
         {/* Mobile Description */}
         <p className="text-[#757575] text-[16px] font-medium leading-normal text-left">
-          Paraquat is a highly toxic herbicide used across U.S. farmlands for weed and grass control. Scientific studies and court filings have linked Paraquat exposure to an increased risk of Parkinson's disease, a chronic and progressive neurological condition.
+Roundup is one of the most widely used weed killers in the world. Its active ingredient, glyphosate, has been the subject of growing concern due to links to non-Hodgkin’s lymphoma, a serious blood cancer.            <br /><br />
           <br /><br />
-          Lawsuits claim that manufacturers, including Syngenta and Chevron, failed to properly warn users of these serious health risks - despite knowing the potential dangers for decades.
-        </p>
+Thousands of lawsuits claim that Monsanto (now owned by Bayer) failed to warn users about the cancer risks associated with glyphosate. Multiple jury verdicts have awarded plaintiffs millions in damages.   </p>
  
         {/* Mobile Secondary Heading */}
         <h3 className="text-[#0A1F8F] text-[24px] sm:text-[28px] font-semibold leading-[1.2] capitalize text-left">
@@ -139,6 +136,6 @@ const ParaquatLawsuitOverview = () => {
   );
 };
  
-export default ParaquatLawsuitOverview;
+export default RoundUpFour;
  
 

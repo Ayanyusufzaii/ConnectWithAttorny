@@ -6,7 +6,7 @@ import Disclaimer from './components/Disclaimer';
 import Depomain from './components/SubServices/depo/DepoMain.jsx'; 
 import BabyfoodMain from './components/SubServices/babyfood/BabyFoodMain.jsx';
 import ParaquatMain from './components/SubServices/paraquat/PraquatMain.jsx';
-import RoundupMain from './components/SubServices/roundup/RoundupMain.jsx';
+import RoundUpMain from './components/SubServices/Roundup/RoundUpMain.jsx';
 import ServiceMain from './components/Service/ServiceMain.jsx';
 import AboutUs from './components/AboutUs/AboutMain.jsx';
 import ContactUs from './components/ContactUs/ContactMain.jsx'; 
@@ -47,7 +47,7 @@ const App = () => {
       },
       {
         path: "/RoundupMain",
-        element: <RoundupMain />,
+        element: <RoundUpMain />,
       },
       {
         path: "/ServiceMain",

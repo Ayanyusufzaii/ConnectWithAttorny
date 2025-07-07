@@ -9,12 +9,12 @@ const trustCards = [
   {
     icon: c1,
     title: 'Specialized Legal Support',
-    description: 'Get experienced attorneys in drug injury, hormone related lawsuits like Depo-Provera.'
+    description: 'We work with attorneys focused on toxic chemical lawsuits and contaminated water claims.'
   },
   {
     icon: c2,
     title: 'No Upfront Costs',
-    description: 'There are no consultation fees. You only pay if your case results in compensation.'
+    description: 'You only pay if your case leads to a settlement or legal recovery. '
   },
   {
     icon: c3,

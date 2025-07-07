@@ -1,7 +1,7 @@
 import React from "react";
 import leftImg from "../../../assets/Rectangle 4604.png";
 
-export default function Compensation() {
+export default function RoundUpSix() {
   return (
     <section
       className="relative text-white font-[Quicksand] w-full"
@@ -34,13 +34,14 @@ export default function Compensation() {
                   <br />May Cover
                 </span>
               </h2>
-              <ul className="list-disc pl-5 text-[14px] md:text-[16px] lg:text-[22px] font-medium space-y-2 leading-relaxed text-white">
-                <li>Medical Bills And Diagnostic Testing</li>
-                <li>Brain Tumor Treatment Or Surgery</li>
-                <li>Lost Wages Or Inability To Work</li>
-                <li>Ongoing Care For Long-Term Symptoms</li>
-                <li>Pain, Emotional Stress, And Reduced Quality Of Life</li>
-              </ul>
+            <ul className="list-disc pl-5 text-[14px] md:text-[16px] lg:text-[22px] font-medium space-y-2 leading-relaxed text-white">
+  <li>Cancer Treatment And Medical Expenses</li>
+  <li>Lost Wages And Long-Term Financial Hardship</li>
+  <li>Pain And Suffering</li>
+  <li>Emotional Distress And Mental Health Treatment</li>
+  <li>Wrongful Death Claims (For Surviving Family Members)</li>
+</ul>
+
             </div>
           </div>
         </div>
@@ -61,13 +62,14 @@ export default function Compensation() {
             <h2 className="text-[24px] min-[350px]:text-[28px] min-[400px]:text-[32px] sm:text-[28px] font-semibold capitalize mb-3 leading-tight text-left">
               What <span className="text-[#EDC14A]">Compensation</span> May Cover
             </h2>
-            <ul className="list-disc pl-5 text-[14px] min-[350px]:text-[16px] min-[400px]:text-[17px] sm:text-[16px] font-medium leading-[28px] min-[400px]:leading-[30px] sm:leading-[32px] capitalize space-y-2">
-              <li>Medical Bills And Diagnostic Testing</li>
-              <li>Brain Tumor Treatment Or Surgery</li>
-              <li>Lost Wages Or Inability To Work</li>
-              <li>Ongoing Care For Long-Term Symptoms</li>
-              <li>Pain, Emotional Stress, And Reduced Quality Of Life</li>
-            </ul>
+        <ul className="list-disc pl-5 text-[14px] md:text-[16px] lg:text-[22px] font-medium space-y-2 leading-relaxed text-white">
+  <li>Cancer Treatment And Medical Expenses</li>
+  <li>Lost Wages And Long-Term Financial Hardship</li>
+  <li>Pain And Suffering</li>
+  <li>Emotional Distress And Mental Health Treatment</li>
+  <li>Wrongful Death Claims (For Surviving Family Members)</li>
+</ul>
+
           </div>
         </div>
       </div>

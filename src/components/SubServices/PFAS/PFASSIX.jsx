@@ -35,11 +35,11 @@ export default function PFASSIX() {
                 </span>
               </h2>
               <ul className="list-disc pl-5 text-[14px] md:text-[16px] lg:text-[22px] font-medium space-y-2 leading-relaxed text-white">
-                <li>Medical Bills And Diagnostic Testing</li>
-                <li>Brain Tumor Treatment Or Surgery</li>
-                <li>Lost Wages Or Inability To Work</li>
-                <li>Ongoing Care For Long-Term Symptoms</li>
-                <li>Pain, Emotional Stress, And Reduced Quality Of Life</li>
+                <li>Medical bills and ongoing treatment </li>
+                <li>Cancer-related expenses and hospitalization</li>
+                <li>Lost wages or reduced earning ability </li>
+                <li>Pain, suffering, and loss of quality of life</li>
+                <li>Funeral expenses in wrongful death claims</li>
               </ul>
             </div>
           </div>

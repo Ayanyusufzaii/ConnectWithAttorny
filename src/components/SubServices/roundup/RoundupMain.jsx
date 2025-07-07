@@ -1,16 +1,16 @@
 import React, { useEffect } from 'react';
-import HomeOne from './HomeOne.jsx';
-import HomeTwoo from './HomeTwoo.jsx'; 
+import RoundUpOne from './RoundUpOne.jsx';
+import SubServiceForm from '../SubServiceForm.jsx'; 
 import Navbar from '../../Navbar/Navbar.jsx';
 import Footer from '../../Footer/Footer.jsx';
-import HomeThree from './HomeThree.jsx';
-import HomeFour from './HomeFour.jsx';
-import HomeFive from './HomeFive.jsx';
-import HomeSix from './HomeSix.jsx';
-import HomeSeven from './HomeSeven.jsx';
-import HomeEight from './HomeEight.jsx'; // Assuming you have a HomeEight component
+import RoundUpThree from './RoundUpThree.jsx';
+import RoundUpFour from './RoundUpFour.jsx';
+import RoundUpFive from './RoundUpFive.jsx';
+import RoundUpSix from './RoundUpSix.jsx';
+import RoundUpSeven from './RoundUpSeven.jsx';
+import RoundUpEight from './RoundUpEight.jsx'; // Assuming you have a RoundUpEight component
 
-const RoundupMain = () => {
+const RoundUpupMain = () => {
   useEffect(() => {
     window.scrollTo(0, 0); 
   }, []);
@@ -18,20 +18,20 @@ const RoundupMain = () => {
   return (
     <div>
       <Navbar />
-      <HomeOne />
-      <HomeTwoo />
-      <HomeThree />
-      <HomeFour />
-      <HomeFive />
-      <HomeSix />
-      <HomeEight />
-      <HomeSeven />
+      <RoundUpOne />
+      <SubServiceForm />
+      <RoundUpThree />
+      <RoundUpFour />
+      <RoundUpFive />
+      <RoundUpSix />
+      <RoundUpEight />
+      <RoundUpSeven />
       <Footer />
     </div>
   );
 };
 
-export default RoundupMain;
+export default RoundUpupMain;
 
 
-// src\components\Home\HomeTwo.jsx
+// src\components\RoundUp\RoundUpTwo.jsx
