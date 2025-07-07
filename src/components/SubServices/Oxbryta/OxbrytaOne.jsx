@@ -1,12 +1,13 @@
 import React from 'react'
-import herobg from '../../../assets/ParaHero.png'
-import MobileHeroBg from '../../../assets/Paramobilebg.png'
+import herobg from '../../../assets/subservice/OxbrytaHerobg.png'
+import MobileHeroBg from  '../../../assets/subservice/OxbrytaMobilebg.png'
 
 const HomeOne = () => {
   return (
     <>
       {/* Desktop/Laptop/Tablet Hero Section */}
-      <section className="hidden sm:flex relative w-full min-h-[45vh] md:min-h-[55vh] lg:min-h-[65vh] items-center justify-center overflow-hidden">
+      <section className="hidden sm:flex relative w-full h-[65vh] md:h-[75vh] lg:h-[80vh] items-center justify-center overflow-hidden">
+
         {/* Background Image */}
         <img
           src={herobg}
@@ -23,15 +24,13 @@ const HomeOne = () => {
             className="text-2xl md:text-3xl lg:text-5xl font-bold text-white mb-4 drop-shadow-lg"
             style={{ fontFamily: 'Quicksand, sans-serif' }}
           >
-          Exposed to Paraquat and Later Diagnosed with Parkinson’s?
+          Experienced Liver Injury or Stroke After Taking Oxbryta? 
           </h1>
           <h2
             className="text-sm sm:text-base md:text-xs lg:text-xl text-white mb-6 font-medium drop-shadow leading-relaxed"
             style={{ fontFamily: 'Quicksand, sans-serif' }}
           >
-           Farmers, agricultural workers, and nearby residents exposed to Paraquat may face a 
-higher risk of Parkinson’s disease. If you or a loved one were affected, you may be 
-eligible for settlement.
+           Oxbryta, a drug prescribed for sickle cell disease, has been linked to serious side effects including liver damage and stroke. If you or a loved one were affected, you may qualify for settlement. 
           </h2>
         </div>
       </section>
@@ -50,13 +49,13 @@ eligible for settlement.
       className="text-3xl font-bold text-white mb-4 drop-shadow-lg"
       style={{ fontFamily: 'Quicksand, sans-serif' }}
     >
-      Trusted Legal Support for Your Future
+      Experienced Liver Injury or Stroke After Taking Oxbryta? 
     </h1>
     <h2
       className="text-sm text-white mb-4 font-normal drop-shadow"
       style={{ fontFamily: 'Quicksand, sans-serif' }}
     >
-      If you’ve been harmed by a dangerous drug, medical device, or toxic exposure, you're not alone. We help you understand your rights and connect you with experienced legal teams who put your recovery first.
+      Oxbryta, a drug prescribed for sickle cell disease, has been linked to serious side effects including liver damage and stroke. If you or a loved one were affected, you may qualify for settlement. 
     </h2>
   </div>
   {/* Overlay */}

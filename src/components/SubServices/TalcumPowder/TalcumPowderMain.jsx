@@ -8,7 +8,7 @@ import TalcumPowderFour from './TalcumPowderFour.jsx';
 import TalcumPowderFive from './TalcumPowderFive.jsx';
 import TalcumPowderSix from './TalcumPowderSix.jsx';
 import TalcumPowderSeven from './TalcumPowderSeven.jsx';
-import TalcumPowderEight from './TalcumPowderEight.jsx'; // Assuming you have a TalcumPowderEight component
+import TalcumPowderEight from './TalcumPowderEight.jsx'; 
 
 const TalcumMain = () => {
   useEffect(() => {

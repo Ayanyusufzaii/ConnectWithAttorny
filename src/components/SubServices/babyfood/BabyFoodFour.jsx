@@ -8,7 +8,7 @@ const cards = [
     number: "01",
     text: (
       <>
-        Farmers, field workers,<span className="text-[#757575]"> and </span>pesticide applicators
+       Autism spectrum disorder (ASD) 
       </>
     ),
     bg: "bg-[#FFFFFF]",
@@ -17,7 +17,7 @@ const cards = [
     number: "02",
     text: (
       <>
-        Communities<span className="text-[#757575]"> near treated fields</span>
+        Attention disorders 
       </>
     ),
     bg: "bg-[#FFFFFF]",
@@ -26,7 +26,7 @@ const cards = [
     number: "03",
     text: (
       <>
-        <span className="text-[#757575]">Individuals exposed through </span>direct spraying <span className="text-[#757575]"> or </span> environmental drift  
+        Cognitive and behavioral delays 
       </>
     ),
     bg: "bg-[#FFFFFF]",
@@ -59,38 +59,43 @@ const ParaquatLawsuitOverview = () => {
               Overview of the{' '}
             </span>
             <span className="text-[#EDC14A] text-[35px] font-semibold leading-normal capitalize overflow-hidden text-ellipsis">
-              Paraquat Lawsuit
+              Toxic Baby Food Lawsuit 
             </span>
           </h2>
  
           {/* Description Text */}
           <p className="text-[#757575] text-[18px] font-medium leading-normal mb-8 max-w-[1200px]">
-            Paraquat is a highly toxic herbicide used across U.S. farmlands for weed and grass control. Scientific studies and court filings have linked Paraquat exposure to an increased risk of Parkinson's disease, a chronic and progressive neurological condition.
-            <br /><br />
-            Lawsuits claim that manufacturers, including Syngenta and Chevron, failed to properly warn users of these serious health risks - despite knowing the potential dangers for decades.
+           A congressional investigation revealed that several major baby food brands sold products containing high levels of toxic heavy metals - including arsenic, lead, cadmium, and mercury.<br></br><br></br>
+
+Brands named in lawsuits and investigations include: Gerber, Beech-Nut, Earth's Best, HappyBABY, Plum Organics, and others. <br></br><br></br>
+
+Legal claims allege these manufacturers failed to warn parents and allowed dangerous products to reach children during critical stages of brain development. 
           </p>
  
           {/* Secondary Heading */}
           <h3 className="text-[#0A1F8F] text-[35px] font-semibold leading-normal capitalize mb-8">
-            This lawsuit targets:
+            These metals are known to interfere with brain development and have been linked to: 
           </h3>
  
           {/* Cards Container */}
-          <div className="grid grid-cols-3 gap-8">
-            {cards.map((card) => (
-              <article
-                key={card.number}
-                className={`p-4 h-[100px] rounded-[10px] ${card.bg} shadow-sm border border-white overflow-hidden flex flex-col justify-center`}
-              >
-                <span className="text-[#0A1F8F] font-[Quicksand] not-italic font-normal leading-none text-[24px] mb-2">
-                  {card.number}
-                </span>
-                <p className="text-[#0A1F8F] text-[16px] font-medium leading-none tracking-[-0.32px] text-left">
-                  {card.text}
-                </p>
-              </article>
-            ))}
-          </div>
+          <div className="grid grid-cols-2 gap-8">
+  {cards.map((card, index) => (
+    <article
+      key={card.number}
+      className={`p-4 h-[100px] rounded-[10px] ${card.bg} shadow-sm border border-white overflow-hidden flex flex-col justify-center ${
+        index === 2 ? 'col-span-2' : ''
+      }`}
+    >
+      <span className="text-[#0A1F8F] font-[Quicksand] not-italic font-normal leading-none text-[24px] mb-2">
+        {card.number}
+      </span>
+      <p className="text-[#0A1F8F] text-[16px] font-medium leading-none tracking-[-0.32px] text-left">
+        {card.text}
+      </p>
+    </article>
+  ))}
+</div>
+
         </div>
       </div>
  
@@ -109,14 +114,16 @@ const ParaquatLawsuitOverview = () => {
  
         {/* Mobile Description */}
         <p className="text-[#757575] text-[16px] font-medium leading-normal text-left">
-          Paraquat is a highly toxic herbicide used across U.S. farmlands for weed and grass control. Scientific studies and court filings have linked Paraquat exposure to an increased risk of Parkinson's disease, a chronic and progressive neurological condition.
-          <br /><br />
-          Lawsuits claim that manufacturers, including Syngenta and Chevron, failed to properly warn users of these serious health risks - despite knowing the potential dangers for decades.
+           A congressional investigation revealed that several major baby food brands sold products containing high levels of toxic heavy metals - including arsenic, lead, cadmium, and mercury.<br></br><br></br>
+
+Brands named in lawsuits and investigations include: Gerber, Beech-Nut, Earth's Best, HappyBABY, Plum Organics, and others. <br></br><br></br>
+
+Legal claims allege these manufacturers failed to warn parents and allowed dangerous products to reach children during critical stages of brain development. 
         </p>
  
         {/* Mobile Secondary Heading */}
         <h3 className="text-[#0A1F8F] text-[24px] sm:text-[28px] font-semibold leading-[1.2] capitalize text-left">
-          This lawsuit targets:
+          These metals are known to interfere with brain development and have been linked to: 
         </h3>
  
         {/* Mobile Cards */}

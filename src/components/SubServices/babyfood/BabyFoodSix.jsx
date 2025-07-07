@@ -28,18 +28,21 @@ export default function Compensation() {
           <div className="w-1/2 flex items-center justify-start px-4 md:px-6 lg:px-10 py-6">
             <div className="max-w-[600px] w-full">
               <h2 className="font-semibold capitalize leading-snug text-[20px] md:text-[28px] lg:text-[40px] text-white mb-4">
-                What <span className="text-[#EDC14A]">Compensation</span>
+                What <span className="text-[#EDC14A]">Settlement</span>
                 <span className="md:hidden lg:inline"> May Cover</span>
                 <span className="hidden md:inline lg:hidden">
                   <br />May Cover
                 </span>
               </h2>
               <ul className="list-disc pl-5 text-[14px] md:text-[16px] lg:text-[22px] font-medium space-y-2 leading-relaxed text-white">
-                <li>Medical Bills And Diagnostic Testing</li>
-                <li>Brain Tumor Treatment Or Surgery</li>
-                <li>Lost Wages Or Inability To Work</li>
-                <li>Ongoing Care For Long-Term Symptoms</li>
-                <li>Pain, Emotional Stress, And Reduced Quality Of Life</li>
+               <li>Medical and therapy costs </li>
+              <li>Special education services and long-term support </li>
+              <li>
+Emotional distress for the family </li>
+              <li>
+Loss of quality of life </li>
+              <li>
+Future care expenses and financial burden </li>
               </ul>
             </div>
           </div>
@@ -59,14 +62,17 @@ export default function Compensation() {
           {/* Text */}
           <div className="w-full text-white pt-4">
             <h2 className="text-[24px] min-[350px]:text-[28px] min-[400px]:text-[32px] sm:text-[28px] font-semibold capitalize mb-3 leading-tight text-left">
-              What <span className="text-[#EDC14A]">Compensation</span> May Cover
+              What <span className="text-[#EDC14A]">Settlement</span> May Cover
             </h2>
             <ul className="list-disc pl-5 text-[14px] min-[350px]:text-[16px] min-[400px]:text-[17px] sm:text-[16px] font-medium leading-[28px] min-[400px]:leading-[30px] sm:leading-[32px] capitalize space-y-2">
-              <li>Medical Bills And Diagnostic Testing</li>
-              <li>Brain Tumor Treatment Or Surgery</li>
-              <li>Lost Wages Or Inability To Work</li>
-              <li>Ongoing Care For Long-Term Symptoms</li>
-              <li>Pain, Emotional Stress, And Reduced Quality Of Life</li>
+              <li>Medical and therapy costs </li>
+              <li>Special education services and long-term support </li>
+              <li>
+Emotional distress for the family </li>
+              <li>
+Loss of quality of life </li>
+              <li>
+Future care expenses and financial burden </li>
             </ul>
           </div>
         </div>
@@ -74,3 +80,6 @@ export default function Compensation() {
     </section>
   );
 }
+
+
+
