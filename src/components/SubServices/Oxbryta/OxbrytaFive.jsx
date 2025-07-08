@@ -6,7 +6,7 @@ const eligibilityCards = [
     number: "01",
     text: (
       <>
-       You or a family member took Oxbryta<span className="text-[#EDC14A]">  for sickle cell disease </span>
+       You or a family member took Oxbryta <span className="text-[#EDC14A]">  for sickle cell disease </span>
       </>
     ),
     bg: "bg-[#FDF9ED]",
@@ -15,7 +15,7 @@ const eligibilityCards = [
     number: "02",
     text: (
       <>
-        Experienced<span className="text-[#EDC14A]">  liver injury</span>, <span className="text-[#EDC14A]"> stroke</span>Or <span className="text-[#EDC14A]"> Other serious health complications</span> After Use
+        Experienced<span className="text-[#EDC14A]">  liver injury</span>, <span className="text-[#EDC14A]"> stroke</span> Or <span className="text-[#EDC14A]"> Other serious health complications</span> After Use
                
       </>
     ),
@@ -35,7 +35,7 @@ const eligibilityCards = [
     number: "04",
     text: (
       <>
-        symptoms occurred<span className="text-[#EDC14A]">Wwhile on  </span>Or <span className="text-[#EDC14A]"> shortly after stopping Oxbryta</span>
+        symptoms occurred<span className="text-[#EDC14A]"> While on  </span>Or <span className="text-[#EDC14A]"> shortly after stopping Oxbryta</span>
        
       </>
      

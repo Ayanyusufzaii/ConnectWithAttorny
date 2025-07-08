@@ -37,7 +37,7 @@ const eligibilityCards = [
     number: "03",
     text: (
       <>
-        You have <span className="text-[#EDC14A]">medical documentation</span>  of the diagnosis  
+        You have <span className="text-[#EDC14A]">medical documentation</span>  of diagnosis  
        
       </>
      
@@ -83,7 +83,7 @@ export default function EligibilityCriteria() {
 </span>
             </h2>
             <p className="text-[#757575] text-[13px] xl:text-[14px] font-medium leading-[20px] xl:leading-[22px]">
-  Unsure?{' '}
+  Unsure?{' '} 
   <a
     href="#form-section"
     className="text-[#EDC14A] hover:text-[#d4a841] transition-colors duration-200 underline"

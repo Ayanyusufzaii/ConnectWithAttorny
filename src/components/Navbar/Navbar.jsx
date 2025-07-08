@@ -26,6 +26,18 @@ const LAWSUIT_TYPES = [
 
 function DesktopNavbar() {
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  // Get current page from URL
+  const getCurrentPage = () => {
+    const path = window.location.pathname;
+    if (path === '/' || path === '/  ') return 'Home';
+    if (path === '/AboutUs') return 'About Us';
+    if (path === '/ContactUs') return 'Contact Us';
+    // Check if it's a service page
+    const isServicePage = LAWSUIT_TYPES.some(lawsuit => lawsuit.href === path);
+    if (isServicePage) return 'Services';
+    return 'Home';
+  };
+  const [activePage, setActivePage] = useState(getCurrentPage());
 
   return (
     <nav className="w-full bg-white shadow flex items-center justify-between px-6 py-3">
@@ -41,7 +53,9 @@ function DesktopNavbar() {
               {link.hasDropdown ? (
                 <div className="relative">
                   <button
-                    className="text-[#0A1F8F] font-semibold hover:underline transition flex items-center gap-1 cursor-pointer"
+                    className={`font-semibold hover:underline transition flex items-center gap-1 cursor-pointer ${
+                      activePage === link.name ? 'text-[#0A1F8F]' : 'text-gray-600'
+                    }`}
                     onClick={() => setDropdownOpen(prev => !prev)}
                   >
                     {link.name}
@@ -72,7 +86,10 @@ function DesktopNavbar() {
               ) : (
                 <a
                   href={link.href}
-                  className="text-[#0A1F8F] font-semibold hover:underline transition"
+                  className={`font-semibold hover:underline transition ${
+                    activePage === link.name ? 'text-[#0A1F8F]' : 'text-gray-600'
+                  }`}
+                  onClick={() => setActivePage(link.name)}
                 >
                   {link.name}
                 </a>
@@ -109,110 +126,147 @@ function MobileNavbar() {
     { icon: Instagram, href: '#', label: 'Instagram' },
     
   ];
-  const [active, setActive] = useState("Home");
+  // Get current page from URL
+  const getCurrentPage = () => {
+    const path = window.location.pathname;
+    if (path === '/' || path === '/  ') return 'Home';
+    if (path === '/AboutUs') return 'About Us';
+    if (path === '/ContactUs') return 'Contact Us';
+    // Check if it's a service page
+    const isServicePage = LAWSUIT_TYPES.some(lawsuit => lawsuit.href === path);
+    if (isServicePage) return 'Services';
+    return 'Home';
+  };
+  const [active, setActive] = useState(getCurrentPage());
   return (
-    <nav className="w-full bg-white shadow flex items-center justify-between px-4 py-3 relative">
-      {/* Logo */}
-      <div className="flex items-center">
-        <img src={logo} alt="Logo" className="h-16 w-24 object-contain" />
-      </div>
-      {/* Hamburger */}
+
+
+
+
+    <nav className="w-full bg-white shadow px-4 py-3 relative">
+  
+<div
+  className={`absolute left-4 top-1/2 transform -translate-y-1/2 z-50 transition-all duration-300 ease-in-out ${
+    open ? 'opacity-0 scale-90 pointer-events-none' : 'opacity-100 scale-100'
+  }`}
+>
+  <button
+    className="flex flex-col justify-center items-center w-10 h-10 focus:outline-none"
+    onClick={() => setOpen(true)}
+    aria-label="Open menu"
+  >
+    <span className="block w-6 h-0.5 bg-blue-600 mb-1 rounded transition-all duration-300"></span>
+    <span className="block w-6 h-0.5 bg-blue-600 mb-1 rounded transition-all duration-300"></span>
+    <span className="block w-6 h-0.5 bg-blue-600 rounded transition-all duration-300"></span>
+  </button>
+</div>
+
+
+    <div className="flex justify-center items-center w-full">
+      <img src={logo} alt="Logo" className="h-16 w-24 object-contain mx-auto" />
+    </div>
+
+ 
+  <div
+    className={`fixed inset-0 bg-white z-40 flex flex-col font-quicksand transition-all duration-500 ease-in-out ${
+      open ? 'translate-x-0 opacity-100' : '-translate-x-full opacity-0 pointer-events-none'
+    }`}
+    style={{ transitionProperty: 'transform, opacity' }}
+  >
+   
+    <div className="flex items-center justify-between px-4 py-4 bg-white shadow-md">
       <button
-        className="flex flex-col justify-center items-center w-10 h-10 focus:outline-none"
-        onClick={() => setOpen((v) => !v)}
-        aria-label="Open menu"
+        className="text-[#0A1F8F] text-3xl font-bold focus:outline-none transition-all duration-200 hover:scale-110"
+        onClick={() => setOpen(false)}
+        aria-label="Close menu"
       >
-        <span className="block w-6 h-0.5 bg-blue-600 mb-1 rounded"></span>
-        <span className="block w-6 h-0.5 bg-blue-600 mb-1 rounded"></span>
-        <span className="block w-6 h-0.5 bg-blue-600 rounded"></span>
+        &times;
       </button>
-      {/* Fullscreen Dropdown */}
-     <div
-  className={`fixed inset-0 bg-white z-50 flex flex-col font-quicksand transition-all duration-500 ease-in-out ${open ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0 pointer-events-none'}`}
-  style={{ transitionProperty: 'transform, opacity' }}
->
+      <span className="text-[#0A1F8F] text-lg font-bold mx-auto">BE WITH LAW</span>
+      <span className="w-8"></span> 
+    </div>
 
-        {/* Top Bar */}
-        <div className="flex items-center justify-between px-4 py-4 bg-white">
-          <button
-            className="text-[#0A1F8F] text-3xl font-bold focus:outline-none"
-            onClick={() => setOpen(false)}
-            aria-label="Close menu"
-          >
-            &times;
-          </button>
-          <span className="text-[#0A1F8F] text-lg font-bold mx-auto">BE WITH LAW</span>
-          <span className="w-8"></span> {/* Spacer for symmetry */}
-        </div>
-        
-        {/* Scrollable Content */}
-        <div className="flex-1 bg-[#E7E9F4] overflow-y-auto">
-          <div className="flex flex-col min-h-full">
-            {/* Navigation Links */}
-            <div className="flex-1">
-              <ul className="flex flex-col w-full">
-                {NAV_LINKS.map((link, idx) => (
-                  <li key={link.name} className="w-full">
-                    {link.hasDropdown ? (
-                      <div className="w-full">
-                        <button
-                          className={`block w-full px-8 py-4 text-lg font-semibold text-left transition-colors duration-200 ${active === link.name ? 'text-[#0A1F8F] bg-gray-300' : 'text-gray-600'} hover:text-[#0A1F8F]  flex items-center justify-between`}
-                          onClick={() => setServicesOpen(!servicesOpen)}
-                        >
-                          {link.name}
-                          <ChevronDown className={`w-5 h-5 transition-transform duration-200 ${servicesOpen ? 'rotate-180' : ''}`} />
-                        </button>
-                        {servicesOpen && (
-                          <div className="bg-gray-100">
-                            {LAWSUIT_TYPES.map((lawsuit) => (
-                              <a
-                                key={lawsuit.name}
-                                href={lawsuit.href}
-                                className="block px-12 py-3 text-sm text-gray-700 hover:text-[#0A1F8F] hover:bg-gray-200 transition-colors duration-200"
-                                onClick={() => setOpen(false)}
-                              >
-                                {lawsuit.name}
-                              </a>
-                            ))}
-                          </div>
-                        )}
+    <div className="flex-1 bg-[#E7E9F4] overflow-y-auto">
+      <div className="flex flex-col min-h-full">
+     
+        <div className="flex-1">
+          <ul className="flex flex-col w-full">
+            {NAV_LINKS.map((link, idx) => (
+              <li key={link.name} className="w-full">
+                {link.hasDropdown ? (
+                  <div className="w-full">
+                    <button
+                      className={`block w-full px-8 py-4 text-lg font-semibold text-left transition-colors duration-200 ${
+                        active === link.name
+                          ? 'text-[#0A1F8F] bg-gray-300'
+                          : 'text-gray-600'
+                      } hover:text-[#0A1F8F] flex items-center justify-between`}
+                      onClick={() => setServicesOpen(!servicesOpen)}
+                    >
+                      {link.name}
+                      <ChevronDown
+                        className={`w-5 h-5 transition-transform duration-200 ${
+                          servicesOpen ? 'rotate-180' : ''
+                        }`}
+                      />
+                    </button>
+                    {servicesOpen && (
+                      <div className="bg-gray-100">
+                        {LAWSUIT_TYPES.map((lawsuit) => (
+                          <a
+                            key={lawsuit.name}
+                            href={lawsuit.href}
+                            className="block px-12 py-3 text-sm text-gray-700 hover:text-[#0A1F8F] hover:bg-gray-200 transition-colors duration-200"
+                            onClick={() => setOpen(false)}
+                          >
+                            {lawsuit.name}
+                          </a>
+                        ))}
                       </div>
-                    ) : (
-                      <a
-                        href={link.href}
-                        className={`block w-full px-8 py-4 text-lg font-semibold text-left transition-colors duration-200 ${active === link.name ? 'text-[#0A1F8F] ' : 'text-gray-600'} hover:text-[#0A1F8F] `}
-                        onClick={() => { setActive(link.name); setOpen(false); }}
-                      >
-                        {link.name}
-                      </a>
                     )}
-                  </li>
-                ))}
-              </ul>
-            </div>
-            
-            {/* Follow Us Section */}
-            <div className="mt-8 px-8 pb-8 bg-[#0A1F8F]">
-              <h3 className="text-gray-700 font-semibold text-lg mb-4 text-white mt-8">Follow Us</h3>
-                 <div className="flex justify-left gap-8 mt-5 ">
-              {socialLinks.map(({ icon: Icon, href, label }) => (
-               <a
-  key={label}
-  href={href}
-  aria-label={label}
-  className="w-12 h-12 flex items-center justify-center rounded-lg border-2 border-white bg-[#00085B] hover:bg-opacity-80 transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-4 focus:ring-white focus:ring-opacity-30"
->
-  <Icon className="w-5 h-5 text-white" />
-</a>
+                  </div>
+                ) : (
+                  <a
+                    href={link.href}
+                    className={`block w-full px-8 py-4 text-lg font-semibold text-left transition-colors duration-200 ${
+                      active === link.name
+                        ? 'text-[#0A1F8F]'
+                        : 'text-gray-600'
+                    } hover:text-[#0A1F8F]`}
+                    onClick={() => {
+                      setActive(link.name);
+                      setOpen(false);
+                    }}
+                  >
+                    {link.name}
+                  </a>
+                )}
+              </li>
+            ))}
+          </ul>
+        </div>
 
-              ))}
-            </div>
-
-            </div>
+     
+        <div className="mt-8 px-8 pb-8 bg-[#0A1F8F]">
+          <h3 className="text-white font-semibold text-lg mb-4 mt-8">Follow Us</h3>
+          <div className="flex justify-left gap-8 mt-5">
+            {socialLinks.map(({ icon: Icon, href, label }) => (
+              <a
+                key={label}
+                href={href}
+                aria-label={label}
+                className="w-12 h-12 flex items-center justify-center rounded-lg border-2 border-white bg-[#00085B] hover:bg-opacity-80 transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-4 focus:ring-white focus:ring-opacity-30"
+              >
+                <Icon className="w-5 h-5 text-white" />
+              </a>
+            ))}
           </div>
         </div>
       </div>
-    </nav>
+    </div>
+  </div>
+</nav>
+
   );
 }
 
@@ -232,3 +286,122 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//     <nav className="w-full bg-white shadow flex items-center justify-between  px-4 py-3 relative">
+//       <div className="flex items-center">
+//         <img src={logo} alt="Logo" className="h-16 w-24 object-contain" />
+//       </div>
+//       <button
+//         className="flex flex-col justify-center items-center w-10 h-10 focus:outline-none"
+//         onClick={() => setOpen((v) => !v)}
+//         aria-label="Open menu"
+//       >
+//         <span className="block w-6 h-0.5 bg-blue-600 mb-1 rounded"></span>
+//         <span className="block w-6 h-0.5 bg-blue-600 mb-1 rounded"></span>
+//         <span className="block w-6 h-0.5 bg-blue-600 rounded"></span>
+//       </button>
+     
+      
+//      <div
+//   className={`fixed inset-0 bg-white z-50 flex flex-col font-quicksand transition-all duration-500 ease-in-out ${open ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0 pointer-events-none'}`}
+//   style={{ transitionProperty: 'transform, opacity' }}
+// >
+
+      
+//         <div className="flex items-center justify-between px-4 py-4 bg-white">
+//           <button
+//             className="text-[#0A1F8F] text-3xl font-bold focus:outline-none"
+//             onClick={() => setOpen(false)}
+//             aria-label="Close menu"
+//           >
+//             &times;
+//           </button>
+//           <span className="text-[#0A1F8F] text-lg font-bold mx-auto">BE WITH LAW</span>
+//           <span className="w-8"></span>
+//         </div>
+        
+       
+//         <div className="flex-1 bg-[#E7E9F4] overflow-y-auto">
+//           <div className="flex flex-col min-h-full">
+         
+//             <div className="flex-1">
+//               <ul className="flex flex-col w-full">
+//                 {NAV_LINKS.map((link, idx) => (
+//                   <li key={link.name} className="w-full">
+//                     {link.hasDropdown ? (
+//                       <div className="w-full">
+//                         <button
+//                           className={`block w-full px-8 py-4 text-lg font-semibold text-left transition-colors duration-200 ${active === link.name ? 'text-[#0A1F8F] bg-gray-300' : 'text-gray-600'} hover:text-[#0A1F8F]  flex items-center justify-between`}
+//                           onClick={() => setServicesOpen(!servicesOpen)}
+//                         >
+//                           {link.name}
+//                           <ChevronDown className={`w-5 h-5 transition-transform duration-200 ${servicesOpen ? 'rotate-180' : ''}`} />
+//                         </button>
+//                         {servicesOpen && (
+//                           <div className="bg-gray-100">
+//                             {LAWSUIT_TYPES.map((lawsuit) => (
+//                               <a
+//                                 key={lawsuit.name}
+//                                 href={lawsuit.href}
+//                                 className="block px-12 py-3 text-sm text-gray-700 hover:text-[#0A1F8F] hover:bg-gray-200 transition-colors duration-200"
+//                                 onClick={() => setOpen(false)}
+//                               >
+//                                 {lawsuit.name}
+//                               </a>
+//                             ))}
+//                           </div>
+//                         )}
+//                       </div>
+//                     ) : (
+//                       <a
+//                         href={link.href}
+//                         className={`block w-full px-8 py-4 text-lg font-semibold text-left transition-colors duration-200 ${active === link.name ? 'text-[#0A1F8F] ' : 'text-gray-600'} hover:text-[#0A1F8F] `}
+//                         onClick={() => { setActive(link.name); setOpen(false); }}
+//                       >
+//                         {link.name}
+//                       </a>
+//                     )}
+//                   </li>
+//                 ))}
+//               </ul>
+//             </div>
+          
+//             <div className="mt-8 px-8 pb-8 bg-[#0A1F8F]">
+//               <h3 className="text-gray-700 font-semibold text-lg mb-4 text-white mt-8">Follow Us</h3>
+//                  <div className="flex justify-left gap-8 mt-5 ">
+//               {socialLinks.map(({ icon: Icon, href, label }) => (
+//                <a
+//   key={label}
+//   href={href}
+//   aria-label={label}
+//   className="w-12 h-12 flex items-center justify-center rounded-lg border-2 border-white bg-[#00085B] hover:bg-opacity-80 transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-4 focus:ring-white focus:ring-opacity-30"
+// >
+//   <Icon className="w-5 h-5 text-white" />
+// </a>
+
+//               ))}
+//             </div>
+
+//             </div>
+//           </div>
+//         </div>
+//       </div>
+//     </nav>
