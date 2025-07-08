@@ -18,7 +18,7 @@ const LAWSUIT_TYPES = [
   { name: "Oxbryta Lawsuit", href: "/OxbrytaMain" },
   { name: "Talcum Powder Lawsuit", href: "/TalcumMain" },
   { name: "Bard PowerPort Lawsuit", href: "/BardPowerPortMain" },
-  { name: "Ultra-Processed Foods Lawsuit", href: "/UltraProcessedMain" },
+  // { name: "Ultra-Processed Foods Lawsuit", href: "/UltraProcessedMain" },
   { name: "AFFF Firefighting Foam Lawsuit", href: "/AFFFMain" },
   { name: "PFAS Contamination Lawsuit", href: "/PFASMain" },
   { name: "Transvaginal Mesh Lawsuit", href: "/TransvaginalMain" },

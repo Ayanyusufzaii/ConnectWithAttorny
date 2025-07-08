@@ -1,14 +1,14 @@
 import React, { useEffect } from 'react';
-import HomeOne from './HomeOne.jsx';
+import AFFOne from './AFFOne.jsx';
 import SubServiceForm from '../SubServiceForm.jsx';
 import Navbar from '../../Navbar/Navbar.jsx';
 import Footer from '../../Footer/Footer.jsx';
-import HomeThree from './HomeThree.jsx';
-import HomeFour from './HomeFour.jsx';
-import HomeFive from './HomeFive.jsx';
-import HomeSix from './HomeSix.jsx';
-import HomeSeven from './HomeSeven.jsx';
-import HomeEight from './HomeEight.jsx'; // Assuming you have a HomeEight component
+import AFFThree from './AFFThree.jsx';
+import AFFFour from './AFFFour.jsx';
+import AFFFive from './AFFFive.jsx';
+import AFFSix from './AFFSix.jsx';
+import AFFSeven from './AFFSeven.jsx';
+import AFFEight from './AFFEight.jsx'; // Assuming you have a HomeEight component
 
 const AFFFMain = () => {
   useEffect(() => {
@@ -18,14 +18,14 @@ const AFFFMain = () => {
   return (
     <div>
       <Navbar />
-      <HomeOne />
+      <AFFOne />
       <SubServiceForm />
-      <HomeThree />
-      <HomeFour />
-      <HomeFive />
-      <HomeSix />
-      <HomeEight />
-      <HomeSeven />
+      <AFFThree />
+      <AFFFour />
+      <AFFFive />
+      <AFFSix />
+      <AFFEight />
+      <AFFSeven />
       <Footer />
     </div>
   );

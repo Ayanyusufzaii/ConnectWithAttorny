@@ -1,14 +1,14 @@
 import React, { useEffect } from 'react';
-import HomeOne from './HomeOne.jsx';
+import BardPowerOne from './BardPowerOne.jsx';
 import SubServiceForm from '../SubServiceForm.jsx';
 import Navbar from '../../Navbar/Navbar.jsx';
 import Footer from '../../Footer/Footer.jsx';
-import HomeThree from './HomeThree.jsx';
-import HomeFour from './HomeFour.jsx';
-import HomeFive from './HomeFive.jsx';
-import HomeSix from './HomeSix.jsx';
-import HomeSeven from './HomeSeven.jsx';
-import HomeEight from './HomeEight.jsx'; // Assuming you have a HomeEight component
+import BardPowerThree from './BardPowerThree.jsx';
+import BardPowerFour from './BardPowerFour.jsx';
+import BardPowerFive from './BardPowerFive.jsx';
+import BardPowerSix from './BardPowerSix.jsx';
+import BardPowerSeven from './BardPowerSeven.jsx';
+import BardPowerEight from './BardPowerEight.jsx'; // Assuming you have a HomeEight component
 
 const BardPowerMain = () => {
   useEffect(() => {
@@ -18,14 +18,14 @@ const BardPowerMain = () => {
   return (
     <div>
       <Navbar />
-      <HomeOne />
+      <BardPowerOne />
       <SubServiceForm />
-      <HomeThree />
-      <HomeFour />
-      <HomeFive />
-      <HomeSix />
-      <HomeEight />
-      <HomeSeven />
+      <BardPowerThree />
+      <BardPowerFour />
+      <BardPowerFive />
+      <BardPowerSix />
+      <BardPowerSeven />
+      <BardPowerEight />
       <Footer />
     </div>
   );

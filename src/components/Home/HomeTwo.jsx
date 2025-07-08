@@ -374,7 +374,7 @@ const LAWSUIT_OPTIONS = [
   { value: "Oxbryta Lawsuit ", label: "Oxbryta Lawsuit" },
   { value: "Talcum Powder Lawsuit ", label: "Talcum Powder Lawsuit" },
   { value: "Bard PowerPort Lawsuit ", label: "Bard PowerPort Lawsuit" },
-  { value: "Ultra-Processed Foods Lawsuit ", label: "Ultra-Processed Foods Lawsuit" },
+  // { value: "Ultra-Processed Foods Lawsuit ", label: "Ultra-Processed Foods Lawsuit" },
   { value: "AFFF Firefighting Foam Lawsuit ", label: "AFFF Firefighting Foam Lawsuit" },
   { value: "PFAS Contamination Lawsuit ", label: "PFAS Contamination Lawsuit" },
   { value: "Transvaginal Mesh Lawsuit ", label: "Transvaginal Mesh Lawsuit" },

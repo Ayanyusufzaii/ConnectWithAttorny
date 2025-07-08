@@ -197,7 +197,7 @@ const lawsuits = [
     title: 'Ultra-Processed Foods Lawsuit',
     description: 'Heavy metal exposure tied to developmental delays',
     image: ultraProcessedImg,
-    link: '/UltraProcessedMain',
+    link: '/404',
   },
   {
     title: 'AFFF Firefighting Foam Lawsuit',

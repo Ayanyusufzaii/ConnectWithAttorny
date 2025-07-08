@@ -2,29 +2,29 @@ import React, { useState } from 'react';
 
 const faqData = [
   {
-    question: 'What is AFFF and where was it used?',
+    question: 'Is Depo-Provera linked to brain tumors?',
     answer:
-      ' AFFF is a firefighting foam used to extinguish fuel-based fires, commonly used by military, airport, and industrial firefighters.',
+      'Yes. Studies and lawsuits have reported higher rates of hormone-sensitive tumors like meningiomas in women who used Depo-Provera long-term.',
   },
   {
-    question: 'How is AFFF harmful?',
+    question: 'What is pseudotumor cerebri?',
     answer:
-      'It contains PFAS, a class of toxic “forever chemicals” that accumulate in the body and are linked to cancer and other illnesses.',
+      'PTC is a neurological disorder that causes increased pressure inside the skull. It can lead to vision loss, migraines, and permanent complications.',
   },
   {
-    question: 'Has AFFF been banned?',
+    question: 'Is there a recall?',
     answer:
-      'Some states and military branches have restricted its use. Federal regulations and lawsuits are ongoing.',
+      'Depo-Provera is not recalled, but it carries a black box warning for significant bone density loss.',
   },
   {
-    question: 'Can retired firefighters still file a claim?',
+    question: 'Do I need medical records now?',
     answer:
-      'Yes. Even if you’re no longer active, you may still be eligible if you meet the exposure and diagnosis criteria.',
+      'No. Your legal team can help request records after your initial eligibility review.',
   },
   {
-    question: 'Is this a class action?',
+    question: 'Will this cost me anything?',
     answer:
-      ' Most cases are individual mass tort claims. Compensation is based on personal exposure, diagnosis, and loss.',
+      'There is no cost to submit your case. You only pay if you receive a settlement or award.',
   },
 ];
 
