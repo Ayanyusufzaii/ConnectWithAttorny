@@ -6,7 +6,7 @@ const eligibilityCards = [
     number: "01",
     text: (
       <>
-        Your child consumed <span className="text-[#EDC14A]"> store-bought baby food </span> from one or more major brands 
+        You regularly used <span className="text-[#EDC14A]"> talc-based powders for personal hygiene </span> 
       </>
     ),
     bg: "bg-[#FDF9ED]",
@@ -16,7 +16,7 @@ const eligibilityCards = [
     number: "02",
     text: (
       <>
-        Your child was later diagnosed with <span className="text-[#EDC14A]"> autism, ADHD, or other developmental conditions </span>
+        You were later diagnosed with <span className="text-[#EDC14A]"> ovarian cancer </span>
                
       </>
     ),
@@ -48,7 +48,7 @@ const eligibilityCards = [
     number: "04",
     text: (
       <>
-        You are within<span className="text-[#EDC14A]"> the legal filing window</span> in your state 
+        You are stil within your<span className="text-[#EDC14A]"> state’s statute of limitations </span> 
        
       </>
      
@@ -78,9 +78,9 @@ export default function EligibilityCriteria() {
           {/* First Row */}
           {/* Text Block (First Cell) - Sized like a card but without background */}
           <div className="flex flex-col justify-center px-6 xl:px-8 py-6 xl:py-8 h-[140px] xl:h-[160px]">
-            <h2 className="text-[#0A1F8F] text-[28px] xl:text-[32px] font-semibold capitalize leading-tight mb-2">
-              You may  <span class="text-[#EDC14A]">qualify to file 
-</span> a lawsuit if you
+            <h2 className="text-[#0A1F8F] text-[28px] xl:text-[32px] font-semibold capitalize leading-tight mb-2 ">
+              Who May Be <span class="text-[#EDC14A]">Eligible
+</span>
             </h2>
             <p className="text-[#757575] text-[13px] xl:text-[14px] font-medium leading-[20px] xl:leading-[22px]">
   Unsure?{' '}
@@ -155,8 +155,8 @@ export default function EligibilityCriteria() {
       {/* Mobile Layout (below md) */}
       <div className="md:hidden flex flex-col items-center justify-center gap-6 px-4">
   <h2 className="text-[#0A1F8F] text-[24px] font-semibold capitalize leading-snug text-left w-full">
-    You may  <span class="text-[#EDC14A]">qualify to file 
-</span> a lawsuit if you
+   Who May Be  <span class="text-[#EDC14A]">Eligible
+</span>
   </h2>
         <p className="text-[#757575] text-[14px] font-medium text-left leading-[22px]">
   Unsure?{' '}

@@ -8,7 +8,7 @@ const cards = [
     number: "01",
     text: (
       <>
-       Autism spectrum disorder (ASD) 
+       Talc products used near the genitals can travel to the ovaries 
       </>
     ),
     bg: "bg-[#FFFFFF]",
@@ -17,7 +17,7 @@ const cards = [
     number: "02",
     text: (
       <>
-        Attention disorders 
+        Talc may cause chronic inflammation, leading to cancer over time 
       </>
     ),
     bg: "bg-[#FFFFFF]",
@@ -26,7 +26,7 @@ const cards = [
     number: "03",
     text: (
       <>
-        Cognitive and behavioral delays 
+        Internal company documents allegedly show that manufacturers knew of the risks and failed to warn consumers 
       </>
     ),
     bg: "bg-[#FFFFFF]",
@@ -59,22 +59,20 @@ const ParaquatLawsuitOverview = () => {
               Overview of the{' '}
             </span>
             <span className="text-[#EDC14A] text-[35px] font-semibold leading-normal capitalize overflow-hidden text-ellipsis">
-              Toxic Baby Food Lawsuit 
+               Talcum Powder Lawsuit 
             </span>
           </h2>
  
           {/* Description Text */}
           <p className="text-[#757575] text-[18px] font-medium leading-normal mb-8 max-w-[1200px]">
-           A congressional investigation revealed that several major baby food brands sold products containing high levels of toxic heavy metals - including arsenic, lead, cadmium, and mercury.<br></br><br></br>
+          Thousands of women have filed lawsuits against Johnson & Johnson and other companies, claiming that long-term use of talc-based powders in the genital area caused them to develop ovarian cancer. <br></br><br></br>
 
-Brands named in lawsuits and investigations include: Gerber, Beech-Nut, Earth's Best, HappyBABY, Plum Organics, and others. <br></br><br></br>
-
-Legal claims allege these manufacturers failed to warn parents and allowed dangerous products to reach children during critical stages of brain development. 
+Many juries have awarded multi-million dollar verdicts to affected women, while others are pursuing claims through mass tort litigation. 
           </p>
  
           {/* Secondary Heading */}
           <h3 className="text-[#0A1F8F] text-[35px] font-semibold leading-normal capitalize mb-8">
-            These metals are known to interfere with brain development and have been linked to: 
+            The lawsuits are based on evidence that: 
           </h3>
  
           {/* Cards Container */}
@@ -108,22 +106,20 @@ Legal claims allege these manufacturers failed to warn parents and allowed dange
           </span>
          
           <span className="text-[#EDC14A] text-[24px] sm:text-[28px] font-semibold leading-[1.2] capitalize">
-            Toxic Baby Food Lawsuit 
+            Talcum Powder Lawsuit
           </span>
         </h2>
  
         {/* Mobile Description */}
         <p className="text-[#757575] text-[16px] font-medium leading-normal text-left">
-           A congressional investigation revealed that several major baby food brands sold products containing high levels of toxic heavy metals - including arsenic, lead, cadmium, and mercury.<br></br><br></br>
+           Thousands of women have filed lawsuits against Johnson & Johnson and other companies, claiming that long-term use of talc-based powders in the genital area caused them to develop ovarian cancer. <br></br><br></br>
 
-Brands named in lawsuits and investigations include: Gerber, Beech-Nut, Earth's Best, HappyBABY, Plum Organics, and others. <br></br><br></br>
-
-Legal claims allege these manufacturers failed to warn parents and allowed dangerous products to reach children during critical stages of brain development. 
+Many juries have awarded multi-million dollar verdicts to affected women, while others are pursuing claims through mass tort litigation. 
         </p>
  
         {/* Mobile Secondary Heading */}
         <h3 className="text-[#0A1F8F] text-[24px] sm:text-[28px] font-semibold leading-[1.2] capitalize text-left">
-          These metals are known to interfere with brain development and have been linked to: 
+          The lawsuits are based on evidence that: 
         </h3>
  
         {/* Mobile Cards */}

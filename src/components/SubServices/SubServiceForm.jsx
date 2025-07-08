@@ -587,22 +587,24 @@ const DesktopForm = () => {
                       value={pingUrl}
                     />
         <div className="flex flex-col md:flex-row md:space-x-4 space-y-4 md:space-y-0 w-full">
-          <FloatingInput 
-            type="text" 
-            id="first_name" 
-            label="First Name" 
-            value={formData.name} 
-            onChange={handleChange}
-            error={errors.name}
-          />
-           <FloatingInput 
-            type="text" 
-            id="last_name" 
-            label="Last Name" 
-            value={formData.name} 
-            onChange={handleChange}
-            error={errors.name}
-          />
+         <FloatingInput 
+  type="text" 
+  id="firstName" 
+  label="First Name" 
+  value={formData.firstName} 
+  onChange={handleChange}
+  error={errors.firstName}
+/>
+
+<FloatingInput 
+  type="text" 
+  id="lastName" 
+  label="Last Name" 
+  value={formData.lastName} 
+  onChange={handleChange}
+  error={errors.lastName}
+/>
+
           <FloatingInput 
             type="tel" 
             id="phone" 
