@@ -104,7 +104,7 @@ export default function EligibilityCriteria() {
       <div className="hidden md:flex lg:hidden max-w-[1200px] mx-auto flex-col items-center gap-6 px-4 py-2 md:gap-6 xl:gap-8">
         <div className="w-full text-center -mt-8">
           <h2 className="text-[#0A1F8F] text-[28px] lg:text-[32px] font-semibold capitalize leading-normal">
-          Who May Be Eligible
+          Who May Be <span className="text-[#EDC14A]"> Eligible</span>
           </h2>
  
           <p className="text-[#757575] text-[14px] lg:text-[14px] font-medium text-center mt-4 leading-[22px] lg:leading-[24px]">
@@ -141,7 +141,7 @@ export default function EligibilityCriteria() {
       {/* Mobile Layout (below md) */}
       <div className="md:hidden flex flex-col items-center justify-center gap-6 px-4">
   <h2 className="text-[#0A1F8F] text-[24px] font-semibold capitalize leading-snug text-left w-full">
-    Who May Be Eligible
+    Who May Be <span className="text-[#EDC14A]"> Eligible</span>
   </h2>
         <p className="text-[#757575] text-[14px] font-medium text-left leading-[22px]">
   Unsure?{' '}

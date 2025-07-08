@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import Turnstile from 'react-turnstile';
-
 import Navbar from '../Navbar/Navbar.jsx';
 import Footer from '../Footer/Footer.jsx';
 import HomeOne from './HomeOne.jsx';
