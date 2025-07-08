@@ -15,9 +15,9 @@ const Footer = () => {
 
   const navigationLinks = [
     { name: 'Home', href: '/' },
-    { name: 'About Us', href: '#' },
+    { name: 'About Us', href: '/AboutUs' },
     { name: 'Services', href: '/ServiceMain' },
-    { name: 'Contact Us', href: '#' },
+    { name: 'Contact Us', href: '/ContactUs' },
   ];
 
   const legalLinks = [
@@ -26,7 +26,7 @@ const Footer = () => {
   ];
 
   const scrollToForm = () => {
-    const formSection = document.getElementById('contact-form');
+    const formSection = document.getElementById('contactUs');
     formSection?.scrollIntoView({ behavior: 'smooth' });
   };
 
@@ -52,12 +52,12 @@ const Footer = () => {
 <h2 className="text-3xl font-bold font-[Quicksand] mt-2 text-white">
   Your <span className="text-yellow-400">Legal Options</span> Today
 </h2>
-            <button
-              onClick={scrollToForm}
-              className="mt-6 bg-[#EDC14A] hover:bg-[#EDC14A]-600 text-[#0A1F8F] px-4 py-2 rounded w-[75%] md:w-auto transition duration-300 font-bold"
-            >
-              Book an Appointment
-            </button>
+          <a href="/ContactUs">
+  <button className="bg-[#EDC14A] hover:bg-yellow-600 text-[#0A1F8F] px-4 py-4 rounded font-bold mt-8">
+    Book an Appointment
+  </button>
+</a>
+
 
             {/* Social Icons */}
             <div className="flex justify-center gap-8 mt-10">
@@ -153,12 +153,12 @@ const Footer = () => {
 
               {/* Right */}
               <div className="flex items-center justify-end gap-8">
-                <button
-                  onClick={scrollToForm}
-                  className="bg-[#EDC14A] hover:bg-yellow-600 text-[#0A1F8F] px-4 py-4 rounded font-bold"
-                >
-                  Book an Appointment
-                </button>
+            <a href="/ContactUs">
+  <button className="bg-[#EDC14A] hover:bg-yellow-600 text-[#0A1F8F] px-4 py-4 rounded font-bold ">
+    Book an Appointment
+  </button>
+</a>
+
 
                 {socialLinks.map(({ icon: Icon, href, label }) => (
                  <a

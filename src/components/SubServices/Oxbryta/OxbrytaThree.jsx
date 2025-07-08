@@ -13,12 +13,12 @@ const trustCards = [
   },
   {
     icon: c2,
-    title: 'No Upfront Costs',
+    title: 'No Payment Unless You Win ',
     description: 'You only pay if your case leads to a settlement or legal recovery. '
   },
   {
     icon: c3,
-    title: 'Private and Confidential',
+    title: 'Private and Secure Case Reviews ',
     description: 'Your information is 100% secure and never shared without your consent. '
   }
 ];

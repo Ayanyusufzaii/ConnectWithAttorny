@@ -781,7 +781,7 @@ const DesktopForm = () => {
             style={{ width: '1.25rem', height: '1.25rem' }}
           />
           <label htmlFor="captchaEnabled" className="text-sm font-medium text-gray-700" style={{ fontFamily: 'Quicksand, sans-serif' }}>
-            Verify you're human
+           Please Verify you're human
           </label>
         </div>
         {formData.captchaEnabled && (
@@ -1232,7 +1232,7 @@ try {
             style={{ width: '1.25rem', height: '1.25rem' }}
           />
           <label htmlFor="captchaEnabled" className="text-sm font-medium text-gray-700" style={{ fontFamily: 'Quicksand, sans-serif' }}>
-            Verify you're human
+           Please Verify you're human
           </label>
         </div>
         {formData.captchaEnabled && (
