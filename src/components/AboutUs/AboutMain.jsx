@@ -3,14 +3,14 @@ import Turnstile from 'react-turnstile';
 
 import Navbar from '../Navbar/Navbar.jsx';
 import Footer from '../Footer/Footer.jsx';
-import HomeOne from './HomeOne.jsx';
-import HomeTwo from './HomeTwo.jsx';
-import HomeThree from './HomeThree.jsx';
-import HomeFour from './HomeFour.jsx';
-import HomeFive from './HomeFive.jsx';
-import HomeSix from './HomeSix.jsx';
+import AboutOne from './AboutOne.jsx';
+import AboutTwo from './AboutTwo.jsx';
+import AboutThree from './AboutThree.jsx';
+import AboutFour from './AboutFour.jsx';
+import AboutFive from './AboutFive.jsx';
+import AboutSix from './AboutSix.jsx';
 
-const TURNSTILE_SITE_KEY = process.env.REACT_APP_TURNSTILE_SITE_KEY;
+const TURNSTILE_SITE_KEY = '0x4AAAAAABilXDcqr5nBkhD9';
 
 const AboutMain = () => {
   const [verified, setVerified] = useState(false);
@@ -35,12 +35,12 @@ const AboutMain = () => {
       {/* Main layout */}
       <div className={`${!verified ? 'pointer-events-none blur-sm select-none' : ''}`}>
         <Navbar />
-        <HomeOne />
-        <HomeTwo />
-        <HomeThree />
-        <HomeFour />
-        <HomeFive />
-        <HomeSix />
+        <AboutOne />
+        <AboutTwo />
+        <AboutThree />
+        <AboutFour />
+        <AboutFive />
+        <AboutSix />
         <Footer />
       </div>
 
