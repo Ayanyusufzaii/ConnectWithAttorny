@@ -1,14 +1,14 @@
 import React, { useEffect } from 'react';
-import HomeOne from './HomeOne.jsx';
+import PraquatOne from './PraquatOne.jsx';
 import SubServiceForm from '../SubServiceForm.jsx';
 import Navbar from '../../Navbar/Navbar.jsx';
 import Footer from '../../Footer/Footer.jsx';
-import HomeThree from './HomeThree.jsx';
-import HomeFour from './HomeFour.jsx';
-import HomeFive from './HomeFive.jsx';
-import HomeSix from './HomeSix.jsx';
-import HomeSeven from './HomeSeven.jsx';
-import HomeEight from './HomeEight.jsx'; // Assuming you have a HomeEight component
+import PraquatThree from './PraquatThree.jsx';
+import PraquatFour from './PraquatFour.jsx';
+import PraquatFive from './PraquatFive.jsx';
+import PraquatSix from './PraquatSix.jsx';
+import PraquatSeven from './PraquatSeven.jsx';
+import PraquatEight from './PraquatEight.jsx'; 
 
 const ParaquatMain = () => {
   useEffect(() => {
@@ -18,14 +18,14 @@ const ParaquatMain = () => {
   return (
     <div>
       <Navbar />
-      <HomeOne />
+      <PraquatOne />
       <SubServiceForm />
-      <HomeThree />
-      <HomeFour />
-      <HomeFive />
-      <HomeSix />
-      <HomeEight />
-      <HomeSeven />
+      <PraquatThree />
+      <PraquatFour />
+      <PraquatFive />
+      <PraquatSix />
+      <PraquatEight />
+      <PraquatSeven />
       <Footer />
     </div>
   );

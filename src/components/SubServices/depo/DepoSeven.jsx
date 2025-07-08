@@ -65,14 +65,12 @@ const HomeSeven = () => {
                 className="text-3xl font-bold text-white mb-6 leading-tight"
                 style={{ fontFamily: 'Quicksand, sans-serif' }}
               >
-                Used Depo-Provera and Diagnosed with a Brain Tumor or Neurological Condition?
-              </h1>
+Were You Diagnosed After Using Depo-Provera?               </h1>
               <h2 
                 className="text-lg text-white mb-8 font-medium leading-relaxed opacity-90"
                 style={{ fontFamily: 'Quicksand, sans-serif' }}
               >
-                Depo-Provera has been linked to brain tumors, pseudotumor cerebri, and bone loss. You may qualify for compensation. Get a free legal case review now.
-              </h2>
+ You may be entitled to settlement. Start with a free, confidential legal case review today.               </h2>
               <button 
                 className="bg-yellow-400 hover:bg-yellow-500 text-black font-semibold px-8 py-4 rounded-lg text-lg transition-colors duration-200 shadow-lg hover:shadow-xl"
                 style={{ fontFamily: 'Quicksand, sans-serif' }}
@@ -102,14 +100,12 @@ const HomeSeven = () => {
               className="text-2xl sm:text-3xl font-bold text-white mb-4 leading-tight"
               style={{ fontFamily: 'Quicksand, sans-serif' }}
             >
-              Used Depo-Provera and Diagnosed with a Brain Tumor?
-            </h1>
+Were You Diagnosed After Using Depo-Provera?             </h1>
             <h2 
               className="text-base sm:text-lg text-white mb-6 font-medium leading-relaxed opacity-90"
               style={{ fontFamily: 'Quicksand, sans-serif' }}
             >
-              Depo-Provera has been linked to brain tumors and other serious conditions. You may qualify for compensation.
-            </h2>
+ You may be entitled to settlement. Start with a free, confidential legal case review today.             </h2>
             <button 
               className="bg-yellow-400 hover:bg-yellow-500 text-black font-semibold px-6 py-3 rounded-lg text-base transition-colors duration-200 shadow-lg w-full sm:w-auto"
               style={{ fontFamily: 'Quicksand, sans-serif' }}

@@ -16,7 +16,7 @@ const cards = [
     number: "02",
     text: (
       <>
-        Groundskeepers and landscapers
+        Groundskeepers <span className='text-[#757575]'>and</span>  landscapers
       </>
     ),
     bg: "bg-[#FFFFFF]",
@@ -25,7 +25,8 @@ const cards = [
     number: "03",
     text: (
       <>
-       Homeowners who used Roundup regularly
+          Homeowners <span className='text-[#757575]'>who used Roundup regularly</span>  
+
       </>
     ),
     bg: "bg-[#FFFFFF]",

@@ -23,14 +23,12 @@ const TransvaginalOne = () => {
             className="text-2xl md:text-3xl lg:text-5xl font-bold text-white mb-4 drop-shadow-lg"
             style={{ fontFamily: 'Quicksand, sans-serif' }}
           >
-         Exposed to PFAS-Contaminated Water or Products?
-          </h1>
+Suffered Complications After a Transvaginal Mesh Implant?          </h1>
           <h2
             className="text-sm sm:text-base md:text-xs lg:text-xl text-white mb-6 font-medium drop-shadow leading-relaxed"
             style={{ fontFamily: 'Quicksand, sans-serif' }}
           >
-           PFAS chemicals have been linked to cancer, birth defects, and organ damage. If you or a loved one were exposed through drinking water or workplace contact, you may qualify for settlement.
-          </h2>
+Thousands of women have reported chronic pain, erosion, and multiple revision surgeries after mesh implants. You may be eligible for legal settlement.          </h2>
         </div>
       </section>
 {/* Mobile Hero Section */}
@@ -48,14 +46,12 @@ const TransvaginalOne = () => {
       className="text-3xl font-bold text-white mb-4 drop-shadow-lg"
       style={{ fontFamily: 'Quicksand, sans-serif' }}
     >
-         Exposed to PFAS-Contaminated Water or Products?
-    </h1>
+Suffered Complications After a Transvaginal Mesh Implant?    </h1>
     <h2
       className="text-sm text-white mb-4 font-normal drop-shadow"
       style={{ fontFamily: 'Quicksand, sans-serif' }}
     >
-           PFAS chemicals have been linked to cancer, birth defects, and organ damage. If you or a loved one were exposed through drinking water or workplace contact, you may qualify for settlement.
-    </h2>
+Thousands of women have reported chronic pain, erosion, and multiple revision surgeries after mesh implants. You may be eligible for legal compensation.    </h2>
   </div>
   {/* Overlay */}
   <div className="absolute inset-0  z-10" />

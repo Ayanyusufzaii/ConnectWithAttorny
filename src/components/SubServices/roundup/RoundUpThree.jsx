@@ -13,7 +13,7 @@ const trustCards = [
   },
   {
     icon: c2,
-    title: 'No Upfront Costs',
+    title: 'No Fees Unless You Win',
     description: 'You only pay if your case leads to a settlement or legal recovery. '
   },
   {

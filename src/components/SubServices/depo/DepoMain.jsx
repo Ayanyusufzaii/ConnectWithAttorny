@@ -1,14 +1,14 @@
 import React, { useEffect } from 'react';
-import HomeOne from './HomeOne.jsx';
+import DepoOne from './DepoOne.jsx';
 import SubServiceForm from '../SubServiceForm.jsx'; 
 import Navbar from '../../Navbar/Navbar.jsx';
 import Footer from '../../Footer/Footer.jsx';
-import HomeThree from './HomeThree.jsx';
-import HomeFour from './HomeFour.jsx';
-import HomeFive from './HomeFive.jsx';
-import HomeSix from './HomeSix.jsx';
-import HomeSeven from './HomeSeven.jsx';
-import HomeEight from './HomeEight.jsx'; // Assuming you have a HomeEight component
+import DepoThree from './DepoThree.jsx';
+import DepoFour from './DepoFour.jsx';
+import DepoFive from './DepoFive.jsx';
+import DepoSix from './DepoSix.jsx';
+import DepoSeven from './DepoSeven.jsx';
+import DepoEight from './DepoEight.jsx'; // Assuming you have a HomeEight component
 
 const Depomain = () => {
   useEffect(() => {
@@ -22,14 +22,14 @@ const Depomain = () => {
   return (
     <div>
       <Navbar />
-      <HomeOne />
+      <DepoOne />
       <SubServiceForm />
-      <HomeThree />
-      <HomeFour />
-      <HomeFive />
-      <HomeSix />
-      <HomeEight />
-      <HomeSeven />
+      <DepoThree />
+      <DepoFour />
+      <DepoFive />
+      <DepoSix />
+      <DepoEight />
+      <DepoSeven />
       <Footer />
     </div>
   );

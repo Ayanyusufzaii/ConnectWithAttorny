@@ -2,7 +2,7 @@ import React from 'react'
 import img1 from '../../../assets/Frame 48.png'
 const PraquatSeven = () => {
   return (
-    <>
+      <>
       {/* Desktop Tile Section */}
 <section className="hidden lg:block py-12 lg:py-16">
   <div className="max-w-7xl mx-auto px-6 lg:px-8">
@@ -15,13 +15,14 @@ const PraquatSeven = () => {
             className="text-2xl lg:text-3xl xl:text-4xl font-bold text-white mb-4 leading-tight"
             style={{ fontFamily: 'Quicksand, sans-serif' }}
           >
-            Were You Diagnosed After Using Depo-Provera? 
+            If you're unsure, start 
+your free case Review!
           </h1>
           <h2
             className="text-lg text-white mb-6 font-medium leading-relaxed opacity-90"
             style={{ fontFamily: 'Quicksand, sans-serif' }}
           >
-            You may be entitled to compensation. Start with a free, confidential legal case review today. 
+            Fill out a from to start a free case review Now.
           </h2>
           <button
             className="bg-yellow-400 hover:bg-yellow-500 text-black font-semibold px-8 py-4 rounded-lg text-lg transition-colors duration-200 shadow-lg hover:shadow-xl"
@@ -65,14 +66,14 @@ const PraquatSeven = () => {
                 className="text-3xl font-bold text-white mb-6 leading-tight"
                 style={{ fontFamily: 'Quicksand, sans-serif' }}
               >
-                Used Depo-Provera and Diagnosed with a Brain Tumor or Neurological Condition?
+                If you're unsure, start 
+your free case Review!
               </h1>
               <h2 
                 className="text-lg text-white mb-8 font-medium leading-relaxed opacity-90"
                 style={{ fontFamily: 'Quicksand, sans-serif' }}
               >
-                Depo-Provera has been linked to brain tumors, pseudotumor cerebri, and bone loss. You may qualify for compensation. Get a free legal case review now.
-              </h2>
+ Fill out a from to start a free case review Now.              </h2>
               <button 
                 className="bg-yellow-400 hover:bg-yellow-500 text-black font-semibold px-8 py-4 rounded-lg text-lg transition-colors duration-200 shadow-lg hover:shadow-xl"
                 style={{ fontFamily: 'Quicksand, sans-serif' }}
@@ -102,14 +103,13 @@ const PraquatSeven = () => {
               className="text-2xl sm:text-3xl font-bold text-white mb-4 leading-tight"
               style={{ fontFamily: 'Quicksand, sans-serif' }}
             >
-              Used Depo-Provera and Diagnosed with a Brain Tumor?
-            </h1>
+If you're unsure, start 
+your free case Review!            </h1>
             <h2 
               className="text-base sm:text-lg text-white mb-6 font-medium leading-relaxed opacity-90"
               style={{ fontFamily: 'Quicksand, sans-serif' }}
             >
-              Depo-Provera has been linked to brain tumors and other serious conditions. You may qualify for compensation.
-            </h2>
+ Fill out a from to start a free case review Now.                </h2>
             <button 
               className="bg-yellow-400 hover:bg-yellow-500 text-black font-semibold px-6 py-3 rounded-lg text-base transition-colors duration-200 shadow-lg w-full sm:w-auto"
               style={{ fontFamily: 'Quicksand, sans-serif' }}
