@@ -1,14 +1,14 @@
 import React, { useEffect } from 'react';
-import HomeOne from './HomeOne.jsx';
+import BabyFoodOne from './BabyFoodOne.jsx';
 import SubServiceForm from '../SubServiceForm.jsx';
 import Navbar from '../../Navbar/Navbar.jsx';
 import Footer from '../../Footer/Footer.jsx';
-import HomeThree from './HomeThree.jsx';
-import HomeFour from './HomeFour.jsx';
-import HomeFive from './HomeFive.jsx';
-import HomeSix from './HomeSix.jsx';
-import HomeSeven from './HomeSeven.jsx';
-import HomeEight from './HomeEight.jsx'; // Assuming you have a HomeEight component
+import BabyFoodThree from './BabyFoodThree.jsx';
+import BabyFoodFour from './BabyFoodFour.jsx';
+import BabyFoodFive from './BabyFoodFive.jsx';
+import BabyFoodSix from './BabyFoodSix.jsx';
+import BabyFoodSeven from './BabyFoodSeven.jsx';
+import BabyFoodEight from './BabyFoodEight.jsx'; 
 
 const BabyFoodMain = () => {
   useEffect(() => {
@@ -18,14 +18,14 @@ const BabyFoodMain = () => {
   return (
     <div>
       <Navbar />
-      <HomeOne />
+      <BabyFoodOne />
       <SubServiceForm />
-      <HomeThree />
-      <HomeFour />
-      <HomeFive />
-      <HomeSix />
-      <HomeEight />
-      <HomeSeven />
+      <BabyFoodThree />
+      <BabyFoodFour />
+      <BabyFoodFive />
+      <BabyFoodSix />
+      <BabyFoodEight />
+      <BabyFoodSeven />
       <Footer />
     </div>
   );

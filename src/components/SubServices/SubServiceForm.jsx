@@ -587,22 +587,24 @@ const DesktopForm = () => {
                       value={pingUrl}
                     />
         <div className="flex flex-col md:flex-row md:space-x-4 space-y-4 md:space-y-0 w-full">
-          <FloatingInput 
-            type="text" 
-            id="first_name" 
-            label="First Name" 
-            value={formData.name} 
-            onChange={handleChange}
-            error={errors.name}
-          />
-           <FloatingInput 
-            type="text" 
-            id="last_name" 
-            label="Last Name" 
-            value={formData.name} 
-            onChange={handleChange}
-            error={errors.name}
-          />
+         <FloatingInput 
+  type="text" 
+  id="firstName" 
+  label="First Name" 
+  value={formData.firstName} 
+  onChange={handleChange}
+  error={errors.firstName}
+/>
+
+<FloatingInput 
+  type="text" 
+  id="lastName" 
+  label="Last Name" 
+  value={formData.lastName} 
+  onChange={handleChange}
+  error={errors.lastName}
+/>
+
           <FloatingInput 
             type="tel" 
             id="phone" 
@@ -626,44 +628,45 @@ const DesktopForm = () => {
           
         </div>
    
-        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
-          <div className="flex items-start w-full md:w-auto">
-            <input
-              type="checkbox"
-              id="termsAccepted"
-              required
-              checked={formData.termsAccepted}
-              onChange={handleChange}
-              className="mr-2 mt-1"
-              style={{ width: '1.25rem', height: '1.25rem' }}
-            />
-            <label htmlFor="termsAccepted" className="text-sm text-gray-700">
-              I agree to the{' '}
-              <a href="/PrivacyPolicy" className="text-[#EDC14A] underline" target="_blank" rel="noopener noreferrer">
-                Privacy Policy
-              </a>{' '}
-              and{' '}
-               <a href="/Disclaimer" className="text-[#EDC14A] underline" target="_blank" rel="noopener noreferrer">
-                Disclaimer
-              </a>{' '}
-              and give my express written consent, affiliates and/or lawyer to contact you at the number provided above, even if this number is a wireless number or if I am presently listed on a Do Not Call list. I understand that I may be contacted by telephone, email, text message or mail regarding case options and that I may be called using automatic dialing equipment. Message and data rates may apply. My consent does not require purchase. This is Legal advertising.
-            </label>
-          </div>
-          <div className="flex justify-end w-full md:w-auto">
-            <button
-              type="submit"
-              className="flex items-center justify-center font-semibold min-w-[180px] md:min-w-[320px] px-8 md:px-32 py-4 rounded-lg shadow transition text-base md:text-lg hover:bg-blue-700"
-              style={{
-                backgroundColor: '#0A1F8F',
-                color: '#fff',
-                fontFamily: 'Quicksand, sans-serif',
-                whiteSpace: 'nowrap',
-              }}
-            >
-              Start My Case Review<span className="text-[#EDC14A]">{' ->'}</span>
-            </button>
-          </div>
-        </div>
+      <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
+  <div className="flex items-start w-full lg:w-auto">
+    <input
+      type="checkbox"
+      id="termsAccepted"
+      required
+      checked={formData.termsAccepted}
+      onChange={handleChange}
+      className="mr-2 mt-1"
+      style={{ width: '1.25rem', height: '1.25rem' }}
+    />
+    <label htmlFor="termsAccepted" className="text-sm text-gray-700">
+      I agree to the{' '}
+      <a href="/PrivacyPolicy" className="text-[#EDC14A] underline" target="_blank" rel="noopener noreferrer">
+        Privacy Policy
+      </a>{' '}
+      and{' '}
+      <a href="/Disclaimer" className="text-[#EDC14A] underline" target="_blank" rel="noopener noreferrer">
+        Disclaimer
+      </a>{' '}
+      and give my express written consent, affiliates and/or lawyer to contact you at the number provided above, even if this number is a wireless number or if I am presently listed on a Do Not Call list. I understand that I may be contacted by telephone, email, text message or mail regarding case options and that I may be called using automatic dialing equipment. Message and data rates may apply. My consent does not require purchase. This is Legal advertising.
+    </label>
+  </div>
+  <div className="flex justify-end w-full lg:w-auto">
+    <button
+      type="submit"
+      className="flex items-center justify-center font-semibold w-full min-w-[280px] lg:min-w-[320px] lg:w-auto px-8 lg:px-32 py-4 rounded-lg shadow transition text-base lg:text-lg hover:bg-blue-700"
+      style={{
+        backgroundColor: '#0A1F8F',
+        color: '#fff',
+        fontFamily: 'Quicksand, sans-serif',
+        whiteSpace: 'nowrap',
+      }}
+    >
+      Start My Case Review<span className="text-[#EDC14A]">{' ->'}</span>
+    </button>
+  </div>
+</div>
+
       </form>
     );
   }
@@ -1077,10 +1080,27 @@ try {
             className="mt-1"
             style={{ width: '1.5rem', height: '1.5rem' }}
           />
-          <label htmlFor="termsAccepted" className="text-xs text-gray-700">
-            I agree to the <a href="/PrivacyPolicy" className="text-[#EDC14A] underline" target="_blank" rel="noopener noreferrer">Privacy Policy</a> and
-            <a href="/Disclaimer" className="text-[#EDC14A] underline ml-1" target="_blank" rel="noopener noreferrer">Disclaimer</a> and give my express written consent to be contacted by affiliates and/or lawyers.
-          </label>
+ <label htmlFor="termsAccepted" className="text-xs text-gray-700">
+  I agree to the{' '}
+  <a
+    href="/PrivacyPolicy"
+    className="text-[#EDC14A] underline"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Privacy Policy
+  </a>{' '}
+  and{' '}
+  <a
+    href="/Disclaimer"
+    className="text-[#EDC14A] underline"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Disclaimer
+  </a>{' '}
+  and give my express written consent to affiliates and/or lawyers to contact me at the number provided above, even if this number is a wireless number or is listed on a Do Not Call list. I understand that I may be contacted by telephone, email, text message, or mail regarding case options and that I may be called using automatic dialing equipment. Message and data rates may apply. My consent does not require a purchase. This is legal advertising.
+</label>
         </div>
    
         <div className="flex justify-end">

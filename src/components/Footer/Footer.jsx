@@ -34,11 +34,16 @@ const Footer = () => {
     <div className="flex flex-col">
       <footer className="bg-[#0A1F8F] text-white relative overflow-hidden">
         {/* Vector Background */}
-        <img
-          src={footerVector}
-          alt="Footer Decoration"
-          className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 z-0 opacity-20 pointer-events-none w-full max-w-3xl"
-        />
+ <img
+  src={footerVector}
+  alt="Footer Decoration"
+  className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 z-0 pointer-events-none 
+             w-2/3 h-80 
+             sm:w-1/2 sm:h-80 
+             md:w-1/3 md:h-60"
+/>
+
+
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           {/* Mobile View */}

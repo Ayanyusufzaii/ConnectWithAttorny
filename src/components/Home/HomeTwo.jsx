@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { sendAdminEmail, sendUserEmail } from '../../emailService.js';
 import toast, { Toaster } from 'react-hot-toast';
+import { ChevronDown, Check } from 'lucide-react';
 
 const CustomCaptcha = ({ onCaptchaChange, resetTrigger }) => {
   const [captchaText, setCaptchaText] = useState('');
@@ -270,6 +271,61 @@ const FloatingTextarea = ({ id, label, value, onChange }) => {
   );
 };
 
+// Custom Dropdown Component
+const CustomDropdown = ({ id, label, value, onChange, options, placeholder }) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleSelect = (optionValue, optionLabel) => {
+    onChange({
+      target: {
+        id: id,
+        value: optionValue
+      }
+    });
+    setIsOpen(false);
+  };
+
+  const selectedOption = options.find(option => option.value === value);
+
+  return (
+    <div className="relative w-full">
+      <button
+        type="button"
+        className="w-full border border-gray-300 rounded-lg px-4 py-5 focus:outline-none focus:ring-2 focus:ring-blue-400 appearance-none bg-[#E7E9F4] text-[#0A1F8F] text-left flex items-center justify-between"
+        style={{ fontFamily: 'Quicksand, sans-serif' }}
+        onClick={() => setIsOpen(!isOpen)}
+      >
+        <span className={selectedOption ? 'text-[#0A1F8F]' : 'text-gray-500'}>
+          {selectedOption ? selectedOption.label : placeholder}
+        </span>
+        <ChevronDown className={`w-5 h-5 text-gray-400 transition-transform ${isOpen ? 'rotate-180' : ''}`} />
+      </button>
+
+      {isOpen && (
+        <div className="absolute top-full left-0 mt-2 w-full bg-white shadow-lg rounded-lg border border-gray-200 z-50 max-h-60 overflow-y-auto">
+          <div className="py-2">
+            {options.map((option) => (
+              <button
+                key={option.value}
+                type="button"
+                onClick={() => handleSelect(option.value, option.label)}
+                className="group w-full text-left px-4 py-3 text-sm text-gray-700 hover:text-[#0A1F8F] transition-colors relative flex items-center justify-between"
+              >
+                <span>{option.label}</span>
+                <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                  <div className="w-5 h-5 bg-[#0A1F8F] rounded-full flex items-center justify-center">
+                    <Check className="w-3 h-3 text-white" />
+                  </div>
+                </div>
+              </button>
+            ))}
+          </div>
+        </div>
+      )}
+    </div>
+  );
+};
+
 // ZIP code lookup function
 const fetchLocationByZip = async (zipCode) => {
   try {
@@ -308,6 +364,21 @@ const isValidUSPhone = (phone) => {
   const cleaned = phone.replace(/\D/g, '');
   return cleaned.length === 10 && cleaned.match(/^[2-9]\d{2}[2-9]\d{6}$/);
 };
+
+// Lawsuit options
+const LAWSUIT_OPTIONS = [
+  { value: "Depo-Provera Lawsuit ", label: "Depo-Provera Lawsuit" },
+  { value: "Paraquat Lawsuit ", label: "Paraquat Lawsuit" },
+  { value: "Roundup Lawsuit ", label: "Roundup Lawsuit" },
+  { value: "Toxic Baby Food Lawsuit ", label: "Toxic Baby Food Lawsuit" },
+  { value: "Oxbryta Lawsuit ", label: "Oxbryta Lawsuit" },
+  { value: "Talcum Powder Lawsuit ", label: "Talcum Powder Lawsuit" },
+  { value: "Bard PowerPort Lawsuit ", label: "Bard PowerPort Lawsuit" },
+  { value: "Ultra-Processed Foods Lawsuit ", label: "Ultra-Processed Foods Lawsuit" },
+  { value: "AFFF Firefighting Foam Lawsuit ", label: "AFFF Firefighting Foam Lawsuit" },
+  { value: "PFAS Contamination Lawsuit ", label: "PFAS Contamination Lawsuit" },
+  { value: "Transvaginal Mesh Lawsuit ", label: "Transvaginal Mesh Lawsuit" },
+];
 
 const DesktopForm = () => {
   const [currentStep, setCurrentStep] = useState(1);
@@ -613,69 +684,54 @@ const DesktopForm = () => {
           />
         </div>
    
-        <div className="relative w-full">
-          <select
-            id="category"
-            required
-            value={formData.category}
-            onChange={handleChange}
-            className="w-full border border-gray-300 rounded-lg px-4 py-5 focus:outline-none focus:ring-2 focus:ring-blue-400 appearance-none bg-[#E7E9F4] text-[#0A1F8F]"
-            style={{ fontFamily: 'Quicksand, sans-serif' }}
-          >
-            <option value="">Lawsuit Type</option>
-            <option value="Depo-Provera Lawsuit ">Depo-Provera Lawsuit  </option>
-            <option value="Paraquat Lawsuit ">Paraquat Lawsuit </option>
-            <option value="Roundup Lawsuit ">Roundup Lawsuit </option>
-            <option value="Toxic Baby Food Lawsuit ">Toxic Baby Food Lawsuit   </option>
-            <option value="Oxbryta Lawsuit ">Oxbryta Lawsuit </option>
-            <option value="Talcum Powder Lawsuit ">  Talcum Powder Lawsuit  </option>
-             <option value="Bard PowerPort Lawsuit ">Bard PowerPort Lawsuit  </option>
-            <option value="Ultra-Processed Foods Lawsuit ">Ultra-Processed Foods Lawsuit   </option>
-            <option value="AFFF Firefighting Foam Lawsuit ">AFFF Firefighting Foam Lawsuit </option>
-            <option value="PFAS Contamination Lawsuit ">PFAS Contamination Lawsuit </option>
-            <option value="Transvaginal Mesh Lawsuit ">Transvaginal Mesh Lawsuit  </option>
-          </select>
-          <span className="pointer-events-none absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400 text-xl">▼</span>
-        </div>
+        <CustomDropdown
+          id="category"
+          label="Lawsuit Type"
+          value={formData.category}
+          onChange={handleChange}
+          options={LAWSUIT_OPTIONS}
+          placeholder="Lawsuit Type"
+        />
    
-        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
-          <div className="flex items-start w-full md:w-auto">
-            <input
-              type="checkbox"
-              id="termsAccepted"
-              required
-              checked={formData.termsAccepted}
-              onChange={handleChange}
-              className="mr-2 mt-1"
-              style={{ width: '1.25rem', height: '1.25rem' }}
-            />
-            <label htmlFor="termsAccepted" className="text-sm text-gray-700">
-              I agree to the{' '}
-              <a href="/PrivacyPolicy" className="text-[#EDC14A] underline" target="_blank" rel="noopener noreferrer">
-                Privacy Policy
-              </a>{' '}
-              and{' '}
-               <a href="/Disclaimer" className="text-[#EDC14A] underline" target="_blank" rel="noopener noreferrer">
-                Disclaimer
-              </a>{' '}
-              and give my express written consent, affiliates and/or lawyer to contact you at the number provided above, even if this number is a wireless number or if I am presently listed on a Do Not Call list. I understand that I may be contacted by telephone, email, text message or mail regarding case options and that I may be called using automatic dialing equipment. Message and data rates may apply. My consent does not require purchase. This is Legal advertising.
-            </label>
-          </div>
-          <div className="flex justify-end w-full md:w-auto">
-            <button
-              type="submit"
-              className="flex items-center justify-center font-semibold min-w-[180px] md:min-w-[320px] px-8 md:px-32 py-4 rounded-lg shadow transition text-base md:text-lg hover:bg-blue-700"
-              style={{
-                backgroundColor: '#0A1F8F',
-                color: '#fff',
-                fontFamily: 'Quicksand, sans-serif',
-                whiteSpace: 'nowrap',
-              }}
-            >
-              Start My Case Review<span className="text-[#EDC14A]">{' ->'}</span>
-            </button>
-          </div>
-        </div>
+        <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
+  <div className="flex items-start w-full lg:w-auto">
+    <input
+      type="checkbox"
+      id="termsAccepted"
+      required
+      checked={formData.termsAccepted}
+      onChange={handleChange}
+      className="mr-2 mt-1"
+      style={{ width: '1.25rem', height: '1.25rem' }}
+    />
+    <label htmlFor="termsAccepted" className="text-sm text-gray-700">
+      I agree to the{' '}
+      <a href="/PrivacyPolicy" className="text-[#EDC14A] underline" target="_blank" rel="noopener noreferrer">
+        Privacy Policy
+      </a>{' '}
+      and{' '}
+      <a href="/Disclaimer" className="text-[#EDC14A] underline" target="_blank" rel="noopener noreferrer">
+        Disclaimer
+      </a>{' '}
+      and give my express written consent, affiliates and/or lawyer to contact you at the number provided above, even if this number is a wireless number or if I am presently listed on a Do Not Call list. I understand that I may be contacted by telephone, email, text message or mail regarding case options and that I may be called using automatic dialing equipment. Message and data rates may apply. My consent does not require purchase. This is Legal advertising.
+    </label>
+  </div>
+  <div className="flex justify-end w-full lg:w-auto">
+    <button
+      type="submit"
+      className="flex items-center justify-center font-semibold w-full min-w-[280px] lg:min-w-[320px] lg:w-auto px-8 lg:px-32 py-4 rounded-lg shadow transition text-base lg:text-lg hover:bg-blue-700"
+      style={{
+        backgroundColor: '#0A1F8F',
+        color: '#fff',
+        fontFamily: 'Quicksand, sans-serif',
+        whiteSpace: 'nowrap',
+      }}
+    >
+      Start My Case Review<span className="text-[#EDC14A]">{' ->'}</span>
+    </button>
+  </div>
+</div>
+
       </form>
     );
   }
@@ -1072,30 +1128,14 @@ try {
           error={errors.email}
         />
    
-        <div className="relative w-full">
-          <select
-            id="category"
-            required
-            value={formData.category}
-            onChange={handleChange}
-            className="w-full border border-gray-300 rounded-lg px-4 py-4 focus:outline-none focus:ring-2 focus:ring-blue-400 appearance-none bg-[#E7E9F4] text-[#0A1F8F]"
-            style={{ fontFamily: 'Quicksand, sans-serif' }}
-          >
-            <option value="">Lawsuit Type</option>
-            <option value="Depo-Provera Lawsuit ">Depo-Provera Lawsuit  </option>
-            <option value="Paraquat Lawsuit ">Paraquat Lawsuit </option>
-            <option value="Roundup Lawsuit ">Roundup Lawsuit </option>
-            <option value="Toxic Baby Food Lawsuit ">Toxic Baby Food Lawsuit   </option>
-            <option value="Oxbryta Lawsuit ">Oxbryta Lawsuit </option>
-            <option value="Talcum Powder Lawsuit ">Talcum Powder Lawsuit  </option>
-             <option value="Bard PowerPort Lawsuit ">Bard PowerPort Lawsuit  </option>
-            <option value="Ultra-Processed Foods Lawsuit ">Ultra-Processed Foods Lawsuit   </option>
-            <option value="AFFF Firefighting Foam Lawsuit ">AFFF Firefighting Foam Lawsuit </option>
-            <option value="PFAS Contamination Lawsuit ">PFAS Contamination Lawsuit </option>
-            <option value="Transvaginal Mesh Lawsuit ">Transvaginal Mesh Lawsuit  </option>
-          </select>
-          <span className="pointer-events-none absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400 text-xl">▼</span>
-        </div>
+        <CustomDropdown
+          id="category"
+          label="Lawsuit Type"
+          value={formData.category}
+          onChange={handleChange}
+          options={LAWSUIT_OPTIONS}
+          placeholder="Lawsuit Type"
+        />
    
         <div className="flex items-start gap-3">
           <input
@@ -1107,10 +1147,28 @@ try {
             className="mt-1"
             style={{ width: '1.5rem', height: '1.5rem' }}
           />
-          <label htmlFor="termsAccepted" className="text-xs text-gray-700">
-            I agree to the <a href="/PrivacyPolicy" className="text-[#EDC14A] underline" target="_blank" rel="noopener noreferrer">Privacy Policy</a> and
-            <a href="/Disclaimer" className="text-[#EDC14A] underline ml-1" target="_blank" rel="noopener noreferrer">Disclaimer</a> and give my express written consent to be contacted by affiliates and/or lawyers.
-          </label>
+         <label htmlFor="termsAccepted" className="text-xs text-gray-700">
+  I agree to the{' '}
+  <a
+    href="/PrivacyPolicy"
+    className="text-[#EDC14A] underline"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Privacy Policy
+  </a>{' '}
+  and{' '}
+  <a
+    href="/Disclaimer"
+    className="text-[#EDC14A] underline"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Disclaimer
+  </a>{' '}
+  and give my express written consent to affiliates and/or lawyers to contact me at the number provided above, even if this number is a wireless number or is listed on a Do Not Call list. I understand that I may be contacted by telephone, email, text message, or mail regarding case options and that I may be called using automatic dialing equipment. Message and data rates may apply. My consent does not require a purchase. This is legal advertising.
+</label>
+
         </div>
    
         <div className="flex justify-end">

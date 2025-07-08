@@ -10,7 +10,7 @@ import HomeFour from './HomeFour.jsx';
 import HomeFive from './HomeFive.jsx';
 import HomeSix from './HomeSix.jsx';
 
-const TURNSTILE_SITE_KEY = process.env.REACT_APP_TURNSTILE_SITE_KEY;
+const TURNSTILE_SITE_KEY = process.env.REACT_APP_TURNSTILE_SITE_KEY||'x4AAAAAABilXDcqr5nBkhD9';
 
 const HomeMain = () => {
   const [verified, setVerified] = useState(false);
@@ -18,7 +18,7 @@ const HomeMain = () => {
   // Check localStorage on first render
   useEffect(() => {
     const isVerified = localStorage.getItem('isHumanVerified');
-    if (isVerified === 'true') {
+    if (isVerified === 'true') { 
       setVerified(true);
     }
   }, []);
