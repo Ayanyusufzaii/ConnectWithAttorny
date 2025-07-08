@@ -193,12 +193,12 @@ const lawsuits = [
     image: bardImg,
     link: '/BardPowerPortMain',
   },
-  {
-    title: 'Ultra-Processed Foods Lawsuit',
-    description: 'Heavy metal exposure tied to developmental delays',
-    image: ultraProcessedImg,
-    link: '/404',
-  },
+  // {
+  //   title: 'Ultra-Processed Foods Lawsuit',
+  //   description: 'Heavy metal exposure tied to developmental delays',
+  //   image: ultraProcessedImg,
+  //   link: '/404',
+  // },
   {
     title: 'AFFF Firefighting Foam Lawsuit',
     description: 'Linked to brain tumors and bone loss in long-term users',
