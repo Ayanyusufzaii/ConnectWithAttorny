@@ -18,7 +18,7 @@ const HomeMain = () => {
   // Check localStorage on first render
   useEffect(() => {
     const isVerified = localStorage.getItem('isHumanVerified');
-    if (isVerified === 'true') {
+    if (isVerified === 'true') { 
       setVerified(true);
     }
   }, []);
