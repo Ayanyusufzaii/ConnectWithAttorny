@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import logo from "../../assets/Logo.png"; // Adjust the path as necessary
-import { Facebook, Instagram, Linkedin, ChevronDown, Check } from 'lucide-react';
+import {  Instagram, Linkedin, ChevronDown, Check } from 'lucide-react';
 import { BsTwitterX } from "react-icons/bs"; // Importing Twitter icon from react-icons
-
+import { FaFacebookF } from 'react-icons/fa';
 const NAV_LINKS = [
   { name: "Home", href: "/" },  
     { name: "About Us", href: "/AboutUs" },
@@ -121,7 +121,7 @@ function MobileNavbar() {
   ];
   // Define socialLinks here, matching the footer
   const socialLinks = [
-    { icon: Facebook, href: '#', label: 'Facebook' },
+    { icon: FaFacebookF, href: '#', label: 'Facebook' },
     { icon: BsTwitterX , href: '#', label: 'Twitter' },
     { icon: Instagram, href: '#', label: 'Instagram' },
     

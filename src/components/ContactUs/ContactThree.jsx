@@ -1,6 +1,7 @@
 import React from "react";
-import { Facebook, Instagram, Phone, Mail } from "lucide-react";
+import { Instagram, Phone, Mail } from "lucide-react";
 import { BsTwitterX } from "react-icons/bs";
+import {FaFacebookF} from 'react-icons/fa'; // Importing Facebook icon from react-icons
 
 const ContactThree = () => {
   return (
@@ -41,7 +42,7 @@ const ContactThree = () => {
             Follow Us
           </h3>
           <div className="flex gap-2 lg:gap-4">
-            {[Facebook, BsTwitterX, Instagram].map((Icon, index) => (
+            {[FaFacebookF, BsTwitterX, Instagram].map((Icon, index) => (
               <div
                 key={index}
                 className="w-[clamp(4rem,4vw,5rem)] h-[clamp(4rem,4vw,5rem)] bg-[#0A1F8F] rounded-[13px] flex justify-center items-center text-white"
@@ -87,7 +88,7 @@ const ContactThree = () => {
         <div className="flex flex-col gap-4">
           <h3 className="text-[30px] font-bold text-[#0A1F8F]">Follow Us</h3>
           <div className="flex gap-4 w-[48px] h-[48px]">
-            {[Facebook, BsTwitterX, Instagram].map((Icon, idx) => (
+            {[FaFacebookF, BsTwitterX, Instagram].map((Icon, idx) => (
               <div key={idx} className="bg-[#0A1F8F] p-2 rounded-md text-white">
                 <Icon className="w-[28px] h-[28px]" />
               </div>

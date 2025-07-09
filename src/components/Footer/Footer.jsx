@@ -1,5 +1,6 @@
 import React from 'react';
-import { Facebook, Instagram, Linkedin } from 'lucide-react';
+import {  Instagram, Linkedin } from 'lucide-react';
+import { FaFacebookF } from 'react-icons/fa';
 import footerVector from '../../assets/Vector.svg';
 import { Link, useLocation } from 'react-router-dom';
 import { BsTwitterX } from "react-icons/bs";
@@ -9,7 +10,7 @@ const Footer = () => {
   const location = useLocation();
 
   const socialLinks = [
-    { icon: Facebook, href: '#', label: 'Facebook' },
+    { icon: FaFacebookF, href: '#', label: 'Facebook' },
     { icon: BsTwitterX , href: '#', label: 'X ' },
     { icon: Instagram, href: '#', label: 'Instagram' },
   ];
