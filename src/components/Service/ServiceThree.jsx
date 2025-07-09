@@ -1,225 +1,128 @@
-// import React, { useState, useEffect } from 'react';
-// import { Link } from 'react-router-dom';
-// import img1 from '../../assets/home3_1.png';
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
-// const lawsuits = [
-//   {
-//     title: 'Depo-Provera Lawsuit',
-//     description: 'Linked to brain tumors and bone loss in long-term users',
-//     image: img1,
-//     link: '/DepoMain',
-//   },
-//   {
-//     title: 'Paraquat Lawsuit',
-//     description: 'Parkinsons disease caused by toxic herbicide exposure',
-//     image: img1,
-//     link: '/lawsuits/paraquat',
-//   },
-//   {
-//     title: 'Roundup-Lawsuit',
-//     description: 'Cancer linked to glyphosate-based weed killer',
-//     image: img1,
-//     link: '/lawsuits/roundup-lawsuit',
-//   },
-//   {
-//     title: 'Toxic Baby Food Lawsuit',
-//     description: 'Heavy metal exposure tied to developmental delays',
-//     image: img1,
-//     link: '/lawsuits/toxic-baby-food-lawsuit',
-//   },
-//   {
-//     title: 'Oxbryta Lawsuit',
-//     description: 'Linked to brain tumors and bone loss in long-term users',
-//     image: img1,
-//     link: '#',
-//   },
-//   {
-//     title: 'Talcum Powder Lawsuit',
-//     description: 'Parkinson’s disease caused by toxic herbicide exposure',
-//     image: img1,
-//     link: '#',
-//   },
-//   {
-//     title: 'Bard PowerPort Lawsuit',
-//     description: 'Cancer linked to glyphosate-based weed killer',
-//     image: img1,
-//     link: '#',
-//   },
-//   {
-//     title: 'Ultra-Processed Foods Lawsuit',
-//     description: 'Heavy metal exposure tied to developmental delays',
-//     image: img1,
-//     link: '#',
-//   },
-//   {
-//     title: 'AFFF Firefighting Foam Lawsuit',
-//     description: 'Linked to brain tumors and bone loss in long-term users',
-//     image: img1,
-//     link: '#',
-//   },
-//   {
-//     title: 'PFAS Contamination Lawsuit',
-//     description: 'Parkinson’s disease caused by toxic herbicide exposure',
-//     image: img1,
-//     link: '#',
-//   },
-//   {
-//     title: 'Transvaginal Mesh Lawsuit',
-//     description: 'Cancer linked to glyphosate-based weed killer',
-//     image: img1,
-//     link: '#',
-//   },
-// ];
+// Desktop Images
+import depoImg from "../../assets/SubserviceDesktop/desk-depo-provera-lawsuit.png";
+import paraquatImg from "../../assets/SubserviceDesktop/desk-paraquat-lawsuit.png";
+import roundupImg from "../../assets/SubserviceDesktop/desk-roundup-lawsuit.png";
+import babyFoodImg from "../../assets/SubserviceDesktop/desk-toxic-baby-food-lawsuit.png";
+import oxbrytaImg from "../../assets/SubserviceDesktop/desk-oxbryta-lawsuit.png";
+import talcumImg from "../../assets/SubserviceDesktop/desk-talcum-powder-lawsuit.png";
+import bardImg from "../../assets/SubserviceDesktop/desk-bard-powerport-lawsuit.png";
+import afffImg from "../../assets/SubserviceDesktop/desk-afff-firefighting-foam-lawsuit.png";
+import pfasImg from "../../assets/SubserviceDesktop/desk-pfas-contamination-lawsuit.png";
+import meshImg from "../../assets/SubserviceDesktop/desk-transvaginal-mesh-lawsuit.png";
 
-// const HomeFour = () => {
-//   const [isMobile, setIsMobile] = useState(typeof window !== 'undefined' ? window.innerWidth < 1280 : false);
+// Mobile Images
+import depoImgMob from "../../assets/SubserviceMobile/mob-depo-provera-lawsuit.png";
+import paraquatImgMob from "../../assets/SubserviceMobile/mob-paraquat-lawsuit.png";
+import roundupImgMob from "../../assets/SubserviceMobile/mob-roundup-lawsuit.png";
+import babyFoodImgMob from "../../assets/SubserviceMobile/mob-toxic-baby-food-lawsuit.png";
+import oxbrytaImgMob from "../../assets/SubserviceMobile/mob-oxbryta-lawsuit.png";
+import talcumImgMob from "../../assets/SubserviceMobile/mob-talcum-powder-lawsuit.png";
+import bardImgMob from "../../assets/SubserviceMobile/mob-bard-powerport-lawsuit.png";
+import afffImgMob from "../../assets/SubserviceMobile/mob-afff-firefighting-foam-lawsuit.png";
+import pfasImgMob from "../../assets/SubserviceMobile/mob-pfas-contamination-lawsuit.png";
+import meshImgMob from "../../assets/SubserviceMobile/mob-transvaginal-mesh-lawsuit.png";
+
+// new images
+
+import newRoundup from "../../assets/newServiceImg/roundupnew.png"
+
+const lawsuits = [
+  { title: 'Depo-Provera Lawsuit', description: 'Linked to brain tumors and bone loss in long-term users', image: depoImg, link: '/DepoMain' },
+  { title: 'Paraquat Lawsuit', description: 'Parkinsons disease caused by toxic herbicide exposure', image: paraquatImg, link: '/ParaquatMain' },
+  { title: 'Roundup Lawsuit', description: 'Cancer linked to glyphosate-based weed killer', image: roundupImg, link: '/roundupMain' },
+  { title: 'Toxic Baby Food Lawsuit', description: 'Heavy metal exposure tied to developmental delays', image: babyFoodImg, link: '/Babyfood' },
+  { title: 'Oxbryta Lawsuit', description: 'Linked to brain tumors and bone loss in long-term users', image: oxbrytaImg, link: '/OxbrytaMain' },
+  { title: 'Talcum Powder Lawsuit', description: 'Parkinsons disease caused by toxic herbicide exposure', image: talcumImg, link: '/TalcumMain' },
+  { title: 'Bard PowerPort Lawsuit', description: 'Cancer linked to glyphosate-based weed killer', image: bardImg, link: '/BardPowerPortMain' },
+  { title: 'AFFF Firefighting Foam Lawsuit', description: 'Linked to brain tumors and bone loss in long-term users', image: afffImg, link: '/AFFFMain' },
+  { title: 'PFAS Contamination Lawsuit', description: 'Parkinsons disease caused by toxic herbicide exposure', image: pfasImg, link: '/PFASMain' },
+  { title: 'Transvaginal Mesh Lawsuit', description: 'Cancer linked to glyphosate-based weed killer', image: meshImg, link: '/TransvaginalMain' },
+];
+
+const Moblawsuits = [
+  { title: 'Depo-Provera Lawsuit', description: 'Linked to brain tumors and bone loss in long-term users', image: depoImgMob, link: '/DepoMain' },
+  { title: 'Paraquat Lawsuit', description: 'Parkinsons disease caused by toxic herbicide exposure', image: paraquatImgMob, link: '/ParaquatMain' },
+  { title: 'Roundup Lawsuit', description: 'Cancer linked to glyphosate-based weed killer', image: roundupImgMob, link: '/roundupMain' },
+  { title: 'Toxic Baby Food Lawsuit', description: 'Heavy metal exposure tied to developmental delays', image: babyFoodImgMob, link: '/Babyfood' },
+  { title: 'Oxbryta Lawsuit', description: 'Linked to brain tumors and bone loss in long-term users', image: oxbrytaImgMob, link: '/OxbrytaMain' },
+  { title: 'Talcum Powder Lawsuit', description: 'Parkinsons disease caused by toxic herbicide exposure', image: talcumImgMob, link: '/TalcumMain' },
+  { title: 'Bard PowerPort Lawsuit', description: 'Cancer linked to glyphosate-based weed killer', image: bardImgMob, link: '/BardPowerPortMain' },
+  { title: 'AFFF Firefighting Foam Lawsuit', description: 'Linked to brain tumors and bone loss in long-term users', image: afffImgMob, link: '/AFFFMain' },
+  { title: 'PFAS Contamination Lawsuit', description: 'Parkinsons disease caused by toxic herbicide exposure', image: pfasImgMob, link: '/PFASMain' },
+  { title: 'Transvaginal Mesh Lawsuit', description: 'Cancer linked to glyphosate-based weed killer', image: meshImgMob, link: '/TransvaginalMain' },
+];
+
+// const ServiceThree = () => {
+//   const [isMobile, setIsMobile] = useState(false);
 
 //   useEffect(() => {
-//     const handleResize = () => setIsMobile(window.innerWidth < 1280);
+//     const handleResize = () => setIsMobile(window.innerWidth < 768);
+//     handleResize();
 //     window.addEventListener('resize', handleResize);
 //     return () => window.removeEventListener('resize', handleResize);
 //   }, []);
 
-//   return (
-//     <section
-//       className="px-4 sm:px-8 md:px-16 lg:px-24 py-12 bg-white w-full"
-//       style={{ fontFamily: 'Quicksand, sans-serif' }}
+//   // Custom function to ensure all images fit consistently
+//   const getImageStyles = () => {
+//     return {
+//       width: '100%',
+//       height: '100%',
+//       objectFit: 'fill',
+//       objectPosition: 'center',
+//       display: 'block',
+//       margin: 0,
+//       padding: 0,
+//       border: 'none',
+//       outline: 'none'
+//     };
+//   };
+
+//   const renderCard = (item, idx) => (
+//     <div
+//       key={idx}
+//       className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-200 w-full max-w-[320px] mx-auto"
 //     >
-//       {/* Header */}
-//       <div className="flex justify-between items-center mb-8 flex-wrap gap-4">
+//       {/* Image Section */}
+//       <div className="h-[200px] relative overflow-hidden">
+//         <img
+//           src={item.image}
+//           alt={item.title}
+//           style={getImageStyles()}
+//         />
+//         <div className="absolute bottom-0 left-0 w-full  py-2 px-3 rounded-b-2xl">
+//           <h3 className="text-white text-[14px] font-semibold leading-tight">{item.title}</h3>
+//         </div>
+//       </div>
+
+//       {/* Text Section */}
+//       <div className="p-4">
+//         <p className="text-sm text-gray-600 min-h-[40px] mb-4">{item.description}</p>
+//         <Link to={item.link}>
+//           <button className="w-full py-2 border border-blue-600 text-blue-600 rounded-lg text-sm font-medium hover:bg-yellow-400 hover:text-black hover:border-yellow-400 transition-all duration-200">
+//             Learn More
+//           </button>
+//         </Link>
+//       </div>
+//     </div>
+//   );
+
+//   return (
+//     <section className="px-4 sm:px-8 md:px-16 lg:px-24 py-12 bg-white font-[Quicksand]">
+//       <div className="mb-10 text-left">
 //         <h2 className="text-2xl md:text-3xl font-semibold text-[#0A1F8F]">
-//           What Do We <span className="text-[#EDC14A]">Help</span> You With <span className="text-[#EDC14A]">?</span>
+//           What Do We <span className="text-[#EDC14A]">Help You</span> With?
 //         </h2>
 //       </div>
 
-//       {/* Cards */}
-//       <div
-//         className={`${
-//           isMobile
-//             ? 'flex overflow-x-auto gap-6 scrollbar-hide pb-2'
-//             : 'grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6'
-//         }`}
-//       >
-//         {lawsuits.map((item, idx) => (
-//           <div
-//             key={idx}
-//             className="bg-white rounded-[14px] overflow-hidden flex-shrink-0 min-w-[260px] max-w-[280px] w-full"
-//           >
-//             {/* Image */}
-//             <div className="w-full h-[180px] overflow-hidden">
-//               <img
-//                 src={item.image}
-//                 alt={item.title}
-//                 className="w-full h-full object-cover rounded-t-[14px]"
-//               />
-//             </div>
-
-//             {/* Content */}
-//             <div className="p-4">
-//               <h3 className="text-[18px] font-bold text-[#0A1F8F] mb-2 leading-snug">{item.title}</h3>
-//               <p className="text-sm text-[#6b7280] leading-snug">{item.description}</p>
-//               <Link to={item.link}>
-//                 <button className="mt-4 px-4 py-2 border border-blue-600 text-blue-600 rounded-[6px] text-sm transition-colors duration-200 hover:bg-yellow-400">
-//                   Learn More
-//                 </button>
-//               </Link>
-//             </div>
-//           </div>
-//         ))}
+//       <div className={`grid gap-6 ${isMobile ? 'grid-cols-2' : 'grid-cols-2 md:grid-cols-3 xl:grid-cols-4 justify-center'}`}>
+//         {(isMobile ? Moblawsuits : lawsuits).map(renderCard)}
 //       </div>
 //     </section>
 //   );
 // };
-
-// export default HomeFour;
-
-
-import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-// Import each image with a unique name
-import depoImg from "../../assets/subservice/depo-provera-lawsuit.png";
-import paraquatImg from "../../assets/subservice/paraquat-lawsuit.png";
-import roundupImg from "../../assets/subservice/roundup-lawsuit.png";
-import babyFoodImg from "../../assets/subservice/toxic-baby-food-lawsuit.png";
-import oxbrytaImg from "../../assets/subservice/oxbryta-lawsuit.png";
-import talcumImg from "../../assets/subservice/talcum-powder-lawsuit.png";
-import bardImg from "../../assets/subservice/bard-powerport-lawsuit.png";
-import ultraProcessedImg from "../../assets/subservice/ultra-processed-foods-lawsuit.png";
-import afffImg from "../../assets/subservice/afff-firefighting-foam-lawsuit.png";
-import pfasImg from "../../assets/subservice/pfas-contamination-lawsuit.png";
-import meshImg from "../../assets/subservice/transvaginal-mesh-lawsuit.png";
-
-// Map images correctly in the lawsuits array
-const lawsuits = [
-  {
-    title: 'Depo-Provera Lawsuit',
-    description: 'Linked to brain tumors and bone loss in long-term users',
-    image: depoImg,
-    link: '/DepoMain',
-  },
-  {
-    title: 'Paraquat Lawsuit',
-    description: 'Parkinsons disease caused by toxic herbicide exposure',
-    image: paraquatImg,
-    link: '/ParaquatMain',
-  },
-  {
-    title: 'Roundup-Lawsuit',
-    description: 'Cancer linked to glyphosate-based weed killer',
-    image: roundupImg,
-    link: '/roundupMain',
-  },
-  {
-    title: 'Toxic Baby Food Lawsuit',
-    description: 'Heavy metal exposure tied to developmental delays',
-    image: babyFoodImg,
-    link: '/Babyfood',
-  },
-  {
-    title: 'Oxbryta Lawsuit',
-    description: 'Linked to brain tumors and bone loss in long-term users',
-    image: oxbrytaImg,
-    link: '/OxbrytaMain',
-  },
-  {
-    title: 'Talcum Powder Lawsuit',
-    description: 'Parkinson’s disease caused by toxic herbicide exposure',
-    image: talcumImg,
-    link: '/TalcumMain',
-  },
-  {
-    title: 'Bard PowerPort Lawsuit',
-    description: 'Cancer linked to glyphosate-based weed killer',
-    image: bardImg,
-    link: '/BardPowerPortMain',
-  },
-  // {
-  //   title: 'Ultra-Processed Foods Lawsuit',
-  //   description: 'Heavy metal exposure tied to developmental delays',
-  //   image: ultraProcessedImg,
-  //   link: '/404',
-  // },
-  {
-    title: 'AFFF Firefighting Foam Lawsuit',
-    description: 'Linked to brain tumors and bone loss in long-term users',
-    image: afffImg,
-    link: '/AFFFMain',
-  },
-  {
-    title: 'PFAS Contamination Lawsuit',
-    description: 'Parkinson’s disease caused by toxic herbicide exposure',
-    image: pfasImg,
-    link: '/PFASMain',
-  },
-  {
-    title: 'Transvaginal Mesh Lawsuit',
-    description: 'Cancer linked to glyphosate-based weed killer',
-    image: meshImg,
-    link: '/TransvaginalMain',
-  },
-];
-
-
 const ServiceThree = () => {
   const [isMobile, setIsMobile] = useState(false);
 
@@ -250,7 +153,7 @@ const ServiceThree = () => {
          <div className="grid grid-cols-2 gap-6">
           {/* </div> <div className="flex gap-6 overflow-x-auto scrollbar-hide pb-2">  */}
            
-          {lawsuits.map((item, idx) => (
+          {Moblawsuits.map((item, idx) => (
             <div
               key={idx}
                className="bg-white rounded-[14px] overflow-hidden w-full"
@@ -262,13 +165,13 @@ const ServiceThree = () => {
                 <img
                   src={item.image}
                   alt={item.title}
-                  className="w-full h-full object-cover rounded-[10%]"
+                  className="w-full h-full object-fill rounded-[10%]"
                 />
-                <div className="absolute bottom-0 left-0 w-full text-left px-4 py-3">
+                <div className="absolute bottom-0 left-0 w-full text-left px-3 py-3">
                   {/* <h3 className="text-[16px] sm:text-[18px] font-bold text-white truncate px-2">
                     {item.title}
                   </h3> */}
-              <h3 className="text-[16px] sm:text-[13px] font-bold text-white leading-tight px-2 break-words whitespace-normal">
+              <h3 className="text-[14px] sm:text-[13px] font-bold text-white leading-tight px-3 py-2 break-words whitespace-normal">
               {item.title}
             </h3>
 
@@ -292,7 +195,7 @@ const ServiceThree = () => {
         </div>
       ) : (
         <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6">
-          {lawsuits.map((item, idx) => (
+          {Moblawsuits.map((item, idx) => (
             <div
               key={idx}
               className="bg-white rounded-[14px] overflow-hidden w-full"
@@ -302,10 +205,10 @@ const ServiceThree = () => {
                 <img
                   src={item.image}
                   alt={item.title}
-                  className="w-full h-full object-cover rounded-[10%]"
+                  className="w-full h-full object-fill rounded-[10%]"
                 />
-                 <div className="absolute bottom-0 left-0 w-full text-left px-4 py-3">
-                      <h3 className="text-[16px] font-bold text-white leading-tight px-2 break-words whitespace-normal">
+                 <div className="absolute bottom-0 left-0 w-full text-left px-5 py-3">
+                      <h3 className="text-[16px] font-bold text-white leading-tight px-5 py-4 break-words whitespace-normal">
               {item.title}
             </h3>
                 </div>

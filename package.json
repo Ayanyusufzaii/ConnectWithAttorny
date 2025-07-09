@@ -5,6 +5,7 @@
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
     "@hookform/resolvers": "^5.1.1",
+    "@hugeicons/react": "^1.0.5",
     "@mui/icons-material": "^7.1.2",
     "@mui/material": "^7.1.2",
     "@testing-library/dom": "^10.4.0",

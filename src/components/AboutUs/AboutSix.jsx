@@ -3,7 +3,7 @@ import teamImg from '../../assets/abUs006.png'
 import teamImg1 from '../../assets/abUs006Mob.png'
 import aposthopthe_icon from '../../assets/aposthopthe_icon.png';
 import MobileHeroBg from '../../assets/aboutUsMobHeroBg.png'
-
+ 
 const AboutSix = () => {
   return (
     <>
@@ -14,7 +14,7 @@ const AboutSix = () => {
       {/* Left Image */}
           {/* Main Flex Row */}
 <div className="flex flex-col-reverse md:flex-row items-center justify-center gap-[40px] md:gap-[50px] lg:gap-[70px] xl:gap-[80px] w-full">
-
+ 
   {/* IMAGE BLOCK with border */}
   <div className=" p-[4px] w-[310px] h-[260px] sm:w-[360px] sm:h-[300px] md:w-[390px] md:h-[330px] lg:w-[420px] lg:h-[360px] xl:w-[465px] xl:h-[391px]">
     <img
@@ -23,7 +23,7 @@ const AboutSix = () => {
       className="w-full h-full object-cover rounded-md"
     />
   </div>
-
+ 
   {/* TEXT BLOCK */}
   <div className="flex flex-col justify-center w-[380px] sm:w-[440px] md:w-[480px] lg:w-[520px] xl:w-[559px] gap-4">
     <img
@@ -42,13 +42,13 @@ const AboutSix = () => {
           </button>
   </div>
 </div>
-
+ 
     </div>
   </div>
 </section>
-
-
-
+ 
+ 
+ 
       {/* Tablet Tile Section */}
       <section className="hidden md:block lg:hidden py-12">
         <div className="max-w-4xl mx-auto px-6">
@@ -61,13 +61,13 @@ const AboutSix = () => {
                 className="w-full h-auto rounded-xl shadow-xl max-w-lg mx-auto"
               />
             </div>
-            
+           
             {/* Tablet Content */}
             <div className="text-left">
               <p className="text-[#ffffff] font-quicksand text-[14px] sm:text-[16px] md:text-[20px] lg:text-[26px] xl:text-[30px] 2xl:text-[32px] leading-normal max-w-[700px] capitalize mb-10">
               If you or a loved one has been affected by a harmful product or exposure, we’re here to help you take the first step toward justice.
             </p>
-              <button 
+              <button
                 className="bg-yellow-400 hover:bg-yellow-500 text-black font-semibold px-8 py-4 rounded-lg text-lg transition-colors duration-200 shadow-lg hover:shadow-xl"
                 style={{ fontFamily: 'Quicksand, sans-serif' }}
               >
@@ -77,11 +77,12 @@ const AboutSix = () => {
           </div>
         </div>
       </section>
-
-
+ 
+ 
      {/* Mobile Hero Section */}
-<section className="sm:hidden flex flex-col items-center justify-end bg-[#0A1F8F] w-full pt-[50px]">
-
+<section className="relative sm:hidden flex flex-col items-center justify-end bg-[#0A1F8F] w-full pt-[50px] pb-[60px]">
+ 
+<div className="z-[10] flex flex-col items-center w-full">
   {/* Quote + Text Block */}
   <div className="w-[390px] px-[16px] flex flex-col items-start gap-[20px]">
     {/* Quote Icon */}
@@ -90,13 +91,13 @@ const AboutSix = () => {
       alt="quote icon"
       className="w-[48px] h-[38px]"
     />
-    
+   
     {/* Text */}
     <p className="text-white font-quicksand text-[28px] font-semibold capitalize leading-snug w-[358px]">
-      If you or a loved one has been affected by a harmful product or exposure, we’re here to help you take the first step toward justice.
+      If you or a loved one has been affected by a harmful product or exposure, we're here to help you take the first step toward justice.
     </p>
   </div>
-
+ 
   {/* Bottom Image inside yellow border */}
   <div className="mt-[32px] h-[309px]">
     <img
@@ -105,10 +106,13 @@ const AboutSix = () => {
       className="w-full h-full object-cover rounded-md"
     />
   </div>
+  </div>
+  {/* Cream Bottom Patch */}
+<div className="absolute bottom-0 left-0 w-full h-[35px] bg-[#FAF7EF] " />
+ 
 </section>
-
     </>
   )
 }
-
+ 
 export default AboutSix

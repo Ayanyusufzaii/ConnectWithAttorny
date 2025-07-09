@@ -1,7 +1,7 @@
 import React from 'react'
 import imgR from '../../assets/serHR.png'
 import MobileHeroBg from '../../assets/serMob.png'
- 
+import GradientMobileHero from '../../assets/ServiceGradientMobileHero.png'
 const ServiceOne = () => {
   return (
     <>
@@ -48,11 +48,7 @@ const ServiceOne = () => {
               xl:text-[15px] xl:leading-[30px] xl:max-w-[636px]
               2xl:text-[17px] 2xl:leading-[36px] 2xl:max-w-[760px]
               min-[3840px]:text-[36px] min-[3840px]:leading-[60px] min-[3840px]:max-w-[1272px]
-               md:-ml-8"
-            style={{
-              fontFamily: 'Quicksand, sans-serif',
-              fontWeight: 600
-            }}
+               md:-ml-8  font-[Quicksand] font-medium"
           >
             Discover legal actions against companies that endangered lives. If you were harmed by a drug, toxic exposure, or defective product, you may be eligible for a settlement. Click to learn more and connect with attorneys - at no cost to you.
           </h2>
@@ -76,42 +72,41 @@ const ServiceOne = () => {
  
       {/* Mobile Hero Section */}
       <section className="bg-[#0A1F8F] flex sm:hidden relative w-full h-[654px] items-start justify-center overflow-hidden">
-        {/* Background Image */}
-        <img
-          src={MobileHeroBg}
-          alt="Hero Background"
-          className="absolute inset-0 w-full h-full object-cover z-0"
-        />
- 
-        {/* Overlay for better text visibility */}
-        <div className="absolute inset-0 z-10 " />
- 
-        {/* Content - Positioned at top */}
-        <div className="relative z-20 flex flex-col items-start w-full px-4 pt-[50px]">
-          <h1
-            className="text-white mb-4 text-left capitalize
-              text-[28px] leading-normal max-w-[358px]"
-            style={{
-              fontFamily: 'Quicksand, sans-serif',
-              fontWeight: 700
-            }}
-          >
-            Explore Active Lawsuits
-            And Claim Your Rights
-          </h1>
-         
-          <h2
-            className="text-white text-left capitalize
-              text-[14px] leading-normal tracking-[-0.15px] max-w-[358px]"
-            style={{
-              fontFamily: 'Quicksand, sans-serif',
-              fontWeight: 300
-            }}
-          >
-            Discover legal actions against companies that endangered lives. If you were harmed by a drug, toxic exposure, or defective product, you may be eligible for a settlement. Click to learn more and connect with attorneys - at no cost to you.
-                      </h2>
-        </div>
-      </section>
+      {/* Background Image Gradient */}
+      <img
+        src={GradientMobileHero}
+        alt="Gradient Mobile Hero"
+        className="absolute inset-0 w-full h-full object-cover z-10"
+      />
+
+      {/* Foreground Image */}
+      <img
+        src={MobileHeroBg}
+        alt="Hero Background"
+        className="absolute inset-0 w-full h-full object-cover z-0"
+      />
+
+      {/* Transparent overlay for readability */}
+      <div className="absolute inset-0  opacity-20 z-10" />
+
+      {/* Hero Text Content */}
+      <div className="relative z-20 flex flex-col items-start w-full px-4 pt-[50px]">
+        <h1
+          className="text-white mb-4 text-left capitalize text-[28px] leading-normal max-w-[358px] font-[Quicksand] font-bold"
+        >
+          Explore Active Lawsuits<br />
+          And Claim Your Rights
+        </h1>
+
+        <h2
+          className="text-white text-left capitalize text-[14px] leading-[23px] tracking-[-0.15px] max-w-[358px] font-[Quicksand] font-medium"
+        >
+          Discover legal actions against companies that endangered lives. If you were harmed by a drug, toxic exposure, or defective product, you may be eligible for a settlement. Click to learn more and connect with attorneys – at no cost to you.
+        </h2>
+      </div>
+    </section>
+   
+   
     </>
   )
 }

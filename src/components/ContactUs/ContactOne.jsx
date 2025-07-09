@@ -39,7 +39,7 @@ const ContactOne = () => {
           <div className="max-w-7xl mx-auto grid md:grid-cols-2 items-center gap-8">
             {/* Left Content */}
             <div>
-              <h2 className=" md:text-[27px] lg:text-[33px] 2xl:text-[40px] font-semibold leading-snug">
+              <h2 className=" md:text-[27px] lg:text-[33px] xl:text-[40px] font-semibold leading-snug">
                 The Right Legal Help <br />
                 <span className="text-white">
                   Is Just <span className="text-yellow-400">One Message</span> Away
