@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 // Desktop Images
-import depoImg from "../../assets/SubserviceDesktop/desk-depo-provera-lawsuit.png";
+import depoImg from "../../assets/SubserviceDesktop/new-desk-depo-lawsuit.png";
 import paraquatImg from "../../assets/SubserviceDesktop/new-desk-paraquat-lawsuit.png";
 import roundupImg from "../../assets/SubserviceDesktop/desk-roundup-lawsuit.png";
 import babyFoodImg from "../../assets/SubserviceDesktop/desk-toxic-baby-food-lawsuit.png";
