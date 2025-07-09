@@ -100,10 +100,11 @@ function DesktopNavbar() {
       </div>
       {/* Call Now Tile */}
       <div className="flex items-center">
-        <div className="bg-[#0A1F8F] rounded-lg px-4 py-2 text-white text-center shadow">
-          <div className=" text-l">CALL NOW</div>
-          <div className="text-l">888 201-1350</div>
-        </div>
+       <div className="bg-[#0A1F8F] rounded-lg px-6 py-1 text-white text-center shadow font-quicksand">
+  <div className="text-xs">CALL NOW</div>
+  <div className="text-l">888 201-1350</div>
+</div>
+
       </div>
     </nav>
   );
