@@ -212,7 +212,7 @@ const CustomCaptcha = ({ onCaptchaChange, resetTrigger }) => {
   );
 };
 
-const FloatingInput = ({ type, id, label, value, onChange, error }) => {
+const FloatingInput = ({ type, id, label, value, onChange, error, readOnly = false }) => {
   const [focused, setFocused] = useState(false);
  
   return (
@@ -225,7 +225,8 @@ const FloatingInput = ({ type, id, label, value, onChange, error }) => {
         onChange={onChange}
         onFocus={() => setFocused(true)}
         onBlur={(e) => setFocused(e.target.value !== '' || focused)}
-        className={`peer w-full border ${error ? 'border-red-500' : 'border-gray-300'} rounded-lg px-4 pt-6 pb-2 focus:outline-none focus:ring-2 ${error ? 'focus:ring-red-500' : 'focus:ring-blue-400'} bg-[#E7E9F4] text-[#0A1F8F] font-medium`}
+        readOnly={readOnly}
+        className={`peer w-full border ${error ? 'border-red-500' : 'border-gray-300'} rounded-lg px-4 pt-6 pb-2 focus:outline-none focus:ring-2 ${error ? 'focus:ring-red-500' : 'focus:ring-blue-400'} bg-[#E7E9F4] text-[#0A1F8F] font-medium ${readOnly ? 'cursor-not-allowed opacity-75' : ''}`}
         style={{ fontFamily: 'Quicksand, sans-serif' }}
         placeholder=" "
       />
@@ -238,6 +239,9 @@ const FloatingInput = ({ type, id, label, value, onChange, error }) => {
       </label>
       {error && (
         <p className="text-red-500 text-sm mt-1">{error}</p>
+      )}
+      {readOnly && (
+        <p className="text-blue-600 text-xs mt-1"></p>
       )}
     </div>
   );
@@ -400,9 +404,11 @@ const DesktopForm = () => {
   const [loading, setLoading] = useState(false);
   const [captchaResetTrigger, setCaptchaResetTrigger] = useState(0);
   const [errors, setErrors] = useState({});
-   const [pingUrl, setPingUrl] = useState("");
+  const [pingUrl, setPingUrl] = useState("");
   const [certId, setCertId] = useState("");
   const [tokenUrl, settokenUrl] = useState("");
+  const [zipCodeUsed, setZipCodeUsed] = useState(false);
+  const [manualCityState, setManualCityState] = useState(false);
 
 
   useEffect(() => {
@@ -510,6 +516,17 @@ const DesktopForm = () => {
       }
     }
 
+    // Handle manual city/state entry (before ZIP code)
+    if (fieldName === 'city' || fieldName === 'state') {
+      if (!zipCodeUsed && value.length > 0) {
+        setManualCityState(true);
+        setFormData(prevData => ({
+          ...prevData,
+          captchaEnabled: true
+        }));
+      }
+    }
+
     // Handle ZIP code validation and auto-population
     if (fieldName === 'zipCode') {
       const cleaned = value.replace(/\D/g, '');
@@ -519,11 +536,12 @@ const DesktopForm = () => {
           // Clear city and state when ZIP code is deleted
           setFormData(prevData => ({
             ...prevData,
-            
             city: '',
             state: '',
             zipCode: '',
           }));
+          setZipCodeUsed(false);
+          setManualCityState(false);
           setErrors(newErrors);
           return;
         }
@@ -548,6 +566,12 @@ const DesktopForm = () => {
           city: locationData.city,
           state: locationData.state
         }));
+        setZipCodeUsed(true);
+        setManualCityState(false);
+        toast.success('ZIP code validated! ');
+      } else {
+        toast.error('Invalid ZIP code. Please enter a valid US ZIP code.');
+        setZipCodeUsed(false);
       }
     }
   };
@@ -747,6 +771,7 @@ const DesktopForm = () => {
           value={formData.city} 
           onChange={handleChange}
           error={errors.city}
+          readOnly={zipCodeUsed}
         />
         <FloatingInput 
           type="text" 
@@ -755,6 +780,7 @@ const DesktopForm = () => {
           value={formData.state} 
           onChange={handleChange}
           error={errors.state}
+          readOnly={zipCodeUsed}
         />
         <FloatingInput 
           type="text" 
@@ -781,8 +807,9 @@ const DesktopForm = () => {
             style={{ width: '1.25rem', height: '1.25rem' }}
           />
           <label htmlFor="captchaEnabled" className="text-sm font-medium text-gray-700" style={{ fontFamily: 'Quicksand, sans-serif' }}>
-           Please Verify you're human
+            Please Verify you're human
           </label>
+   
         </div>
         {formData.captchaEnabled && (
           <CustomCaptcha onCaptchaChange={handleCaptchaChange} resetTrigger={captchaResetTrigger} />
@@ -843,9 +870,11 @@ const MobileForm = () => {
   const [loading, setLoading] = useState(false);
   const [captchaResetTrigger, setCaptchaResetTrigger] = useState(0);
   const [errors, setErrors] = useState({});
-   const [pingUrl, setPingUrl] = useState("");
+  const [pingUrl, setPingUrl] = useState("");
   const [certId, setCertId] = useState("");
   const [tokenUrl, settokenUrl] = useState("");
+  const [zipCodeUsed, setZipCodeUsed] = useState(false);
+  const [manualCityState, setManualCityState] = useState(false);
 
 
   useEffect(() => {
@@ -993,6 +1022,8 @@ const MobileForm = () => {
           city: locationData.city,
           state: locationData.state
         }));
+      } else {
+        toast.error('Invalid ZIP code. Please enter a valid US ZIP code.');
       }
     }
   };

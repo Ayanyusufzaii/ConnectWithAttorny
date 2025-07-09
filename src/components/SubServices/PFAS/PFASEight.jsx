@@ -1,6 +1,15 @@
 import React from 'react'
 import img1 from '../../../assets/Frame 48.png'
+import { useNavigate } from 'react-router-dom';
+
 const PFASEight = () => {
+  const navigate = useNavigate();
+
+const handleRedirect = () => {
+  navigate('/ContactUs'); // Adjust if your route is named differently
+};
+
+  
   return (
        <>
       {/* Desktop Tile Section */}
@@ -24,12 +33,14 @@ your free case Review!
           >
             Fill out a from to start a free case review Now.
           </h2>
-          <button
-            className="bg-yellow-400 hover:bg-yellow-500 text-black font-semibold px-8 py-4 rounded-lg text-lg transition-colors duration-200 shadow-lg hover:shadow-xl"
-            style={{ fontFamily: 'Quicksand, sans-serif' }}
-          >
-            Start My Case Review
-          </button>
+        <button
+  onClick={handleRedirect}
+  className="bg-yellow-400 hover:bg-yellow-500 text-black font-semibold px-8 py-4 rounded-lg text-lg transition-colors duration-200 shadow-lg hover:shadow-xl"
+  style={{ fontFamily: 'Quicksand, sans-serif' }}
+>
+  Start My Case Review
+</button>
+
         </div>
       </div>
 
@@ -74,12 +85,14 @@ your free case Review!
                 style={{ fontFamily: 'Quicksand, sans-serif' }}
               >
  Fill out a from to start a free case review Now.              </h2>
-              <button 
-                className="bg-yellow-400 hover:bg-yellow-500 text-black font-semibold px-8 py-4 rounded-lg text-lg transition-colors duration-200 shadow-lg hover:shadow-xl"
-                style={{ fontFamily: 'Quicksand, sans-serif' }}
-              >
-                Start My Case Review
-              </button>
+              <button
+  onClick={handleRedirect}
+  className="bg-yellow-400 hover:bg-yellow-500 text-black font-semibold px-8 py-4 rounded-lg text-lg transition-colors duration-200 shadow-lg hover:shadow-xl"
+  style={{ fontFamily: 'Quicksand, sans-serif' }}
+>
+  Start My Case Review
+</button>
+
             </div>
           </div>
         </div>
@@ -110,12 +123,14 @@ your free case Review!            </h1>
               style={{ fontFamily: 'Quicksand, sans-serif' }}
             >
  Fill out a from to start a free case review Now.                </h2>
-            <button 
-              className="bg-yellow-400 hover:bg-yellow-500 text-black font-semibold px-6 py-3 rounded-lg text-base transition-colors duration-200 shadow-lg w-full sm:w-auto"
-              style={{ fontFamily: 'Quicksand, sans-serif' }}
-            >
-              Start My Case Review
-            </button>
+          <button
+  onClick={handleRedirect}
+  className="bg-yellow-400 hover:bg-yellow-500 text-black font-semibold px-8 py-4 rounded-lg text-lg transition-colors duration-200 shadow-lg hover:shadow-xl"
+  style={{ fontFamily: 'Quicksand, sans-serif' }}
+>
+  Start My Case Review
+</button>
+
           </div>
         </div>
         <div className="mt-8 border-t-8 border-white" />

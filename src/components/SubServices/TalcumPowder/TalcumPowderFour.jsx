@@ -8,7 +8,7 @@ const cards = [
     number: "01",
     text: (
       <>
-       Talc products used near the genitals can travel to the ovaries 
+       <span className='text-[#757575]'>Talc products</span> used near the genitals  <span className='text-[#757575]'>can travel to the ovaries </span>
       </>
     ),
     bg: "bg-[#FFFFFF]",
@@ -17,7 +17,7 @@ const cards = [
     number: "02",
     text: (
       <>
-        Talc may cause chronic inflammation, leading to cancer over time 
+         <span className='text-[#757575]'>Talc may cause </span> chronic inflammation, <span className='text-[#757575]'> leading to cancer over time </span>
       </>
     ),
     bg: "bg-[#FFFFFF]",
@@ -26,7 +26,7 @@ const cards = [
     number: "03",
     text: (
       <>
-        Internal company documents allegedly show that manufacturers knew of the risks and failed to warn consumers 
+         <span className='text-[#757575]'>Internal company documents allegedly show that </span> manufacturers knew of the risks  <span className='text-[#757575]'>and</span> failed to warn consumers 
       </>
     ),
     bg: "bg-[#FFFFFF]",
@@ -65,7 +65,7 @@ const ParaquatLawsuitOverview = () => {
  
           {/* Description Text */}
           <p className="text-[#757575] text-[18px] font-medium leading-normal mb-8 max-w-[1200px]">
-          Thousands of women have filed lawsuits against Johnson & Johnson and other companies, claiming that long-term use of talc-based powders in the genital area caused them to develop ovarian cancer. <br></br><br></br>
+          Thousands of women have filed lawsuits against <span className="text-[#EDC14A]">Johnson & Johnson </span> and other companies, claiming that long-term use of <span className="text-[#EDC14A]">talc-based powders </span>in the genital area caused them to develop <span className="text-[#EDC14A]">ovarian cancer.</span> <br></br><br></br>
 
 Many juries have awarded multi-million dollar verdicts to affected women, while others are pursuing claims through mass tort litigation. 
           </p>
@@ -112,10 +112,10 @@ Many juries have awarded multi-million dollar verdicts to affected women, while 
  
         {/* Mobile Description */}
         <p className="text-[#757575] text-[16px] font-medium leading-normal text-left">
-           Thousands of women have filed lawsuits against Johnson & Johnson and other companies, claiming that long-term use of talc-based powders in the genital area caused them to develop ovarian cancer. <br></br><br></br>
+           Thousands of women have filed lawsuits against <span className="text-[#EDC14A]">Johnson & Johnson </span> and other companies, claiming that long-term use of <span className="text-[#EDC14A]">talc-based powders </span>in the genital area caused them to develop <span className="text-[#EDC14A]">ovarian cancer.</span> <br></br><br></br>
 
 Many juries have awarded multi-million dollar verdicts to affected women, while others are pursuing claims through mass tort litigation. 
-        </p>
+          </p>
  
         {/* Mobile Secondary Heading */}
         <h3 className="text-[#0A1F8F] text-[24px] sm:text-[28px] font-semibold leading-[1.2] capitalize text-left">

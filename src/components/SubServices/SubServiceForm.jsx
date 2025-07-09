@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { SubServiceSendAdminEmail, SubServiceSendUserEmail } from '../../emailService.js';
 import toast, { Toaster } from 'react-hot-toast';
@@ -211,7 +210,7 @@ const CustomCaptcha = ({ onCaptchaChange, resetTrigger }) => {
   );
 };
 
-const FloatingInput = ({ type, id, label, value, onChange, error }) => {
+const FloatingInput = ({ type, id, label, value, onChange, error, readOnly = false }) => {
   const [focused, setFocused] = useState(false);
  
   return (
@@ -224,7 +223,8 @@ const FloatingInput = ({ type, id, label, value, onChange, error }) => {
         onChange={onChange}
         onFocus={() => setFocused(true)}
         onBlur={(e) => setFocused(e.target.value !== '' || focused)}
-        className={`peer w-full border ${error ? 'border-red-500' : 'border-gray-300'} rounded-lg px-4 pt-6 pb-2 focus:outline-none focus:ring-2 ${error ? 'focus:ring-red-500' : 'focus:ring-blue-400'} bg-[#E7E9F4] text-[#0A1F8F] font-medium`}
+        readOnly={readOnly}
+        className={`peer w-full border ${error ? 'border-red-500' : 'border-gray-300'} rounded-lg px-4 pt-6 pb-2 focus:outline-none focus:ring-2 ${error ? 'focus:ring-red-500' : 'focus:ring-blue-400'} bg-[#E7E9F4] text-[#0A1F8F] font-medium ${readOnly ? 'cursor-not-allowed opacity-75' : ''}`}
         style={{ fontFamily: 'Quicksand, sans-serif' }}
         placeholder=" "
       />
@@ -238,6 +238,7 @@ const FloatingInput = ({ type, id, label, value, onChange, error }) => {
       {error && (
         <p className="text-red-500 text-sm mt-1">{error}</p>
       )}
+      {readOnly }
     </div>
   );
 };
@@ -313,10 +314,10 @@ const DesktopForm = () => {
   const [currentStep, setCurrentStep] = useState(1);
   const [formData, setFormData] = useState({
     // Step 1 fields
-    name: '',
+    firstName: '',
+    lastName: '',
     phone: '',
     email: '',
-    category: '',
     termsAccepted: false,
     // Step 2 fields
     streetAddress: '',
@@ -329,10 +330,11 @@ const DesktopForm = () => {
   const [loading, setLoading] = useState(false);
   const [captchaResetTrigger, setCaptchaResetTrigger] = useState(0);
   const [errors, setErrors] = useState({});
-   const [pingUrl, setPingUrl] = useState("");
+  const [pingUrl, setPingUrl] = useState("");
   const [certId, setCertId] = useState("");
   const [tokenUrl, settokenUrl] = useState("");
-
+  const [zipCodeUsed, setZipCodeUsed] = useState(false);
+  const [manualCityState, setManualCityState] = useState(false);
 
   useEffect(() => {
   // Simple observer to capture TrustedForm data when it's populated
@@ -397,7 +399,6 @@ const DesktopForm = () => {
   };
 }, []);
 
-  
   const handleChange = async (e) => {
     const { id, value, type, checked } = e.target;
     const fieldName = id.replace('-mobile', '');
@@ -439,6 +440,17 @@ const DesktopForm = () => {
       }
     }
 
+    // Handle manual city/state entry (before ZIP code)
+    if (fieldName === 'city' || fieldName === 'state') {
+      if (!zipCodeUsed && value.length > 0) {
+        setManualCityState(true);
+        setFormData(prevData => ({
+          ...prevData,
+          captchaEnabled: true
+        }));
+      }
+    }
+
     // Handle ZIP code validation and auto-population
     if (fieldName === 'zipCode') {
       const cleaned = value.replace(/\D/g, '');
@@ -448,11 +460,12 @@ const DesktopForm = () => {
           // Clear city and state when ZIP code is deleted
           setFormData(prevData => ({
             ...prevData,
-            
             city: '',
             state: '',
             zipCode: '',
           }));
+          setZipCodeUsed(false);
+          setManualCityState(false);
           setErrors(newErrors);
           return;
         }
@@ -477,6 +490,12 @@ const DesktopForm = () => {
           city: locationData.city,
           state: locationData.state
         }));
+        setZipCodeUsed(true);
+        setManualCityState(false);
+        toast.success('ZIP code validated!');
+      } else {
+        toast.error('Invalid ZIP code. Please enter a valid US ZIP code.');
+        setZipCodeUsed(false);
       }
     }
   };
@@ -543,10 +562,10 @@ const DesktopForm = () => {
       toast.success('Your request has been submitted successfully.')
       // Reset form
       setFormData({
-        name: '',
+        firstName: '',
+        lastName: '',
         phone: '',
         email: '',
-        category: '',
         termsAccepted: false,
         streetAddress: '',
         city: '',
@@ -682,6 +701,7 @@ const DesktopForm = () => {
           value={formData.city} 
           onChange={handleChange}
           error={errors.city}
+          readOnly={zipCodeUsed}
         />
         <FloatingInput 
           type="text" 
@@ -690,6 +710,7 @@ const DesktopForm = () => {
           value={formData.state} 
           onChange={handleChange}
           error={errors.state}
+          readOnly={zipCodeUsed}
         />
         <FloatingInput 
           type="text" 
@@ -716,8 +737,9 @@ const DesktopForm = () => {
             style={{ width: '1.25rem', height: '1.25rem' }}
           />
           <label htmlFor="captchaEnabled" className="text-sm font-medium text-gray-700" style={{ fontFamily: 'Quicksand, sans-serif' }}>
-            Verify you're human
+            Please Verify you're human
           </label>
+          {(manualCityState || zipCodeUsed)}
         </div>
         {formData.captchaEnabled && (
           <CustomCaptcha onCaptchaChange={handleCaptchaChange} resetTrigger={captchaResetTrigger} />
@@ -762,8 +784,8 @@ const MobileForm = () => {
   const [currentStep, setCurrentStep] = useState(1);
   const [formData, setFormData] = useState({
     // Step 1 fields
-    first_name: '',
-    last_name: '',
+    firstName: '',
+    lastName: '',
     phone: '',
     email: '',
     termsAccepted: false,
@@ -778,9 +800,11 @@ const MobileForm = () => {
   const [loading, setLoading] = useState(false);
   const [captchaResetTrigger, setCaptchaResetTrigger] = useState(0);
   const [errors, setErrors] = useState({});
-   const [pingUrl, setPingUrl] = useState("");
+  const [pingUrl, setPingUrl] = useState("");
   const [certId, setCertId] = useState("");
   const [tokenUrl, settokenUrl] = useState("");
+  const [zipCodeUsed, setZipCodeUsed] = useState(false);
+  const [manualCityState, setManualCityState] = useState(false);
 
   useEffect(() => {
   // Simple observer to capture TrustedForm data when it's populated
@@ -845,8 +869,6 @@ const MobileForm = () => {
   };
 }, []);
 
-
-
   const handleChange = async (e) => {
     const { id, value, type, checked } = e.target;
     const fieldName = id.replace('-mobile', '');
@@ -888,6 +910,17 @@ const MobileForm = () => {
       }
     }
 
+    // Handle manual city/state entry (before ZIP code)
+    if (fieldName === 'city' || fieldName === 'state') {
+      if (!zipCodeUsed && value.length > 0) {
+        setManualCityState(true);
+        setFormData(prevData => ({
+          ...prevData,
+          captchaEnabled: true
+        }));
+      }
+    }
+
     // Handle ZIP code validation and auto-population
     if (fieldName === 'zipCode') {
       const cleaned = value.replace(/\D/g, '');
@@ -897,11 +930,12 @@ const MobileForm = () => {
           // Clear city and state when ZIP code is deleted
           setFormData(prevData => ({
             ...prevData,
-            
             city: '',
             state: '',
             zipCode: '',
           }));
+          setZipCodeUsed(false);
+          setManualCityState(false);
           setErrors(newErrors);
           return;
         }
@@ -926,6 +960,12 @@ const MobileForm = () => {
           city: locationData.city,
           state: locationData.state
         }));
+        setZipCodeUsed(true);
+        setManualCityState(false);
+        toast.success('ZIP code validated! Please update CAPTCHA verification.');
+      } else {
+        toast.error('Invalid ZIP code. Please enter a valid US ZIP code.');
+        setZipCodeUsed(false);
       }
     }
   };
@@ -992,8 +1032,8 @@ try {
       toast.success('Your request has been submitted successfully.')
       // Reset form
       setFormData({
-        first_namename: '',
-        last_name: '',
+        firstName: '',
+        lastName: '',
         phone: '',
         email: '',
         termsAccepted: false,
@@ -1038,19 +1078,19 @@ try {
                     />
         <FloatingInput 
           type="text" 
-          id="fist_name" 
-          label="Fist Name" 
-          value={formData.fist_name} 
+          id="firstName" 
+          label="First Name" 
+          value={formData.firstName} 
           onChange={handleChange}
-          error={errors.first_name}
+          error={errors.firstName}
         />
          <FloatingInput 
           type="text" 
-          id="last_name" 
+          id="lastName" 
           label="Last Name" 
-          value={formData.last_name} 
+          value={formData.lastName} 
           onChange={handleChange}
-          error={errors.last_name}
+          error={errors.lastName}
         />
         <FloatingInput 
           type="tel" 
@@ -1069,7 +1109,6 @@ try {
           error={errors.email}
         />
    
-    
         <div className="flex items-start gap-3">
           <input
             type="checkbox"
@@ -1131,6 +1170,7 @@ try {
         value={formData.city} 
         onChange={handleChange}
         error={errors.city}
+        readOnly={zipCodeUsed}
       />
       <FloatingInput 
         type="text" 
@@ -1139,6 +1179,7 @@ try {
         value={formData.state} 
         onChange={handleChange}
         error={errors.state}
+        readOnly={zipCodeUsed}
       />
        <FloatingInput 
         type="text" 
@@ -1164,9 +1205,14 @@ try {
             style={{ width: '1.25rem', height: '1.25rem' }}
           />
           <label htmlFor="captchaEnabled" className="text-sm font-medium text-gray-700" style={{ fontFamily: 'Quicksand, sans-serif' }}>
-            Verify you're human
+            Please Verify you're human
           </label>
         </div>
+        {(manualCityState || zipCodeUsed) && (
+          <p className="text-xs text-blue-600 mb-2">
+            {manualCityState ? 'Required for manual entry' : 'Required after ZIP validation'}
+          </p>
+        )}
         {formData.captchaEnabled && (
           <CustomCaptcha onCaptchaChange={handleCaptchaChange} resetTrigger={captchaResetTrigger} />
         )}

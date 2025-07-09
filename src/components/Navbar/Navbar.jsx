@@ -4,8 +4,8 @@ import { Facebook, Instagram, Linkedin, ChevronDown, Check } from 'lucide-react'
 import { BsTwitterX } from "react-icons/bs"; // Importing Twitter icon from react-icons
 
 const NAV_LINKS = [
-  { name: "Home", href: "/" },
-  { name: "About Us", href: "/AboutUs" },
+  { name: "Home", href: "/" },  
+    { name: "About Us", href: "/AboutUs" },
   { name: "Services", hasDropdown: true },
   { name: "Contact Us", href: "/ContactUs" },
 ];

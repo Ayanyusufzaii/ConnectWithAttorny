@@ -1,11 +1,12 @@
 import React from 'react';
 import { Facebook, Instagram, Linkedin } from 'lucide-react';
 import footerVector from '../../assets/Vector.svg';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { BsTwitterX } from "react-icons/bs";
 
 
 const Footer = () => {
+  const location = useLocation();
 
   const socialLinks = [
     { icon: Facebook, href: '#', label: 'Facebook' },
@@ -76,14 +77,14 @@ const Footer = () => {
 
             {/* Navigation */}
             <nav className="flex justify-center gap-8 mt-10">
-              {navigationLinks.map((link, idx) => (
+              {navigationLinks.map((link) => (
                 <a
                   key={link.name}
                   href={link.href}
                   className={`text-base font-medium transition-colors ${
-                    idx === 0 ? 'text-yellow-400' : 'text-gray-300 hover:text-white'
+                    location.pathname === link.href ? 'text-yellow-400' : 'text-gray-300 hover:text-white'
                   }`}
-                  aria-current={idx === 0 ? 'page' : undefined}
+                  aria-current={location.pathname === link.href ? 'page' : undefined}
                 >
                   {link.name}
                 </a>
@@ -136,14 +137,14 @@ const Footer = () => {
 </h2>
 
                 <nav className="flex flex-wrap gap-6 mt-8">
-                  {navigationLinks.map((link, idx) => (
+                  {navigationLinks.map((link) => (
                     <a
                       key={link.name}
                       href={link.href}
                       className={`text-base font-medium transition-colors ${
-                        idx === 0 ? 'text-yellow-400' : 'text-gray-300 hover:text-white'
+                        location.pathname === link.href ? 'text-yellow-400' : 'text-gray-300 hover:text-white'
                       }`}
-                      aria-current={idx === 0 ? 'page' : undefined}
+                      aria-current={location.pathname === link.href ? 'page' : undefined}
                     >
                       {link.name}
                     </a>
