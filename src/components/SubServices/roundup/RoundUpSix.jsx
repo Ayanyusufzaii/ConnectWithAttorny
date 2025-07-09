@@ -62,7 +62,7 @@ export default function RoundUpSix() {
             <h2 className="text-[24px] min-[350px]:text-[28px] min-[400px]:text-[32px] sm:text-[28px] font-semibold capitalize mb-3 leading-tight text-left">
               What <span className="text-[#EDC14A]">Settlement</span> May Cover
             </h2>
-        <ul className="list-disc pl-5 text-[14px] md:text-[16px] lg:text-[22px] font-medium space-y-2 leading-relaxed text-white">
+        <ul className="list-disc pl-5 text-[14px] md:text-[16px] lg:text-[22px] font-medium space-y-2 leading-relaxed text-white pb-6">
   <li>Cancer Treatment And Medical Expenses</li>
   <li>Lost Wages And Long-Term Financial Hardship</li>
   <li>Pain And Suffering</li>

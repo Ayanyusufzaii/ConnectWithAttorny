@@ -25,21 +25,18 @@ export default function Compensation() {
           </div>
 
           {/* Right: Text */}
-          <div className="w-1/2 flex items-center justify-start px-4 md:px-6 lg:px-10 py-6">
+          <div className="w-1/2 flex items-center justify-start px-4 md:px-6 lg:px-10 py-4">
             <div className="max-w-[600px] w-full">
-              <h2 className="font-semibold capitalize leading-snug text-[20px] md:text-[28px] lg:text-[40px] text-white mb-4">
-                What <span className="text-[#EDC14A]">Settlement</span>
-                <span className="md:hidden lg:inline"> May Cover</span>
-                <span className="hidden md:inline lg:hidden">
-                  <br />May Cover
-                </span>
+              <h2 className="font-medium capitalize leading-snug text-[22px] md:text-[22px] lg:text-[30px] xl:text-[35px] text-white mb-4 ">
+                What <span className="text-[#EDC14A]">Settlement</span> May Cover
+                
               </h2>
-              <ul className="list-disc pl-5 text-[14px] md:text-[16px] lg:text-[22px] font-medium space-y-2 leading-relaxed text-white">
-                <li>Medical Bills And Diagnostic Testing</li>
-                <li>Brain Tumor Treatment Or Surgery</li>
-                <li>Lost Wages Or Inability To Work</li>
-                <li>Ongoing Care For Long-Term Symptoms</li>
-                <li>Pain, Emotional Stress, And Reduced Quality Of Life</li>
+              <ul className="list-disc pl-12 text-[10px] md:text-[12px] lg:text-[16px] xl:text-[18px] space-y-2 leading-relaxed text-white ">
+                <li>Medical bills and diagnostic testing</li>
+              <li>Brain tumor treatment or surgery </li>
+              <li>Lost wages or inability to work</li>
+              <li>Ongoing care for long-term symptoms</li>
+              <li>Pain, emotional stress, and reduced quality of life</li>
               </ul>
             </div>
           </div>
@@ -58,15 +55,15 @@ export default function Compensation() {
 
           {/* Text */}
           <div className="w-full text-white pt-4">
-            <h2 className="text-[24px] min-[350px]:text-[28px] min-[400px]:text-[32px] sm:text-[28px] font-semibold capitalize mb-3 leading-tight text-left">
-              What <span className="text-[#EDC14A]">Settlement</span> May Cover
+            <h2 className="text-[24px] min-[350px]:text-[28px] min-[400px]:text-[32px] sm:text-[28px] font-medium capitalize mb-3 leading-tight text-left">
+              What <span className="text-[#EDC14A]"> Settlement </span> May Cover
             </h2>
-            <ul className="list-disc pl-5 text-[14px] min-[350px]:text-[16px] min-[400px]:text-[17px] sm:text-[16px] font-medium leading-[28px] min-[400px]:leading-[30px] sm:leading-[32px] capitalize space-y-2">
-              <li>Medical Bills And Diagnostic Testing</li>
-              <li>Brain Tumor Treatment Or Surgery</li>
-              <li>Lost Wages Or Inability To Work</li>
-              <li>Ongoing Care For Long-Term Symptoms</li>
-              <li>Pain, Emotional Stress, And Reduced Quality Of Life</li>
+            <ul className="list-disc pl-5 text-[14px] min-[350px]:text-[16px] min-[400px]:text-[17px] sm:text-[16px] font-medium leading-[28px] min-[400px]:leading-[30px] sm:leading-[32px] capitalize space-y-2 pb-6">
+            <li>Medical bills and diagnostic testing</li>
+              <li>Brain tumor treatment or surgery </li>
+              <li>Lost wages or inability to work</li>
+              <li>Ongoing care for long-term symptoms</li>
+              <li>Pain, emotional stress, and reduced quality of life</li>
             </ul>
           </div>
         </div>

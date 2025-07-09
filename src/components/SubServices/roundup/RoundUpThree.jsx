@@ -9,7 +9,7 @@ const trustCards = [
   {
     icon: c1,
     title: 'Specialized Legal Support',
-    description: ' We connect you with attorneys who specialize in agricultural and consumer product lawsuits.  '
+    description: 'We connect you with attorneys who specialize in agricultural and consumer product lawsuits.'
   },
   {
     icon: c2,
@@ -19,7 +19,7 @@ const trustCards = [
   {
     icon: c3,
     title: 'Private and Confidential',
-    description: 'Your information is 100 percent secured and never shared without your consent.'
+    description: 'Your information is 100% secure and never shared without your consent.'
   }
 ];
 

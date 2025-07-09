@@ -9,17 +9,17 @@ const trustCards = [
   {
     icon: c1,
     title: 'Specialized Legal Support',
-    description: 'Get experienced attorneys in drug injury, hormone related lawsuits like Depo-Provera.'
+    description: 'Get experienced attorneys in drug injury, hormone-related lawsuits like Depo-Provera.'
   },
   {
     icon: c2,
     title: 'No Upfront Costs',
-    description: 'There are no consultation fees. You only pay if your case results in compensation.'
+    description: 'You only pay if your case leads to a settlement or legal recovery. '
   },
   {
     icon: c3,
     title: 'Private and Confidential',
-    description: 'Your information is 100 percent secured and never shared without your consent.'
+    description: 'Your information is 100% secure and never shared without your consent. '
   }
 ];
 
@@ -55,7 +55,7 @@ const WhyTrustUs = () => (
               alt="icon"
               className="w-[32px] h-[32px] md:w-[36px] md:h-[36px] lg:w-[44px] lg:h-[44px] xl:w-[48px] xl:h-[48px] 2xl:w-[50px] 2xl:h-[50px]"
             />
-            <h3 className="text-center text-[#0A1F8F] text-[15px] md:text-[16px] lg:text-[18px] xl:text-[20px] 2xl:text-[22px] font-semibold">
+            <h3 className="w-[165px] text-center text-[#0A1F8F] text-[15px] md:text-[16px] lg:text-[18px] xl:text-[20px] 2xl:text-[22px] font-semibold">
               {card.title}
             </h3>
             <p className="text-center text-[#757575] text-[12px] md:text-[13px] lg:text-[14px] xl:text-[15px] 2xl:text-[16px] font-medium opacity-80">

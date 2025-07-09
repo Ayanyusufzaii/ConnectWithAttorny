@@ -41,10 +41,10 @@ const RoundUpEight = () => {
     <section className="py-12 px-2 sm:px-4 md:px-8 lg:px-16 w-full max-w-none" style={{ fontFamily: 'Quicksand, sans-serif' }}>
       {/* Title */}
       <h2
-        className="text-[32px] sm:text-[40px] font-semibold text-[#0A1F8F] mb-6 capitalize leading-none"
+        className="text-[32px] sm:text-[40px] font-medium text-[#0A1F8F] mb-6 capitalize leading-none"
       >
         Frequently Asked{' '}
-        <span className="text-[#EDC14A] font-semibold capitalize">
+        <span className="text-[#EDC14A] font-medium capitalize">
           Questions
         </span>
       </h2>
@@ -60,7 +60,7 @@ const RoundUpEight = () => {
               } transition`}
               style={{ fontFamily: 'Quicksand, sans-serif' }}
             >
-              <span className="text-[#0A1F8F] text-[20px] sm:text-[24px] font-semibold leading-normal">
+              <span className="text-[#0A1F8F] text-[20px] sm:text-[24px] font-medium leading-normal">
                 {item.question}
               </span>
               <span className="text-[18px] font-light select-none">

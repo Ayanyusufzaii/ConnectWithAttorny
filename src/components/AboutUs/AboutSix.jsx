@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import React from 'react'
 import teamImg from '../../assets/abUs006.png'
 import teamImg1 from '../../assets/abUs006Mob.png'
@@ -34,12 +35,12 @@ const AboutSix = () => {
     <p className="text-white font-quicksand capitalize text-[16px] sm:text-[18px] md:text-[22px] lg:text-[28px] xl:text-[32px] leading-snug">
       If you or a loved one has been affected by a harmful product or exposure, we’re here to help you take the first step toward justice.
     </p>
-    <button
-            className="bg-yellow-400 hover:bg-yellow-500 text-black font-semibold px-8 py-4 rounded-lg text-lg transition-colors duration-200 shadow-lg hover:shadow-xl"
-            style={{ fontFamily: 'Quicksand, sans-serif' }}
-          >
-            Explore Active Lawsuits
-          </button>
+
+    <Link to="/ServiceMain">
+      <button className="bg-yellow-400 hover:bg-yellow-500 text-black font-semibold px-8 py-4 rounded-lg text-lg transition-colors duration-200 shadow-lg hover:shadow-xl">
+        Explore Active Lawsuits
+      </button>
+    </Link>
   </div>
 </div>
  
@@ -67,12 +68,14 @@ const AboutSix = () => {
               <p className="text-[#ffffff] font-quicksand text-[14px] sm:text-[16px] md:text-[20px] lg:text-[26px] xl:text-[30px] 2xl:text-[32px] leading-normal max-w-[700px] capitalize mb-10">
               If you or a loved one has been affected by a harmful product or exposure, we’re here to help you take the first step toward justice.
             </p>
+            <Link to="/ServiceMain">
               <button
                 className="bg-yellow-400 hover:bg-yellow-500 text-black font-semibold px-8 py-4 rounded-lg text-lg transition-colors duration-200 shadow-lg hover:shadow-xl"
                 style={{ fontFamily: 'Quicksand, sans-serif' }}
               >
                 Explore Active Lawsuits
               </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -84,7 +87,7 @@ const AboutSix = () => {
  
 <div className="z-[10] flex flex-col items-center w-full">
   {/* Quote + Text Block */}
-  <div className="w-[390px] px-[16px] flex flex-col items-start gap-[20px]">
+  <div className="w-full px-[16px] flex flex-col items-start gap-[20px]">
     {/* Quote Icon */}
     <img
       src={aposthopthe_icon}
@@ -93,7 +96,7 @@ const AboutSix = () => {
     />
    
     {/* Text */}
-    <p className="text-white font-quicksand text-[28px] font-semibold capitalize leading-snug w-[358px]">
+    <p className="text-white font-quicksand text-[28px] font-semibold capitalize leading-snug w-full">
       If you or a loved one has been affected by a harmful product or exposure, we're here to help you take the first step toward justice.
     </p>
   </div>
@@ -116,3 +119,4 @@ const AboutSix = () => {
 }
  
 export default AboutSix
+ 

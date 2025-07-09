@@ -1,6 +1,9 @@
 import React from 'react'
 import bgImg from '../../assets/abUs005.png'
 import MobileHeroBg from '../../assets/abUs005Mob.png'
+import dots from '../../assets/dots.png'
+import map from '../../assets/abUsMap.png'
+
  
 const AboutFive = () => {
   return (
@@ -56,39 +59,44 @@ const AboutFive = () => {
 </section>
  
       {/* Mobile Hero Section */}
-      <section className="flex sm:hidden relative w-full h-[654px] flex-col items-start justify-between overflow-hidden ">
-        {/* Background Image */}
-        <img
-          src={MobileHeroBg}
-          alt="Hero Background"
-          className="absolute inset-0 w-full h-full object-cover z-0"
-        />
- 
-        {/* Overlay for better text visibility */}
-        <div className="absolute inset-0 bg-#FDF9ED;/30 z-10" />
- 
-        {/* Content - Positioned at top */}
-        <div className="relative z-20 flex flex-col items-start w-full px-4 pt-[97px]">
-          <h1
-            className="text-[#0A1F8F] mb-4 text-left capitalize
-              text-[32px] leading-normal
-              font-[Quicksand] font-bold"
-          >
-            Our Network
-          </h1>
-         
-          <h2
-            className="text-[#757575] text-left
-              text-[12px] leading-normal
-              font-[Quicksand]"
-          >
-            BeWithLaw partners with vetted law firms that focus on mass torts and personal injury cases across the United States. These firms work on a contingency basis, meaning you pay nothing unless compensation is awarded.
-          </h2>
-        </div>
- 
-      </section>
+      <section className="flex sm:hidden relative w-full h-[568px] flex-col items-start justify-between bg-white overflow-hidden">
+
+      {/* Dots at top-right */}
+<img
+  src={dots}
+  alt="Top Right Dots"
+  className="absolute top-0 right-0 w-1/2 h-[42px] object-contain z-10"
+/>
+
+      {/* Text Content */}
+      <div className="relative z-20 flex flex-col items-start w-full px-4 pt-[97px]">
+        <h1 className="text-[#0A1F8F] mb-4 text-left capitalize text-[32px] leading-normal font-[Quicksand] font-bold">
+          Our Network
+        </h1>
+
+        <h2 className="text-[#757575] text-left text-[12px] leading-normal font-[Quicksand]">
+          BeWithLaw partners with vetted law firms that focus on mass torts and personal injury cases across the United States. These firms work on a contingency basis, meaning you pay nothing unless compensation is awarded.
+        </h2>
+      </div>
+
+      {/* Map at bottom */}
+<img
+  src={map}
+  alt="USA Map"
+  className="
+    absolute bottom-[64.53px] left-1/2 transform -translate-x-1/2
+    w-[84.24%] max-w-[358px] z-10
+    h-[235.186px]
+    min-[375px]:h-[250px]
+    min-[425px]:h-[270px]
+    object-contain
+  "
+/>
+
+    </section>
     </>
   )
 }
  
 export default AboutFive
+ 

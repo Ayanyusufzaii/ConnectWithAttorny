@@ -35,7 +35,7 @@ export default function PraquatSix() {
                   May Cover
                 </span>
               </h2>
-              <ul className="list-disc pl-5 text-[14px] md:text-[16px] lg:text-[22px] font-medium space-y-2 leading-relaxed text-white">
+              <ul className="list-disc pl-5 text-[14px] md:text-[14px] lg:text-[16px] font-normal space-y-2 leading-relaxed text-white">
                 <li>
                   Medical bills, neurologist consultations, and treatment costs
                 </li>
@@ -66,7 +66,7 @@ export default function PraquatSix() {
             <h2 className="text-[24px] min-[350px]:text-[28px] min-[400px]:text-[32px] sm:text-[28px] font-semibold capitalize mb-3 leading-tight text-left">
               What <span className="text-[#EDC14A]">Settlement</span> May Cover
             </h2>
-            <ul className="list-disc pl-5 text-[14px] min-[350px]:text-[16px] min-[400px]:text-[17px] sm:text-[16px] font-medium leading-[28px] min-[400px]:leading-[30px] sm:leading-[32px] capitalize space-y-2">
+            <ul className="list-disc pl-5 text-[14px] min-[350px]:text-[16px] min-[400px]:text-[17px] sm:text-[16px] font-medium leading-[28px] min-[400px]:leading-[30px] sm:leading-[32px] capitalize space-y-2 pb-6">
               <li>Medical Bills And Diagnostic Testing</li>
               <li>Brain Tumor Treatment Or Surgery</li>
               <li>Lost Wages Or Inability To Work</li>

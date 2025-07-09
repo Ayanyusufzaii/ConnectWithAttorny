@@ -80,7 +80,7 @@ const PraquatFour = () => {
             {cards.map((card) => (
               <article
                 key={card.number}
-                className={`p-4 h-[100px] rounded-[10px] ${card.bg} shadow-sm border border-white overflow-hidden flex flex-col justify-center`}
+                className={`p-4 h-[100px] md:h-[150px] rounded-[10px] ${card.bg} shadow-sm border border-white overflow-hidden flex flex-col justify-center`}
               >
                 <span className="text-[#0A1F8F] font-[Quicksand] not-italic font-normal leading-none text-[24px] mb-2">
                   {card.number}

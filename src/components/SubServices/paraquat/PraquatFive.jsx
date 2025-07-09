@@ -176,7 +176,7 @@ export default function PraquatFive() {
   {' '}above to check eligibility at no cost.
 </p>
  
-        <div className="flex flex-col gap-5 w-full max-w-[360px]">
+        <div className="flex flex-col gap-5 w-full">
           {mobileEligibilityCards.map((card) => (
             <article
               key={card.number}

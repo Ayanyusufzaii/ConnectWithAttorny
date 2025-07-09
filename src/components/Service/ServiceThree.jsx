@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 // Desktop Images
 import depoImg from "../../assets/SubserviceDesktop/desk-depo-provera-lawsuit.png";
-import paraquatImg from "../../assets/SubserviceDesktop/desk-paraquat-lawsuit.png";
+import paraquatImg from "../../assets/SubserviceDesktop/new-desk-paraquat-lawsuit.png";
 import roundupImg from "../../assets/SubserviceDesktop/desk-roundup-lawsuit.png";
 import babyFoodImg from "../../assets/SubserviceDesktop/desk-toxic-baby-food-lawsuit.png";
 import oxbrytaImg from "../../assets/SubserviceDesktop/desk-oxbryta-lawsuit.png";

@@ -35,8 +35,7 @@ const eligibilityCards = [
     number: "04",
     text: (
       <>
-        Are Still <span className="text-[#EDC14A]">Within Your State's</span>
-        <br /> Statute Of Limitations
+        Are Still <span className="text-[#EDC14A]">Within Your State's</span> Statute Of Limitations
       </>
     ),
     bg: "bg-[#FDF9ED]",
@@ -62,25 +61,32 @@ export default function EligibilityCriteria() {
     >
       {/* ✅ Laptop & Large Screen Layout (≥1024px) */}
       <div className="hidden lg:grid max-w-[1200px] mx-auto grid-cols-[420px_auto] xl:grid-cols-[450px_auto] gap-x-[48px] xl:gap-x-[60px] gap-y-12 px-4 lg:px-6 items-center">
-        <div className="max-w-[5000px] flex flex-col justify-center">
-          <h2 className="text-[#0A1F8F] text-[32px] xl:text-[40px] font-semibold capitalize leading-normal">
-            You May <span className="text-[#EDC14A]">Qualify To File </span><br /><span className="text-[#0A1F8F]">A Lawsuit If You</span>
+        <div className="max-w-[405px] flex flex-col justify-center">
+          <h2 className="text-[#0A1F8F] text-[32px] xl:text-[40px] font-semibold capitalize leading-[1.2]">
+            You May <span className="text-[#EDC14A]">Qualify<br></br> To File </span><span className="text-[#0A1F8F]">A Lawsuit<br /> If You...!</span>
           </h2>
-          <p className="text-[#757575] text-[14px] xl:text-[16px] font-medium mt-4 leading-[24px] xl:leading-[26px]">
-            If you are unsure, a free case evaluation can help determine eligibility.
-          </p>
+          <p className="text-[#757575] text-[13px] xl:text-[14px] font-medium leading-[20px] xl:leading-[22px]">
+  Unsure?{' '}
+  <a
+    href="#form-section"
+    className="text-[#EDC14A] hover:text-[#d4a841] transition-colors duration-200 underline"
+  >
+    Submit the form
+  </a>
+  {' '}above<br />to check eligibility at no cost.
+</p>
         </div>
 
         <div className="grid grid-cols-2 gap-x-[28px] xl:gap-x-[32px] gap-y-4 justify-start ml-[-20px] xl:ml-[-32px]">
           {eligibilityCards.map((card) => (
             <article
               key={card.number}
-              className={`flex flex-col justify-center items-start gap-[6px] p-4 w-[260px] xl:w-[290px] h-[100px] rounded-[10px] ${card.bg} shadow-sm border border-white overflow-hidden`}
+              className={`flex flex-col justify-center items-start gap-[6px] p-4 w-[260px] xl:w-[325px] h-[100px] rounded-[10px] ${card.bg} shadow-sm border border-white overflow-hidden`}
             >
-              <span className="text-[#0A1F8F] font-[Quicksand] not-italic font-normal leading-none text-[22px] xl:text-[24px]">
+              <span className="text-[#0A1F8F] font-[Quicksand] not-italic font-medium leading-none text-[25px] xl:text-[28px]">
                 {card.number}
               </span>
-              <p className="text-[#0A1F8F] text-[15px] xl:text-[16px] font-medium leading-none tracking-[-0.32px] capitalize text-left">
+              <p className="text-[#0A1F8F] text-[12px] xl:text-[13px] font-medium leading-none tracking-[-0.32px] capitalize text-left">
                 {card.text}
               </p>
             </article>
@@ -92,11 +98,18 @@ export default function EligibilityCriteria() {
       <div className="hidden md:flex lg:hidden max-w-[1200px] mx-auto flex-col items-center gap-6 px-4 py-2 md:gap-6 xl:gap-8">
         <div className="w-full text-center -mt-8">
           <h2 className="text-[#0A1F8F] text-[28px] lg:text-[32px] font-semibold capitalize leading-normal">
-          You May <span className="text-[#EDC14A]">Qualify To File </span><br /><span className="text-[#0A1F8F]">A Lawsuit If You</span>
+          You May <span className="text-[#EDC14A]">Qualify To File </span><br /><span className="text-[#0A1F8F]">A Lawsuit If You...!</span>
           </h2>
-          <p className="text-[#757575] text-[14px] lg:text-[14px] font-medium mt-4 leading-[22px] lg:leading-[24px]">
-            If you are unsure, a free case evaluation can help determine eligibility.
-          </p>
+          <p className="text-[#757575] text-[13px] xl:text-[14px] font-medium leading-[20px] xl:leading-[22px]">
+  Unsure?{' '}
+  <a
+    href="#form-section"
+    className="text-[#EDC14A] hover:text-[#d4a841] transition-colors duration-200 underline"
+  >
+    Submit the form
+  </a>
+  {' '}above to check eligibility at no cost.
+</p>
         </div>
 
         <div className="grid grid-cols-2 gap-12">
@@ -118,14 +131,14 @@ export default function EligibilityCriteria() {
 
       {/* ✅ Mobile Layout (below md) */}
       <div className="md:hidden flex flex-col items-center justify-center gap-6 px-4">
-        <h2 className="text-[#0A1F8F] text-[24px] font-semibold capitalize leading-snug text-center">
+        <h2 className="text-[#0A1F8F] text-[24px] font-semibold capitalize leading-snug text-left">
           You May <span className="text-[#EDC14A]">Qualify</span> <span className="text-[#EDC14A]">To</span> <span className="text-[#EDC14A]">File</span> A Lawsuit If You
         </h2>
-        <p className="text-[#757575] text-[14px] font-medium text-center leading-[22px]">
+        <p className="text-[#757575] text-[14px] font-medium text-left leading-[22px]">
           If you are unsure, a free case evaluation can help determine eligibility.
         </p>
 
-        <div className="flex flex-col gap-5 w-full max-w-[320px]">
+        <div className="flex flex-col gap-5 w-full">
           {mobileEligibilityCards.map((card) => (
             <article
               key={card.number}

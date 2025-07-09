@@ -45,13 +45,13 @@ const mobileEligibilityCards = eligibilityCards.map((card, index) => {
 export default function RoundUpFive() {
   return (
     <section
-      className="w-full bg-white py-12 font-[Quicksand] bg-cover"
+      className="w-full bg-white py-10 font-[Quicksand] bg-cover"
       style={{ backgroundImage: `url(${bgImg})` }}
     >
       {/* Laptop & Large Screen Layout (≥1024px) - 3x2 Grid */}
       <div className="hidden lg:block max-w-[1280px] mx-auto px-6 lg:px-8">
-         <div className="flex flex-col justify-center px-6 xl:px-8 py-6 xl:py-8 h-[140px] xl:h-[160px]">
-            <h2 className="text-[#0A1F8F] text-[28px] xl:text-[32px] font-semibold capitalize leading-tight mb-2">
+         <div className="flex flex-col justify-center px-0 xl:px-0 py-0 xl:py-0 h-[140px] xl:h-[160px]">
+            <h2 className="text-[#0A1F8F] text-[28px] xl:text-[34px] font-semibold capitalize leading-tight mb-4">
               You may <span className="text-[#EDC14A]"> qualify to file </span>{" "}
               a lawsuit if you{" "}
             </h2>
@@ -66,7 +66,7 @@ export default function RoundUpFive() {
               above to check eligibility at no cost.
             </p>
           </div>
-        <div className="grid grid-cols-3 gap-6 xl:gap-7">
+        <div className="grid grid-cols-3 gap-6 xl:gap-7 mb-8">
           {/* First Row */}
           {/* Text Block (First Cell) - Sized like a card but without background */}
          
@@ -157,7 +157,7 @@ export default function RoundUpFive() {
           above to check eligibility at no cost.
         </p>
 
-        <div className="flex flex-col gap-5 w-full max-w-[360px]">
+        <div className="flex flex-col gap-5 w-full">
           {mobileEligibilityCards.map((card) => (
             <article
               key={card.number}
