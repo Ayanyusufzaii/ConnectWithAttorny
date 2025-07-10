@@ -62,7 +62,9 @@ export default function EligibilityCriteria() {
   px-[57px] py-[43px]
   xl:px-[80px] xl:py-[60px]
   2xl:px-[96px] 2xl:py-[72px]">
-  <div className="flex items-center gap-6 xl:gap-8">
+  <div className="flex items-center gap-6 xl:gap-8 justify-evenly">
+
+
     
     {/* Text Block */}
     <div className="flex flex-col justify-center 
@@ -141,10 +143,10 @@ export default function EligibilityCriteria() {
  
       {/* Mobile Layout (below md) */}
 <div className="md:hidden flex flex-col items-center justify-center gap-6 px-4">
-  <h2 className="text-[#0A1F8F] text-[24px] font-semibold capitalize leading-snug text-left w-full">
+  <h2 className="text-[#0A1F8F] text-[35px] font-semibold capitalize leading-[10px] text-left w-full">
     Who We<span className="text-[#EDC14A]"> Help</span>
   </h2>
-  <p className="text-[#757575] text-[14px] font-normal text-left leading-[22px] w-full">
+  <p className="text-[#757575] text-[16px] font-medium text-left leading-[22px] w-full">
     We assist individuals & families affected by:
   </p>
 
@@ -158,7 +160,7 @@ export default function EligibilityCriteria() {
           key={card.number}
           className={`flex flex-col justify-center items-start text-left gap-3 p-5 h-[120px] rounded-[10px] ${card.bg} shadow-sm border border-white overflow-hidden`}
         >
-          <span className={`${numberColor} text-[30px] font-normal font-[Quicksand] leading-none`}>
+          <span className={`${numberColor} text-[35px] font-medium font-[Quicksand] leading-none`}>
             {card.number}
           </span>
           <p className="text-[#0A1F8F] text-[15px] font-medium font-[Quicksand] leading-[20px] tracking-[-0.32px] capitalize">
