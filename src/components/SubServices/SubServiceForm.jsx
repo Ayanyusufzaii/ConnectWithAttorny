@@ -670,20 +670,21 @@ const DesktopForm = () => {
       and give my express written consent, affiliates and/or lawyer to contact you at the number provided above, even if this number is a wireless number or if I am presently listed on a Do Not Call list. I understand that I may be contacted by telephone, email, text message or mail regarding case options and that I may be called using automatic dialing equipment. Message and data rates may apply. My consent does not require purchase. This is Legal advertising.
     </label>
   </div>
-  <div className="flex justify-end w-full lg:w-auto">
-    <button
-      type="submit"
-      className="flex items-center justify-center font-semibold w-full min-w-[280px] lg:min-w-[320px] lg:w-auto px-8 lg:px-32 py-4 rounded-lg shadow transition text-base lg:text-lg hover:bg-blue-700"
-      style={{
-        backgroundColor: '#0A1F8F',
-        color: '#fff',
-        fontFamily: 'Quicksand, sans-serif',
-        whiteSpace: 'nowrap',
-      }}
-    >
-      Start My Case Review<span className="text-[#EDC14A]">{' ->'}</span>
-    </button>
-  </div>
+<div className="flex justify-end w-full lg:w-auto">
+  <button
+    type="submit"
+    className="flex items-center justify-center font-semibold w-full min-w-[220px] lg:min-w-[240px] lg:w-auto px-6 lg:px-16 py-4 rounded-lg shadow transition text-base lg:text-lg hover:bg-blue-700"
+    style={{
+      backgroundColor: '#0A1F8F',
+      color: '#fff',
+      fontFamily: 'Quicksand, sans-serif',
+      whiteSpace: 'nowrap',
+    }}
+  >
+    Start My Case Review<span className="text-[#EDC14A]">{' ->'}</span>
+  </button>
+</div>
+
 </div>
 
       </form>

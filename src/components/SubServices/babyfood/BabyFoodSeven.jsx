@@ -20,11 +20,11 @@ const handleRedirect = () => {
         {/* Left Content */}
         <div className="text-left">
           <h1
-            className="text-2xl lg:text-3xl xl:text-4xl font-bold text-white mb-4 leading-tight"
+            className="text-3xl lg:text-4xl xl:text-4xl font-bold text-white mb-4 leading-tight"
             style={{ fontFamily: 'Quicksand, sans-serif' }}
           >
-          If you're unsure, start 
-your free case Review!
+          If You're Unsure, Start 
+Your Free Case Review!
           </h1>
           <h2
             className="text-lg text-white mb-6 font-medium leading-relaxed opacity-90"
@@ -76,8 +76,8 @@ your free case Review!
                 className="text-3xl font-bold text-white mb-6 leading-tight"
                 style={{ fontFamily: 'Quicksand, sans-serif' }}
               >
-              If you're unsure, start 
-your free case Review!
+             If You're Unsure, Start 
+Your Free Case Review!
               </h1>
               <h2 
                 className="text-lg text-white mb-8 font-medium leading-relaxed opacity-90"
@@ -116,8 +116,8 @@ your free case Review!
               className="text-2xl sm:text-3xl font-bold text-white mb-4 leading-tight"
               style={{ fontFamily: 'Quicksand, sans-serif' }}
             >
-             If you're unsure, start 
-your free case Review!
+           If You're Unsure, Start 
+Your Free Case Review!
             </h1>
             <h2 
               className="text-base sm:text-lg text-white mb-6 font-medium leading-relaxed opacity-90"

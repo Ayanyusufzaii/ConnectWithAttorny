@@ -3,6 +3,7 @@ import logo from "../../assets/Logo.png"; // Adjust the path as necessary
 import {  Instagram, Linkedin, ChevronDown, Check } from 'lucide-react';
 import { BsTwitterX } from "react-icons/bs"; // Importing Twitter icon from react-icons
 import { FaFacebookF } from 'react-icons/fa';
+
 const NAV_LINKS = [
   { name: "Home", href: "/" },  
     { name: "About Us", href: "/AboutUs" },
@@ -32,11 +33,13 @@ function DesktopNavbar() {
     if (path === '/' || path === '/  ') return 'Home';
     if (path === '/AboutUs') return 'About Us';
     if (path === '/ContactUs') return 'Contact Us';
+    if (path === '/ServiceMain') return 'Services';
     // Check if it's a service page
     const isServicePage = LAWSUIT_TYPES.some(lawsuit => lawsuit.href === path);
     if (isServicePage) return 'Services';
     return 'Home';
   };
+
   const [activePage, setActivePage] = useState(getCurrentPage());
 
   return (
@@ -133,6 +136,7 @@ function MobileNavbar() {
     if (path === '/' || path === '/  ') return 'Home';
     if (path === '/AboutUs') return 'About Us';
     if (path === '/ContactUs') return 'Contact Us';
+    if (path === '/ServiceMain') return 'Services';
     // Check if it's a service page
     const isServicePage = LAWSUIT_TYPES.some(lawsuit => lawsuit.href === path);
     if (isServicePage) return 'Services';
