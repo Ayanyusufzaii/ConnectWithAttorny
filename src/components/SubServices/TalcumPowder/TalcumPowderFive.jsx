@@ -42,7 +42,7 @@ const eligibilityCards = [
       </>
      
     ),
-    bg: "bg-[#FDF9ED]",
+    bg: "bg-[#F3F4F9]",
   },
     {
     number: "04",
@@ -53,7 +53,7 @@ const eligibilityCards = [
       </>
      
     ),
-    bg: "bg-[#F3F4F9]",
+    bg: "bg-[#FDF9ED]",
   }
 ];
  
