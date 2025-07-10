@@ -40,14 +40,14 @@ const HomeFive = () => {
         </div>
       ) : (
         // Desktop Version
-        <div className="w-full md:max-w-full lg:max-w-[1440px] mx-auto bg-[#F3F4F9] rounded-md p-4 sm:p-6 md:p-0 lg:p-0 xl:p-12 flex flex-col-reverse md:flex-row items-center gap-8 md:gap-10 lg:gap-16 xl:gap-20">
+        <div className="w-full md:max-w-full lg:max-w-[1440px] mx-auto bg-[#F3F4F9] rounded-md p-4 sm:p-6 flex flex-col-reverse md:flex-row items-center gap-8 md:gap-10 lg:gap-16 xl:gap-20">
           {/* Left Image */}
           <div className="relative flex-shrink-0">
             <div className="rounded-xl overflow-hidden w-[180px] h-[180px] sm:w-[240px] sm:h-[220px] md:w-[300px] md:h-[260px] lg:w-[350px] lg:h-[320px] xl:w-[400px] xl:h-[360px] 2xl:w-[480px] 2xl:h-[420px]">
               <img
                 src={teamImg}
                 alt="Legal Team"
-                className="w-full h-auto object-cover"
+                className="w-auto  h-auto object-cover"
               />
             </div>
           </div>
