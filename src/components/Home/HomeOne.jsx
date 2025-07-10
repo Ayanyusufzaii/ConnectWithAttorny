@@ -59,7 +59,7 @@ const HomeOne = () => {
         <img
           src={MobileHeroBg}
           alt="Hero Background"
-          className="absolute inset-0 w-full h-full object-cover z-0"
+          className="absolute inset-0 w-full h-relative object-cover z-0"
           style={{ minHeight: '90vh', width: '100%' }}
         />
         {/* Content */}

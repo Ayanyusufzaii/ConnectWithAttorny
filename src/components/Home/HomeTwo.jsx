@@ -420,17 +420,17 @@ const DesktopForm = () => {
         
         // Check if this is a TrustedForm field
         if (target.name === "xxTrustedFormCertUrl" && target.value) {
-          console.log("✅ TrustedForm Cert URL:", target.value);
+          // console.log("✅ TrustedForm Cert URL:", target.value);
           setCertId(target.value);
         }
         
         if (target.name === "xxTrustedFormPingUrl" && target.value) {
-          console.log("✅ TrustedForm Ping URL:", target.value);
+          // console.log("✅ TrustedForm Ping URL:", target.value);
           setPingUrl(target.value);
         }
         
         if (target.name === "xxTrustedFormCertToken" && target.value) {
-          console.log("✅ TrustedForm Token:", target.value);
+          // console.log("✅ TrustedForm Token:", target.value);
           settokenUrl(target.value);
         }
       }
