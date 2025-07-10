@@ -15,7 +15,7 @@ const lawsuitCards = [
     )
   },
   {
-    title: '02 - Severe Bone Loss',
+    title: '02 - Severe Bone',
     description:(
       <>
         Severe bone mineral
@@ -58,7 +58,7 @@ const LawsuitOverview = () => {
         className={`hidden md:flex flex-row w-full ${
           is1024
             ? 'max-w-[940px] gap-[72px] px-[56px] pt-[40px]'
-            : 'max-w-[925px] lg:max-w-[1300px] gap-4 md:gap-16 lg:gap-6 px-4 md:px-8 xl:px-0 pt-[80px] md:pt-[25px]'
+            : 'max-w-[925px] lg:max-w-[1300px] gap-4 md:gap-16 lg:gap-6 2xl:gap-10 px-4 md:px-8 xl:px-0 pt-[80px] md:pt-[25px]'
         } items-start justify-center`}
       >
         {/* Left: Heading + Text + Image */}

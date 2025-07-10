@@ -34,7 +34,7 @@ const ServiceTwo = () => {
         <div className="max-w-[1440px] mx-auto flex flex-col lg:flex-row items-center justify-between gap-8">
           {/* Title */}
           <div className="w-full lg:w-[300px] flex justify-center lg:justify-start">
-            <h2 className="text-center text-[32px] sm:text-[40px] font-quicksand font-semibold text-white leading-[48px] sm:leading-[60px] capitalize">
+            <h2 className="text-center text-[32px] sm:text-[36px] font-quicksand font-semibold text-white leading-[48px] sm:leading-[60px] capitalize">
               Why You <span className="text-[#FFC928] font-quicksand">Can</span> <br />
               <span className="text-[#FFC928] font-quicksand">Always</span> Trust Us
             </h2>
@@ -57,7 +57,7 @@ const ServiceTwo = () => {
                 <h3 className="text-lg font-quicksand font-semibold mb-2 text-[#0A1F8F]">
                   {item.title}
                 </h3>
-                <p className="text-sm font-quicksand text-[#0A1F8F] leading-relaxed">
+                <p className="text-sm font-quicksand text-[#757575] leading-relaxed">
                   {item.description}
                 </p>
               </div>
@@ -97,7 +97,7 @@ const ServiceTwo = () => {
                 <h3 className="text-lg font-quicksand font-semibold mb-2 text-[#0A1F8F]">
                   {item.title}
                 </h3>
-                <p className="text-sm font-quicksand text-[#0A1F8F] leading-relaxed">
+                <p className="text-sm font-quicksand text-[#757575] leading-relaxed">
                   {item.description}
                 </p>
               </div>

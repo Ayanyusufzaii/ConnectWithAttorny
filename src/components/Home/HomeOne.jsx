@@ -44,7 +44,7 @@ const HomeOne = () => {
           <button 
           
           onClick={scrollToForm}
-          className="bg-yellow-400 text-white font-bold px-6 md:px-8 py-2 md:py-3 rounded-lg shadow hover:bg-yellow-500 transition text-base md:text-lg">
+          className="bg-[#EDC14A] text-white  px-6 md:px-8 py-3 md:py-4 rounded-md shadow hover:bg-yellow-500 transition text-base md:text-lg ">
             Let's Discuss Your Case
           </button>
 

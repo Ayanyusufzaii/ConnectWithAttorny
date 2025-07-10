@@ -64,32 +64,23 @@ export default function EligibilityCriteria() {
       style={{ backgroundImage: `url(${bgImg})` }}
     >
       {/* ✅ Laptop & Large Screen Layout (≥1024px) */}
-      <div className="hidden lg:grid max-w-[1200px] mx-auto grid-cols-[420px_auto] xl:grid-cols-[450px_auto] gap-x-[48px] xl:gap-x-[60px] gap-y-12 px-4 lg:px-6 items-center">
-        <div className="max-w-[405px] flex flex-col justify-center items-center">
+     <div className="hidden lg:grid max-w-[1200px] mx-auto grid-cols-[420px_auto] xl:grid-cols-[450px_auto] gap-x-[48px] xl:gap-x-[60px] gap-y-12 px-4 lg:px-6 items-center">
+        <div className="max-w-[405px] flex flex-col justify-center">
           <h2 className="text-[#0A1F8F] text-[32px] xl:text-[40px] font-semibold capitalize leading-[1.2]">
-            You May{" "}
-            <span className="text-[#EDC14A]">
-              Qualify<br></br> To File{" "}
-            </span>
-            <span className="text-[#0A1F8F]">
-              A Lawsuit
-              <br /> If You...!
-            </span>
+            You May <span className="text-[#EDC14A]">Qualify<br></br> To File </span><span className="text-[#0A1F8F]">A Lawsuit<br /> If You...!</span>
           </h2>
           <p className="text-[#757575] text-[13px] xl:text-[14px] font-medium leading-[20px] xl:leading-[22px]">
-            Unsure?{" "}
-            <a
-              href="#form-section"
-              className="text-[#EDC14A] hover:text-[#d4a841] transition-colors duration-200 underline"
-            >
-              Submit the form
-            </a>{" "}
-            above
-            <br />
-            to check eligibility at no cost.
-          </p>
+  Unsure?{' '}
+  <a
+    href="#form-section"
+    className="text-[#EDC14A] hover:text-[#d4a841] transition-colors duration-200 underline"
+  >
+    Submit the form
+  </a>
+  {' '}above<br />to check eligibility at no cost.
+</p>
         </div>
-
+ 
         <div className="grid grid-cols-2 gap-x-[28px] xl:gap-x-[32px] gap-y-4 justify-start ml-[-20px] xl:ml-[-32px]">
           {eligibilityCards.map((card) => (
             <article
@@ -106,6 +97,7 @@ export default function EligibilityCriteria() {
           ))}
         </div>
       </div>
+ 
 
       {/* ✅ Tablet Layout (md only) */}
       <div className="hidden md:flex lg:hidden max-w-[1200px] mx-auto flex-col items-center gap-6 px-4 py-2 md:gap-6 xl:gap-8">

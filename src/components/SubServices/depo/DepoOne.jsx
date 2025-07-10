@@ -13,7 +13,7 @@ const HomeOne = () => {
           src={herobg}
           alt="Hero Background"
           className="absolute inset-0 w-full h-full object-cover z-0"
-        />
+        /> 
 
         {/* Overlay for better text visibility */}
         <div className="absolute inset-0  z-10" />
@@ -24,7 +24,7 @@ const HomeOne = () => {
             className="text-2xl md:text-3xl lg:text-5xl font-bold text-white mb-4 drop-shadow-lg"
             style={{ fontFamily: 'Quicksand, sans-serif' }}
           >
-           Used Depo-Provera and Diagnosed with a Brain Tumor or Neurological Condition?
+           Used Depo-Provera And Diagnosed With A Brain Tumor Or Neurological Condition?
           </h1>
           <h2
             className="text-sm sm:text-base md:text-xs lg:text-xl text-white mb-6 font-medium drop-shadow leading-relaxed"
@@ -49,7 +49,7 @@ const HomeOne = () => {
       className="text-3xl font-bold text-white mb-4 drop-shadow-lg"
       style={{ fontFamily: 'Quicksand, sans-serif' }}
     >
-           Used Depo-Provera and Diagnosed with a Brain Tumor or Neurological Condition?
+           Used Depo-Provera And Diagnosed With A Brain Tumor Or Neurological Condition?
     </h1>
     <h2
       className="text-sm text-white mb-4 font-normal drop-shadow"
