@@ -70,11 +70,11 @@ const AboutFive = () => {
 
       {/* Text Content */}
       <div className="relative z-20 flex flex-col items-start w-full px-4 pt-[97px]">
-        <h1 className="text-[#0A1F8F] mb-4 text-left capitalize text-[32px] leading-normal font-[Quicksand] font-bold">
+        <h1 className="text-[#0A1F8F] mb-4 text-left capitalize text-[32px] leading-[22px] font-[Quicksand] font-bold">
           Our Network
         </h1>
 
-        <h2 className="text-[#757575] text-left text-[12px] leading-normal font-[Quicksand]">
+        <h2 className="text-[#757575] text-left text-[16px] leading-[17px] font-[Quicksand]">
           BeWithLaw partners with vetted law firms that focus on mass torts and personal injury cases across the United States. These firms work on a contingency basis, meaning you pay nothing unless compensation is awarded.
         </h2>
       </div>

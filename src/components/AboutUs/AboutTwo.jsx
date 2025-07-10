@@ -56,7 +56,7 @@ const AboutTwo = () => {
 </section>
 
       {/* Mobile Hero Section */}
-      <section className="flex sm:hidden relative w-full h-[554px] flex-col items-start justify-between overflow-hidden ">
+      <section className="flex sm:hidden relative w-full h-[610px] flex-col items-start justify-between overflow-hidden ">
         {/* Background Image */}
         <img
           src={MobileHeroBg}
@@ -79,7 +79,7 @@ const AboutTwo = () => {
           
           <h2 
             className="text-[#757575] text-left
-              text-[12px] leading-normal
+              text-[14px] leading-normal font-medium
               font-[Quicksand]"
           >
             To simplify legal access for people harmed by negligence & hold corporations accountable through trusted, compassionate, and professional support.
