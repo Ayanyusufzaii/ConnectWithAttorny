@@ -1,15 +1,15 @@
 // import React, { useState, useEffect } from 'react';
 // import teamImg from '../../assets/team_new.png'; // replace with your image
-// import aposthopthe_icon from '../../assets/aposthopthe_icon.png'; 
+// import aposthopthe_icon from '../../assets/aposthopthe_icon.png';
 // const HomeFive = () => {
 //   const [isMobile, setIsMobile] = useState(typeof window !== 'undefined' ? window.innerWidth < 768 : false);
-
+ 
 //   useEffect(() => {
 //     const handleResize = () => setIsMobile(window.innerWidth < 768);
 //     window.addEventListener('resize', handleResize);
 //     return () => window.removeEventListener('resize', handleResize);
 //   }, []);
-
+ 
 //   return (
 //     <section className="bg-[#ffffff] py-12 px-2 sm:px-4 md:px-8 lg:px-16" style={{ fontFamily: 'Quicksand, sans-serif' }}>
 //       {isMobile ? (
@@ -51,7 +51,7 @@
 //               />
 //             </div>
 //           </div>
-
+ 
 //           {/* Right Content */}
 //           <div className="text-left md:text-left flex-1">
 //             <div className="mb-4 flex items-center">
@@ -74,13 +74,13 @@
 //     </section>
 //   );
 // };
-
+ 
 // export default HomeFive;
 import React from "react";
 import leftImg from "../../assets/team_new.png";
 import leftImgMob from "../../assets/team_new_mob.png";
 import aposthopthe_icon from "../../assets/aposthopthe_icon.png";
-
+ 
 export default function HomeFive() {
   return (
     <section
@@ -88,7 +88,7 @@ export default function HomeFive() {
       style={{ background: "#F3F4F9", zIndex: 0, opacity: 1 }}
     >
       <div className="relative max-w-[1200px] 2xl:max-w-[1400px] w-full mx-auto px-4 sm:px-5 md:px-6 lg:px-8 xl:px-10 2xl:px-12">
-
+ 
         {/* Desktop & Tablet View */}
         <div className="hidden md:flex w-full items-center pt-6 md:pt-8 lg:pt-10 xl:pt-12 gap-8">
           {/* Left: Image */}
@@ -100,7 +100,7 @@ export default function HomeFive() {
               style={{ height: "100%" }}
             />
           </div>
-
+ 
           {/* Right: Content */}
           <div className="w-1/2 flex flex-col justify-center">
             <div className="mb-4">
@@ -122,7 +122,7 @@ export default function HomeFive() {
             </p>
           </div>
         </div>
-
+ 
         {/* Mobile View */}
         <div className="flex flex-col md:hidden w-full pt-6 px-4 bg-[#F3F4F9]">
           {/* Content first on mobile */}
@@ -146,7 +146,7 @@ export default function HomeFive() {
               attention to detail.
             </p>
           </div>
-
+ 
           {/* Image last on mobile */}
           <div className="w-full overflow-hidden rounded-2xl ">
             <img
@@ -160,4 +160,6 @@ export default function HomeFive() {
     </section>
   );
 }
-
+ 
+ 
+ 
