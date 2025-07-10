@@ -53,7 +53,7 @@ const WhyTrustUs = () => (
             <img
               src={card.icon}
               alt="icon"
-              className="w-[32px] h-[32px] md:w-[36px] md:h-[36px] lg:w-[44px] lg:h-[44px] xl:w-[48px] xl:h-[48px] 2xl:w-[50px] 2xl:h-[50px]"
+              className="w-[32px] h-[32px] md:w-[50px] md:h-[50px] lg:w-[50px] lg:h-[50px] xl:w-[48px] xl:h-[51x] 2xl:w-[50px] 2xl:h-[50px]"
             />
             <h3 className="w-[165px] text-center text-[#0A1F8F] text-[15px] md:text-[16px] lg:text-[18px] xl:text-[20px] 2xl:text-[22px] font-semibold">
               {card.title}
@@ -75,16 +75,16 @@ const WhyTrustUs = () => (
         <span className="text-[#EDC14A] font-bold">Always</span> Trust Us
       </h2>
 
-      <div className="flex flex-col gap-6 w-full max-w-[320px]">
+      <div className="flex flex-col gap-6 w-full">
         {trustCards.map((card) => (
           <article
             key={card.title}
-            className="flex flex-col items-center bg-[#F3F4F9] rounded-[10px] py-5 px-4 gap-2 shadow-md"
+            className="flex flex-col items-center bg-[#F3F4F9] rounded-[10px] py-8 px-4 gap-2 shadow-md"
           >
             <img
               src={card.icon}
               alt="icon"
-              className="w-[36px] h-[36px]"
+              className="w-[50px] h-[50px]"
             />
             <h3 className="text-center text-[#0A1F8F] text-[18px] font-semibold">
               {card.title}

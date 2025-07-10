@@ -36,15 +36,12 @@ export default function PraquatSix() {
                 </span>
               </h2>
               <ul className="list-disc pl-5 text-[14px] md:text-[14px] lg:text-[16px] font-normal space-y-2 leading-relaxed text-white">
-                <li>
-                  Medical bills, neurologist consultations, and treatment costs
-                </li>
-                <li>Loss of income & future earning potential</li>
-                <li>Mobility equipment, home care & long-term support</li>
-                <li>Emotional distress & diminished quality of life</li>
-                <li>
-                  Wrongful death damages for families who lost a loved one
-                </li>
+                <li>Medical bills, neurologist consultations, and treatment costs</li>
+<li>Loss of income and future earning potential</li>
+<li>Mobility equipment, home care, and long-term support</li>
+<li>Emotional distress and diminished quality of life</li>
+<li>Wrongful death damages for families who lost a loved one</li>
+
               </ul>
             </div>
           </div>
@@ -67,11 +64,12 @@ export default function PraquatSix() {
               What <span className="text-[#EDC14A]">Settlement</span> May Cover
             </h2>
             <ul className="list-disc pl-5 text-[14px] min-[350px]:text-[16px] min-[400px]:text-[17px] sm:text-[16px] font-medium leading-[28px] min-[400px]:leading-[30px] sm:leading-[32px] capitalize space-y-2 pb-6">
-              <li>Medical Bills And Diagnostic Testing</li>
-              <li>Brain Tumor Treatment Or Surgery</li>
-              <li>Lost Wages Or Inability To Work</li>
-              <li>Ongoing Care For Long-Term Symptoms</li>
-              <li>Pain, Emotional Stress, And Reduced Quality Of Life</li>
+              <li>Medical bills, neurologist consultations, and treatment costs</li>
+<li>Loss of income and future earning potential</li>
+<li>Mobility equipment, home care, and long-term support</li>
+<li>Emotional distress and diminished quality of life</li>
+<li>Wrongful death damages for families who lost a loved one</li>
+
             </ul>
           </div>
         </div>

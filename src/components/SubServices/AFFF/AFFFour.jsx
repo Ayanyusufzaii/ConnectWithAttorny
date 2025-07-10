@@ -1,6 +1,5 @@
 import React from "react";
 import bgImg from "../../../assets/Rectangle05.png";
-import dpImg from "../../../assets/2bg 1.png";
  
 const cards = [
   {
@@ -61,7 +60,7 @@ const AFFFour = () => {
               Overview of the{" "}
             </span>
             <span className="text-[#EDC14A] text-[35px] font-semibold leading-normal capitalize overflow-hidden text-ellipsis">
-              AFF Lawsuit
+              AFFF Lawsuit
             </span>
           </h2>
  
@@ -84,11 +83,11 @@ const AFFFour = () => {
 <div className="w-full  ">
   <div className="grid grid-cols-2 gap-6">
     {[
-      { number: "01", text: "Kidney and testicular cancer" },
-      { number: "02", text: "Liver damage" },
-      { number: "03", text: "Thyroid disease" },
-      { number: "04", text: "Birth defects and reproductive harm" },
-      { number: "05", text: "Immune system dysfunction" },
+      { number: "01", text: "Kidney cancer" },
+      { number: "02", text: "Testicular cancer " },
+      { number: "03", text: "Liver cancer" },
+      { number: "04", text: "Prostate cancer" },
+      { number: "05", text: "Thyroid disease" },
       { number: "06", text: "Ulcerative colitis" },
     ].map((card, index) => (
       <div

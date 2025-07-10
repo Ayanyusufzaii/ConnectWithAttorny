@@ -124,11 +124,12 @@ const LawsuitOverview = () => {
  
       {/*  Mobile Layout (<768px) */}
       <div className="md:hidden flex flex-col w-full gap-6 px-2 py-25">
-        <h2 className="text-[#0A1F8F] text-[24px] sm:text-[28px] md:text-[30px] font-semibold leading-[1.2] capitalize text-left md:text-left tracking-[-0.28px] whitespace-nowrap px-0 pt-10 pb-4">
-          Overview of Depo-Provera<br />Brain Tumor{' '}
-          <span className="text-[#EDC14A] font-semibold text-[26px] sm:text-[30px] md:text-[32px]">
-            Lawsuit
-          </span>
+        <h2 className="text-[#0A1F8F] text-[24px] sm:text-[24px] md:text-[30px] font-semibold leading-[1.2] capitalize text-left md:text-left tracking-[-0.28px] whitespace-nowrap px-0 pt-10 pb-4
+          min-[350px]:text-[26px]
+          min-[420px]:text-[30px]
+        ">
+          Overview of 
+          <span className="text-[#EDC14A]"> Depo-Provera<br />Brain Tumor{' '} Lawsuit</span>
         </h2>
         </div>
         <div className="md:hidden flex flex-col w-full gap-6 px-4">
@@ -143,15 +144,15 @@ const LawsuitOverview = () => {
           control medication manufactured by Pfizer. Though FDA-approved,
           long-term use has been linked to serious health risks.
         </p>
-        <h3 className="text-[#0A1F8F] text-[24px] sm:text-[28px] md:text-[30px] font-semibold leading-[1.2] capitalize text-left tracking-[-0.28px]">
-          Lawsuits allege that Pfizer failed<br />
-          to{' '}
-          <span className="text-[#EDC14A] font-semibold text-[26px] sm:text-[30px] md:text-[32px]">
-            properly warn
-          </span>
-          <br />
-          women about
-        </h3>
+        <h2 className="text-[#0A1F8F] text-[24px] sm:text-[30px] md:text-[30px] font-semibold leading-[1.2] capitalize text-left tracking-[-0.28px]
+           min-[350px]:text-[26px]
+           min-[420px]:text-[30px]
+        ">
+          Lawsuits allege that Pfizer failed to{' '}
+          <span className="text-[#EDC14A]">
+            properly warn{' '}
+          </span>Women about
+        </h2>
         <p className="text-[#757575] text-[16px] font-medium leading-normal text-left">
         Lawsuits allege that Pfizer failed to properly warn women about
         </p>

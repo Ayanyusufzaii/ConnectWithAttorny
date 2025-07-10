@@ -69,13 +69,13 @@ const WhyTrustUs = () => (
     {/* Mobile Layout */}
     <div className="flex flex-col items-center gap-6 px-4 md:hidden">
       <h2
-        className="text-[34px] leading-[40px] font-semibold text-[#0A1F8F] text-center"
+        className="text-[34px] leading-[40px] font-semibold text-[#0A1F8F] text-center pb-8 -mt-6"
       >
         Why You <span className="text-[#EDC14A] font-bold">Can</span> <br />
         <span className="text-[#EDC14A] font-bold">Always</span> Trust Us
       </h2>
 
-      <div className="flex flex-col gap-6 w-full max-w-[320px]">
+      <div className="flex flex-col gap-6 w-full">
         {trustCards.map((card) => (
           <article
             key={card.title}
@@ -84,7 +84,7 @@ const WhyTrustUs = () => (
             <img
               src={card.icon}
               alt="icon"
-              className="w-[36px] h-[36px]"
+              className="w-[50px] h-[50px]"
             />
             <h3 className="text-center text-[#0A1F8F] text-[18px] font-semibold">
               {card.title}

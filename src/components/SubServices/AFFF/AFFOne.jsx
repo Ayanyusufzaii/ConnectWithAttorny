@@ -6,7 +6,7 @@ const AFFOne = () => {
   return (
     <>
       {/* Desktop/Laptop/Tablet Hero Section */}
-<section className="hidden sm:flex relative w-full min-h-[45vh] md:min-h-[55vh] lg:min-h-[60vh] items-center justify-center overflow-hidden">
+<section className="hidden sm:flex relative w-full h-relative md:min-h-[55vh] md:min-w-[80vh] lg:min-h-[60vh] items-center justify-center overflow-hidden">
         {/* Background Image */}
         <img
           src={herobg}
