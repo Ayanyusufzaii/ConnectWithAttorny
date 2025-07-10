@@ -6,13 +6,13 @@ const HomeOne = () => {
   return (
     <>
       {/* Desktop/Laptop/Tablet Hero Section */}
-      <section className="hidden sm:flex relative w-full h-[65vh] md:h-[75vh] lg:h-[80vh] items-center justify-center overflow-hidden">
+      <section className="hidden sm:flex relative w-full  md:h-[35vh] lg:h-[60vh] items-center justify-center overflow-hidden">
 
         {/* Background Image */}
         <img
           src={herobg}
           alt="Hero Background"
-          className="absolute inset-0 w-full h-full object-cover z-0"
+          className="absolute inset-0 w-full h-relative object-cover z-0"
         />
 
         {/* Overlay for better text visibility */}

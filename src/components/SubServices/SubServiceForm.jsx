@@ -681,7 +681,7 @@ const DesktopForm = () => {
       whiteSpace: 'nowrap',
     }}
   >
-    Start My Case Review<span className="text-[#EDC14A]">{' ->'}</span>
+    Start My Case Review <span className="text-[#EDC14A]">{' ->'}</span>
   </button>
 </div>
 
@@ -1154,7 +1154,7 @@ try {
               whiteSpace: 'nowrap',
             }}
           >
-            Start My Case Review
+            Start My Case Review <span className="text-[#EDC14A]">{' ->'}</span>
           </button>
         </div>
       </form>

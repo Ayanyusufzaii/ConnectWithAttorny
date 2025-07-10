@@ -103,11 +103,11 @@ Legal claims allege these manufacturers failed to warn parents and allowed dange
       <div className="md:hidden flex flex-col w-full gap-6 px-4 py-8">
         {/* Mobile Main Heading */}
         <h2 className="text-left">
-          <span className="text-[#0A1F8F] text-[24px] sm:text-[28px] font-semibold leading-[1.2] capitalize">
+          <span className="text-[#0A1F8F] text-[30px] sm:text-[36px] font-semibold leading-[1.2] capitalize">
             Overview of the{' '}
           </span>
          
-          <span className="text-[#EDC14A] text-[24px] sm:text-[28px] font-semibold leading-[1.2] capitalize">
+          <span className="text-[#EDC14A] text-[30px] sm:text-[36px] font-semibold leading-[1.2] capitalize">
             Toxic Baby Food Lawsuit 
           </span>
         </h2>
@@ -122,7 +122,7 @@ Legal claims allege these manufacturers failed to warn parents and allowed dange
         </p>
  
         {/* Mobile Secondary Heading */}
-        <h3 className="text-[#0A1F8F] text-[24px] sm:text-[28px] font-semibold leading-[1.2] capitalize text-left">
+        <h3 className="text-[#0A1F8F] text-[30px] sm:text-[36px] font-semibold leading-[1.2] capitalize text-left">
           These metals are known to interfere with brain development and have been linked to: 
         </h3>
  

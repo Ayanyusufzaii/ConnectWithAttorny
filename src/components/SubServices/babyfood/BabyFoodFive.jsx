@@ -154,11 +154,11 @@ export default function EligibilityCriteria() {
  
       {/* Mobile Layout (below md) */}
       <div className="md:hidden flex flex-col items-center justify-center gap-6 px-4">
-  <h2 className="text-[#0A1F8F] text-[24px] font-semibold capitalize leading-snug text-left w-full">
+  <h2 className="text-[#0A1F8F] text-[34px] font-semibold capitalize leading-snug text-left w-full">
     You may  <span class="text-[#EDC14A]">qualify to file 
 </span> a lawsuit if you
   </h2>
-        <p className="text-[#757575] text-[14px] font-medium text-left leading-[22px]">
+        <p className="text-[#757575] text-[20px] font-medium text-left leading-[28px]">
   Unsure?{' '}
   <a
     href="#form-section"
