@@ -2,16 +2,16 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 // Desktop Images
-import depoImg from "../../assets/SubserviceDesktop/new-desk-depo-lawsuit.png";
-import paraquatImg from "../../assets/SubserviceDesktop/new-desk-paraquat-lawsuit.png";
-import roundupImg from "../../assets/SubserviceDesktop/desk-roundup-lawsuit.png";
-import babyFoodImg from "../../assets/SubserviceDesktop/desk-toxic-baby-food-lawsuit.png";
-import oxbrytaImg from "../../assets/SubserviceDesktop/desk-oxbryta-lawsuit.png";
-import talcumImg from "../../assets/SubserviceDesktop/desk-talcum-powder-lawsuit.png";
-import bardImg from "../../assets/SubserviceDesktop/desk-bard-powerport-lawsuit.png";
-import afffImg from "../../assets/SubserviceDesktop/desk-afff-firefighting-foam-lawsuit.png";
-import pfasImg from "../../assets/SubserviceDesktop/desk-pfas-contamination-lawsuit.png";
-import meshImg from "../../assets/SubserviceDesktop/desk-transvaginal-mesh-lawsuit.png";
+import depoImg from "../../assets/newServiceImg/new-desk-depo-lawsuit.png";
+import paraquatImg from "../../assets/newServiceImg/new-desk-paraquat-lawsuit.png";
+import roundupImg from "../../assets/newServiceImg/new-desk-roundup-lawsuit.png";
+import babyFoodImg from "../../assets/newServiceImg/new-desk-toxic-baby-food-lawsuit.png";
+import oxbrytaImg from "../../assets/newServiceImg/new-desk-oxbryta-lawsuit.png";
+import talcumImg from "../../assets/newServiceImg/new-desk-talcum-powder-lawsuit.png";
+import bardImg from "../../assets/newServiceImg/new-desk-bard-powerport-lawsuit.png";
+import afffImg from "../../assets/newServiceImg/new-desk-afff-firefighting-foam-lawsuit.png";
+import pfasImg from "../../assets/newServiceImg/new-desk-pfas-contamination-lawsuit.png";
+import meshImg from "../../assets/newServiceImg/new-desk-transvaginal-mesh-lawsuit.png";
 
 // Mobile Images
 import depoImgMob from "../../assets/SubserviceMobile/mob-depo-provera-lawsuit.png";
@@ -27,7 +27,7 @@ import meshImgMob from "../../assets/SubserviceMobile/mob-transvaginal-mesh-laws
 
 // new images
 
-import newRoundup from "../../assets/newServiceImg/roundupnew.png"
+// import newRoundup from "../../assets/newServiceImg/roundupnew.png"
 
 const lawsuits = [
   { title: 'Depo-Provera Lawsuit', description: 'Linked to brain tumors and bone loss in long-term users', image: depoImg, link: '/DepoMain' },
@@ -194,8 +194,8 @@ const ServiceThree = () => {
           ))}
         </div>
       ) : (
-        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6">
-          {Moblawsuits.map((item, idx) => (
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 gap-5">
+          {lawsuits.map((item, idx) => (
             <div
               key={idx}
               className="bg-white rounded-[14px] overflow-hidden w-full"
@@ -205,23 +205,21 @@ const ServiceThree = () => {
                 <img
                   src={item.image}
                   alt={item.title}
-                  className="w-full h-full object-fill rounded-[10%]"
+                  className="w-full h-full object-fill"
                 />
-                 <div className="absolute bottom-0 left-0 w-full text-left px-5 py-3">
-                      <h3 className="text-[16px] font-bold text-white leading-tight px-5 py-4 break-words whitespace-normal">
-              {item.title}
-            </h3>
+                
+                <div className="absolute bottom-0 left-0 w-full text-left px-4 py-3">
+                  <h3 className="text-[16px] font-bold text-white leading-tight px-3 py-2 break-words whitespace-normal">
+                    {item.title}
+                  </h3>
                 </div>
               </div>
-
+              
               {/* Content */}
               <div className="p-4">
-                {/* <h3 className="text-[18px] font-bold text-[#0A1F8F] mb-2 leading-snug">
-                  {item.title}
-                </h3> */}
-                <p className="text-sm text-[#6b7280] leading-snug">{item.description}</p>
+                <p className="text-sm text-[#6b7280] leading-snug mb-4">{item.description}</p>
                 <Link to={item.link}>
-                  <button className="mt-4 px-4 py-2 border border-blue-600 text-blue-600 rounded-[6px] text-sm transition-colors duration-200 hover:bg-yellow-400">
+                  <button className="mt-2 px-4 py-2 border border-blue-600 text-blue-600 rounded-[6px] text-sm transition-colors duration-200 hover:bg-yellow-400">
                     Learn More
                   </button>
                 </Link>
@@ -229,9 +227,9 @@ const ServiceThree = () => {
             </div>
           ))}
         </div>
+
       )}
     </section>
   );
 };
-
 export default ServiceThree;

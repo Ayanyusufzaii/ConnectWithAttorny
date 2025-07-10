@@ -1,37 +1,21 @@
 import React, { useRef, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-// Import correct images
-import depoImg from '../../assets/subservice/depo-provera-lawsuit.png';
-import paraquatImg from '../../assets/subservice/paraquat-lawsuit.png';
-import roundupImg from '../../assets/subservice/roundup-lawsuit.png';
-import babyFoodImg from '../../assets/subservice/toxic-baby-food-lawsuit.png';
+
+import depoImg from "../../assets/newServiceImg/new-desk-depo-lawsuit.png";
+import paraquatImg from "../../assets/newServiceImg/new-desk-paraquat-lawsuit.png";
+import roundupImg from "../../assets/newServiceImg/new-desk-roundup-lawsuit.png";
+import babyFoodImg from "../../assets/newServiceImg/new-desk-toxic-baby-food-lawsuit.png";
+
 
 const lawsuits = [
-  {
-    title: 'Depo-Provera Lawsuit',
-    description: 'Linked to brain tumors and bone loss in long-term users',
-    image: depoImg,
-    link: '/DepoMain',
-  },
-  {
-    title: 'Paraquat Lawsuit',
-    description: 'Parkinsons disease caused by toxic herbicide exposure',
-    image: paraquatImg,
-    link: '/ParaquatMain',
-  },
-  {
-    title: 'Roundup-Lawsuit',
-    description: 'Cancer linked to glyphosate-based weed killer',
-    image: roundupImg,
-    link: '/RoundupMain',
-  },
-  {
-    title: 'Toxic Baby Food Lawsuit',
-    description: 'Heavy metal exposure tied to developmental delays',
-    image: babyFoodImg,
-    link: '/BabyfoodMain',
-  },
+  { title: 'Depo-Provera Lawsuit', description: 'Linked to brain tumors and bone loss in long-term users', image: depoImg, link: '/DepoMain' },
+  { title: 'Paraquat Lawsuit', description: 'Parkinsons disease caused by toxic herbicide exposure', image: paraquatImg, link: '/ParaquatMain' },
+  { title: 'Roundup Lawsuit', description: 'Cancer linked to glyphosate-based weed killer', image: roundupImg, link: '/roundupMain' },
+  { title: 'Toxic Baby Food Lawsuit', description: 'Heavy metal exposure tied to developmental delays', image: babyFoodImg, link: '/Babyfood' },
+
 ];
+
+
 
 const HomeThree = () => {
 

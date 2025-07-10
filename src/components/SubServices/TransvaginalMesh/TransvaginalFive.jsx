@@ -1,13 +1,14 @@
 import React from "react";
 import bgImg from "../../../assets/Rectangle04.png";
-
+// FDF9ED  yellow
+// F3F4F9 grey
 const eligibilityCards = [
   {
     number: "01",
     text: (
       <>
-        You <span className="text-[#EDC14A]">lived near a contaminated</span>{" "}
-        military base, plant, or industrial site
+        You Had A Transvaginal Mesh Implant<br />
+        <span className="text-[#EDC14A]">For POP Or SUI</span>
       </>
     ),
     bg: "bg-[#FDF9ED]",
@@ -16,8 +17,8 @@ const eligibilityCards = [
     number: "02",
     text: (
       <>
-        You <span className="text-[#EDC14A]">drank or cooked with</span>{" "}
-        PFAS-contaminated water
+        You <span className="text-[#EDC14A]">Experienced Complications</span> Such As<br />
+        Erosion, Infection, Or Severe Pain
       </>
     ),
     bg: "bg-[#F3F4F9]",
@@ -26,8 +27,60 @@ const eligibilityCards = [
     number: "03",
     text: (
       <>
-        You <span className="text-[#EDC14A]">developed cancer</span> or another
-        PFAS-related illness
+        You <span className="text-[#EDC14A]">Underwent Revision Or Removal</span><br />
+        Surgery
+      </>
+    ),
+    bg: "bg-[#FDF9ED]",
+  },
+  {
+    number: "04",
+    text: (
+      <>
+        You Were <span className="text-[#EDC14A]">Not Fully Informed</span> About The<br />
+        Risks At The Time Of Your Procedure
+      </>
+    ),
+    bg: "bg-[#F3F4F9]",
+  },
+  {
+    number: "05",
+    text: (
+      <>
+        You Are Still Within The <span className="text-[#EDC14A]">Statute Of<br />Limitations</span> In Your State
+      </>
+    ),
+    bg: "bg-[#FDF9ED]",
+  },
+];
+
+const tabeligibilityCards = [
+  {
+    number: "01",
+    text: (
+      <>
+        You Had A Transvaginal Mesh Implant<br />
+        <span className="text-[#EDC14A]">For POP Or SUI</span>
+      </>
+    ),
+    bg: "bg-[#FDF9ED]",
+  },
+  {
+    number: "02",
+    text: (
+      <>
+        You <span className="text-[#EDC14A]">Experienced Complications</span> Such As<br />
+        Erosion, Infection, Or Severe Pain
+      </>
+    ),
+    bg: "bg-[#F3F4F9]",
+  },
+  {
+    number: "03",
+    text: (
+      <>
+        You <span className="text-[#EDC14A]">Underwent Revision Or Removal</span><br />
+        Surgery
       </>
     ),
     bg: "bg-[#F3F4F9]",
@@ -36,9 +89,8 @@ const eligibilityCards = [
     number: "04",
     text: (
       <>
-        You were exposed through{" "}
-        <span className="text-[#EDC14A]">workplace handling of PFAS</span>{" "}
-        (firefighters, chemical workers)
+        You Were <span className="text-[#EDC14A]">Not Fully Informed</span> About The<br />
+        Risks At The Time Of Your Procedure
       </>
     ),
     bg: "bg-[#FDF9ED]",
@@ -47,14 +99,12 @@ const eligibilityCards = [
     number: "05",
     text: (
       <>
-        You are within your{" "}
-        <span className="text-[#EDC14A]">state’s statute of limitations</span>
+        You Are Still Within The <span className="text-[#EDC14A]">Statute Of<br />Limitations</span> In Your State
       </>
     ),
-    bg: "bg-[#F3F4F9]",
+    bg: "bg-[#FDF9ED]",
   },
 ];
-
 const mobileEligibilityCards = eligibilityCards.map((card, index) => {
   // Alternate colors: odd indices get #FDF9ED, even indices get #F3F4F9
   // This creates: #FDF9ED, #F3F4F9, #FDF9ED, #F3F4F9, #FDF9ED
@@ -145,7 +195,7 @@ export default function TransvaginalFive() {
         </div>
 
         <div className="grid grid-cols-2 gap-8">
-          {eligibilityCards.map((card) => (
+          {tabeligibilityCards.map((card) => (
             <article
               key={card.number}
               className={`flex flex-col justify-center items-start gap-3 p-6 h-[140px] rounded-[10px] ${card.bg} shadow-sm border border-white overflow-hidden`}

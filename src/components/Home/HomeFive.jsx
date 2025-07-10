@@ -11,10 +11,10 @@ const HomeFive = () => {
   }, []);
 
   return (
-    <section className="bg-[#ffffff] py-12 px-2 sm:px-4 md:px-8 lg:px-16" style={{ fontFamily: 'Quicksand, sans-serif' }}>
+    <section className="bg-[#F3F4F9] py-12 px-2 sm:px-4 md:px-8 lg:px-16" style={{ fontFamily: 'Quicksand, sans-serif' }}>
       {isMobile ? (
         // Mobile Version: Right section (content) on top, left section (image) on bottom
-        <div className="max-w-full mx-auto bg-white rounded-md p-4 flex flex-col items-center gap-6">
+        <div className="max-w-full mx-auto bg-[#F3F4F9] rounded-md p-4 flex flex-col items-center gap-6">
           {/* Right Content (on top) */}
           <div className="w-full flex flex-col items-start order-1">
             <div className="text-3xl text-[#FFC928] font-bold mb-2 flex justify-start"><img src={aposthopthe_icon} alt="" className="w-[48px] h-[38px] object-cover" /></div>
@@ -40,7 +40,7 @@ const HomeFive = () => {
         </div>
       ) : (
         // Desktop Version
-        <div className="w-full md:max-w-full lg:max-w-[1440px] mx-auto bg-white rounded-md p-4 sm:p-6 md:p-0 lg:p-0 xl:p-12 flex flex-col-reverse md:flex-row items-center gap-8 md:gap-10 lg:gap-16 xl:gap-20">
+        <div className="w-full md:max-w-full lg:max-w-[1440px] mx-auto bg-[#F3F4F9] rounded-md p-4 sm:p-6 md:p-0 lg:p-0 xl:p-12 flex flex-col-reverse md:flex-row items-center gap-8 md:gap-10 lg:gap-16 xl:gap-20">
           {/* Left Image */}
           <div className="relative flex-shrink-0">
             <div className="rounded-xl overflow-hidden w-[180px] h-[180px] sm:w-[240px] sm:h-[220px] md:w-[300px] md:h-[260px] lg:w-[350px] lg:h-[320px] xl:w-[400px] xl:h-[360px] 2xl:w-[480px] 2xl:h-[420px]">

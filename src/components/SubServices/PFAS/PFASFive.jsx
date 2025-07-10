@@ -41,6 +41,59 @@ const eligibilityCards = [
         (firefighters, chemical workers)
       </>
     ),
+    bg: "bg-[#F3F4F9]",
+  },
+  {
+    number: "05",
+    text: (
+      <>
+        You are within your{" "}
+        <span className="text-[#EDC14A]">state’s statute of limitations</span>
+      </>
+    ),
+    bg: "bg-[#FDF9ED]",
+  },
+];
+const tabeligibilityCards = [
+  {
+    number: "01",
+    text: (
+      <>
+        You <span className="text-[#EDC14A]">lived near a contaminated</span>{" "}
+        military base, plant, or industrial site
+      </>
+    ),
+    bg: "bg-[#FDF9ED]",
+  },
+  {
+    number: "02",
+    text: (
+      <>
+        You <span className="text-[#EDC14A]">drank or cooked with</span>{" "}
+        PFAS-contaminated water
+      </>
+    ),
+    bg: "bg-[#F3F4F9]",
+  },
+  {
+    number: "03",
+    text: (
+      <>
+        You <span className="text-[#EDC14A]">developed cancer</span> or another
+        PFAS-related illness
+      </>
+    ),
+    bg: "bg-[#F3F4F9]",
+  },
+  {
+    number: "04",
+    text: (
+      <>
+        You were exposed through{" "}
+        <span className="text-[#EDC14A]">workplace handling of PFAS</span>{" "}
+        (firefighters, chemical workers)
+      </>
+    ),
     bg: "bg-[#FDF9ED]",
   },
   {
@@ -51,10 +104,9 @@ const eligibilityCards = [
         <span className="text-[#EDC14A]">state’s statute of limitations</span>
       </>
     ),
-    bg: "bg-[#F3F4F9]",
+    bg: "bg-[#FDF9ED]",
   },
 ];
-
 const mobileEligibilityCards = eligibilityCards.map((card, index) => {
   // Alternate colors: odd indices get #FDF9ED, even indices get #F3F4F9
   // This creates: #FDF9ED, #F3F4F9, #FDF9ED, #F3F4F9, #FDF9ED
@@ -142,7 +194,7 @@ export default function PFASFive() {
         </div>
 
         <div className="grid grid-cols-2 gap-8">
-          {eligibilityCards.map((card) => (
+          {tabeligibilityCards.map((card) => (
             <article
               key={card.number}
               className={`flex flex-col justify-center items-start gap-3 p-6 h-[140px] rounded-[10px] ${card.bg} shadow-sm border border-white overflow-hidden`}

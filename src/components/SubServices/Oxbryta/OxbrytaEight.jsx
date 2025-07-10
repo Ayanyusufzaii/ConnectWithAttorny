@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+ import { ChevronDown } from "lucide-react";
 
 const faqData = [
   {
@@ -63,8 +64,12 @@ const HomeEight = () => {
               <span className="text-[#0A1F8F] text-[20px] sm:text-[24px] font-semibold leading-normal">
                 {item.question}
               </span>
-              <span className="text-[18px] font-light select-none">
-                {activeIndex === idx ? '▴' : '▾'}
+             
+<span className="text-[18px] font-light select-none">
+                <ChevronDown
+                  className={`w-5 h-5 transform transition-transform duration-300 
+      ${activeIndex === idx ? "rotate-180 text-[#EDC14A]" : "text-[#0A1F8F]"}`}
+                />
               </span>
             </button>
             {activeIndex === idx && (

@@ -2,14 +2,14 @@ import React from 'react'
 import Navbar from '../Navbar/Navbar'
 import Footer from '../Footer/Footer'
 import ContactOne from './ContactOne'
-import ContactTwo from './ContactTwo'
+import HomeTwo from "../Home/HomeTwo"
 import ContactThree from './ContactThree'
 const ContactMain = () => {
   return (
     <div>
         <Navbar />
         <ContactOne />
-        <ContactTwo />
+      <HomeTwo/>
         <ContactThree />    
         <Footer />
     </div>

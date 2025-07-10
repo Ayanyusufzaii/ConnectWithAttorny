@@ -24,8 +24,8 @@ const BardPowerMain = () => {
       <BardPowerFour />
       <BardPowerFive />
       <BardPowerSix />
-      <BardPowerSeven />
       <BardPowerEight />
+      <BardPowerSeven />
       <Footer />
     </div>
   );

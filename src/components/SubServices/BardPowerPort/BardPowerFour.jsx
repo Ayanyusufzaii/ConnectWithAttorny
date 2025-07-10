@@ -111,7 +111,7 @@ The Brad PowerPort Device Can Lead To:           </h3>
           </span>
          
           <span className="text-[#EDC14A] text-[24px] sm:text-[28px] font-semibold leading-[1.2] capitalize">
-            Oxbryta Lawsuit 
+            Bard PowerPort Lawsuit 
           </span>
         </h2>
  
