@@ -12,7 +12,7 @@ const HomeOne = () => {
   return (
     <>
      {/* Desktop/Laptop/Tablet Hero Section */}
-      <section className="hidden sm:flex relative w-full min-h-[45vh] md:min-h-[55vh] lg:min-h-[65vh] items-center justify-start overflow-hidden">
+      <section className="hidden sm:flex relative w-full min-h-[45vh] md:min-h-[55vh] lg:min-h-[65vh] items-center justify-start overflow-hidden capitalize">
         {/* Background Image */}
         <img
           src={herobg}
@@ -54,7 +54,7 @@ const HomeOne = () => {
       </section>
 
       {/* Mobile Hero Section */}
-      <section className="flex sm:hidden relative w-full min-h-[90vh] items-end justify-center overflow-hidden">
+      <section className="flex sm:hidden relative w-full min-h-[90vh] items-end justify-center overflow-hidden capitalize">
         {/* Background Image */}
         <img
           src={MobileHeroBg}
