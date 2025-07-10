@@ -90,7 +90,7 @@ export default function HomeFive() {
       <div className="relative max-w-[1200px] 2xl:max-w-[1400px] w-full mx-auto px-4 sm:px-5 md:px-6 lg:px-8 xl:px-10 2xl:px-12">
  
         {/* Desktop & Tablet View */}
-        <div className="hidden md:flex w-full items-center pt-6 md:pt-8 lg:pt-10 xl:pt-12 gap-8">
+        <div className="hidden md:flex w-full items-center pt-6 md:pt-8 lg:pt-10 xl:pt-12  md:gap-8 xl:gap-[8rem]">
           {/* Left: Image */}
           <div className="w-1/2 overflow-hidden rounded-2xl">
             <img
@@ -110,8 +110,8 @@ export default function HomeFive() {
                 className="w-[48px] h-[38px] object-contain"
               />
             </div>
-            <h2 className="text-[28px] lg:text-[36px] xl:text-[42px] font-semibold text-[#0A1F8F] leading-snug mb-4">
-              Experienced <span className="text-[#FFC928]">Legal Teams</span>
+            <h2 className="text-[28px] lg:text-[36px] xl:text-[40px] font-semibold text-[#0A1F8F] leading-snug mb-4">
+              Experienced <span className="text-[#EDC14A]">Legal Teams</span>
               <br />
               <span>Who Work For You</span>
             </h2>
@@ -136,7 +136,7 @@ export default function HomeFive() {
             </div>
             <h2 className="text-[24px] min-[350px]:text-[26px] sm:text-[28px] font-semibold text-[#0A1F8F] leading-snug mb-2">
               Experienced{" "}
-              <span className="text-[#FFC928]">Legal Teams</span>
+              <span className="text-[#EDC14A]">Legal Teams</span>
               <br />
               <span>Who Work For You</span>
             </h2>

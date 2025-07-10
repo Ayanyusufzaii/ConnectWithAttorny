@@ -32,7 +32,7 @@ const HomeSix = () => {
 
   return (
     <section
-      className="py-12 px-2 sm:px-4 md:px-8 lg:px-16 w-full max-w-none"
+      className="py-12 px-2 sm:px-4 md:px-8 lg:px-16 w-full max-w-none capitalize"
       style={{ fontFamily: "Quicksand, sans-serif" }}
     >
       {/* Title */}
