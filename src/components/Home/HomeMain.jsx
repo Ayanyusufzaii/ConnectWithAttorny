@@ -63,5 +63,3 @@ const HomeMain = () => {
 };
  
 export default HomeMain;
- 
- 
