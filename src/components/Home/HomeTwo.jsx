@@ -409,7 +409,7 @@ const DesktopForm = () => {
   const [tokenUrl, settokenUrl] = useState("");
   const [zipCodeUsed, setZipCodeUsed] = useState(false);
   const [manualCityState, setManualCityState] = useState(false);
-
+ 
 
   useEffect(() => {
   // Simple observer to capture TrustedForm data when it's populated
@@ -698,6 +698,7 @@ const DesktopForm = () => {
             onChange={handleChange}
             error={errors.phone}
           />
+          
           <FloatingInput 
             type="email" 
             id="email" 
@@ -1342,3 +1343,45 @@ const HomeTwo = () => {
 };
  
 export default HomeTwo;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
