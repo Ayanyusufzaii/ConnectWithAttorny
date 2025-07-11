@@ -191,7 +191,7 @@ function DesktopNavbar() {
       
       {/* Call Now Tile */}
       <div className="flex items-center">
-        <div className="bg-[#0A1F8F] rounded-lg px-6 py-3 text-white text-center shadow font-quicksand hover:bg-[#0A1F8F]/90 transition-colors duration-200">
+        <div className="bg-[#0A1F8F] rounded-lg px-6 py-3 text-white text-center shadow font-quicksand hover:bg-[#EDC14A] hover:text-[#0A1F8F] transition-colors duration-200">
           <div className="text-xs">CALL NOW</div>
           <div className="text-l">888 201-1350</div>
         </div>
