@@ -68,7 +68,7 @@ export default function Compensation() {
             <h2 className="text-[24px] min-[350px]:text-[28px] min-[400px]:text-[32px] sm:text-[28px] font-semibold capitalize mb-3 leading-tight text-left">
               What <span className="text-[#EDC14A]">Settlement</span> May Cover
             </h2>
-            <ul className="list-disc pl-5 text-[14px] min-[350px]:text-[16px] min-[400px]:text-[17px] sm:text-[16px] font-medium leading-[28px] min-[400px]:leading-[30px] sm:leading-[32px] capitalize space-y-2">
+            <ul className="list-disc pl-5 text-[14px] min-[350px]:text-[16px] min-[400px]:text-[17px] sm:text-[16px] font-medium leading-[28px] min-[400px]:leading-[30px] sm:leading-[32px] capitalize space-y-2 pb-6">
               {compensationItems.map((item, index) => (
                 <li key={index}>{item}</li>
               ))}

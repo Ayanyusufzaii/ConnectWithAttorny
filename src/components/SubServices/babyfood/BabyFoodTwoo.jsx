@@ -1012,7 +1012,7 @@ const MobileForm = () => {
   );
 };
 
-const HomeTwoo = () => {
+const BabyFoodTwo = () => {
   return (
     <section
       id="contact-form"
@@ -1047,4 +1047,4 @@ const HomeTwoo = () => {
   );
 };
  
-export default HomeTwoo;
+export default BabyFoodTwo;

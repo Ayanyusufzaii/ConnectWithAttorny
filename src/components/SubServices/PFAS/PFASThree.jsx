@@ -44,7 +44,7 @@ const PFASThree = () => (
       </div>
 
       {/* Cards */}
-      <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 flex-1">
+      <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 2xl:gap-20 flex-1">
         {trustCards.map((card) => (
           <article
             key={card.title}

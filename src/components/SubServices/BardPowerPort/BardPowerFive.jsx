@@ -73,7 +73,7 @@ export default function EligibilityCriteria() {
       <p className="text-[#757575] text-[15px] xl:text-[18px] leading-[22px] xl:leading-[25px] font-medium">
         Unsure?{' '}
         <a
-          href="#form-section"
+          href="#contact-form"
           className="text-[#EDC14A] hover:text-[#d4a841] transition-colors duration-200 underline"
         >
           Submit the form
@@ -111,7 +111,7 @@ export default function EligibilityCriteria() {
           <p className="text-[#757575] text-[14px] lg:text-[14px] font-medium text-center mt-4 leading-[22px] lg:leading-[24px]">
   Unsure?{' '}
   <a
-    href="#form-section"
+    href="#contact-form"
     className="text-[#EDC14A] hover:text-[#d4a841] transition-colors duration-200 underline"
   >
     Submit the form
@@ -147,7 +147,7 @@ export default function EligibilityCriteria() {
         <p className="text-[#757575] text-[14px] font-medium text-left leading-[22px]">
   Unsure?{' '}
   <a
-    href="#form-section"
+    href="#contact-form"
     className="text-[#EDC14A] hover:text-[#d4a841] transition-colors duration-200 underline"
   >
     Submit the form
