@@ -133,7 +133,7 @@ export default function TransvaginalFive() {
             <p className="text-[#757575] text-[13px] xl:text-[14px] font-medium leading-[20px] xl:leading-[22px]">
               Unsure?{" "}
               <a
-                href="#form-section"
+                href="#contact-form"
                 className="text-[#EDC14A] hover:text-[#d4a841] transition-colors duration-200 underline"
               >
                 Submit the form
@@ -185,7 +185,7 @@ export default function TransvaginalFive() {
           <p className="text-[#757575] text-[14px] lg:text-[14px] font-medium text-center mt-4 leading-[22px] lg:leading-[24px]">
             Unsure?{" "}
             <a
-              href="#form-section"
+              href="#contact-form"
               className="text-[#EDC14A] hover:text-[#d4a841] transition-colors duration-200 underline"
             >
               Submit the form
@@ -220,7 +220,7 @@ export default function TransvaginalFive() {
         <p className="text-[#757575] text-[14px] font-medium text-left leading-[22px]">
           Unsure?{" "}
           <a
-            href="#form-section"
+            href="#contact-form"
             className="text-[#EDC14A] hover:text-[#d4a841] transition-colors duration-200 underline"
           >
             Submit the form
