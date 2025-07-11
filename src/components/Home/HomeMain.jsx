@@ -8,27 +8,27 @@ import HomeThree from './HomeThree.jsx';
 import HomeFour from './HomeFour.jsx';
 import HomeFive from './HomeFive.jsx';
 import HomeSix from './HomeSix.jsx';
-
+ 
 const TURNSTILE_SITE_KEY = process.env.REACT_APP_TURNSTILE_SITE_KEY;
-
+ 
 const HomeMain = () => {
   const [verified, setVerified] = useState(false);
-
+ 
   // Check localStorage on first render
   useEffect(() => {
     const isVerified = localStorage.getItem('isHumanVerified');
-    if (isVerified === 'true') { 
+    if (isVerified === 'true') {
       setVerified(true);
     }
   }, []);
-
+ 
   // Handle success and persist verification
   const handleVerificationSuccess = (token) => {
     // console.log('Turnstile token:', token);
     localStorage.setItem('isHumanVerified', 'true');
     setVerified(true);
   };
-
+ 
   return (
     <div className="relative">
       {/* Main layout */}
@@ -42,7 +42,7 @@ const HomeMain = () => {
         <HomeSix />
         <Footer />
       </div>
-
+ 
       {/* Turnstile verification — only runs once */}
       {!verified && (
         <div className="fixed top-0 left-0 w-screen h-screen z-50 flex items-center justify-center">
@@ -61,5 +61,7 @@ const HomeMain = () => {
     </div>
   );
 };
-
+ 
 export default HomeMain;
+ 
+ 
