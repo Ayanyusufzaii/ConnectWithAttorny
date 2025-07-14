@@ -1,6 +1,17 @@
 // emailService.js
  
 import emailjs from '@emailjs/browser';
+
+  const sanitize = (value) => {
+  if (typeof value === 'string') {
+    return value.trim() === '' ? 'N/A' : value;
+  }
+  if (value === undefined || value === null) {
+    return 'N/A';
+  }
+  return value;
+};
+ 
  
 const SERVICE_ID = 'service_azb26ks';
 const ADMIN_TEMPLATE_ID = 'template_i4yx3al';
@@ -48,8 +59,7 @@ export const sendAdminEmail = async (formData) => {
     name: formData.name,
     email: formData.email,
     phone: formData.phone,
-    alternateNumber:formData.alternateNumber,
-
+alternateNumber: sanitize(formData.alternateNumber),
     category: formData.category,
     streetAddress: formData.streetAddress,
     city: formData.city,
@@ -77,7 +87,7 @@ export const sendUserEmail = async (formData) => {
     name: formData.name,
     email: formData.email,
     phone: formData.phone,
-    alternateNumber:formData.alternateNumber,
+alternateNumber: sanitize(formData.alternateNumber),
     category: formData.category,
     streetAddress: formData.streetAddress,
     city: formData.city,
