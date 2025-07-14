@@ -815,6 +815,7 @@ const DesktopForm = () => {
               label="Lawsuit Type"
               value={formData.category}
               onChange={handleChange}
+              required
               options={LAWSUIT_OPTIONS}
               placeholder="Select Lawsuit Category"
             />
@@ -990,101 +991,94 @@ const MobileForm = () => {
   const [tokenUrl, settokenUrl] = useState("");
   const [zipCodeUsed, setZipCodeUsed] = useState(false);
   const [manualCityState, setManualCityState] = useState(false);
- 
- 
-  useEffect(() => {
-  // Simple observer to capture TrustedForm data when it's populated
-  const observer = new MutationObserver((mutations) => {
-    mutations.forEach((mutation) => {
-      if (mutation.type === "attributes" && mutation.attributeName === "value") {
-        const target = mutation.target;
-       
-        // Check if this is a TrustedForm field
-        if (target.name === "xxTrustedFormCertUrl" && target.value) {
-          console.log("✅ TrustedForm Cert URL:", target.value);
-          setCertId(target.value);
-        }
-       
-        if (target.name === "xxTrustedFormPingUrl" && target.value) {
-          console.log("✅ TrustedForm Ping URL:", target.value);
-          setPingUrl(target.value);
-        }
-       
-        if (target.name === "xxTrustedFormCertToken" && target.value) {
-          console.log("✅ TrustedForm Token:", target.value);
-          settokenUrl(target.value);
-        }
+
+  // Helper function for phone number validation
+  const validatePhoneNumber = (phoneNumber, fieldName, otherPhoneNumber = '') => {
+    const cleaned = phoneNumber.replace(/\D/g, '');
+    
+    if (cleaned.length === 0) return null;
+    
+    if (cleaned.length !== 10) {
+      return 'Phone number must be 10 digits';
+    }
+    
+    if (!isValidUSPhone(cleaned)) {
+      return 'Please enter a valid US phone number';
+    }
+    
+    // Check if phone numbers are the same (only when both are complete)
+    if (otherPhoneNumber) {
+      const otherCleaned = otherPhoneNumber.replace(/\D/g, '');
+      if (cleaned === otherCleaned && otherCleaned.length === 10) {
+        return 'Phone number and alternate number cannot be the same';
       }
-    });
-  });
- 
- 
-  // Start observing after a short delay to ensure TrustedForm script has loaded
-  const timeoutId = setTimeout(() => {
-    const certField = document.querySelector('[name="xxTrustedFormCertUrl"]');
-    const pingField = document.querySelector('[name="xxTrustedFormPingUrl"]');
-    const tokenField = document.querySelector('[name="xxTrustedFormCertToken"]');
- 
-    if (certField) {
-      observer.observe(certField, { attributes: true });
     }
-    if (pingField) {
-      observer.observe(pingField, { attributes: true });
-    }
-    if (tokenField) {
-      observer.observe(tokenField, { attributes: true });
-    }
- 
-    // Also check if values are already populated
-    if (certField?.value) {
-      setCertId(certField.value);
-     
-    }
-    if (pingField?.value) {
-      setPingUrl(pingField.value);
-     
-    }
-    if (tokenField?.value) {
-      settokenUrl(tokenField.value);
-   
-    }
-  }, 1000);
- 
-  return () => {
-    clearTimeout(timeoutId);
-    observer.disconnect();
+    
+    return null;
   };
-}, []);
+
+  useEffect(() => {
+    // Simple observer to capture TrustedForm data when it's populated
+    const observer = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        if (mutation.type === "attributes" && mutation.attributeName === "value") {
+          const target = mutation.target;
+         
+          // Check if this is a TrustedForm field
+          if (target.name === "xxTrustedFormCertUrl" && target.value) {
+            setCertId(target.value);
+          }
+         
+          if (target.name === "xxTrustedFormPingUrl" && target.value) {
+            setPingUrl(target.value);
+          }
+         
+          if (target.name === "xxTrustedFormCertToken" && target.value) {
+            settokenUrl(target.value);
+          }
+        }
+      });
+    });
  
+    // Start observing after a short delay to ensure TrustedForm script has loaded
+    const timeoutId = setTimeout(() => {
+      const certField = document.querySelector('[name="xxTrustedFormCertUrl"]');
+      const pingField = document.querySelector('[name="xxTrustedFormPingUrl"]');
+      const tokenField = document.querySelector('[name="xxTrustedFormCertToken"]');
  
+      [certField, pingField, tokenField].forEach(field => {
+        if (field) observer.observe(field, { attributes: true });
+      });
  
+      // Check if values are already populated
+      if (certField?.value) setCertId(certField.value);
+      if (pingField?.value) setPingUrl(pingField.value);
+      if (tokenField?.value) settokenUrl(tokenField.value);
+    }, 1000);
+ 
+    return () => {
+      clearTimeout(timeoutId);
+      observer.disconnect();
+    };
+  }, []);
+
   const handleChange = async (e) => {
     const { id, value, type, checked } = e.target;
     const fieldName = id.replace('-mobile', '');
-   
     let processedValue = value;
     let newErrors = { ...errors };
- 
-    // Handle phone number formatting and validation for both phone and alternateNumber
+
+    // Handle phone number formatting and validation
     if (fieldName === 'phone' || fieldName === 'alternateNumber') {
       const cleaned = value.replace(/\D/g, '');
       if (cleaned.length <= 10) {
         processedValue = cleaned.length === 10 ? formatPhoneNumber(cleaned) : cleaned;
-        if (cleaned.length === 10) {
-          if (isValidUSPhone(cleaned)) {
-            delete newErrors[fieldName];
-           
-            // Check if phone and alternate number are the same
-            const otherField = fieldName === 'phone' ? 'alternateNumber' : 'phone';
-            const otherValue = formData[otherField].replace(/\D/g, '');
-            if (cleaned === otherValue && otherValue.length === 10) {
-              newErrors[fieldName] = 'Phone number and alternate number cannot be the same';
-            }
-          } else {
-            newErrors[fieldName] = 'Please enter a valid US phone number';
-          }
-        } else if (cleaned.length > 0) {
-          newErrors[fieldName] = 'Phone number must be 10 digits';
+        
+        const otherField = fieldName === 'phone' ? 'alternateNumber' : 'phone';
+        const validationError = validatePhoneNumber(cleaned, fieldName, formData[otherField]);
+        
+        if (validationError) {
+          newErrors[fieldName] = validationError;
         } else {
           delete newErrors[fieldName];
         }
@@ -1092,7 +1086,7 @@ const MobileForm = () => {
         return; // Don't allow more than 10 digits
       }
     }
- 
+
     // Handle email validation
     if (fieldName === 'email') {
       if (value.length > 0) {
@@ -1105,7 +1099,18 @@ const MobileForm = () => {
         delete newErrors.email;
       }
     }
- 
+
+    // Handle manual city/state entry (before ZIP code)
+    if (fieldName === 'city' || fieldName === 'state') {
+      if (!zipCodeUsed && value.length > 0) {
+        setManualCityState(true);
+        setFormData(prevData => ({
+          ...prevData,
+          captchaEnabled: true
+        }));
+      }
+    }
+
     // Handle ZIP code validation and auto-population
     if (fieldName === 'zipCode') {
       const cleaned = value.replace(/\D/g, '');
@@ -1115,11 +1120,13 @@ const MobileForm = () => {
           // Clear city and state when ZIP code is deleted
           setFormData(prevData => ({
             ...prevData,
-           
             city: '',
             state: '',
             zipCode: '',
           }));
+          setZipCodeUsed(false);
+          setManualCityState(false);
+          delete newErrors.zipCode;
           setErrors(newErrors);
           return;
         }
@@ -1127,14 +1134,14 @@ const MobileForm = () => {
         return; // Don't allow more than 5 digits
       }
     }
- 
+
     setFormData(prevData => ({
       ...prevData,
       [fieldName]: type === 'checkbox' ? checked : processedValue,
     }));
- 
+
     setErrors(newErrors);
- 
+
     // Handle ZIP code auto-population
     if (fieldName === 'zipCode' && processedValue.length === 5) {
       const locationData = await fetchLocationByZip(processedValue);
@@ -1144,44 +1151,67 @@ const MobileForm = () => {
           city: locationData.city,
           state: locationData.state
         }));
+        setZipCodeUsed(true);
+        setManualCityState(false);
+        delete newErrors.zipCode;
+        setErrors(newErrors);
+        toast.success('ZIP code validated!');
       } else {
+        newErrors.zipCode = 'Invalid ZIP code. Please enter a valid US ZIP code.';
+        setErrors(newErrors);
+        setZipCodeUsed(false);
         toast.error('Invalid ZIP code. Please enter a valid US ZIP code.');
       }
     }
   };
- 
+
   const handleCaptchaChange = (isValid) => {
     setCaptchaValid(isValid);
   };
- 
+
   const goToNextStep = () => {
     setCurrentStep(2);
     setCaptchaValid(false);
     setCaptchaResetTrigger(prev => prev + 1);
   };
- 
+
   const goToPreviousStep = () => {
     setCurrentStep(1);
     setCaptchaValid(false);
   };
- 
+
+  // Validate ZIP code matches state
+  const validateZipCodeState = async (zipCode, enteredState) => {
+    if (!zipCode || zipCode.length !== 5) return false;
+    
+    try {
+      const locationData = await fetchLocationByZip(zipCode);
+      if (!locationData) return false;
+      
+      return locationData.state.toLowerCase() === enteredState.toLowerCase();
+    } catch (error) {
+      console.error('Error validating ZIP code state:', error);
+      return false;
+    }
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
+
     if (currentStep === 1) {
       // Validate step 1 fields
       const stepErrors = {};
+      
       if (!isValidEmail(formData.email)) {
         stepErrors.email = 'Please enter a valid email address';
       }
-      if (!isValidUSPhone(formData.phone.replace(/\D/g, ''))) {
-        stepErrors.phone = 'Please enter a valid US phone number';
-      }
-      if (!isValidUSPhone(formData.alternateNumber.replace(/\D/g, ''))) {
-        stepErrors.alternateNumber = 'Please enter a valid US alternate number';
-      }
       
-     
+      const phoneError = validatePhoneNumber(formData.phone, 'phone', formData.alternateNumber);
+      if (phoneError) stepErrors.phone = phoneError;
+      
+      const altPhoneError = validatePhoneNumber(formData.alternateNumber, 'alternateNumber', formData.phone);
+      if (altPhoneError) stepErrors.alternateNumber = altPhoneError;
+
       if (Object.keys(stepErrors).length > 0) {
         setErrors(stepErrors);
         return;
@@ -1190,30 +1220,48 @@ const MobileForm = () => {
       goToNextStep();
       return;
     }
- 
+
+    // Step 2 validation
+    const stepErrors = {};
+
+    // Validate ZIP code and state match
+    if (formData.zipCode && formData.state) {
+      const isValidZipState = await validateZipCodeState(formData.zipCode, formData.state);
+      if (!isValidZipState) {
+        stepErrors.zipCode = 'ZIP code does not match the selected state. Please verify your address.';
+        toast.error('ZIP code does not match the selected state. Please verify your address.');
+      }
+    }
+
     if (!formData.captchaEnabled) {
       toast.error('Please enable CAPTCHA verification.');
       return;
     }
- 
+
     if (!captchaValid) {
       toast.error('Please complete the CAPTCHA verification.');
       return;
     }
-    setLoading(true);
-try {
-    // Include TrustedForm data in your form submission
-    const formDataWithTrustedForm = {
-      ...formData,
-      xxTrustedFormCertUrl: certId,
-      xxTrustedFormPingUrl: pingUrl,
-      xxTrustedFormCertToken: tokenUrl,
-    };
 
-    await sendAdminEmail(formDataWithTrustedForm);
-    await sendUserEmail(formDataWithTrustedForm);
- 
-      toast.success('Your request has been submitted successfully.')
+    if (Object.keys(stepErrors).length > 0) {
+      setErrors(stepErrors);
+      return;
+    }
+
+    setLoading(true);
+
+    try {
+      const formDataWithTrustedForm = {
+        ...formData,
+        xxTrustedFormCertUrl: certId,
+        xxTrustedFormPingUrl: pingUrl,
+        xxTrustedFormCertToken: tokenUrl,
+      };
+
+      await sendAdminEmail(formDataWithTrustedForm);
+      await sendUserEmail(formDataWithTrustedForm);
+      toast.success('Your request has been submitted successfully.');
+      
       // Reset form
       setFormData({
         name: '',
@@ -1232,40 +1280,43 @@ try {
       setCaptchaResetTrigger(prev => prev + 1);
       setCurrentStep(1);
       setErrors({});
+      setZipCodeUsed(false);
+      setManualCityState(false);
     } catch (error) {
       toast.error('There was an error submitting your request. Please try again.');
     } finally {
       setLoading(false);
     }
   };
- 
+
   if (currentStep === 1) {
     return (
       <form className="space-y-4 w-full" onSubmit={handleSubmit}>
- 
-         <input
-                      type="hidden"
-                      id="xxTrustedFormCertUrl"
-                      name="xxTrustedFormCertUrl"
-                      value={certId}
-                    />
-                    <input
-                      type="hidden"
-                      id="xxTrustedFormCertToken"
-                      name="xxTrustedFormCertToken"
-                      value={tokenUrl}
-                    />
-                    <input
-                      type="hidden"
-                      id="xxTrustedFormPingUrl"
-                      name="xxTrustedFormPingUrl"
-                      value={pingUrl}
-                    />
+        <input
+          type="hidden"
+          id="xxTrustedFormCertUrl"
+          name="xxTrustedFormCertUrl"
+          value={certId}
+        />
+        <input
+          type="hidden"
+          id="xxTrustedFormCertToken"
+          name="xxTrustedFormCertToken"
+          value={tokenUrl}
+        />
+        <input
+          type="hidden"
+          id="xxTrustedFormPingUrl"
+          name="xxTrustedFormPingUrl"
+          value={pingUrl}
+        />
+        
         <FloatingInput
           type="text"
           id="name"
           label="Full Name"
           value={formData.name}
+          isRequired={true}
           onChange={handleChange}
           error={errors.name}
         />
@@ -1274,6 +1325,7 @@ try {
           id="phone"
           label="Phone Number"
           value={formData.phone}
+          isRequired={true}
           onChange={handleChange}
           error={errors.phone}
         />
@@ -1282,6 +1334,7 @@ try {
           id="alternateNumber"
           label="Alternate Number"
           value={formData.alternateNumber}
+          isRequired={false}
           onChange={handleChange}
           error={errors.alternateNumber}
         />
@@ -1290,6 +1343,7 @@ try {
           id="email"
           label="Email"
           value={formData.email}
+          isRequired={true}
           onChange={handleChange}
           error={errors.email}
         />
@@ -1300,7 +1354,7 @@ try {
           value={formData.category}
           onChange={handleChange}
           options={LAWSUIT_OPTIONS}
-          placeholder="Lawsuit Type"
+          placeholder="Select Lawsuit Category"
         />
    
         <div className="flex items-start gap-3">
@@ -1313,28 +1367,17 @@ try {
             className="mt-1"
             style={{ width: '1.5rem', height: '1.5rem' }}
           />
-         <label htmlFor="termsAccepted" className="text-xs text-gray-700">
-  I agree to the{' '}
-  <a
-    href="/PrivacyPolicy"
-    className="text-[#EDC14A] underline"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    Privacy Policy
-  </a>{' '}
-  and{' '}
-  <a
-    href="/Disclaimer"
-    className="text-[#EDC14A] underline"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    Disclaimer
-  </a>{' '}
-  and give my express written consent to affiliates and/or lawyers to contact me at the number provided above, even if this number is a wireless number or is listed on a Do Not Call list. I understand that I may be contacted by telephone, email, text message, or mail regarding case options and that I may be called using automatic dialing equipment. Message and data rates may apply. My consent does not require a purchase. This is legal advertising.
-</label>
- 
+          <label htmlFor="termsAccepted" className="text-xs text-gray-700">
+            I agree to the{' '}
+            <a href="/PrivacyPolicy" className="text-[#EDC14A] underline" target="_blank" rel="noopener noreferrer">
+              Privacy Policy
+            </a>{' '}
+            and{' '}
+            <a href="/Disclaimer" className="text-[#EDC14A] underline" target="_blank" rel="noopener noreferrer">
+              Disclaimer
+            </a>{' '}
+            and give my express written consent, affiliates and/or lawyer to contact you at the number provided above, even if this number is a wireless number or if I am presently listed on a Do Not Call list. I understand that I may be contacted by telephone, email, text message or mail regarding case options and that I may be called using automatic dialing equipment. Message and data rates may apply. My consent does not require purchase. This is Legal advertising.
+          </label>
         </div>
    
         <div className="flex justify-end">
@@ -1348,23 +1391,24 @@ try {
               whiteSpace: 'nowrap',
             }}
           >
-            Start My Case Review  <span className="text-[#EDC14A]">{' ->'}</span>
+            Start My Case Review <span className="text-[#EDC14A]">{' ->'}</span>
           </button>
         </div>
       </form>
     );
   }
- 
+
   return (
     <form className="space-y-4 w-full" onSubmit={handleSubmit}>
-     
       <FloatingInput
         type="text"
         id="city-mobile"
         label="City"
         value={formData.city}
         onChange={handleChange}
+        isRequired={true}
         error={errors.city}
+        readOnly={zipCodeUsed}
       />
       <FloatingInput
         type="text"
@@ -1372,19 +1416,28 @@ try {
         label="State"
         value={formData.state}
         onChange={handleChange}
+        isRequired={true}
         error={errors.state}
+        readOnly={zipCodeUsed}
       />
-       <FloatingInput
+      <FloatingInput
         type="text"
         id="zipCode-mobile"
         label="Zip Code"
         value={formData.zipCode}
         onChange={handleChange}
+        isRequired={true}
         error={errors.zipCode}
       />
      
       <div className="w-full">
-        <FloatingTextarea id="streetAddress-mobile" label="Street Address" value={formData.streetAddress} onChange={handleChange} />
+        <FloatingTextarea 
+          id="streetAddress-mobile" 
+          label="Street Address" 
+          value={formData.streetAddress} 
+          onChange={handleChange}
+          isRequired={true}
+        />
       </div>
  
       <div className="w-full">
@@ -1398,7 +1451,7 @@ try {
             style={{ width: '1.25rem', height: '1.25rem' }}
           />
           <label htmlFor="captchaEnabled" className="text-sm font-medium text-gray-700" style={{ fontFamily: 'Quicksand, sans-serif' }}>
-           Please Verify you're human
+            Please Verify you're human
           </label>
         </div>
         {formData.captchaEnabled && (
