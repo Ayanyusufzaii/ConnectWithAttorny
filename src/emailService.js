@@ -119,6 +119,7 @@ export const SubServiceSendAdminEmail = async (formData) => {
     full_name: `${formData.firstName || formData.fist_name || ''} ${formData.lastName || ''}`.trim(),
     email: formData.email,
     phone: formData.phone,
+alternateNumber: sanitize(formData.alternateNumber),
     streetAddress: formData.streetAddress,
     city: formData.city,
     state: formData.state,
@@ -152,6 +153,8 @@ export const SubServiceSendUserEmail = async (formData) => {
     lastName: formData.lastName || '',
     full_name: `${formData.firstName || formData.firstName || ''} ${formData.lastName || ''}`.trim(),
     email: formData.email,
+alternateNumber: sanitize(formData.alternateNumber),
+
     phone: formData.phone,
     streetAddress: formData.streetAddress,
     city: formData.city,
