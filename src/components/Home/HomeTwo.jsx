@@ -802,6 +802,8 @@ const DesktopForm = () => {
               type="email"
               id="email"
               label="Email"
+            isRequired={true}
+
               value={formData.email}
               onChange={handleChange}
               error={errors.email}
@@ -870,6 +872,8 @@ const DesktopForm = () => {
           label="City"
           value={formData.city}
           onChange={handleChange}
+            isRequired={true}
+
           error={errors.city}
           readOnly={zipCodeUsed}
         />
@@ -878,6 +882,8 @@ const DesktopForm = () => {
           id="state"
           label="State"
           value={formData.state}
+            isRequired={true}
+
           onChange={handleChange}
           error={errors.state}
           readOnly={zipCodeUsed}
@@ -885,6 +891,8 @@ const DesktopForm = () => {
         <FloatingInput
           type="text"
           id="zipCode"
+            isRequired={true}
+
           label="Zip Code"
           value={formData.zipCode}
           onChange={handleChange}
@@ -896,6 +904,8 @@ const DesktopForm = () => {
         <FloatingTextarea 
           id="streetAddress" 
           label="Street Address" 
+            isRequired={true}
+
           value={formData.streetAddress} 
           onChange={handleChange} 
         />
