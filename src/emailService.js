@@ -48,6 +48,7 @@ export const sendAdminEmail = async (formData) => {
     name: formData.name,
     email: formData.email,
     phone: formData.phone,
+    alternateNumber:formData.alternateNumber,
     category: formData.category,
     streetAddress: formData.streetAddress,
     city: formData.city,
@@ -75,6 +76,7 @@ export const sendUserEmail = async (formData) => {
     name: formData.name,
     email: formData.email,
     phone: formData.phone,
+    alternateNumber:formData.alternateNumber,
     category: formData.category,
     streetAddress: formData.streetAddress,
     city: formData.city,
@@ -101,9 +103,9 @@ export const SubServiceSendAdminEmail = async (formData) => {
  
   const templateParams = {
     // Handle both desktop and mobile form field names
-    first_name: formData.first_name || formData.fist_name || '',
-    last_name: formData.last_name || '',
-    full_name: `${formData.first_name || formData.fist_name || ''} ${formData.last_name || ''}`.trim(),
+    firstName: formData.firstName || formData.fist_name || '',
+    lastName: formData.lastName || '',
+    full_name: `${formData.firstName || formData.fist_name || ''} ${formData.lastName || ''}`.trim(),
     email: formData.email,
     phone: formData.phone,
     streetAddress: formData.streetAddress,
@@ -111,7 +113,7 @@ export const SubServiceSendAdminEmail = async (formData) => {
     state: formData.state,
     zipCode: formData.zipCode,
     fullAddress: `${formData.streetAddress || ''}, ${formData.city || ''}, ${formData.state || ''} ${formData.zipCode || ''}`.replace(/^,\s*/, '').trim(),
-    message: `New SubService case review request from ${formData.first_name || formData.fist_name || ''} ${formData.last_name || ''}`,
+    message: `New SubService case review request from ${formData.firstName || formData.fist_name || ''} ${formData.lastName || ''}`,
     submissionDate: new Date().toLocaleString(),
     ip_address: ipAddress,
     page_source: getSourceUrl(),
@@ -135,9 +137,9 @@ export const SubServiceSendUserEmail = async (formData) => {
  
   const templateParams = {
     // Handle both desktop and mobile form field names
-    first_name: formData.first_name || formData.fist_name || '',
-    last_name: formData.last_name || '',
-    full_name: `${formData.first_name || formData.fist_name || ''} ${formData.last_name || ''}`.trim(),
+    firstName: formData.firstName || formData.firstName || '',
+    lastName: formData.lastName || '',
+    full_name: `${formData.firstName || formData.firstName || ''} ${formData.lastName || ''}`.trim(),
     email: formData.email,
     phone: formData.phone,
     streetAddress: formData.streetAddress,
@@ -161,4 +163,5 @@ export const SubServiceSendUserEmail = async (formData) => {
  
   return emailjs.send(SERVICE_ID, SUBSERVICE_USER_TEMPLATE_ID, templateParams);
 };
+ 
  

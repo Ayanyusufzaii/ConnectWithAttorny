@@ -1,6 +1,3 @@
-
-
- 
 import React, { useState, useEffect } from 'react';
 import { sendAdminEmail, sendUserEmail } from '../../emailService.js';
 import toast, { Toaster } from 'react-hot-toast';
@@ -215,10 +212,9 @@ const CustomCaptcha = ({ onCaptchaChange, resetTrigger }) => {
   );
 };
  
-const FloatingInput = ({ type, id, label, value, onChange, error, readOnly = false }) => {
+const FloatingInput = ({ type, id, label, value, onChange, error, readOnly = false ,isRequired}) => {
   const [focused, setFocused] = useState(false);
- 
-  return (
+ if(isRequired){return (
     <div className="relative w-full">
       <input
         id={id}
@@ -247,7 +243,37 @@ const FloatingInput = ({ type, id, label, value, onChange, error, readOnly = fal
         <p className="text-blue-600 text-xs mt-1"></p>
       )}
     </div>
-  );
+  );}
+  else{return (
+    <div className="relative w-full">
+      <input
+        id={id}
+        type={type}
+        value={value}
+        onChange={onChange}
+        onFocus={() => setFocused(true)}
+        onBlur={(e) => setFocused(e.target.value !== '' || focused)}
+        readOnly={readOnly}
+        className={`peer w-full border ${error ? 'border-red-500' : 'border-gray-300'} rounded-lg px-4 pt-6 pb-2 focus:outline-none focus:ring-2 ${error ? 'focus:ring-red-500' : 'focus:ring-blue-400'} bg-[#E7E9F4] text-[#0A1F8F] font-medium ${readOnly ? 'cursor-not-allowed opacity-75' : ''}`}
+        style={{ fontFamily: 'Quicksand, sans-serif' }}
+        placeholder=" "
+      />
+      <label
+        htmlFor={id}
+        className={`absolute left-4 top-2 text-sm ${error ? 'text-red-600' : 'text-gray-600'} transition-all peer-placeholder-shown:top-5 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500 peer-focus:top-2 peer-focus:text-sm peer-focus:text-gray-600`}
+        style={{ fontFamily: 'Quicksand, sans-serif' }}
+      >
+        {label}
+      </label>
+      {error && (
+        <p className="text-red-500 text-sm mt-1">{error}</p>
+      )}
+      {readOnly && (
+        <p className="text-blue-600 text-xs mt-1"></p>
+      )}
+    </div>
+  );}
+  
 };
  
 const FloatingTextarea = ({ id, label, value, onChange }) => {
@@ -302,7 +328,7 @@ const CustomDropdown = ({ id, label, value, onChange, options, placeholder }) =>
         style={{ fontFamily: 'Quicksand, sans-serif' }}
         onClick={() => setIsOpen(!isOpen)}
       >
-        <span className={selectedOption ? 'text-[#0A1F8F]' : 'text-gray-500'}>
+        <span className="text-[#0A1F8F] ">
           {selectedOption ? selectedOption.label : placeholder}
         </span>
         <ChevronDown className={`w-5 h-5 text-gray-400 transition-transform ${isOpen ? 'rotate-180' : ''}`} />
@@ -420,99 +446,94 @@ const DesktopForm = () => {
   const [tokenUrl, settokenUrl] = useState("");
   const [zipCodeUsed, setZipCodeUsed] = useState(false);
   const [manualCityState, setManualCityState] = useState(false);
- 
- 
-  useEffect(() => {
-  // Simple observer to capture TrustedForm data when it's populated
-  const observer = new MutationObserver((mutations) => {
-    mutations.forEach((mutation) => {
-      if (mutation.type === "attributes" && mutation.attributeName === "value") {
-        const target = mutation.target;
-       
-        // Check if this is a TrustedForm field
-        if (target.name === "xxTrustedFormCertUrl" && target.value) {
-          // console.log("✅ TrustedForm Cert URL:", target.value);
-          setCertId(target.value);
-        }
-       
-        if (target.name === "xxTrustedFormPingUrl" && target.value) {
-          // console.log("✅ TrustedForm Ping URL:", target.value);
-          setPingUrl(target.value);
-        }
-       
-        if (target.name === "xxTrustedFormCertToken" && target.value) {
-          // console.log("✅ TrustedForm Token:", target.value);
-          settokenUrl(target.value);
-        }
+
+  // Helper function for phone number validation
+  const validatePhoneNumber = (phoneNumber, fieldName, otherPhoneNumber = '') => {
+    const cleaned = phoneNumber.replace(/\D/g, '');
+    
+    if (cleaned.length === 0) return null;
+    
+    if (cleaned.length !== 10) {
+      return 'Phone number must be 10 digits';
+    }
+    
+    if (!isValidUSPhone(cleaned)) {
+      return 'Please enter a valid US phone number';
+    }
+    
+    // Check if phone numbers are the same (only when both are complete)
+    if (otherPhoneNumber) {
+      const otherCleaned = otherPhoneNumber.replace(/\D/g, '');
+      if (cleaned === otherCleaned && otherCleaned.length === 10) {
+        return 'Phone number and alternate number cannot be the same';
       }
-    });
-  });
- 
-  // Start observing after a short delay to ensure TrustedForm script has loaded
-  const timeoutId = setTimeout(() => {
-    const certField = document.querySelector('[name="xxTrustedFormCertUrl"]');
-    const pingField = document.querySelector('[name="xxTrustedFormPingUrl"]');
-    const tokenField = document.querySelector('[name="xxTrustedFormCertToken"]');
- 
-    if (certField) {
-      observer.observe(certField, { attributes: true });
     }
-    if (pingField) {
-      observer.observe(pingField, { attributes: true });
-    }
-    if (tokenField) {
-      observer.observe(tokenField, { attributes: true });
-    }
- 
-    // Also check if values are already populated
-    if (certField?.value) {
-      setCertId(certField.value);
-     
-    }
-    if (pingField?.value) {
-      setPingUrl(pingField.value);
-     
-    }
-    if (tokenField?.value) {
-      settokenUrl(tokenField.value);
-     
-    }
-  }, 1000);
- 
-  return () => {
-    clearTimeout(timeoutId);
-    observer.disconnect();
+    
+    return null;
   };
-}, []);
+
+  useEffect(() => {
+    // Simple observer to capture TrustedForm data when it's populated
+    const observer = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        if (mutation.type === "attributes" && mutation.attributeName === "value") {
+          const target = mutation.target;
+         
+          // Check if this is a TrustedForm field
+          if (target.name === "xxTrustedFormCertUrl" && target.value) {
+            setCertId(target.value);
+          }
+         
+          if (target.name === "xxTrustedFormPingUrl" && target.value) {
+            setPingUrl(target.value);
+          }
+         
+          if (target.name === "xxTrustedFormCertToken" && target.value) {
+            settokenUrl(target.value);
+          }
+        }
+      });
+    });
  
+    // Start observing after a short delay to ensure TrustedForm script has loaded
+    const timeoutId = setTimeout(() => {
+      const certField = document.querySelector('[name="xxTrustedFormCertUrl"]');
+      const pingField = document.querySelector('[name="xxTrustedFormPingUrl"]');
+      const tokenField = document.querySelector('[name="xxTrustedFormCertToken"]');
  
-  const handleChange = async (e) => {
+      [certField, pingField, tokenField].forEach(field => {
+        if (field) observer.observe(field, { attributes: true });
+      });
+ 
+      // Check if values are already populated
+      if (certField?.value) setCertId(certField.value);
+      if (pingField?.value) setPingUrl(pingField.value);
+      if (tokenField?.value) settokenUrl(tokenField.value);
+    }, 1000);
+ 
+    return () => {
+      clearTimeout(timeoutId);
+      observer.disconnect();
+    };
+  }, []);
+
+  const handleChange = async (e) => {    
     const { id, value, type, checked } = e.target;
     const fieldName = id.replace('-mobile', '');
-   
     let processedValue = value;
     let newErrors = { ...errors };
- 
-    // Handle phone number formatting and validation for both phone and alternateNumber
+
+    // Handle phone number formatting and validation
     if (fieldName === 'phone' || fieldName === 'alternateNumber') {
       const cleaned = value.replace(/\D/g, '');
       if (cleaned.length <= 10) {
         processedValue = cleaned.length === 10 ? formatPhoneNumber(cleaned) : cleaned;
-        if (cleaned.length === 10) {
-          if (isValidUSPhone(cleaned)) {
-            delete newErrors[fieldName];
-           
-            // Check if phone and alternate number are the same
-            const otherField = fieldName === 'phone' ? 'alternateNumber' : 'phone';
-            const otherValue = formData[otherField].replace(/\D/g, '');
-            if (cleaned === otherValue && otherValue.length === 10) {
-              newErrors[fieldName] = 'Phone number and alternate number cannot be the same';
-            }
-          } else {
-            newErrors[fieldName] = 'Please enter a valid US phone number';
-          }
-        } else if (cleaned.length > 0) {
-          newErrors[fieldName] = 'Phone number must be 10 digits';
+        
+        const otherField = fieldName === 'phone' ? 'alternateNumber' : 'phone';
+        const validationError = validatePhoneNumber(cleaned, fieldName, formData[otherField]);
+        
+        if (validationError) {
+          newErrors[fieldName] = validationError;
         } else {
           delete newErrors[fieldName];
         }
@@ -520,7 +541,7 @@ const DesktopForm = () => {
         return; // Don't allow more than 10 digits
       }
     }
- 
+
     // Handle email validation
     if (fieldName === 'email') {
       if (value.length > 0) {
@@ -533,7 +554,7 @@ const DesktopForm = () => {
         delete newErrors.email;
       }
     }
- 
+
     // Handle manual city/state entry (before ZIP code)
     if (fieldName === 'city' || fieldName === 'state') {
       if (!zipCodeUsed && value.length > 0) {
@@ -544,7 +565,7 @@ const DesktopForm = () => {
         }));
       }
     }
- 
+
     // Handle ZIP code validation and auto-population
     if (fieldName === 'zipCode') {
       const cleaned = value.replace(/\D/g, '');
@@ -560,6 +581,7 @@ const DesktopForm = () => {
           }));
           setZipCodeUsed(false);
           setManualCityState(false);
+          delete newErrors.zipCode;
           setErrors(newErrors);
           return;
         }
@@ -567,14 +589,14 @@ const DesktopForm = () => {
         return; // Don't allow more than 5 digits
       }
     }
- 
+
     setFormData(prevData => ({
       ...prevData,
       [fieldName]: type === 'checkbox' ? checked : processedValue,
     }));
- 
+
     setErrors(newErrors);
- 
+
     // Handle ZIP code auto-population
     if (fieldName === 'zipCode' && processedValue.length === 5) {
       const locationData = await fetchLocationByZip(processedValue);
@@ -586,66 +608,65 @@ const DesktopForm = () => {
         }));
         setZipCodeUsed(true);
         setManualCityState(false);
-        toast.success('ZIP code validated! ');
+        delete newErrors.zipCode;
+        setErrors(newErrors);
+        toast.success('ZIP code validated!');
       } else {
-        toast.error('Invalid ZIP code. Please enter a valid US ZIP code.');
+        newErrors.zipCode = 'Invalid ZIP code. Please enter a valid US ZIP code.';
+        setErrors(newErrors);
         setZipCodeUsed(false);
+        toast.error('Invalid ZIP code. Please enter a valid US ZIP code.');
       }
     }
   };
- 
+
   const handleCaptchaChange = (isValid) => {
     setCaptchaValid(isValid);
   };
- 
+
   const goToNextStep = () => {
     setCurrentStep(2);
     setCaptchaValid(false);
     setCaptchaResetTrigger(prev => prev + 1);
   };
- 
+
   const goToPreviousStep = () => {
     setCurrentStep(1);
     setCaptchaValid(false);
   };
- 
+
+  // Validate ZIP code matches state
+  const validateZipCodeState = async (zipCode, enteredState) => {
+    if (!zipCode || zipCode.length !== 5) return false;
+    
+    try {
+      const locationData = await fetchLocationByZip(zipCode);
+      if (!locationData) return false;
+      
+      return locationData.state.toLowerCase() === enteredState.toLowerCase();
+    } catch (error) {
+      console.error('Error validating ZIP code state:', error);
+      return false;
+    }
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
- 
+
     if (currentStep === 1) {
       // Validate step 1 fields
       const stepErrors = {};
+      
       if (!isValidEmail(formData.email)) {
         stepErrors.email = 'Please enter a valid email address';
       }
-      if (!isValidUSPhone(formData.phone.replace(/\D/g, ''))) {
-        stepErrors.phone = 'Please enter a valid US phone number';
-      }
-      if (!isValidUSPhone(formData.alternateNumber.replace(/\D/g, ''))) {
-        stepErrors.alternateNumber = 'Please enter a valid US alternate number';
-      }
-     
-      // Check if phone numbers are the same
-      const primaryPhoneMobile = formData.phone.replace(/\D/g, '');
-      const alternatePhoneMobile = formData.alternateNumber.replace(/\D/g, '');
-      if (primaryPhoneMobile === alternatePhoneMobile && primaryPhoneMobile.length === 10) {
-        stepErrors.alternateNumber = 'Phone number and alternate number cannot be the same';
-      }
-     
-      // Check if phone numbers are the same
-      const primaryPhone = formData.phone.replace(/\D/g, '');
-      const alternatePhone = formData.alternateNumber.replace(/\D/g, '');
-      if (primaryPhone === alternatePhone && primaryPhone.length === 10) {
-        stepErrors.alternateNumber = 'Phone number and alternate number cannot be the same';
-      }
-     
-      // Check if phone numbers are the same
-      const phoneClean = formData.phone.replace(/\D/g, '');
-      const altClean = formData.alternateNumber.replace(/\D/g, '');
-      if (phoneClean === altClean && phoneClean.length === 10) {
-        stepErrors.alternateNumber = 'Phone number and alternate number cannot be the same';
-      }
-     
+      
+      const phoneError = validatePhoneNumber(formData.phone, 'phone', formData.alternateNumber);
+      if (phoneError) stepErrors.phone = phoneError;
+      
+      const altPhoneError = validatePhoneNumber(formData.alternateNumber, 'alternateNumber', formData.phone);
+      if (altPhoneError) stepErrors.alternateNumber = altPhoneError;
+
       if (Object.keys(stepErrors).length > 0) {
         setErrors(stepErrors);
         return;
@@ -654,30 +675,48 @@ const DesktopForm = () => {
       goToNextStep();
       return;
     }
- 
+
+    // Step 2 validation
+    const stepErrors = {};
+
+    // Validate ZIP code and state match
+    if (formData.zipCode && formData.state) {
+      const isValidZipState = await validateZipCodeState(formData.zipCode, formData.state);
+      if (!isValidZipState) {
+        stepErrors.zipCode = 'ZIP code does not match the selected state. Please verify your address.';
+        toast.error('ZIP code does not match the selected state. Please verify your address.');
+      }
+    }
+
     if (!formData.captchaEnabled) {
       toast.error('Please enable CAPTCHA verification.');
       return;
     }
- 
+
     if (!captchaValid) {
       toast.error('Please complete the CAPTCHA verification.');
       return;
     }
+
+    if (Object.keys(stepErrors).length > 0) {
+      setErrors(stepErrors);
+      return;
+    }
+
     setLoading(true);
- 
+
     try {
- 
-       const formDataWithTrustedForm = {
-      ...formData,
-      xxTrustedFormCertUrl: certId,
-      xxTrustedFormPingUrl: pingUrl,
-      xxTrustedFormCertToken: tokenUrl,
-    };
- 
-         await sendAdminEmail(formDataWithTrustedForm);
-    await sendUserEmail(formDataWithTrustedForm);
-      toast.success('Your request has been submitted successfully.')
+      const formDataWithTrustedForm = {
+        ...formData,
+        xxTrustedFormCertUrl: certId,
+        xxTrustedFormPingUrl: pingUrl,
+        xxTrustedFormCertToken: tokenUrl,
+      };
+
+      await sendAdminEmail(formDataWithTrustedForm);
+      await sendUserEmail(formDataWithTrustedForm);
+      toast.success('Your request has been submitted successfully.');
+      
       // Reset form
       setFormData({
         name: '',
@@ -696,46 +735,51 @@ const DesktopForm = () => {
       setCaptchaResetTrigger(prev => prev + 1);
       setCurrentStep(1);
       setErrors({});
+      setZipCodeUsed(false);
+      setManualCityState(false);
     } catch (error) {
       toast.error('There was an error submitting your request. Please try again.');
     } finally {
       setLoading(false);
     }
   };
- 
+
   if (currentStep === 1) {
     return (
       <form className="space-y-6 w-full" onSubmit={handleSubmit}>
-         <input
-                      type="hidden"
-                      id="xxTrustedFormCertUrl"
-                      name="xxTrustedFormCertUrl"
-                      value={certId}
-                    />
-                    <input
-                      type="hidden"
-                      id="xxTrustedFormCertToken"
-                      name="xxTrustedFormCertToken"
-                      value={tokenUrl}
-                    />
-                    <input
-                      type="hidden"
-                      id="xxTrustedFormPingUrl"
-                      name="xxTrustedFormPingUrl"
-                      value={pingUrl}
-                    />
+        <input
+          type="hidden"
+          id="xxTrustedFormCertUrl"
+          name="xxTrustedFormCertUrl"
+          value={certId}
+        />
+        <input
+          type="hidden"
+          id="xxTrustedFormCertToken"
+          name="xxTrustedFormCertToken"
+          value={tokenUrl}
+        />
+        <input
+          type="hidden"
+          id="xxTrustedFormPingUrl"
+          name="xxTrustedFormPingUrl"
+          value={pingUrl}
+        />
+        
         <div className="flex flex-col md:flex-row md:space-x-4 space-y-4 md:space-y-0 w-full">
           <FloatingInput
             type="text"
             id="name"
             label="Full Name"
             value={formData.name}
+            isRequired={true}
             onChange={handleChange}
             error={errors.name}
           />
           <FloatingInput
             type="tel"
             id="phone"
+            isRequired={true}
             label="Phone Number"
             value={formData.phone}
             onChange={handleChange}
@@ -745,12 +789,13 @@ const DesktopForm = () => {
             type="tel"
             id="alternateNumber"
             label="Alternate Number"
+            isRequired={false}
             value={formData.alternateNumber}
             onChange={handleChange}
             error={errors.alternateNumber}
           />
         </div>
- 
+
         <div className="flex flex-col md:flex-row md:space-x-4 space-y-4 md:space-y-0 w-full">
           <div className="md:w-1/3">
             <FloatingInput
@@ -769,59 +814,56 @@ const DesktopForm = () => {
               value={formData.category}
               onChange={handleChange}
               options={LAWSUIT_OPTIONS}
-              placeholder="Lawsuit Type"
+              placeholder="Select Lawsuit Category"
             />
           </div>
         </div>
    
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
-  <div className="flex items-start w-full lg:w-auto">
-    <input
-      type="checkbox"
-      id="termsAccepted"
-      required
-      checked={formData.termsAccepted}
-      onChange={handleChange}
-      className="mr-2 mt-1"
-      style={{ width: '1.25rem', height: '1.25rem' }}
-    />
-    <label htmlFor="termsAccepted" className="text-sm text-gray-700">
-      I agree to the{' '}
-      <a href="/PrivacyPolicy" className="text-[#EDC14A] underline" target="_blank" rel="noopener noreferrer">
-        Privacy Policy
-      </a>{' '}
-      and{' '}
-      <a href="/Disclaimer" className="text-[#EDC14A] underline" target="_blank" rel="noopener noreferrer">
-        Disclaimer
-      </a>{' '}
-      and give my express written consent, affiliates and/or lawyer to contact you at the number provided above, even if this number is a wireless number or if I am presently listed on a Do Not Call list. I understand that I may be contacted by telephone, email, text message or mail regarding case options and that I may be called using automatic dialing equipment. Message and data rates may apply. My consent does not require purchase. This is Legal advertising.
-    </label>
-  </div>
-<div className="flex justify-end w-full lg:w-auto">
-  <button
-    type="submit"
-    className="flex items-center justify-center font-semibold w-full min-w-[220px] lg:min-w-[240px] lg:w-auto px-6 lg:px-16 py-4 rounded-lg shadow transition text-base lg:text-lg hover:bg-blue-700"
-    style={{
-      backgroundColor: '#0A1F8F',
-      color: '#fff',
-      fontFamily: 'Quicksand, sans-serif',
-      whiteSpace: 'nowrap',
-    }}
-  >
-    Start My Case Review <span className="text-[#EDC14A]">{' ->'}</span>
-  </button>
-</div>
- 
-</div>
- 
+          <div className="flex items-start w-full lg:w-auto">
+            <input
+              type="checkbox"
+              id="termsAccepted"
+              required
+              checked={formData.termsAccepted}
+              onChange={handleChange}
+              className="mr-2 mt-1"
+              style={{ width: '1.25rem', height: '1.25rem' }}
+            />
+            <label htmlFor="termsAccepted" className="text-sm text-gray-700">
+              I agree to the{' '}
+              <a href="/PrivacyPolicy" className="text-[#EDC14A] underline" target="_blank" rel="noopener noreferrer">
+                Privacy Policy
+              </a>{' '}
+              and{' '}
+              <a href="/Disclaimer" className="text-[#EDC14A] underline" target="_blank" rel="noopener noreferrer">
+                Disclaimer
+              </a>{' '}
+              and give my express written consent, affiliates and/or lawyer to contact you at the number provided above, even if this number is a wireless number or if I am presently listed on a Do Not Call list. I understand that I may be contacted by telephone, email, text message or mail regarding case options and that I may be called using automatic dialing equipment. Message and data rates may apply. My consent does not require purchase. This is Legal advertising.
+            </label>
+          </div>
+          <div className="flex justify-end w-full lg:w-auto">
+            <button
+              type="submit"
+              className="flex items-center justify-center font-semibold w-full min-w-[220px] lg:min-w-[240px] lg:w-auto px-6 lg:px-16 py-4 rounded-lg shadow transition text-base lg:text-lg hover:bg-blue-700"
+              style={{
+                backgroundColor: '#0A1F8F',
+                color: '#fff',
+                fontFamily: 'Quicksand, sans-serif',
+                whiteSpace: 'nowrap',
+              }}
+            >
+              Start My Case Review <span className="text-[#EDC14A]">{' ->'}</span>
+            </button>
+          </div>
+        </div>
       </form>
     );
   }
- 
+
   return (
     <form className="space-y-6 w-full" onSubmit={handleSubmit}>
       <div className="flex flex-col md:flex-row md:space-x-4 space-y-4 md:space-y-0 w-full">
-       
         <FloatingInput
           type="text"
           id="city"
@@ -849,11 +891,16 @@ const DesktopForm = () => {
           error={errors.zipCode}
         />
       </div>
- 
+
       <div className="w-full">
-        <FloatingTextarea id="streetAddress" label="Street Address" value={formData.streetAddress} onChange={handleChange} />
+        <FloatingTextarea 
+          id="streetAddress" 
+          label="Street Address" 
+          value={formData.streetAddress} 
+          onChange={handleChange} 
+        />
       </div>
- 
+
       <div className="w-full">
         <div className="flex items-center mb-4">
           <input
@@ -867,13 +914,12 @@ const DesktopForm = () => {
           <label htmlFor="captchaEnabled" className="text-sm font-medium text-gray-700" style={{ fontFamily: 'Quicksand, sans-serif' }}>
             Please Verify you're human
           </label>
-   
         </div>
         {formData.captchaEnabled && (
           <CustomCaptcha onCaptchaChange={handleCaptchaChange} resetTrigger={captchaResetTrigger} />
         )}
       </div>
- 
+
       <div className="flex justify-end gap-4">
         <button
           type="button"
@@ -1111,7 +1157,7 @@ const MobileForm = () => {
  
   const handleSubmit = async (e) => {
     e.preventDefault();
- 
+    
     if (currentStep === 1) {
       // Validate step 1 fields
       const stepErrors = {};
@@ -1124,6 +1170,7 @@ const MobileForm = () => {
       if (!isValidUSPhone(formData.alternateNumber.replace(/\D/g, ''))) {
         stepErrors.alternateNumber = 'Please enter a valid US alternate number';
       }
+      
      
       if (Object.keys(stepErrors).length > 0) {
         setErrors(stepErrors);
@@ -1152,7 +1199,7 @@ try {
       xxTrustedFormPingUrl: pingUrl,
       xxTrustedFormCertToken: tokenUrl,
     };
- 
+
     await sendAdminEmail(formDataWithTrustedForm);
     await sendUserEmail(formDataWithTrustedForm);
  

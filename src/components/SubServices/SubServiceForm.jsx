@@ -210,7 +210,7 @@ const CustomCaptcha = ({ onCaptchaChange, resetTrigger }) => {
   );
 };
 
-const FloatingInput = ({ type, id, label, value, onChange, error, readOnly = false }) => {
+const FloatingInput = ({ type, id, label, value, onChange, error, readOnly = false ,isrequired}) => {
   const [focused, setFocused] = useState(false);
  
   return (
