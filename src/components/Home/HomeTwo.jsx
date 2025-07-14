@@ -329,6 +329,7 @@ const CustomDropdown = ({
   onChange,
   options,
   placeholder,
+  error,
 }) => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -348,11 +349,15 @@ const CustomDropdown = ({
     <div className="relative w-full">
       <button
         type="button"
-        className="w-full border border-gray-300 rounded-lg px-4 pt-6 pb-2 focus:outline-none focus:ring-2 focus:ring-blue-400 appearance-none bg-[#E7E9F4] text-[#0A1F8F] text-left flex items-center justify-between text-base font-medium"
+        className={`w-full border ${
+          error ? "border-red-500" : "border-gray-300"
+        } rounded-lg px-4 pt-6 pb-2 focus:outline-none focus:ring-2 ${
+          error ? "focus:ring-red-500" : "focus:ring-blue-400"
+        } appearance-none bg-[#E7E9F4] text-[#0A1F8F] text-left flex items-center justify-between text-base font-medium`}
         style={{ fontFamily: "Quicksand, sans-serif" }}
         onClick={() => setIsOpen(!isOpen)}
       >
-        <span className="text-[#0A1F8F] ">
+        <span className="text-[#0A1F8F]">
           {selectedOption ? selectedOption.label : placeholder}
         </span>
         <ChevronDown
@@ -363,11 +368,15 @@ const CustomDropdown = ({
       </button>
 
       <label
-        className="absolute left-4 top-2 text-sm text-gray-600"
+        className={`absolute left-4 top-2 text-sm ${
+          error ? "text-red-600" : "text-gray-600"
+        }`}
         style={{ fontFamily: "Quicksand, sans-serif" }}
       >
         {label}
       </label>
+
+      {error && <p className="text-red-500 text-sm mt-1">{error}</p>}
 
       {isOpen && (
         <div className="absolute top-full left-0 mt-1 w-full bg-white shadow-lg rounded-lg border border-gray-200 z-50 max-h-60 overflow-y-auto">
@@ -442,7 +451,6 @@ const LAWSUIT_OPTIONS = [
   { value: "Oxbryta Lawsuit ", label: "Oxbryta Lawsuit" },
   { value: "Talcum Powder Lawsuit ", label: "Talcum Powder Lawsuit" },
   { value: "Bard PowerPort Lawsuit ", label: "Bard PowerPort Lawsuit" },
-  // { value: "Ultra-Processed Foods Lawsuit ", label: "Ultra-Processed Foods Lawsuit" },
   {
     value: "AFFF Firefighting Foam Lawsuit ",
     label: "AFFF Firefighting Foam Lawsuit",
@@ -450,6 +458,34 @@ const LAWSUIT_OPTIONS = [
   { value: "PFAS Contamination Lawsuit ", label: "PFAS Contamination Lawsuit" },
   { value: "Transvaginal Mesh Lawsuit ", label: "Transvaginal Mesh Lawsuit" },
 ];
+
+// Utility function to generate comprehensive validation error messages
+const generateValidationToastMessage = (errors) => {
+  const errorFields = Object.keys(errors);
+  const fieldLabels = {
+    name: "Full Name",
+    phone: "Phone Number",
+    email: "Email Address",
+    category: "Lawsuit Type",
+    termsAccepted: "Terms and Conditions",
+    alternateNumber: "Alternate Phone Number",
+    city: "City",
+    state: "State",
+    zipCode: "ZIP Code",
+    streetAddress: "Street Address",
+  };
+
+  if (errorFields.length === 1) {
+    const field = errorFields[0];
+    const label = fieldLabels[field] || field;
+    return `Please fill in the ${label} field.`;
+  } else if (errorFields.length <= 3) {
+    const labels = errorFields.map((field) => fieldLabels[field] || field);
+    return `Please fill in the following fields: ${labels.join(", ")}.`;
+  } else {
+    return `Please fill in all mandatory fields to proceed.`;
+  }
+};
 
 const DesktopForm = () => {
   const [currentStep, setCurrentStep] = useState(1);
@@ -752,6 +788,16 @@ const DesktopForm = () => {
 
       if (Object.keys(stepErrors).length > 0) {
         setErrors(stepErrors);
+        
+        // Show toast notification for validation errors
+        const toastMessage = generateValidationToastMessage(stepErrors);
+        toast.error(toastMessage, {
+          duration: 5000,
+          style: {
+            maxWidth: '500px',
+          },
+        });
+        
         return;
       }
 
@@ -808,6 +854,16 @@ const DesktopForm = () => {
 
     if (Object.keys(stepErrors).length > 0) {
       setErrors(stepErrors);
+      
+      // Show toast notification for step 2 validation errors
+      const toastMessage = generateValidationToastMessage(stepErrors);
+      toast.error(toastMessage, {
+        duration: 5000,
+        style: {
+          maxWidth: '500px',
+        },
+      });
+      
       return;
     }
 
@@ -988,7 +1044,7 @@ const DesktopForm = () => {
                 whiteSpace: "nowrap",
               }}
             >
-              Start My Case Review{" "}
+              Start My Case Review
               <span className="text-[#EDC14A]">{" ->"}</span>
             </button>
           </div>
@@ -1403,6 +1459,16 @@ const MobileForm = () => {
 
       if (Object.keys(stepErrors).length > 0) {
         setErrors(stepErrors);
+        
+        // Show toast notification for validation errors
+        const toastMessage = generateValidationToastMessage(stepErrors);
+        toast.error(toastMessage, {
+          duration: 5000,
+          style: {
+            maxWidth: '400px',
+          },
+        });
+        
         return;
       }
 
@@ -1457,6 +1523,16 @@ const MobileForm = () => {
 
     if (Object.keys(stepErrors).length > 0) {
       setErrors(stepErrors);
+      
+      // Show toast notification for step 2 validation errors
+      const toastMessage = generateValidationToastMessage(stepErrors);
+      toast.error(toastMessage, {
+        duration: 5000,
+        style: {
+          maxWidth: '400px',
+        },
+      });
+      
       return;
     }
 
@@ -1772,6 +1848,18 @@ const HomeTwo = () => {
 };
 
 export default HomeTwo;
+
+
+
+
+
+
+
+
+
+
+
+
 
 // import React, { useState, useEffect } from 'react';
 // import { sendAdminEmail, sendUserEmail } from '../../emailService.js';
