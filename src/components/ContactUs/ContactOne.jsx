@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import teamImage from '../../assets/ContactUsOneHero.png'; // Replace with your actual image path
+import teamImage from '../../assets/ContactUsOneHero.webp'; // Replace with your actual image path
 
 const ContactOne = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);

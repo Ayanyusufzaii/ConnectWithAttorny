@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
+import { Link } from 'react-router-dom';
 import logo from "../../assets/Logo.png"; // Adjust the path as necessary
 import {  Instagram, Linkedin, ChevronDown, Check } from 'lucide-react';
 import { BsTwitterX } from "react-icons/bs"; // Importing Twitter icon from react-icons
@@ -110,9 +111,13 @@ function DesktopNavbar() {
   return (
     <nav className="w-full bg-white shadow flex items-center justify-between px-6 py-3">
       {/* Logo */}
-      <div className="flex items-center">
-        <img src={logo} alt="Logo" className="h-20 w-32 object-contain" />
-      </div>
+      
+
+<div className="flex items-center">
+  <Link to="/">
+    <img src={logo} alt="Logo" className="h-20 w-32 object-contain" />
+  </Link>
+</div>
       
       {/* Nav Links */}
       <div className="flex-1 flex justify-center">
@@ -279,7 +284,9 @@ function MobileNavbar() {
       </div>
 
       <div className="flex justify-center items-center w-full">
-        <img src={logo} alt="Logo" className="h-16 w-24 object-contain mx-auto" />
+        <Link to="/">
+          <img src={logo} alt="Logo" className="h-[30px] w-auto" />
+        </Link>
       </div>
 
       <div
@@ -296,7 +303,11 @@ function MobileNavbar() {
           >
             &times;
           </button>
-          <span className="text-[#0A1F8F] text-lg font-bold mx-auto">BE WITH LAW</span>
+          <img
+      src={logo}
+      alt="BE WITH LAW"
+      className="h-[30px] w-auto"
+    />
           <span className="w-8"></span> 
         </div>
 

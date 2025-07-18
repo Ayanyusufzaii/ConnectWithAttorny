@@ -1,16 +1,13 @@
 import React from 'react'
-import imgR from '../../assets/abUsHero.png'
-import bgImg from '../../assets/aboutUsHeroBg.png'
-import MobileHeroBg from '../../assets/aboutUsMobHeroBg.png'
-import elp from '../../assets/EllipseMob.png'
-import elpp from '../../assets/Ellipse.png'
+import bgImg from '../../assets/aboutUsHero.webp'
+import MobileHeroBg from '../../assets/aboutUsHeroMob.webp'
 
 
 const AboutOne = () => {
   return (
     <>
       {/* Desktop/Laptop/Tablet Hero Section */}
-      <section className="hidden sm:flex relative items-center justify-between overflow-hidden
+      {/* <section className="hidden sm:flex relative items-center justify-between overflow-hidden
       w-10vh
         h-[33.19vh]
         md:h-[300px]
@@ -19,18 +16,23 @@ const AboutOne = () => {
         2xl:h-[574px]
         min-[3840px]:h-[956px]">
 
+      
         <img
-  src={elpp}
-  alt="Ellipse"
-  className="absolute top-0 right-0 w-full object-contain z-10"
-/>
+          src={bgImg}
+          alt="Hero Background"
+          className="absolute inset-0 w-full h-full object-cover z-0"
+        /> */}
+        
+        {/* Desktop/Laptop/Tablet Hero Section */}
+      <section className="hidden sm:flex relative w-full h-[50vh] md:h-[50vh] lg:h-[60vh] xl:h-[80vh] items-center justify-center overflow-hidden">
 
+        {/* Background Image */}
         <img
           src={bgImg}
           alt="Hero Background"
           className="absolute inset-0 w-full h-full object-cover z-0"
         />
-        
+
         {/* Overlay for better text visibility */}
         {/* <div className="absolute inset-0 bg-black/20 z-10" /> */}
         
@@ -58,11 +60,11 @@ const AboutOne = () => {
           
           <h2
             className="text-white drop-shadow text-left
-              text-[8px] leading-[8px] max-w-[698px]
+              text-[8px] leading-[8px] max-w-[318px]
               md:text-[10px] md:leading-[12px] md:max-w-[368px]
               lg:text-[12px] lg:leading-[14px] lg:max-w-[490px]
-              xl:text-[16px] xl:leading-[22px] xl:max-w-[798px]
-              2xl:text-[20px] 2xl:leading-[25px] 2xl:2xl:max-w-[790px]
+              xl:text-[16px] xl:leading-[22px] xl:max-w-[650px]
+              2xl:text-[20px] 2xl:leading-[25px] 2xl:2xl:max-w-[680px]
               min-[3840px]:text-[36px] min-[3840px]:leading-[40px] min-[3840px]:max-w-[1510px]
               font-[Quicksand]"
           >
@@ -71,17 +73,7 @@ by dangerous drugs, medical devices, and toxic exposures with legal teams who un
           </h2>
         </div>
 
-        {/* Right Image - With Top Padding */}
-        <div className="relative z-20 flex items-end h-full">
-  <img
-    src={imgR}
-    alt="Hero Right"
-    className="md:max-w-[368px] md:max-w-[368px]
-              lg:max-w-[490px] lg:max-w-[490px]
-              xl:max-h-[478px] xl:max-w-[786px]
-              2xl:2xl:max-w-[690px] 2xl:2xl:max-w-[690px]"
-  />
-</div>
+      
       </section>
 
       {/* Mobile Hero Section */}
@@ -93,11 +85,11 @@ by dangerous drugs, medical devices, and toxic exposures with legal teams who un
           className="absolute inset-0 w-full h-full object-cover z-0"
         />
 
-        <img
+        {/* <img
   src={elp}
   alt="Ellipse"
   className="absolute top-0 right-0 w-full object-contain z-10 "
-/>
+/> */}
 
 
         {/* Content - Positioned at top */}
@@ -119,14 +111,14 @@ by dangerous drugs, medical devices, and toxic exposures with legal teams who un
           </h2>
         </div>
 
-        {/* Bottom Image */}
+        {/* Bottom Image
         <div className="relative z-30 w-full flex justify-center mt-auto">
           <img
             src={imgR}
             alt="Bottom illustration"
             className="h-auto object-contain aspect-[374/227.30]"
           />
-        </div>
+        </div> */}
       </section>
     </>
   )

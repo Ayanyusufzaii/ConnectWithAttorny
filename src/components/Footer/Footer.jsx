@@ -4,6 +4,7 @@ import { FaFacebookF } from 'react-icons/fa';
 import footerVector from '../../assets/Vector.svg';
 import { Link, useLocation } from 'react-router-dom';
 import { BsTwitterX } from "react-icons/bs";
+import logo from "../../assets/footerLogo.png"; // Adjust the path as necessary
 
 
 const Footer = () => {
@@ -102,7 +103,11 @@ const Footer = () => {
               <nav className="flex justify-between items-center mt-2 ">
   {/* Left side */}
   <div className="text-2xl font-bold text-white font-[Quicksand]">
-    BE WITH LAW
+    <div>
+                  <Link to="/">
+                    <img src={logo} alt="Logo" className="h-[25px] w-auto" />
+                  </Link>
+                </div>
   </div>
 
   {/* Right side */}
@@ -179,7 +184,13 @@ const Footer = () => {
             {/* Branding & Legal */}
             <div className="mt-4 pt-8 border-t-2 border-yellow-300">
               <div className="flex flex-col sm:flex-row sm:justify-between items-center gap-4">
-                <div className="text-3xl font-bold text-[#fffff] font-[Quicksand]">BE WITH LAW</div>
+                <div className="text-3xl font-bold text-[#fffff] font-[Quicksand]">
+                  <div>
+                  <Link to="/">
+                    <img src={logo} alt="Logo" className="h-[35px] w-auto" />
+                  </Link>
+                </div>
+                </div>
 
                 <div className="flex flex-col sm:flex-row sm:items-center gap-4">
                   <nav className="flex gap-6">

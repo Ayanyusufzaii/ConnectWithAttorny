@@ -1,59 +1,75 @@
 import React from 'react'
-import imgR from '../../assets/abUsHero.png'
-import bgImg from '../../assets/abUs002.png'
+import blueMt from '../../assets/blueMt.png'
+import dots from '../../assets/dots002.png'
+import bgImg from '../../assets/bg002.png'
 import MobileHeroBg from '../../assets/abUs002Mob.png'
 
 const AboutTwo = () => {
   return (
     <>
-      {/* Desktop/Laptop/Tablet Section */}
+    {/* Desktop/Laptop/Tablet Section */}
 {/* Desktop/Laptop/Tablet Section */}
-<section className="hidden sm:flex relative items-center overflow-hidden
-  min-h-[50vh] h-[clamp(300px,35vw,956px)]">
-  
-  {/* Background Image - Fixed to always cover */}
-  <img
-    src={bgImg}
-    alt="Background"
-    className="absolute inset-0 w-full h-full object-cover object-center z-0"
-  />
-  
-  {/* Text Block - Positioned at center with padding */}
-  <div className="absolute left-1/2 top-1/2 -translate-y-1/2 z-10
-    pl-[20px] pr-[20px]
-    md:pl-[30px] md:pr-[30px]
-    lg:pl-[40px] lg:pr-[40px]
-    xl:pl-[50px] xl:pr-[50px]
-    2xl:pl-[60px] 2xl:pr-[60px]
-    min-[3840px]:pl-[100px] min-[3840px]:pr-[100px]
-    w-1/2">
-    
-    {/* Heading */}
-    <h1 className="mb-4 md:mb-5 lg:mb-6
-      text-[35px] 
-      md:text-[38px]
-      lg:text-[44px]
-      xl:text-[50px]
-      2xl:text-[60px]
-      min-[3840px]:text-[100px]
-      font-[Quicksand] font-bold leading-normal capitalize">
-      <span className="text-[#0A1F8F]">Our </span>
-      <span className="text-[#EDC14A]">Mission</span>
-    </h1>
-    
-    {/* Subtext */}
-    <p className="text-[#757575] 
-      text-[13px] leading-[18px]
-      md:text-[14px] md:leading-[19px]
-      lg:text-[16px] lg:leading-[22px]
-      xl:text-[18px] xl:leading-[25px]
-      2xl:text-[22px] 2xl:leading-[30px]
-      min-[3840px]:text-[36px] min-[3840px]:leading-[50px]
-      font-[Quicksand] font-medium">
-      To simplify legal access for people harmed by negligence & hold corporations accountable through trusted, compassionate, and professional support.
-    </p>
+<section
+  className="hidden sm:block relative bg-no-repeat bg-cover bg-center"
+  style={{ backgroundImage: `url(${bgImg})` }}
+>
+  <div className="relative min-h-[500px] lg:min-h-[50vh] max-h-[800px]">
+    {/* Mountain (bottom-left) - More conservative scaling */}
+    <img
+      src={blueMt}
+      alt="Mountains illustration"
+      className="absolute bottom-0 left-0 z-10
+        w-[314px] h-[169px]
+        sm:w-[377px] sm:h-[203px]
+        md:w-[503px] md:h-[270px]
+        lg:w-[589px] lg:h-[317px]"
+    />
+
+    {/* Top-left dots - Conservative scaling to prevent overlap */}
+    <img
+      src={dots}
+      alt=""
+      className="absolute left-0 z-10
+        top-[18px] w-[172px] h-[22px]
+        sm:top-[21px] sm:w-[206px] sm:h-[27px]
+        md:top-[28px] md:w-[275px] md:h-[36px]
+        lg:top-[33px] lg:w-[322px] lg:h-[42px]"
+    />
+
+    {/* Bottom-right dots - Conservative scaling to prevent overlap */}
+    <img
+      src={dots}
+      alt=""
+      className="absolute right-0 z-10
+        bottom-[18px] w-[172px] h-[22px]
+        sm:bottom-[21px] sm:w-[206px] sm:h-[27px]
+        md:bottom-[28px] md:w-[275px] md:h-[36px]
+        lg:bottom-[33px] lg:w-[322px] lg:h-[42px]"
+    />
+
+    {/* Text block - Right half, vertically centered */}
+    <div className="absolute left-1/2 top-1/2 -translate-y-1/2 z-20 w-1/2 pr-8 md:pr-12 lg:pr-16 xl:pr-20 2xl:pr-24">
+      <div className="max-w-[600px] 2xl:max-w-[700px] min-[2560px]:max-w-[800px] space-y-4">
+        <h2 className="font-quicksand font-bold text-left
+          text-[32px] md:text-[38px] lg:text-[44px] xl:text-[50px] 2xl:text-[54px]
+          min-[2560px]:text-[58px] min-[3840px]:text-[62px]
+          leading-snug">
+          <span className="text-[#0A1F8F]">Our </span>
+          <span className="text-[#EDC14A]">Mission</span>
+        </h2>
+        <p className="font-quicksand font-medium text-[#757575] text-left
+          text-[14px] md:text-[16px] lg:text-[18px] xl:text-[20px] 2xl:text-[22px]
+          min-[2560px]:text-[24px] min-[3840px]:text-[26px]
+          leading-relaxed">
+          To simplify legal access for people harmed by negligence &amp; hold
+          corporations accountable through trusted, compassionate, and
+          professional support.
+        </p>
+      </div>
+    </div>
   </div>
 </section>
+
 
       {/* Mobile Hero Section */}
       <section className="flex sm:hidden relative w-full h-[610px] flex-col items-start justify-between overflow-hidden ">

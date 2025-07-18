@@ -1,7 +1,7 @@
 import React from 'react'
-import imgR from '../../assets/serHR.png'
-import MobileHeroBg from '../../assets/serMob.png'
-import GradientMobileHero from '../../assets/ServiceGradientMobileHero.png'
+import imgR from '../../assets/serHero.webp'
+import MobileHeroBg from '../../assets/serMob.webp'
+// import GradientMobileHero from '../../assets/ServiceGradientMobileHero.png'
 const ServiceOne = () => {
   return (
     <>
@@ -73,11 +73,11 @@ const ServiceOne = () => {
       {/* Mobile Hero Section */}
       <section className="bg-[#0A1F8F] flex sm:hidden relative w-full h-[654px] items-start justify-center overflow-hidden">
       {/* Background Image Gradient */}
-      <img
+      {/* <img
         src={GradientMobileHero}
         alt="Gradient Mobile Hero"
         className="absolute inset-0 w-full h-full object-cover z-10"
-      />
+      /> */}
 
       {/* Foreground Image */}
       <img
@@ -92,14 +92,14 @@ const ServiceOne = () => {
       {/* Hero Text Content */}
       <div className="relative z-20 flex flex-col items-start w-full px-4 pt-[50px]">
         <h1
-          className="text-white mb-4 text-left capitalize text-[28px] leading-normal max-w-[358px] font-[Quicksand] font-bold"
+          className="text-white mb-4 text-left capitalize text-[25px] min-[350px]:text-[28px] leading-normal max-w-[358px] font-[Quicksand] font-bold"
         >
           Explore Active Lawsuits<br />
           And Claim Your Rights
         </h1>
 
         <h2
-          className="text-white text-left capitalize text-[14px] leading-[23px] tracking-[-0.15px] max-w-[358px] font-[Quicksand] font-medium"
+          className="text-white text-left capitalize text-[12px] min-[350px]:text-[14px] leading-[23px] tracking-[-0.15px] max-w-[358px] font-[Quicksand] font-medium"
         >
           Discover legal actions against companies that endangered lives. If you were harmed by a drug, toxic exposure, or defective product, you may be eligible for a settlement. Click to learn more and connect with attorneys – at no cost to you.
         </h2>

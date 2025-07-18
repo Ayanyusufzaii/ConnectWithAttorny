@@ -45,18 +45,31 @@ const HomeOne = () => {
   />
   {/* Content */}
   <div className="relative z-20 flex flex-col items-center justify-center w-full px-4 text-center">
-    <h1
-      className="text-3xl font-bold text-white mb-4 drop-shadow-lg"
+    {/* <h1
+      className="text-45px font-bold text-white mb-4 drop-shadow-lg"
       style={{ fontFamily: 'Quicksand, sans-serif' }}
     >
-           Used Depo-Provera And Diagnosed With A Brain Tumor Or Neurological Condition?
-    </h1>
+           
+    </h1> */}
+    <h1
+          className="text-white capitalize text-[22px] min-[390px]:text-[25px] min-[500px]:text-[28px] leading-[28px] font-[Quicksand] font-bold -mt-[100px]"
+        >
+          Used Depo-Provera And Diagnosed With A Brain Tumor Or Neurological Condition?
+        </h1>
+
     <h2
       className="text-sm text-white mb-4 font-normal drop-shadow"
       style={{ fontFamily: 'Quicksand, sans-serif' }}
     >
-           Depo-Provera has been linked to brain tumors, pseudotumor cerebri, and bone loss.  You may qualify for compensation. Get a free legal case review now. 
+           
     </h2>
+
+      <h2
+          className="text-white capitalize text-[14px] min-[350px]:text-[15px] leading-[23px] tracking-[-0.15px] max-w-[358px] font-[Quicksand] font-medium"
+        >
+          Depo-Provera has been linked to brain tumors, pseudotumor cerebri, and bone loss.  You may qualify for compensation. Get a free legal case review now. 
+        </h2>
+
   </div>
   {/* Overlay */}
   <div className="absolute inset-0  z-10" />
