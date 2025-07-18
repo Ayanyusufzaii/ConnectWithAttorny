@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import { Link } from 'react-router-dom';
-import logo from "../../assets/Logo.png"; // Adjust the path as necessary
+import logo from "../../assets/Logo.webp"; // Adjust the path as necessary
 import {  Instagram, Linkedin, ChevronDown, Check } from 'lucide-react';
 import { BsTwitterX } from "react-icons/bs"; // Importing Twitter icon from react-icons
 import { FaFacebookF } from 'react-icons/fa';

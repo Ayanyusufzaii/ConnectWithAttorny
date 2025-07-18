@@ -22,7 +22,7 @@ const ContactThree = () => {
               { icon: IoMail, label: "Reach Us", value: "reachus@bewithlaw.com" },
             ].map(({ icon: Icon, label, value }, idx) => (
               <div key={idx} className="flex items-start gap-4">
-                <div className="bg-[#0A1F8F] rounded-[13px] flex justify-center items-center text-white w-[clamp(3.5rem,4vw,4.5rem)] h-[clamp(3.5rem,4vw,4.5rem)]">
+                <div className="bg-[#0A1F8F] rounded-[13px] flex justify-center items-center text-white w-[clamp(3.5rem,4vw,4.5rem)] h-[clamp(3.5rem,4vw,4.5rem)] hover:scale-[1.05] transition-transform duration-200">
                   <Icon className="w-[clamp(1.5rem,2vw,2rem)] h-[clamp(1.5rem,2vw,2rem)]" />
                 </div>
                 <div className="flex flex-col justify-center">
