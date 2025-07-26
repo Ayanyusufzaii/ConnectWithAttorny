@@ -4,7 +4,7 @@ import dpImg from "../../assets/2bg 1.png";
  
 const cards = [
   {
-    number: "01",
+    number: <span className="text-[#EDC14A]">01</span>,
     text: <>
     Educate the public<span className = "text-[#757575]"> about ongoing lawsuits and legal rights</span>
     </>,
@@ -18,7 +18,7 @@ const cards = [
     bg: "bg-[#FFFFFF]",
   },
   {
-    number: "03",
+    number: <span className="text-[#EDC14A]">03</span>,
     text: <>
     Connect qualified individuals<span className = "text-[#757575]"> with experienced attorneys</span>
     </>,
@@ -52,11 +52,11 @@ const AboutThree = () => {
       style={{ backgroundImage: `url(${bgImg})` }}
     >
       {/*  Desktop + Tablet Layout (≥768px) */}
-      <div className="hidden md:block w-full">
+      <div className="hidden md:block w-full  bg-[#1A33B8]">
         <div className="w-full max-w-[1440px] mx-auto px-[80px] py-[60px]">
           {/* Main Heading - Dual Color */}
           <h2 className="mb-6">
-            <span className="text-[#0A1F8F] text-[35px] font-semibold leading-normal capitalize overflow-hidden text-ellipsis">
+            <span className="text-[#ffffff] text-[35px] font-semibold leading-normal capitalize overflow-hidden text-ellipsis">
               What{" "}
             </span>
             <span className="text-[#EDC14A] text-[35px] font-semibold leading-normal capitalize overflow-hidden text-ellipsis">
@@ -68,7 +68,7 @@ const AboutThree = () => {
  
         
 {/* Cards Container */}
-          <div className="grid grid-cols-2 gap-8">
+          <div className="grid grid-cols-4 gap-8">
             {cards.map((card) => (
               <article
                 key={card.number}
@@ -77,7 +77,7 @@ const AboutThree = () => {
                 <span className="text-[#0A1F8F] font-[Quicksand] not-italic font-semibold leading-none text-[24px] mb-2">
                   {card.number}
                 </span>
-                <p className="text-[#0A1F8F] text-[16px] font-medium leading-none tracking-[-0.32px] text-left">
+                <p className="text-[#0A1F8F] text-[11px] font-medium leading-none tracking-[-0.32px] text-left">
                   {card.text}
                 </p>
               </article>
@@ -89,10 +89,10 @@ const AboutThree = () => {
       </div>
  
       {/*  Mobile Layout (<768px) */}
-      <div className="md:hidden flex flex-col w-full gap-6 px-4 py-10">
+      <div className="md:hidden flex flex-col w-full gap-6 px-4 py-10  bg-[#1A33B8]">
         {/* Mobile Main Heading */}
         <h2 className="text-left  text-[34px] font-semibold leading-[1.2] capitalize">
-          <span className="text-[#0A1F8F]">
+          <span className="text-[#ffffff]">
             What{" "}
           </span>
  
@@ -102,13 +102,13 @@ const AboutThree = () => {
         </h2>
  
         {/* Mobile Cards */}
-        <div className="flex flex-col gap-4">
+        <div className="grid grid-cols-2 gap-4">
           {cards.map((card) => (
             <div
               key={card.number}
-              className="w-full bg-white rounded-[10px] border border-white p-4 shadow-sm text-left"
+              className="w-full bg-white rounded-[12px] border border-white p-4 shadow-sm text-left"
             >
-              <span className="text-[#0A1F8F] text-[20px] font-semibold leading-normal mb-2 block">
+              <span className="text-[#0A1F8F] text-[24px] font-semibold leading-normal mb-2 block">
                 {card.number}
               </span>
               <p className="text-[#0A1F8F] text-[16px] font-medium leading-normal">

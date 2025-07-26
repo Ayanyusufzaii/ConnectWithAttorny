@@ -150,7 +150,7 @@ export default function EligibilityCriteria() {
     We assist individuals & families affected by:
   </p>
 
-  <div className="flex flex-col gap-5 w-full max-w-[360px]">
+  <div className="grid grid-cols-2 gap-4">
     {mobileEligibilityCards.map((card, index) => {
       // Alternating number colors based on index
       const numberColor = index % 2 === 0 ? 'text-[#EDC14A]' : 'text-[#0A1F8F]';

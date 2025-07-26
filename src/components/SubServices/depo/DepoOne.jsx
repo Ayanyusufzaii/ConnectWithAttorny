@@ -1,6 +1,6 @@
 import React from 'react'
-import herobg from '../../../assets/Depobg.png'
-import MobileHeroBg from '../../../assets/DepoMobileBg.png'
+import herobg from '../../../assets/DepoHero.png'
+import MobileHeroBg from '../../../assets/DepoHeroMobile.png'
 
 const HomeOne = () => {
   return (
@@ -51,9 +51,11 @@ const HomeOne = () => {
     >
            
     </h1> */}
-    <h1
-          className="text-white capitalize text-[22px] min-[390px]:text-[25px] min-[500px]:text-[28px] leading-[28px] font-[Quicksand] font-bold -mt-[100px]"
-        >
+   
+   <h1
+      className="text-[36px] leading-[40px] font-bold text-white mb-36 drop-shadow-lg font-[Quicksand]"
+    >
+
           Used Depo-Provera And Diagnosed With A Brain Tumor Or Neurological Condition?
         </h1>
 
@@ -63,12 +65,12 @@ const HomeOne = () => {
     >
            
     </h2>
-
+{/* 
       <h2
           className="text-white capitalize text-[14px] min-[350px]:text-[15px] leading-[23px] tracking-[-0.15px] max-w-[358px] font-[Quicksand] font-medium"
         >
           Depo-Provera has been linked to brain tumors, pseudotumor cerebri, and bone loss.  You may qualify for compensation. Get a free legal case review now. 
-        </h2>
+        </h2> */}
 
   </div>
   {/* Overlay */}

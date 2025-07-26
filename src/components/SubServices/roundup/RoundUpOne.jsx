@@ -1,6 +1,6 @@
 import React from 'react'
-import herobg from '../../../assets/RoundupBg.png'
-import MobileHeroBg from '../../../assets/RoundupMobilebg.png'
+import herobg from '../../../assets/roundupHero.png'
+import MobileHeroBg from '../../../assets/RoundupHeroMobile.png'
  
 const RoundUpOne = () => {
   return (
@@ -60,17 +60,16 @@ const RoundUpOne = () => {
   />
   {/* Content */}
   <div className="relative z-20 flex flex-col items-center w-full px-4 text-center pt-[50px]">
-    <h1
-      className="text-3xl font-bold text-white mb-4 drop-shadow-lg"
-      style={{ fontFamily: 'Quicksand, sans-serif' }}
+       <h1
+      className="text-[36px] leading-[40px] font-bold text-white mb-8 mt-8 drop-shadow-lg font-[Quicksand]"
     >
       Used Roundup and Later Diagnosed with Non-Hodgkin's Lymphoma?
     </h1>
-    <h2
+    {/* <h2
       className="text-sm text-white mb-4 font-normal drop-shadow"
       style={{ fontFamily: 'Quicksand, sans-serif' }}
     >
-Lawsuits allege long-term exposure to Roundup's glyphosate causes cancer. If you or a loved one developed non-Hodgkin's lymphoma, you may qualify for a settlement.    </h2>
+Lawsuits allege long-term exposure to Roundup's glyphosate causes cancer. If you or a loved one developed non-Hodgkin's lymphoma, you may qualify for a settlement.    </h2> */}
   </div>
   {/* Overlay */}
   <div className="absolute inset-0  z-10" />

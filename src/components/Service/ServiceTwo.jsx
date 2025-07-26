@@ -28,7 +28,7 @@ const ServiceTwo = () => {
     <>
       {/* ===== DESKTOP SECTION ===== */}
       <section
-        className="hidden md:block bg-[#13247C] text-white py-12 px-4 sm:px-8 md:px-16"
+        className="hidden md:block bg-[#0A1F8F] text-white py-12 px-4 sm:px-8 md:px-16"
         style={{ fontFamily: 'Quicksand, sans-serif' }}
       >
         <div className="max-w-[1440px] mx-auto flex flex-col lg:flex-row items-center justify-between gap-8">

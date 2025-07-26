@@ -1,6 +1,6 @@
 import React from 'react'
-import herobg from '../../../assets/ParaHero.png'
-import MobileHeroBg from '../../../assets/paraHeroMob.png'
+import herobg from '../../../assets/ParaquatHero.png'
+import MobileHeroBg from '../../../assets/ParaquatHeroMobile.png'
 
 const PraquatOne = () => {
   return (
@@ -63,14 +63,15 @@ const PraquatOne = () => {
   {/* Content */}
   <div className="relative z-20 flex flex-col items-center w-full px-4 text-center pt-[80px]">
     <h1
-      className="text-[24px] leading-[36px] font-bold text-white mb-4 drop-shadow-lg font-[Quicksand]"
+      className="text-[36px] leading-[40px] font-bold text-white mb-8 mt-8 drop-shadow-lg font-[Quicksand]"
     >
     Exposed to Paraquat & Later Diagnosed with Parkinson's?
     </h1>
+{/* 
     <h2
       className="text-[16px] leading-[20px] text-white mb-4 font-normal drop-shadow font-[Quicksand]"
     >
-Farmers, agricultural workers, and nearby residents exposed to Paraquat may face a higher risk of Parkinson's disease. If you or a loved one were affected, you may be eligible for settlement.    </h2>
+Farmers, agricultural workers, and nearby residents exposed to Paraquat may face a higher risk of Parkinson's disease. If you or a loved one were affected, you may be eligible for settlement.    </h2> */}
   </div>
   {/* Overlay */}
   <div className="absolute inset-0  z-10" />

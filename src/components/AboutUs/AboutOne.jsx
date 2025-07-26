@@ -1,6 +1,6 @@
 import React from 'react'
-import bgImg from '../../assets/aboutUsHero.webp'
-import MobileHeroBg from '../../assets/aboutUsHeroMob.webp'
+import bgImg from '../../assets/AboutUsHeroo.png'
+import MobileHeroBg from '../../assets/AboutUsHeroMobb.png'
 
 
 const AboutOne = () => {

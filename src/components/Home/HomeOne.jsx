@@ -1,5 +1,5 @@
 import React from 'react'
-import herobg from '../../assets/herobg.webp'
+import herobg from '../../assets/HOMEHERO.png'
 import MobileHeroBg from '../../assets/MobileHeroBg.webp'
 import { ChevronDown } from 'lucide-react'
 const HomeOne = () => {

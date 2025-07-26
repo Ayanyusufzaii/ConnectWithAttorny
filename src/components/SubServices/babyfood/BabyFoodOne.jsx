@@ -1,6 +1,6 @@
 import React from 'react'
-import herobg from '../../../assets/subservice/BabyFoodHerobg.png'
-import MobileHeroBg from '../../../assets/subservice/BabyFoodMobilebg.png'
+import herobg from '../../../assets/subservice/BabyHero.png'
+import MobileHeroBg from '../../../assets/subservice/babyHeroMobile.png'
 
 
 const HomeOne = () => {
@@ -45,18 +45,17 @@ const HomeOne = () => {
   />
   {/* Content */}
   <div className="relative z-20 flex flex-col items-center justify-center w-full px-4 text-center">
-    <h1
-      className="text-3xl font-bold text-white mb-4 drop-shadow-lg"
-      style={{ fontFamily: 'Quicksand, sans-serif' }}
-    >
+         <h1
+          className="text-white capitalize text-[32px] min-[390px]:text-[40px] min-[500px]:text-[38px] leading-[42px] font-[Quicksand] font-bold -mt-[300px]"
+        >
       Was Your Child Diagnosed with Autism After Consuming Baby Food? 
     </h1>
-    <h2
+    {/* <h2
       className="text-sm text-white mb-4 font-normal drop-shadow"
       style={{ fontFamily: 'Quicksand, sans-serif' }}
     >
      Lawsuits claim certain baby foods contained dangerous levels of heavy metals, leading to autism and developmental delays. You may be eligible for  settlement. Start with a free legal case review. 
-    </h2>
+    </h2> */}
   </div>
   {/* Overlay */}
   <div className="absolute inset-0  z-10" />

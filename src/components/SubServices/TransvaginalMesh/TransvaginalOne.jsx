@@ -1,6 +1,6 @@
 import React from 'react'
-import herobg from '../../../assets/TransvaginalHero.png'
-import MobileHeroBg from '../../../assets/TransvaginalMobileHero.png'
+import herobg from '../../../assets/TransHero.png'
+import MobileHeroBg from '../../../assets/TransHeroMobile.png'
 
 const TransvaginalOne = () => {
   return (
@@ -42,16 +42,15 @@ Thousands of women have reported chronic pain, erosion, and multiple revision su
   />
   {/* Content */}
   <div className="relative z-20 flex flex-col items-center justify-center w-full px-4 text-center">
-    <h1
-      className="text-3xl font-bold text-white mb-4 drop-shadow-lg"
-      style={{ fontFamily: 'Quicksand, sans-serif' }}
-    >
+   <h1
+          className="text-white capitalize text-[32px] min-[390px]:text-[40px] min-[500px]:text-[38px] leading-[42px] font-[Quicksand] font-bold -mt-[300px]"
+        >
 Suffered Complications After a Transvaginal Mesh Implant?    </h1>
-    <h2
+    {/* <h2
       className="text-sm text-white mb-4 font-normal drop-shadow"
       style={{ fontFamily: 'Quicksand, sans-serif' }}
     >
-Thousands of women have reported chronic pain, erosion, and multiple revision surgeries after mesh implants. You may be eligible for legal compensation.    </h2>
+Thousands of women have reported chronic pain, erosion, and multiple revision surgeries after mesh implants. You may be eligible for legal compensation.    </h2> */}
   </div>
   {/* Overlay */}
   <div className="absolute inset-0  z-10" />

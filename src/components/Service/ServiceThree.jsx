@@ -2,28 +2,28 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
  
 // Desktop Images
-import depoImg from "../../assets/newServiceImg/new-desk-depo-lawsuit.png";
-import paraquatImg from "../../assets/newServiceImg/new-desk-paraquat-lawsuit.png";
-import roundupImg from "../../assets/newServiceImg/new-desk-roundup-lawsuit.png";
-import babyFoodImg from "../../assets/newServiceImg/new-desk-toxic-baby-food-lawsuit.png";
-import oxbrytaImg from "../../assets/newServiceImg/new-desk-oxbryta-lawsuit.png";
-import talcumImg from "../../assets/newServiceImg/new-desk-talcum-powder-lawsuit.png";
-import bardImg from "../../assets/newServiceImg/new-desk-bard-powerport-lawsuit.png";
-import afffImg from "../../assets/newServiceImg/new-desk-afff-firefighting-foam-lawsuit.png";
-import pfasImg from "../../assets/newServiceImg/new-desk-pfas-contamination-lawsuit.png";
-import meshImg from "../../assets/newServiceImg/new-desk-transvaginal-mesh-lawsuit.png";
+import depoImg from "../../assets/newServiceImg/depoSer.png";
+import paraquatImg from "../../assets/newServiceImg/ParaSer.png";
+import roundupImg from "../../assets/newServiceImg/RoundupSer.png";
+import babyFoodImg from "../../assets/newServiceImg/BabySer.png";
+import oxbrytaImg from "../../assets/newServiceImg/OxbrytaSer.png";
+import talcumImg from "../../assets/newServiceImg/TalcumSer.png";
+import bardImg from "../../assets/newServiceImg/BardSer.png";
+import afffImg from "../../assets/newServiceImg/AfffSer.png";
+import pfasImg from "../../assets/newServiceImg/PfasSer.png";
+import meshImg from "../../assets/newServiceImg/transSer.png";
  
 // Mobile Images
-import depoImgMob from "../../assets/SubserviceMobile/mob-depo-provera-lawsuit.png";
-import paraquatImgMob from "../../assets/SubserviceMobile/mob-paraquat-lawsuit.png";
-import roundupImgMob from "../../assets/SubserviceMobile/mob-roundup-lawsuit.png";
-import babyFoodImgMob from "../../assets/SubserviceMobile/mob-toxic-baby-food-lawsuit.png";
-import oxbrytaImgMob from "../../assets/SubserviceMobile/mob-oxbryta-lawsuit.png";
-import talcumImgMob from "../../assets/SubserviceMobile/mob-talcum-powder-lawsuit.png";
-import bardImgMob from "../../assets/SubserviceMobile/mob-bard-powerport-lawsuit.png";
-import afffImgMob from "../../assets/SubserviceMobile/mob-afff-firefighting-foam-lawsuit.png";
-import pfasImgMob from "../../assets/SubserviceMobile/mob-pfas-contamination-lawsuit.png";
-import meshImgMob from "../../assets/SubserviceMobile/mob-transvaginal-mesh-lawsuit.png";
+import depoImgMob from "../../assets/SubserviceMobile/depoMob.png";
+import paraquatImgMob from "../../assets/SubserviceMobile/ParaMob.png";
+import roundupImgMob from "../../assets/SubserviceMobile/RoundupMob.png";
+import babyFoodImgMob from "../../assets/SubserviceMobile/BabyMob.png";
+import oxbrytaImgMob from "../../assets/SubserviceMobile/OxbrytaMob.png";
+import talcumImgMob from "../../assets/SubserviceMobile/talcumMob.png";
+import bardImgMob from "../../assets/SubserviceMobile/BardMob.png";
+import afffImgMob from "../../assets/SubserviceMobile/afffMob.png";
+import pfasImgMob from "../../assets/SubserviceMobile/pfasMob.png";
+import meshImgMob from "../../assets/SubserviceMobile/meshmob.png";
  
 const lawsuits = [
   { title: 'Depo-Provera Lawsuit', description: 'Linked to brain tumors and bone loss in long-term users', image: depoImg, link: '/DepoMain' },
