@@ -55,7 +55,7 @@ const AboutOne = () => {
               min-[3840px]:text-[100px] min-[3840px]:leading-[120px] min-[3840px]:max-w-[1136px]
               font-[Quicksand] font-bold"
           >
-            Who We Are
+            Who <span className="text-[#EDC14A]">We Are</span>
           </h1>
           
           <h2
@@ -99,7 +99,7 @@ by dangerous drugs, medical devices, and toxic exposures with legal teams who un
               text-[32px] leading-normal
               font-[Quicksand] font-bold"
           >
-            Who We Are
+            Who <span className="text-[#EDC14A]">We Are</span>
           </h1>
           
           <h2 
@@ -107,7 +107,7 @@ by dangerous drugs, medical devices, and toxic exposures with legal teams who un
               text-[15px] leading-normal
               font-[Quicksand]"
           >
-            BeWithLaw is a legal support platform dedicated to helping individuals & families navigate complex injury and product-related lawsuits. We connect people harmed by dangerous drugs, medical devices, and toxic exposures with legal teams who understand their pain and are ready to fight for justice.
+           <span className="text-[#EDC14A]">BeWithLaw</span> is a legal support platform dedicated to helping individuals & families navigate complex injury and product-related lawsuits. We connect people harmed by dangerous drugs, medical devices, and toxic exposures with legal teams who understand their pain and are ready to fight for justice.
           </h2>
         </div>
 
