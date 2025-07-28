@@ -24,13 +24,13 @@ const HomeOne = () => {
             className="text-2xl md:text-3xl lg:text-5xl font-bold text-white mb-4 drop-shadow-lg"
             style={{ fontFamily: 'Quicksand, sans-serif' }}
           >
-         Was Your Child Diagnosed with Autism After Consuming Baby Food? 
+         Was Your Child Diagnosed with Autism <br></br>After Consuming Baby Food? 
           </h1>
           <h2
             className="text-sm sm:text-base md:text-xs lg:text-xl text-white mb-6 font-medium drop-shadow leading-relaxed"
             style={{ fontFamily: 'Quicksand, sans-serif' }}
           >
-           Lawsuits claim certain baby foods contained dangerous levels of heavy metals, leading to autism and developmental delays. You may be eligible for settlement. Start with a free legal case review. 
+           Lawsuits claim certain baby foods contained dangerous levels of heavy metals,<br></br> leading to autism and developmental delays. You may be eligible for settlement. Start with a free legal case review. 
           </h2>
         </div>
       </section>

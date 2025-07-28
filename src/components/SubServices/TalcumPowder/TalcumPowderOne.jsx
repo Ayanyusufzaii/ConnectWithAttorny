@@ -23,13 +23,13 @@ const HomeOne = () => {
             className="text-2xl md:text-3xl lg:text-5xl font-bold text-white mb-4 drop-shadow-lg"
             style={{ fontFamily: 'Quicksand, sans-serif' }}
           >
-        Used Talcum Powder and Diagnosed with Ovarian Cancer? 
+        Used Talcum Powder and Diagnosed<br></br> with Ovarian Cancer? 
           </h1>
           <h2
             className="text-sm sm:text-base md:text-xs lg:text-xl text-white mb-6 font-medium drop-shadow leading-relaxed"
             style={{ fontFamily: 'Quicksand, sans-serif' }}
           >
-          Talc-based products like Johnson’s Baby Powder have been linked to ovarian cancer in women.   If you or a loved one were diagnosed, you may be eligible for financial settlement. 
+          Talc-based products like Johnson’s Baby Powder have been linked to ovarian cancer in women.<br></br>   If you or a loved one were diagnosed, you may be eligible for financial settlement. 
           </h2>
         </div>
       </section>

@@ -24,13 +24,13 @@ const HomeOne = () => {
             className="text-2xl md:text-3xl lg:text-5xl font-bold text-white mb-4 drop-shadow-lg"
             style={{ fontFamily: 'Quicksand, sans-serif' }}
           >
-           Used Depo-Provera And Diagnosed With A Brain Tumor Or Neurological Condition?
+           Used Depo-Provera And Diagnosed With<br></br> A Brain Tumor Or Neurological Condition?
           </h1>
           <h2
             className="text-sm sm:text-base md:text-xs lg:text-xl text-white mb-6 font-medium drop-shadow leading-relaxed"
             style={{ fontFamily: 'Quicksand, sans-serif' }}
           >
-           Depo-Provera has been linked to brain tumors, pseudotumor cerebri, and bone loss.  You may qualify for compensation. Get a free legal case review now. 
+           Depo-Provera has been linked to brain tumors, pseudotumor cerebri, and bone loss. <br></br> You may qualify for compensation. Get a free legal case review now. 
           </h2>
         </div>
       </section>

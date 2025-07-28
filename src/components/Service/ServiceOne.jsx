@@ -1,12 +1,12 @@
 import React from 'react'
-import imgR from '../../assets/image 91.png'
+import imgR from '../../assets/heroServiceMain.png'
 import MobileHeroBg from '../../assets/serMob1.png'
 // import GradientMobileHero from '../../assets/ServiceGradientMobileHero.png'
 const ServiceOne = () => {
   return (
     <>
       {/* Desktop/Laptop/Tablet Hero Section */}
-      <section className="hidden sm:flex relative items-center justify-between overflow-hidden bg-[#0A1F8F]
+      <section className="hidden sm:flex relative items-center justify-between overflow-hidden bg-gradient-to-r from-[#0A1F8F] to-[#0100AF]
         h-[27.85vh]
         md:h-[301px]
         lg:h-[351px]

@@ -24,13 +24,13 @@ const HomeOne = () => {
             className="text-2xl md:text-3xl lg:text-5xl font-bold text-white mb-4 drop-shadow-lg"
             style={{ fontFamily: 'Quicksand, sans-serif' }}
           >
-          Experienced Liver Injury or Stroke After Taking Oxbryta? 
+          Experienced Liver Injury or Stroke<br></br> After Taking Oxbryta? 
           </h1>
           <h2
             className="text-sm sm:text-base md:text-xs lg:text-xl text-white mb-6 font-medium drop-shadow leading-relaxed"
             style={{ fontFamily: 'Quicksand, sans-serif' }}
           >
-           Oxbryta, a drug prescribed for sickle cell disease, has been linked to serious side effects including liver damage and stroke. If you or a loved one were affected, you may qualify for settlement. 
+           Oxbryta, a drug prescribed for sickle cell disease, has been linked to serious side effects including liver damage and stroke.<br></br> If you or a loved one were affected, you may qualify for settlement. 
           </h2>
         </div>
       </section>

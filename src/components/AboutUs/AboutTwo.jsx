@@ -13,7 +13,7 @@ const AboutTwo = () => {
   className="hidden sm:block relative bg-no-repeat bg-cover bg-center"
   style={{ backgroundImage: `url(${bgImg})` }}
 >
-  <div className="relative min-h-[500px] lg:min-h-[50vh] max-h-[800px]">
+  <div className="relative min-h-[500px] lg:min-h-[60vh] max-h-[900px]">
     {/* Mountain (bottom-left) - More conservative scaling */}
     <img
       src={blueMt}

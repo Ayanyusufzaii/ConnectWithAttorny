@@ -29,7 +29,7 @@ const PFASOne = () => {
             className="text-sm sm:text-base md:text-xs lg:text-xl text-white mb-6 font-medium drop-shadow leading-relaxed"
             style={{ fontFamily: 'Quicksand, sans-serif' }}
           >
-           PFAS chemicals have been linked to cancer, birth defects, and organ damage. If you or a loved one were exposed through drinking water or workplace contact, you may qualify for settlement.
+           PFAS chemicals have been linked to cancer, birth defects, and organ damage. <br></br>If you or a loved one were exposed through drinking water or workplace contact, you may qualify for settlement.
           </h2>
         </div>
       </section>
