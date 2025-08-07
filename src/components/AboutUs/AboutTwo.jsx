@@ -1,5 +1,5 @@
 import React from 'react'
-import blueMt from '../../assets/MountNew.png'
+import blueMt from '../../assets/mountt.png'
 import dots from '../../assets/dots002.png'
 import bgImg from '../../assets/bg002.png'
 import MobileHeroBg from '../../assets/mountMOB.png'

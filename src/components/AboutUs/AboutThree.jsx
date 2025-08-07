@@ -1,7 +1,7 @@
 import React from "react";
 import bgImg from "../../assets/Rectangle05.png";
 import dpImg from "../../assets/2bg 1.png";
- 
+
 const cards = [
   {
     number: <span className="text-[#EDC14A]">01</span>,
@@ -52,7 +52,7 @@ const AboutThree = () => {
       style={{ backgroundImage: `url(${bgImg})` }}
     >
       {/*  Desktop + Tablet Layout (≥768px) */}
-      <div className="hidden md:block w-full  bg-[#1A33B8]">
+      <div className="hidden md:block w-full  bg-[#162766]">
         <div className="w-full max-w-[1440px] mx-auto px-[80px] py-[60px]">
           {/* Main Heading - Dual Color */}
           <h2 className="mb-6">
@@ -89,7 +89,7 @@ const AboutThree = () => {
       </div>
  
       {/*  Mobile Layout (<768px) */}
-      <div className="md:hidden flex flex-col w-full gap-6 px-4 py-10  bg-[#1A33B8]">
+      <div className="md:hidden flex flex-col w-full gap-6 px-4 py-10  bg-[#162766]">
         {/* Mobile Main Heading */}
         <h2 className="text-left  text-[34px] font-semibold leading-[1.2] capitalize">
           <span className="text-[#ffffff]">

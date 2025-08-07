@@ -1,6 +1,6 @@
 import React from 'react'
-import bgImg from '../../assets/AboutUsHeroo.png'
-import MobileHeroBg from '../../assets/AboutUsHeroMobb.png'
+import bgImg from '../../assets/aboutmobhero.png'
+import MobileHeroBg from '../../assets/mobbheroabout.png'
 
 
 const AboutOne = () => {
@@ -24,7 +24,7 @@ const AboutOne = () => {
         /> */}
         
         {/* Desktop/Laptop/Tablet Hero Section */}
-      <section className="hidden sm:flex relative w-full h-[50vh] md:h-[50vh] lg:h-[60vh] xl:h-[80vh] items-center justify-center overflow-hidden">
+      <section className="hidden sm:flex relative w-full h-[50vh] md:h-[32vh] lg:h-[43vh] xl:h-[60vh] items-center justify-center overflow-hidden">
 
         {/* Background Image */}
         <img

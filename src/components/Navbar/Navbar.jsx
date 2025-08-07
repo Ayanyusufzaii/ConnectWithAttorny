@@ -115,7 +115,7 @@ function DesktopNavbar() {
 
 <div className="flex items-center">
   <Link to="/">
-    <img src={logo} alt="Logo" className="h-16 w-48 object-contain" />
+    <img src={logo} alt="Logo" className="h-16 w-40 object-contain" />
   </Link>
 </div>
       
@@ -196,7 +196,7 @@ function DesktopNavbar() {
       
       {/* Call Now Tile */}
       <div className="flex items-center">
-        <div className="bg-[#162766] rounded-lg px-6 py-3 text-white text-center shadow font-quicksand hover:bg-[#EDC14A] hover:text-[#162766] transition-colors duration-200">
+        <div className="bg-[#162766] rounded-lg px-4 py-2 text-white text-center shadow font-quicksand hover:bg-[#EDC14A] hover:text-[#162766] transition-colors duration-200">
           <div className="text-xs">CALL NOW</div>
           <div className="text-l">888 201-1350</div>
         </div>
@@ -276,10 +276,11 @@ function MobileNavbar() {
           className="flex flex-col justify-center items-center w-10 h-10 focus:outline-none"
           onClick={() => setOpen(true)}
           aria-label="Open menu"
-        >
-          <span className="block w-6 h-0.5 bg-blue-600 mb-1 rounded transition-all duration-300"></span>
-          <span className="block w-6 h-0.5 bg-blue-600 mb-1 rounded transition-all duration-300"></span>
-          <span className="block w-6 h-0.5 bg-blue-600 rounded transition-all duration-300"></span>
+        ><div className="flex flex-col items-start">
+          <span className="block w-6 h-0.5 bg-[#162766] mb-1 rounded transition-all duration-300"></span>
+          <span className="block w-6 h-0.5 bg-[#162766] mb-1 rounded transition-all duration-300"></span>
+          <span className="block w-3 h-0.5 bg-[#162766] rounded transition-all duration-300"></span>
+          </div>
         </button>
       </div>
 

@@ -2,7 +2,7 @@ import React, { useRef, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import depoImg from "../../assets/newServiceImg/depoimgg.png";
-import paraquatImg from "../../assets/newServiceImg/para_img.png";
+import paraquatImg from "../../assets/newServiceImg/paraimgg.png";
 import roundupImg from "../../assets/newServiceImg/roundupimgg.png";
 import babyFoodImg from "../../assets/newServiceImg/babyfoodimgg.png";
 

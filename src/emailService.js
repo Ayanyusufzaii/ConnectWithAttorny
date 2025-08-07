@@ -14,8 +14,8 @@ import emailjs from '@emailjs/browser';
  
  
 const SERVICE_ID = 'service_azb26ks';
-const ADMIN_TEMPLATE_ID = 'template_i4yx3al';
-const USER_TEMPLATE_ID = 'template_v3x552b';
+const ADMIN_TEMPLATE_ID = 'template_fa7qndd';
+const USER_TEMPLATE_ID = 'template_vghzjt8';
  
 // SubService template IDs
 const SUBSERVICE_ADMIN_TEMPLATE_ID = 'template_0yxv4ra';

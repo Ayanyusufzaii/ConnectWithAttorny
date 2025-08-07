@@ -1,6 +1,6 @@
 import React from 'react'
 import herobg from '../../assets/herodesktopp.png'
-import MobileHeroBg from '../../assets/heromobilee.png'
+import MobileHeroBg from '../../assets/mobheroimgg.png'
 import { ChevronDown } from 'lucide-react'
 const HomeOne = () => {
 
@@ -12,7 +12,7 @@ const HomeOne = () => {
   return (
     <>
      {/* Desktop/Laptop/Tablet Hero Section */}
-      <section className="hidden sm:flex relative w-full h-relative md:min-h-[55vh] lg:min-h-[85vh] items-center justify-start overflow-hidden capitalize">
+      <section className="hidden sm:flex relative w-full h-relative md:min-h-[40vh] lg:min-h-[55vh] xl:min-h-[85vh] 2xl:min-h-[95vh] items-center justify-start overflow-hidden capitalize">
         {/* Background Image */}
         <img
           src={herobg}
@@ -26,13 +26,13 @@ const HomeOne = () => {
         {/* Content */}
         <div className="relative z-20 flex flex-col items-start w-full px-6 md:px-16 lg:px-24 py-8">
           <h1
-            className="text-2xl md:text-4xl lg:text-6xl font-bold text-white mb-4 drop-shadow-lg text-left"
+            className="text-2xl md:text-4xl  lg:text-5xl xl:text-6xl font-bold text-white mb-4 drop-shadow-lg text-left"
             style={{ fontFamily: 'Quicksand, sans-serif' }}
           >
             Trusted Legal Support <br></br>for Your Future
           </h1>
           <h2
-            className="text-sm sm:text-base md:text-xs lg:text-xl text-white mb-6 font-medium drop-shadow text-left leading-relaxed"
+            className="text-sm sm:text-base md:text-xs  xl:text-xl text-white mb-6 font-medium drop-shadow text-left leading-relaxed"
             style={{ fontFamily: 'Quicksand, sans-serif' }}
           >
             If you’ve been harmed by a dangerous drug, medical device,<br />
