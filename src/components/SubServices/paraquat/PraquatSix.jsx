@@ -6,7 +6,7 @@ export default function PraquatSix() {
     <section
       className="relative text-white font-[Quicksand] w-full"
       style={{
-        background: "#0A1F8F",
+        background: "#162766",
         zIndex: 0,
         opacity: 1,
       }}

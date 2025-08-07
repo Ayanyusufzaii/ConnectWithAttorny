@@ -1,6 +1,6 @@
 import React from 'react'
-import herobg from '../../assets/HOMEHERO.png'
-import MobileHeroBg from '../../assets/MobileHeroBg.webp'
+import herobg from '../../assets/herodesktopp.png'
+import MobileHeroBg from '../../assets/heromobilee.png'
 import { ChevronDown } from 'lucide-react'
 const HomeOne = () => {
 
@@ -44,7 +44,7 @@ const HomeOne = () => {
           <button 
           
           onClick={scrollToForm}
-          className="bg-[#EDC14A] text-[#0A1F8F] font-semibold px-6 md:px-8 py-3 md:py-4 rounded-md shadow hover:bg-yellow-500 transition text-base md:text-lg ">
+          className="bg-[#EDC14A] text-[#162766] font-semibold px-6 md:px-8 py-3 md:py-4 rounded-md shadow hover:bg-yellow-500 transition text-base md:text-lg ">
             Let's Discuss Your Case
           </button>
 
@@ -74,7 +74,7 @@ const HomeOne = () => {
           </h2>
           <button 
           onClick={scrollToForm}
-          className="bg-[#EDC14A] text-[#0A1F8F] font-semibold px-6 py-2 rounded-lg shadow hover:bg-yellow-500 transition text-base max-w-xs text-left" style={{ borderRadius: '0.75rem', minWidth: '180px' }}>
+          className="bg-[#EDC14A] text-[#162766] font-semibold px-6 py-2 rounded-lg shadow hover:bg-yellow-500 transition text-base max-w-xs text-left" style={{ borderRadius: '0.75rem', minWidth: '180px' }}>
             Let's Discuss Your Case
           </button>
         </div>

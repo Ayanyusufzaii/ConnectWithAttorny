@@ -28,7 +28,7 @@ const ServiceTwo = () => {
     <>
       {/* ===== DESKTOP SECTION ===== */}
       <section
-        className="hidden md:block bg-[#0A1F8F] text-white py-12 px-4 sm:px-8 md:px-16"
+        className="hidden md:block bg-[#162766] text-white py-12 px-4 sm:px-8 md:px-16"
         style={{ fontFamily: 'Quicksand, sans-serif' }}
       >
         <div className="max-w-[1440px] mx-auto flex flex-col lg:flex-row items-center justify-between gap-8">
@@ -54,7 +54,7 @@ const ServiceTwo = () => {
                     className="w-12 h-12 object-contain"
                   />
                 </div>
-                <h3 className="text-lg font-quicksand font-semibold mb-2 text-[#0A1F8F]">
+                <h3 className="text-lg font-quicksand font-semibold mb-2 text-[#162766]">
                   {item.title}
                 </h3>
                 <p className="text-sm font-quicksand text-[#757575] leading-relaxed">
@@ -68,7 +68,7 @@ const ServiceTwo = () => {
 
       {/* ===== MOBILE SECTION ===== */}
       <section
-        className="block md:hidden bg-[#0A1F8F] text-white py-12 px-4"
+        className="block md:hidden bg-[#162766] text-white py-12 px-4"
         style={{ fontFamily: 'Quicksand, sans-serif' }}
       >
         <div className="max-w-[1440px] mx-auto flex flex-col items-center gap-8">
@@ -94,7 +94,7 @@ const ServiceTwo = () => {
                     className="w-12 h-12 object-contain"
                   />
                 </div>
-                <h3 className="text-lg font-quicksand font-semibold mb-2 text-[#0A1F8F]">
+                <h3 className="text-lg font-quicksand font-semibold mb-2 text-[#162766]">
                   {item.title}
                 </h3>
                 <p className="text-sm font-quicksand text-[#757575] leading-relaxed">

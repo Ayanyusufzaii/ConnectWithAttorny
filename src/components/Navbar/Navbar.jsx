@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import { Link } from 'react-router-dom';
-import logo from "../../assets/Logo.webp"; // Adjust the path as necessary
+import logo from "../../assets/headerimgg.png"; // Adjust the path as necessary
 import {  Instagram, Linkedin, ChevronDown, Check } from 'lucide-react';
 import { BsTwitterX } from "react-icons/bs"; // Importing Twitter icon from react-icons
 import { FaFacebookF } from 'react-icons/fa';
@@ -115,7 +115,7 @@ function DesktopNavbar() {
 
 <div className="flex items-center">
   <Link to="/">
-    <img src={logo} alt="Logo" className="h-20 w-32 object-contain" />
+    <img src={logo} alt="Logo" className="h-16 w-48 object-contain" />
   </Link>
 </div>
       
@@ -133,8 +133,8 @@ function DesktopNavbar() {
                   <button
                     ref={buttonRef}
                     className={`font-semibold hover:underline transition-all duration-200 flex items-center gap-1 cursor-pointer ${
-                      activePage === link.name ? 'text-[#0A1F8F]' : 'text-gray-600'
-                    } hover:text-[#0A1F8F]`}
+                      activePage === link.name ? 'text-[#162766]' : 'text-gray-600'
+                    } hover:text-[#162766]`}
                     aria-expanded={dropdownOpen}
                     aria-haspopup="true"
                   >
@@ -162,14 +162,14 @@ function DesktopNavbar() {
                         <a
                           key={lawsuit.name}
                           href={lawsuit.href}
-                          className="group block px-4 py-3 text-sm text-gray-700 hover:text-[#0A1F8F] hover:bg-gray-50 transition-all duration-200 relative flex items-center justify-between"
+                          className="group block px-4 py-3 text-sm text-gray-700 hover:text-[#162766] hover:bg-gray-50 transition-all duration-200 relative flex items-center justify-between"
                           style={{
                             animationDelay: `${index * 20}ms`,
                           }}
                         >
                           <span className="font-medium">{lawsuit.name}</span>
                           <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-                            <div className="w-5 h-5 bg-[#0A1F8F] rounded-full flex items-center justify-center">
+                            <div className="w-5 h-5 bg-[#162766] rounded-full flex items-center justify-center">
                               <Check className="w-3 h-3 text-white" />
                             </div>
                           </div>
@@ -182,8 +182,8 @@ function DesktopNavbar() {
                 <a
                   href={link.href}
                   className={`font-semibold hover:underline transition-all duration-200 ${
-                    activePage === link.name ? 'text-[#0A1F8F]' : 'text-gray-600'
-                  } hover:text-[#0A1F8F]`}
+                    activePage === link.name ? 'text-[#162766]' : 'text-gray-600'
+                  } hover:text-[#162766]`}
                   onClick={() => setActivePage(link.name)}
                 >
                   {link.name}
@@ -196,7 +196,7 @@ function DesktopNavbar() {
       
       {/* Call Now Tile */}
       <div className="flex items-center">
-        <div className="bg-[#0A1F8F] rounded-lg px-6 py-3 text-white text-center shadow font-quicksand hover:bg-[#EDC14A] hover:text-[#0A1F8F] transition-colors duration-200">
+        <div className="bg-[#162766] rounded-lg px-6 py-3 text-white text-center shadow font-quicksand hover:bg-[#EDC14A] hover:text-[#162766] transition-colors duration-200">
           <div className="text-xs">CALL NOW</div>
           <div className="text-l">888 201-1350</div>
         </div>
@@ -297,7 +297,7 @@ function MobileNavbar() {
       >
         <div className="flex items-center justify-between px-4 py-4 bg-white shadow-md">
           <button
-            className="text-[#0A1F8F] text-3xl font-bold focus:outline-none transition-all duration-200 hover:scale-110"
+            className="text-[#162766] text-3xl font-bold focus:outline-none transition-all duration-200 hover:scale-110"
             onClick={() => setOpen(false)}
             aria-label="Close menu"
           >
@@ -322,9 +322,9 @@ function MobileNavbar() {
                         <button
                           className={`block w-full px-8 py-4 text-lg font-semibold text-left transition-colors duration-200 ${
                             active === link.name
-                              ? 'text-[#0A1F8F] bg-gray-300'
+                              ? 'text-[#162766] bg-gray-300'
                               : 'text-gray-600'
-                          } hover:text-[#0A1F8F] flex items-center justify-between`}
+                          } hover:text-[#162766] flex items-center justify-between`}
                           onClick={() => setServicesOpen(!servicesOpen)}
                         >
                           {link.name}
@@ -340,7 +340,7 @@ function MobileNavbar() {
                               <a
                                 key={lawsuit.name}
                                 href={lawsuit.href}
-                                className="block px-12 py-3 text-sm text-gray-700 hover:text-[#0A1F8F] hover:bg-gray-200 transition-colors duration-200"
+                                className="block px-12 py-3 text-sm text-gray-700 hover:text-[#162766] hover:bg-gray-200 transition-colors duration-200"
                                 onClick={() => setOpen(false)}
                               >
                                 {lawsuit.name}
@@ -354,9 +354,9 @@ function MobileNavbar() {
                         href={link.href}
                         className={`block w-full px-8 py-4 text-lg font-semibold text-left transition-colors duration-200 ${
                           active === link.name
-                            ? 'text-[#0A1F8F]'
+                            ? 'text-[#162766]'
                             : 'text-gray-600'
-                        } hover:text-[#0A1F8F]`}
+                        } hover:text-[#162766]`}
                         onClick={() => {
                           setActive(link.name);
                           setOpen(false);
@@ -370,7 +370,7 @@ function MobileNavbar() {
               </ul>
             </div>
 
-            <div className="mt-8 px-8 pb-8 bg-[#0A1F8F]">
+            <div className="mt-8 px-8 pb-8 bg-[#162766]">
               <h3 className="text-white font-semibold text-lg mb-4 mt-8">Follow Us</h3>
               <div className="flex justify-left gap-8 mt-5">
                 {socialLinks.map(({ icon: Icon, href, label }) => (
@@ -447,13 +447,13 @@ export default Navbar;
       
 //         <div className="flex items-center justify-between px-4 py-4 bg-white">
 //           <button
-//             className="text-[#0A1F8F] text-3xl font-bold focus:outline-none"
+//             className="text-[#162766] text-3xl font-bold focus:outline-none"
 //             onClick={() => setOpen(false)}
 //             aria-label="Close menu"
 //           >
 //             &times;
 //           </button>
-//           <span className="text-[#0A1F8F] text-lg font-bold mx-auto">BE WITH LAW</span>
+//           <span className="text-[#162766] text-lg font-bold mx-auto">BE WITH LAW</span>
 //           <span className="w-8"></span>
 //         </div>
         
@@ -468,7 +468,7 @@ export default Navbar;
 //                     {link.hasDropdown ? (
 //                       <div className="w-full">
 //                         <button
-//                           className={`block w-full px-8 py-4 text-lg font-semibold text-left transition-colors duration-200 ${active === link.name ? 'text-[#0A1F8F] bg-gray-300' : 'text-gray-600'} hover:text-[#0A1F8F]  flex items-center justify-between`}
+//                           className={`block w-full px-8 py-4 text-lg font-semibold text-left transition-colors duration-200 ${active === link.name ? 'text-[#162766] bg-gray-300' : 'text-gray-600'} hover:text-[#162766]  flex items-center justify-between`}
 //                           onClick={() => setServicesOpen(!servicesOpen)}
 //                         >
 //                           {link.name}
@@ -480,7 +480,7 @@ export default Navbar;
 //                               <a
 //                                 key={lawsuit.name}
 //                                 href={lawsuit.href}
-//                                 className="block px-12 py-3 text-sm text-gray-700 hover:text-[#0A1F8F] hover:bg-gray-200 transition-colors duration-200"
+//                                 className="block px-12 py-3 text-sm text-gray-700 hover:text-[#162766] hover:bg-gray-200 transition-colors duration-200"
 //                                 onClick={() => setOpen(false)}
 //                               >
 //                                 {lawsuit.name}
@@ -492,7 +492,7 @@ export default Navbar;
 //                     ) : (
 //                       <a
 //                         href={link.href}
-//                         className={`block w-full px-8 py-4 text-lg font-semibold text-left transition-colors duration-200 ${active === link.name ? 'text-[#0A1F8F] ' : 'text-gray-600'} hover:text-[#0A1F8F] `}
+//                         className={`block w-full px-8 py-4 text-lg font-semibold text-left transition-colors duration-200 ${active === link.name ? 'text-[#162766] ' : 'text-gray-600'} hover:text-[#162766] `}
 //                         onClick={() => { setActive(link.name); setOpen(false); }}
 //                       >
 //                         {link.name}
@@ -503,7 +503,7 @@ export default Navbar;
 //               </ul>
 //             </div>
           
-//             <div className="mt-8 px-8 pb-8 bg-[#0A1F8F]">
+//             <div className="mt-8 px-8 pb-8 bg-[#162766]">
 //               <h3 className="text-gray-700 font-semibold text-lg mb-4 text-white mt-8">Follow Us</h3>
 //                  <div className="flex justify-left gap-8 mt-5 ">
 //               {socialLinks.map(({ icon: Icon, href, label }) => (

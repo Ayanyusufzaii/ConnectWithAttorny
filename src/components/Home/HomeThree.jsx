@@ -1,10 +1,10 @@
 import React, { useRef, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
-import depoImg from "../../assets/newServiceImg/depo_img.png";
+import depoImg from "../../assets/newServiceImg/depoimgg.png";
 import paraquatImg from "../../assets/newServiceImg/para_img.png";
-import roundupImg from "../../assets/newServiceImg/roundup_img.png";
-import babyFoodImg from "../../assets/newServiceImg/toxic_img.png";
+import roundupImg from "../../assets/newServiceImg/roundupimgg.png";
+import babyFoodImg from "../../assets/newServiceImg/babyfoodimgg.png";
 
 
 const lawsuits = [
@@ -62,24 +62,24 @@ const HomeThree = () => {
       {/* Header */}
       {isDesktop ? (
         <div className="flex justify-between items-center mb-8 flex-wrap gap-4">
-          <h2 className="text-2xl md:text-3xl font-semibold text-[#0A1F8F]">
+          <h2 className="text-2xl md:text-3xl font-semibold text-[#162766]">
             What Do We <span className="text-[#EDC14A]">Help</span> You With <span className="text-[#EDC14A]">?</span>
           </h2>
           <a
             href="/ServiceMain"
-            className="text-sm md:text-base font-semibold text-[#0A1F8F] hover:underline whitespace-nowrap "
+            className="text-sm md:text-base font-semibold text-[#162766] hover:underline whitespace-nowrap "
            style={{ fontFamily: 'Quicksand, sans-serif' }} >
             See All Lawsuits <span className="text-[#EDC14A]">{'>'}</span>
           </a>
         </div>
       ) : (
         <div className="flex justify-between items-center mb-8  gap-4">
-          <h2 className="text-2xl md:text-3xl font-semibold text-[#0A1F8F]">
+          <h2 className="text-2xl md:text-3xl font-semibold text-[#162766]">
             What Do We <span className="text-[#EDC14A]">Help You</span> With?
           </h2>
           <a
             href="/ServiceMain"
-            className="text-sm md:text-base font-bold text-[#0A1F8F] hover:underline whitespace-nowrap"
+            className="text-sm md:text-base font-bold text-[#162766] hover:underline whitespace-nowrap"
           style={{ fontFamily: 'Quicksand, sans-serif' }} >
             See All <span className="text-[#EDC14A]">{'>'}</span>
           </a>

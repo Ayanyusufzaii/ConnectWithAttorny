@@ -74,10 +74,10 @@ const AboutThree = () => {
                 key={card.number}
                 className={`p-4 h-[100px] rounded-[10px] ${card.bg} shadow-sm border border-white overflow-hidden flex flex-col justify-center `}
               >
-                <span className="text-[#0A1F8F] font-[Quicksand] not-italic font-semibold leading-none text-[24px] mb-2">
+                <span className="text-[#162766] font-[Quicksand] not-italic font-semibold leading-none text-[24px] mb-2">
                   {card.number}
                 </span>
-                <p className="text-[#0A1F8F] text-[11px] font-medium leading-none tracking-[-0.32px] text-left">
+                <p className="text-[#162766] text-[11px] font-medium leading-none tracking-[-0.32px] text-left">
                   {card.text}
                 </p>
               </article>
@@ -108,10 +108,10 @@ const AboutThree = () => {
               key={card.number}
               className="w-full bg-white rounded-[12px] border border-white p-4 shadow-sm text-left"
             >
-              <span className="text-[#0A1F8F] text-[24px] font-semibold leading-normal mb-2 block">
+              <span className="text-[#162766] text-[24px] font-semibold leading-normal mb-2 block">
                 {card.number}
               </span>
-              <p className="text-[#0A1F8F] text-[16px] font-medium leading-normal">
+              <p className="text-[#162766] text-[16px] font-medium leading-normal">
                 {card.text}
               </p>
             </div>

@@ -4,7 +4,7 @@ import { FaFacebookF } from 'react-icons/fa';
 import footerVector from '../../assets/Vector.svg';
 import { Link, useLocation } from 'react-router-dom';
 import { BsTwitterX } from "react-icons/bs";
-import logo from "../../assets/footerLogo.webp"; // Adjust the path as necessary
+import logo from "../../assets/footerlogo.png"; // Adjust the path as necessary
 
 
 const Footer = () => {
@@ -35,7 +35,7 @@ const Footer = () => {
 
   return (
     <div className="flex flex-col">
-      <footer className="bg-[#0A1F8F] text-white relative overflow-hidden">
+      <footer className="bg-[#162766] text-white relative overflow-hidden">
         {/* Vector Background */}
  <img
   src={footerVector}
@@ -56,7 +56,7 @@ const Footer = () => {
   Your <span className="text-yellow-400">Legal Options</span> Today
 </h2>
           <a href="/ContactUs">
-  <button className="bg-[#EDC14A] hover:bg-yellow-600 text-[#0A1F8F] px-4 py-4 rounded font-bold mt-8">
+  <button className="bg-[#EDC14A] hover:bg-yellow-600 text-[#162766] px-4 py-4 rounded font-bold mt-8">
     Book an Appointment
   </button>
 </a>
@@ -161,7 +161,7 @@ const Footer = () => {
               {/* Right */}
               <div className="flex items-center justify-end gap-8">
             <a href="/ContactUs">
-  <button className="bg-[#EDC14A] hover:bg-yellow-600 text-[#0A1F8F] px-4 py-4 rounded font-bold ">
+  <button className="bg-[#EDC14A] hover:bg-yellow-600 text-[#162766] px-4 py-4 rounded font-bold ">
     Book an Appointment
   </button>
 </a>

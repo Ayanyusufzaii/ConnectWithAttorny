@@ -42,7 +42,7 @@ const HomeEight = () => {
     <section className="py-12 px-2 sm:px-4 md:px-8 lg:px-16 w-full max-w-none" style={{ fontFamily: 'Quicksand, sans-serif' }}>
       {/* Title */}
       <h2
-        className="text-[32px] sm:text-[40px] font-semibold text-[#0A1F8F] mb-6 capitalize leading-none"
+        className="text-[32px] sm:text-[40px] font-semibold text-[#162766] mb-6 capitalize leading-none"
       >
         Frequently Asked{' '}
         <span className="text-[#EDC14A] font-semibold capitalize">
@@ -61,13 +61,13 @@ const HomeEight = () => {
               } transition`}
               style={{ fontFamily: 'Quicksand, sans-serif' }}
             >
-              <span className="text-[#0A1F8F] text-[20px] sm:text-[24px] font-semibold leading-normal">
+              <span className="text-[#162766] text-[20px] sm:text-[24px] font-semibold leading-normal">
                 {item.question}
               </span>
              <span className="text-[18px] font-light select-none">
                 <ChevronDown
                   className={`w-5 h-5 transform transition-transform duration-300 
-      ${activeIndex === idx ? "rotate-180 text-[#EDC14A]" : "text-[#0A1F8F]"}`}
+      ${activeIndex === idx ? "rotate-180 text-[#EDC14A]" : "text-[#162766]"}`}
                 />
               </span>
             </button>
