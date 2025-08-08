@@ -1,13 +1,13 @@
 import React, { useState, useRef, useEffect } from "react";
 import { Link } from 'react-router-dom';
-import logo from "../../assets/headerimgg.png"; // Adjust the path as necessary
+import logo from "../../assets/logooo.png"; // Adjust the path as necessary
 import {  Instagram, Linkedin, ChevronDown, Check } from 'lucide-react';
 import { BsTwitterX } from "react-icons/bs"; // Importing Twitter icon from react-icons
 import { FaFacebookF } from 'react-icons/fa';
 
 const NAV_LINKS = [
   { name: "Home", href: "/" },  
-    { name: "About Us", href: "/AboutUs" },
+  { name: "About Us", href: "/AboutUs" },
   { name: "Services", hasDropdown: true },
   { name: "Contact Us", href: "/ContactUs" },
 ];

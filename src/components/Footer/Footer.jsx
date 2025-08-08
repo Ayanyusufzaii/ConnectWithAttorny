@@ -4,7 +4,7 @@ import { FaFacebookF } from 'react-icons/fa';
 import footerVector from '../../assets/Vector.svg';
 import { Link, useLocation } from 'react-router-dom';
 import { BsTwitterX } from "react-icons/bs";
-import logo from "../../assets/footerlogo.png"; // Adjust the path as necessary
+import logo from "../../assets/footerlogoo.png"; // Adjust the path as necessary
 
 
 const Footer = () => {

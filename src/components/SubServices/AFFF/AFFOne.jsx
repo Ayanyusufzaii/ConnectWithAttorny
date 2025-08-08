@@ -1,6 +1,6 @@
 import React from 'react'
-import herobg from '../../../assets/affHero.png'
-import MobileHeroBg from '../../../assets/affHeroMob.png'
+import herobg from '../../../assets/afffdeskkk.png'
+import MobileHeroBg from '../../../assets/afffmobbb.png'
 
 const AFFOne = () => {
   return (

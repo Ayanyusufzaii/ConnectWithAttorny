@@ -1,5 +1,5 @@
 import React from 'react'
-import img1 from '../../assets/Frame 48.png'
+import img1 from '../../assets/sec7frame.png'
 import { useNavigate } from 'react-router-dom';
 
 const ServiceFive = () => {

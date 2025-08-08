@@ -1,6 +1,6 @@
 import React from 'react'
-import herobg from '../../../assets/TransHero.png'
-import MobileHeroBg from '../../../assets/TransHeroMobile.png'
+import herobg from '../../../assets/transdekkk.png'
+import MobileHeroBg from '../../../assets/transmobbb.png'
 
 const TransvaginalOne = () => {
   return (

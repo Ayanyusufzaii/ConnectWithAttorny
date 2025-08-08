@@ -1,6 +1,6 @@
 import React from 'react'
-import herobg from '../../../assets/roundupHero.png'
-import MobileHeroBg from '../../../assets/RoundupHeroMobile.png'
+import herobg from '../../../assets/rounddesktoppp.png'
+import MobileHeroBg from '../../../assets/roundmobbb.png'
  
 const RoundUpOne = () => {
   return (

@@ -1,6 +1,6 @@
 import React from 'react'
-import herobg from '../../../assets/PFASHero.png'
-import MobileHeroBg from '../../../assets/PFASMobileHero.png'
+import herobg from '../../../assets/pfasdeskkk.png'
+import MobileHeroBg from '../../../assets/pfasmobbb.png'
 
 const PFASOne = () => {
   return (

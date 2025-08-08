@@ -1,6 +1,6 @@
 import React from 'react'
-import herobg from '../../../assets/DepoHero.png'
-import MobileHeroBg from '../../../assets/DepoHeroMobile.png'
+import herobg from '../../../assets/depolappp.png'
+import MobileHeroBg from '../../../assets/depomobbb.png'
 
 const HomeOne = () => {
   return (
