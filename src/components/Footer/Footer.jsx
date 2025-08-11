@@ -154,7 +154,7 @@ const Footer = () => {
               {/* Right */}
               <div className="flex items-center justify-end gap-8">
             <a href="/ContactUs">
-  <button className="bg-[#EDC14A] hover:bg-yellow-600 text-[#162766] px-4 py-4 rounded font-bold ">
+  <button className="bg-[#EDC14A] hover:bg-yellow-400 text-[#162766] px-2 py-2 rounded font-bold ">
     Book an Appointment
   </button>
 </a>

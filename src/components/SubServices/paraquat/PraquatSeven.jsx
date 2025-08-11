@@ -1,5 +1,5 @@
 import React from 'react'
-import img1 from '../../../assets/Frame 48.png'
+import img1 from '../../../assets/sec7frame.png'
 const PraquatSeven = () => {
   return (
       <>

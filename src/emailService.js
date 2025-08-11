@@ -18,8 +18,8 @@ const ADMIN_TEMPLATE_ID = 'template_fa7qndd';
 const USER_TEMPLATE_ID = 'template_vghzjt8';
  
 // SubService template IDs
-const SUBSERVICE_ADMIN_TEMPLATE_ID = 'template_0yxv4ra';
-const SUBSERVICE_USER_TEMPLATE_ID = 'template_145waea';  
+const SUBSERVICE_ADMIN_TEMPLATE_ID = 'template_mo5pzwu';
+const SUBSERVICE_USER_TEMPLATE_ID = 'template_bz16ror';  
  
 const PUBLIC_KEY = 'DyDZ85E9uwzwSyUoD';
  
