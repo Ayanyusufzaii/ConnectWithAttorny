@@ -13,17 +13,17 @@ const NAV_LINKS = [
 ];
 
 const LAWSUIT_TYPES = [
-  { name: "Depo-Provera Lawsuit", href: "/Depomain" },
-  { name: "Paraquat Lawsuit", href: "/ParaquatMain" },
-  { name: "Roundup Lawsuit", href: "/RoundupMain" },
-  { name: "Toxic Baby Food Lawsuit", href: "/Babyfood" },
-  { name: "Oxbryta Lawsuit", href: "/OxbrytaMain" },
-  { name: "Talcum Powder Lawsuit", href: "/TalcumMain" },
-  { name: "Bard PowerPort Lawsuit", href: "/BardPowerPortMain" },
+  { name: "Depo-Provera Lawsuit", href: "/Service/Depo-Provera-Lawsuit" },
+  { name: "Paraquat Lawsuit", href: "/Service/Paraquat-Lawsuit" },
+  { name: "Roundup Lawsuit", href: "/Service/Roundup-Lawsuit" },
+  { name: "Toxic Baby Food Lawsuit", href: "/Service/Toxic-Baby-Food-Lawsuit" },
+  { name: "Oxbryta Lawsuit", href: "Service/Oxbryta-Lawsuit" },
+  { name: "Talcum Powder Lawsuit", href: "/Service/Talcum-Powder-Lawsuit" },
+  { name: "Bard PowerPort Lawsuit", href: "/Service/Bard-PowerPort-Lawsuit" },
   // { name: "Ultra-Processed Foods Lawsuit", href: "/UltraProcessedMain" },
-  { name: "AFFF Firefighting Foam Lawsuit", href: "/AFFFMain" },
-  { name: "PFAS Contamination Lawsuit", href: "/PFASMain" },
-  { name: "Transvaginal Mesh Lawsuit", href: "/TransvaginalMain" },
+  { name: "AFFF Firefighting Foam Lawsuit", href: "/Service/AFFF-Firefighting-Foam-Lawsuit" },
+  { name: "PFAS Contamination Lawsuit", href: "/Service/PFAS-Contamination-Lawsuit" },
+  { name: "Transvaginal Mesh Lawsuit", href: "/Service/Transvaginal-Mesh-Lawsuit" },
 ];
 
 function DesktopNavbar() {
@@ -38,7 +38,7 @@ function DesktopNavbar() {
     if (path === '/' || path === '/  ') return 'Home';
     if (path === '/AboutUs') return 'About Us';
     if (path === '/ContactUs') return 'Contact Us';
-    if (path === '/ServiceMain') return 'Services';
+    if (path === '/Services') return 'Services';
     // Check if it's a service page
     const isServicePage = LAWSUIT_TYPES.some(lawsuit => lawsuit.href === path);
     if (isServicePage) return 'Services';
@@ -229,7 +229,7 @@ function MobileNavbar() {
     if (path === '/' || path === '/  ') return 'Home';
     if (path === '/AboutUs') return 'About Us';
     if (path === '/ContactUs') return 'Contact Us';
-    if (path === '/ServiceMain') return 'Services';
+    if (path === '/Services') return 'Services';
     // Check if it's a service page
     const isServicePage = LAWSUIT_TYPES.some(lawsuit => lawsuit.href === path);
     if (isServicePage) return 'Services';
@@ -306,7 +306,7 @@ function MobileNavbar() {
           </button>
           <img
       src={logo}
-      alt="BE WITH LAW"
+      alt="Connect With Attorney"
       className="h-[30px] w-auto"
     />
           <span className="w-8"></span> 
@@ -454,7 +454,7 @@ export default Navbar;
 //           >
 //             &times;
 //           </button>
-//           <span className="text-[#162766] text-lg font-bold mx-auto">BE WITH LAW</span>
+//           <span className="text-[#162766] text-lg font-bold mx-auto">Connect With Attorney</span>
 //           <span className="w-8"></span>
 //         </div>
         

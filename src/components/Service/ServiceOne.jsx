@@ -1,6 +1,6 @@
 import React from 'react'
 import imgR from '../../assets/dekkkpeople.png'
-import MobileHeroBg from '../../assets/serMob1.png'
+import MobileHeroBg from '../../assets/servnewww.png'
 // import GradientMobileHero from '../../assets/ServiceGradientMobileHero.png'
 const ServiceOne = () => {
   return (

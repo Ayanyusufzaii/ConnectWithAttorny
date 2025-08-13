@@ -24,7 +24,7 @@ const AboutOne = () => {
         /> */}
         
         {/* Desktop/Laptop/Tablet Hero Section */}
-      <section className="hidden sm:flex relative w-full h-[50vh] md:h-[32vh] lg:h-[43vh] xl:h-[60vh] items-center justify-center overflow-hidden">
+      <section className="hidden sm:flex relative w-full h-[50vh] md:min-h-[32vh] lg:min-h-[43vh] xl:min-h-[60vh] items-center justify-center overflow-hidden">
 
         {/* Background Image */}
         <img
@@ -68,7 +68,7 @@ const AboutOne = () => {
               min-[3840px]:text-[36px] min-[3840px]:leading-[40px] min-[3840px]:max-w-[1510px]
               font-[Quicksand]"
           >
-            <span className="text-[#EDC14A] font-bold">BeWithLaw </span>is a legal support platform dedicated to helping individuals & families navigate complex injury and product-related lawsuits. We connect people harmed 
+            <span className="text-[#EDC14A] font-bold">ConnectwithAttorney </span>is a legal support platform dedicated to helping individuals & families navigate complex injury and product-related lawsuits. We connect people harmed 
 by dangerous drugs, medical devices, and toxic exposures with legal teams who understand their pain and are ready to fight for justice.
           </h2>
         </div>
@@ -107,7 +107,7 @@ by dangerous drugs, medical devices, and toxic exposures with legal teams who un
               text-[15px] leading-normal
               font-[Quicksand]"
           >
-           <span className="text-[#EDC14A]">BeWithLaw</span> is a legal support platform dedicated to helping individuals & families navigate complex injury and product-related lawsuits. We connect people harmed by dangerous drugs, medical devices, and toxic exposures with legal teams who understand their pain and are ready to fight for justice.
+           <span className="text-[#EDC14A]">ConnectwithAttorney</span> is a legal support platform dedicated to helping individuals & families navigate complex injury and product-related lawsuits. We connect people harmed by dangerous drugs, medical devices, and toxic exposures with legal teams who understand their pain and are ready to fight for justice.
           </h2>
         </div>
 

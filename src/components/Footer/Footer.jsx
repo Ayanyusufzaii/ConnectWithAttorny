@@ -19,7 +19,7 @@ const Footer = () => {
   const navigationLinks = [
     { name: 'Home', href: '/' },
     { name: 'About Us', href: '/AboutUs' },
-    { name: 'Services', href: '/ServiceMain' },
+    { name: 'Services', href: '/Services' },
     { name: 'Contact Us', href: '/ContactUs' },
   ];
 
@@ -46,10 +46,10 @@ const Footer = () => {
           <div className="block md:hidden text-center">
             <h2 className="text-3xl font-bold font-[Quicksand] mt-8">Contact Us To Explore </h2>
 <h2 className="text-3xl font-bold font-[Quicksand] mt-2 text-white">
-  Your <span className="text-yellow-400">Legal Options</span> Today
+  Your <span className="text-[#F8D216]">Legal Options</span> Today
 </h2>
           <a href="/ContactUs">
-  <button className="bg-[#EDC14A] hover:bg-yellow-600 text-[#162766] px-4 py-4 rounded font-bold mt-8">
+  <button className="bg-[#F8D216] hover:bg-yellow-600 text-[#162766] px-4 py-4 rounded font-bold mt-8">
     Book an Appointment
   </button>
 </a>
@@ -77,7 +77,7 @@ const Footer = () => {
                   key={link.name}
                   href={link.href}
                   className={`text-base font-medium transition-colors ${
-                    location.pathname === link.href ? 'text-yellow-400' : 'text-gray-300 hover:text-white'
+                    location.pathname === link.href ? 'text-[#F8D216]' : 'text-gray-300 hover:text-white'
                   }`}
                   aria-current={location.pathname === link.href ? 'page' : undefined}
                 >
@@ -132,7 +132,7 @@ const Footer = () => {
               <div>
                  <h2 className="text-2xl font-bold font-[Quicksand] mt-8">Contact Us To Explore </h2>
           <h2 className="text-2xl font-bold font-[Quicksand] mt-2 text-white">
-  Your <span className="text-yellow-400">Legal Options</span> Today
+  Your <span className="text-[#F8D216]">Legal Options</span> Today
 </h2>
 
                 <nav className="flex flex-wrap gap-6 mt-8">
@@ -141,7 +141,7 @@ const Footer = () => {
                       key={link.name}
                       href={link.href}
                       className={`text-base font-medium transition-colors ${
-                        location.pathname === link.href ? 'text-yellow-400' : 'text-gray-300 hover:text-white'
+                        location.pathname === link.href ? 'text-[#F8D216]' : 'text-gray-300 hover:text-white'
                       }`}
                       aria-current={location.pathname === link.href ? 'page' : undefined}
                     >
@@ -154,7 +154,7 @@ const Footer = () => {
               {/* Right */}
               <div className="flex items-center justify-end gap-8">
             <a href="/ContactUs">
-  <button className="bg-[#EDC14A] hover:bg-yellow-400 text-[#162766] px-2 py-2 rounded font-bold ">
+  <button className="bg-[#F8D216] hover:bg-[#F8D216] text-[#162766] px-2 py-2 rounded font-bold ">
     Book an Appointment
   </button>
 </a>

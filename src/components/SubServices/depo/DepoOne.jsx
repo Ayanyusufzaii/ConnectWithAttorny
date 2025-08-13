@@ -6,7 +6,7 @@ const HomeOne = () => {
   return (
     <>
       {/* Desktop/Laptop/Tablet Hero Section */}
-            <section className="hidden sm:flex relative w-full h-relative md:min-h-[55vh] lg:min-h-[85vh] items-center justify-start overflow-hidden">
+            <section className="hidden sm:flex relative w-full  md:min-h-[55vh] lg:min-h-[85vh] items-center justify-start overflow-hidden">
  
         {/* Background Image */}
         <img
@@ -21,7 +21,7 @@ const HomeOne = () => {
         {/* Content */}
         <div className="relative z-20 flex flex-col items-center justify-center w-full px-6 md:px-16 lg:px-24 py-8 text-center">
           <h1
-            className="text-2xl md:text-3xl lg:text-5xl font-bold text-white mb-4 drop-shadow-lg"
+            className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-4 drop-shadow-lg"
             style={{ fontFamily: 'Quicksand, sans-serif' }}
           >
            Used Depo-Provera And Diagnosed With<br></br> A Brain Tumor Or Neurological Condition?
