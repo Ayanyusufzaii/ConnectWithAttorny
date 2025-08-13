@@ -12,7 +12,7 @@ const ContactThree = () => {
   };
  
   const handleEmail = () => {
-    window.location.href = "mailto:reachus@MassTortCounsel.com";
+    window.location.href = "mailto:reachus@ConnectWithAttorney.com";
   };
  
   const socialLinks = [
@@ -85,10 +85,11 @@ const ContactThree = () => {
           <h3 className="text-[30px] font-bold text-[#162766]">Contact Us</h3>
 
           {[
-            { icon: PiPhoneCallFill, label: "Call Us", value: "+1 (888) 202-1350" },
-            { icon: IoMail, label: "Reach Us", value: "reachus@ConnectWithAttorney.com" },
-          ].map(({ icon: Icon, label, value }, idx) => (
-            <div key={idx} className="flex items-center gap-3">
+           { icon: PiPhoneCallFill, label: "Call Us", value: "+1 (888) 202-1350", action: handleCall },
+              { icon: IoMail, label: "Reach Us", value: "reachus@ConnectWithAttorney.com", action: handleEmail },
+          ].map(({ icon: Icon, label, value , action}, idx) => (
+            <div  onClick={action}
+            key={idx} className="flex items-center gap-3">
               <div className="bg-[#162766] p-2 rounded-md w-[48px] h-[48px] text-white flex items-center justify-center">
                 <Icon className="w-[28px] h-[28px]" />
               </div>

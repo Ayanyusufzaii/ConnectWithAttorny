@@ -13,7 +13,7 @@ import emailjs from '@emailjs/browser';
 };
  
  
-const SERVICE_ID = 'service_azb26ks';
+const SERVICE_ID = 'service_qs9v96e';
 const ADMIN_TEMPLATE_ID = 'template_fa7qndd';
 const USER_TEMPLATE_ID = 'template_vghzjt8';
  
