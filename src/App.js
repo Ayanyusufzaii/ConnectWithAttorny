@@ -82,7 +82,7 @@ const App = () => {
         element: <UltraProcessedMain />,
       },
       {
-        path: "Service/Oxbryta-Lawsuit",
+        path: "/Service/Oxbryta-Lawsuit",
         element: <OxbrytaMain />,
       },
       {

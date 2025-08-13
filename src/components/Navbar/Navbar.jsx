@@ -17,7 +17,7 @@ const LAWSUIT_TYPES = [
   { name: "Paraquat Lawsuit", href: "/Service/Paraquat-Lawsuit" },
   { name: "Roundup Lawsuit", href: "/Service/Roundup-Lawsuit" },
   { name: "Toxic Baby Food Lawsuit", href: "/Service/Toxic-Baby-Food-Lawsuit" },
-  { name: "Oxbryta Lawsuit", href: "Service/Oxbryta-Lawsuit" },
+  { name: "Oxbryta Lawsuit", href: "/Service/Oxbryta-Lawsuit" },
   { name: "Talcum Powder Lawsuit", href: "/Service/Talcum-Powder-Lawsuit" },
   { name: "Bard PowerPort Lawsuit", href: "/Service/Bard-PowerPort-Lawsuit" },
   // { name: "Ultra-Processed Foods Lawsuit", href: "/UltraProcessedMain" },
@@ -25,6 +25,10 @@ const LAWSUIT_TYPES = [
   { name: "PFAS Contamination Lawsuit", href: "/Service/PFAS-Contamination-Lawsuit" },
   { name: "Transvaginal Mesh Lawsuit", href: "/Service/Transvaginal-Mesh-Lawsuit" },
 ];
+
+const handlePhoneCall = () => {
+    window.location.href = "tel:+18882021350"
+  }
 
 function DesktopNavbar() {
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -194,13 +198,17 @@ function DesktopNavbar() {
         </ul>
       </div>
       
-      {/* Call Now Tile */}
-      <div className="flex items-center">
-        <div className="bg-[#162766] rounded-lg px-4 py-2 text-white text-center shadow font-quicksand hover:bg-[#EDC14A] hover:text-[#162766] transition-colors duration-200">
-          <div className="text-xs">CALL NOW</div>
-          <div className="text-l">(888) 202 1350 </div>
-        </div>
-      </div>
+    {/* Call Now Tile */}
+<div className="flex items-center">
+  <button
+    onClick={handlePhoneCall}
+    className="bg-[#162766] rounded-lg px-4 py-2 text-white text-center shadow font-quicksand hover:bg-[#EDC14A] hover:text-[#162766] transition-colors duration-200"
+  >
+    <div className="text-xs">CALL NOW</div>
+    <div className="text-l">(888) 202 1350</div>
+  </button>
+</div>
+
     </nav>
   );
 }

@@ -6,6 +6,25 @@ import { IoMail } from "react-icons/io5";
 import { PiPhoneCallFill } from "react-icons/pi";
 
 const ContactThree = () => {
+    // Handlers
+  const handleCall = () => {
+    window.location.href = "tel:+18882021350";
+  };
+ 
+  const handleEmail = () => {
+    window.location.href = "mailto:reachus@MassTortCounsel.com";
+  };
+ 
+  const socialLinks = [
+    { icon: FaFacebookF, url: "https://facebook.com" },
+    { icon: BsTwitterX, url: "https://x.com" },
+    { icon: Instagram, url: "https://instagram.com" },
+  ];
+ 
+  const openLink = (url) => {
+    window.open(url, "_blank", "noopener,noreferrer");
+  };
+ 
   return (
     <div className="bg-[#F5F7FE] py-8 px-4 md:px-12 font-[Quicksand]">
       {/* Desktop / Laptop Version */}
@@ -18,10 +37,13 @@ const ContactThree = () => {
 
           <div className="flex md:flex-col lg:flex-row gap-6">
             {[
-              { icon: PiPhoneCallFill, label: "Call Us", value: "+1 (888) 202-1350" },
-              { icon: IoMail, label: "Reach Us", value: "reachus@ConnectWithAttorney.com" },
-            ].map(({ icon: Icon, label, value }, idx) => (
-              <div key={idx} className="flex items-start gap-4">
+              { icon: PiPhoneCallFill, label: "Call Us", value: "+1 (888) 202-1350", action: handleCall },
+              { icon: IoMail, label: "Reach Us", value: "reachus@ConnectWithAttorney.com", action: handleEmail },
+            ].map(({ icon: Icon, label, value, action }, idx) => (
+              <div  
+              onClick={action}
+              key={idx}
+               className="flex items-start gap-4">
                 <div className="bg-[#162766] rounded-[13px] flex justify-center items-center text-white w-[clamp(3.5rem,4vw,4.5rem)] h-[clamp(3.5rem,4vw,4.5rem)] hover:scale-[1.05] transition-transform duration-200">
                   <Icon className="w-[clamp(1.5rem,2vw,2rem)] h-[clamp(1.5rem,2vw,2rem)]" />
                 </div>
