@@ -1,6 +1,6 @@
 import React from 'react'
-import herobg from '../../assets/herodesktopp.png'
-import MobileHeroBg from '../../assets/mobheroimgg.png'
+import herobg from '../../assets/heroodesktopmainn.png'
+import MobileHeroBg from '../../assets/heromobilemainn.png'
 import { ChevronDown } from 'lucide-react'
 const HomeOne = () => {
 
@@ -12,7 +12,7 @@ const HomeOne = () => {
   return (
     <>
      {/* Desktop/Laptop/Tablet Hero Section */}
-      <section className="hidden sm:flex relative w-full h-relative md:min-h-[40vh] lg:min-h-[55vh] xl:min-h-[85vh] 2xl:min-h-[95vh] items-center justify-start overflow-hidden capitalize">
+      <section className="hidden sm:flex relative w-full h-relative md:min-h-[45vh] lg:min-h-[55vh] xl:min-h-[80vh] items-center justify-start overflow-hidden capitalize">
         {/* Background Image */}
         <img
           src={herobg}
@@ -65,17 +65,17 @@ const HomeOne = () => {
           style={{ minHeight: '90vh', width: '100%' }}
         />
         {/* Content */}
-        <div className="relative z-20 flex flex-col items-start justify-end w-full px-3 pb-8">
-          <h1 className="text-4xl font-bold text-white mb-2 drop-shadow-lg text-left" style={{ fontFamily: 'Quicksand, sans-serif' }}>
+        <div className="relative z-20 flex flex-col items-center justify-end w-full px-3 pb-8">
+          <h1 className="text-4xl font-bold text-white mb-2 drop-shadow-lg text-center" style={{ fontFamily: 'Quicksand, sans-serif' }}>
             Trusted Legal Support for Your Future
           </h1>
-          <h2 className="text-sm text-white mb-4 font-normal drop-shadow text-left" style={{ fontFamily: 'Quicksand, sans-serif' }}>
+          <h2 className="text-sm text-white mb-4 font-normal drop-shadow text-center" style={{ fontFamily: 'Quicksand, sans-serif' }}>
             If you’ve been harmed by a dangerous drug, medical device, or toxic exposure, you're not alone. We help you understand your rights and connect you with experienced legal teams who put your recovery first.
           </h2>
           <button 
           onClick={scrollToForm}
-          className="bg-[#EDC14A] text-[#162766] font-semibold px-6 py-2 rounded-lg shadow hover:bg-yellow-500 transition text-base max-w-xs text-left" style={{ borderRadius: '0.75rem', minWidth: '180px' }}>
-            Let's Discuss Your Case
+          className="bg-[#EDC14A]  text-[#162766] font-semibold px-6 md:px-8 py-3 md:py-4 rounded-md shadow hover:bg-yellow-500 transition text-base md:text-lg ">
+          Let's Discuss Your Case
           </button>
         </div>
         {/* Overlay for better text visibility */}

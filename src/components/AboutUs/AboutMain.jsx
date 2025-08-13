@@ -11,7 +11,16 @@ import AboutFive from './AboutFive.jsx';
 import AboutSix from './AboutSix.jsx';
 
 
+
 const AboutMain = () => {
+
+       useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'instant', // avoid animation delay for initial load
+    });
+  }, []);
 
 
   return (
