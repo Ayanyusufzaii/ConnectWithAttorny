@@ -1,6 +1,5 @@
 // emailService.js
- 
-import emailjs from '@emailjs/browser';
+ import emailjs from '@emailjs/browser';
 
   const sanitize = (value) => {
   if (typeof value === 'string') {

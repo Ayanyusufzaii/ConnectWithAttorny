@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import Turnstile from 'react-turnstile';
-
 import Navbar from '../Navbar/Navbar.jsx';
 import Footer from '../Footer/Footer.jsx';
 import AboutOne from './AboutOne.jsx';
@@ -11,10 +10,9 @@ import AboutFive from './AboutFive.jsx';
 import AboutSix from './AboutSix.jsx';
 
 
-
 const AboutMain = () => {
 
-       useEffect(() => {
+    useEffect(() => {
     window.scrollTo({
       top: 0,
       left: 0,

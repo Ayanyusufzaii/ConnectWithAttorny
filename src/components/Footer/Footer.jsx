@@ -8,6 +8,7 @@ import logo from "../../assets/footerlogoo.png"; // Adjust the path as necessary
 
 
 const Footer = () => {
+  
   const location = useLocation();
 
   const socialLinks = [

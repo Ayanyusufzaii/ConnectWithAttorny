@@ -12,7 +12,7 @@ const ContactThree = () => {
   };
  
   const handleEmail = () => {
-    window.location.href = "mailto:reachus@ConnectWithAttorney.com";
+    window.location.href = "mailto:reachus@connectwithattorney.com";
   };
  
   const socialLinks = [
@@ -38,7 +38,7 @@ const ContactThree = () => {
           <div className="flex md:flex-col lg:flex-row gap-6">
             {[
               { icon: PiPhoneCallFill, label: "Call Us", value: "+1 (888) 202-1350", action: handleCall },
-              { icon: IoMail, label: "Reach Us", value: "reachus@ConnectWithAttorney.com", action: handleEmail },
+              { icon: IoMail, label: "Reach Us", value: "reachus@connectwithattorney.com", action: handleEmail },
             ].map(({ icon: Icon, label, value, action }, idx) => (
               <div  
               onClick={action}
@@ -86,7 +86,7 @@ const ContactThree = () => {
 
           {[
            { icon: PiPhoneCallFill, label: "Call Us", value: "+1 (888) 202-1350", action: handleCall },
-              { icon: IoMail, label: "Reach Us", value: "reachus@ConnectWithAttorney.com", action: handleEmail },
+              { icon: IoMail, label: "Reach Us", value: "reachus@connectwithattorney.com", action: handleEmail },
           ].map(({ icon: Icon, label, value , action}, idx) => (
             <div  onClick={action}
             key={idx} className="flex items-center gap-3">

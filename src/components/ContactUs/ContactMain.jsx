@@ -8,8 +8,6 @@ import {useEffect} from 'react'
 
 
 const ContactMain = () => {
-
- 
      useEffect(() => {
     window.scrollTo({
       top: 0,
